@@ -1,0 +1,335 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5% !important;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.8rem !important;
+  background-color: white;
+}
+
+.container {
+  max-width: 117rem !important;
+}
+
+.spacer {
+  padding: 3rem;
+}
+
+.spacer_m {
+  padding: 2rem;
+}
+
+.spacer_s {
+  padding: 1.3rem;
+}
+
+.bod {
+  border: 1px solid red;
+}
+
+.base_input {
+  font-size: 2rem;
+}
+
+.base_input::placeholder {
+  font-size: 1.5rem;
+}
+
+.brown_btn {
+  background-color: #d44444;
+  color: #fff;
+  font-size: 1.9rem;
+}
+
+.yellow_btn {
+  background-color: #f6a23f;
+  color: #fff;
+  font-size: 1.9rem;
+}
+
+.nodecoration {
+  text-decoration: none !important;
+  color: #2f2f2f !important;
+}
+
+.nodecoration:hover {
+  text-decoration: none !important;
+  color: #2f2f2f !important;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding: 1rem 0 0.4rem 0;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding: 1rem 0 0.4rem 0;
+}
+
+p {
+  font-size: 1.7rem;
+  padding: 0 !important;
+}
+
+.topbar {
+  height: 2.6rem;
+  background-color: #2f2f2f;
+}
+
+.header {
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 0px 1px 4px rgba(122, 122, 122, 0.767);
+}
+
+.title_strip_brown {
+  background-color: #d44444;
+  margin: 1rem 0;
+}
+
+.title_strip_brown_h1 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.title_strip_brown_ul {
+  background-color: #f6a23f;
+  height: 3px;
+  margin-left: 1rem;
+}
+
+.title_strip_yellow {
+  background-color: #f6a23f;
+  margin: 1rem 0;
+}
+
+.title_strip_yellow_h1 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.title_strip_yellow_ul {
+  background-color: #d44444;
+  height: 3px;
+  margin-left: 1rem;
+}
+
+.amt_lable {
+  padding: 0;
+  font-size: 1.4rem;
+  color: #858585;
+}
+
+.donate_amt {
+  background-color: #eee;
+  padding: 0.6rem;
+  border: 1px solid #cacaca;
+  border-radius: 5px;
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin: 0.6rem;
+}
+
+.donate_amt_brown {
+  background-color: #d44444;
+  padding: 0.6rem;
+  border: 1px solid #cacaca;
+  border-radius: 5px;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0.6rem;
+}
+
+.donate_input_lable {
+  font-size: 1.5rem;
+  color: #575757;
+}
+
+.donar_input_pay {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #d44444;
+}
+
+.donar_input_pay::placeholder {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.donar_pay {
+  background-color: #5caf43;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.adopt_input_search {
+  font-size: 2.7rem;
+}
+
+.adopt_input_search::placeholder {
+  font-size: 1.7rem;
+}
+
+.adopt_search_btn {
+  background-color: #f6a23f;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.petinfo_card {
+  border: 1px solid #c4c4c4;
+  box-shadow: 0px 1px 2px #d4d4d4;
+  background-color: #fff;
+  padding: 0.6rem;
+  border-radius: 3px;
+}
+
+.petinfo_card h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1.2rem 1.2rem 0.5rem 1rem;
+  margin: 0.1rem;
+}
+
+.petinfo_card p {
+  font-size: 1.5rem;
+  padding: 0.3rem 1rem !important;
+  margin: 0.1rem;
+}
+
+.petinfo_card:hover {
+  border: 1px solid #d44444;
+}
+
+.petinfo_card_img {
+  width: 100%;
+}
+
+ul {
+  padding-left: 1rem !important;
+}
+
+.about_pet {
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 1px 2px #d4d4d4;
+}
+
+.about_pet_fimg {
+  width: 100%;
+}
+
+.about_pet_subimg {
+  width: 100%;
+  border: 1px solid #dfdfdf;
+  padding: 0.2rem;
+  height: 8rem;
+}
+
+.about_pet_point ul li {
+  list-style-type: none;
+}
+
+.about_pet_point_li {
+  padding-right: 0.8rem;
+  font-weight: 600;
+}
+
+.somemore_pets {
+  background-color: whitesmoke;
+  padding: 2.5rem 2rem;
+}
+
+.adopt_me_btn {
+  background-color: #d44444;
+  color: #fff;
+  font-size: 2.2rem;
+}
+
+.fc_underline {
+  border-bottom: 4px solid #d44444;
+  padding-bottom: 1rem;
+  font-weight: 600;
+}
+
+.fc_options_h1 {
+  color: #d44444;
+}
+
+.fc_banner {
+  background-color: #f6a23f;
+}
+
+.fc_banner_color {
+  color: #fff;
+}
+
+.writetous {
+  border: 1px dashed #d6d6d6;
+  border-radius: 5px;
+}
+
+.client_dashboard {
+  padding: 1rem;
+}
+
+.client_dashboard li {
+  list-style-type: none;
+  padding: 1rem 0.2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.client_dashboard li a {
+  text-decoration: none;
+  color: #d44444;
+}
+
+.my_dogs_available {
+  color: #1b5e13;
+}
+
+.my_dogs_adopted {
+  color: #d44444;
+}
+
+.my_dogs_edit {
+  color: #d44444;
+  font-size: 1.6rem;
+}
+
+.preview {
+  height: 8rem;
+  background-color: white;
+  border: 1px dashed #eee;
+  font-size: 1.6rem;
+}
+
+.choose {
+  width: 10rem;
+  font-size: 1.2rem;
+}
+
+.footer {
+  height: 30vh;
+}
+/*# sourceMappingURL=main.css.map */

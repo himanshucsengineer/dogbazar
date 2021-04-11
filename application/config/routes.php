@@ -52,20 +52,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'home';
 
 
-$route['blogs/(:any)'] = 'frontend/blogpage/index/$1';
-$route['user/campaign'] = 'frontend/user/campaign';
-$route['user/your-page'] = 'frontend/user/page';
-$route['user/profile'] = 'frontend/user/profile';
-$route['user/transfer'] = 'frontend/user/transfer';
-$route['explore'] = 'frontend/workwith';
-$route['production-house'] = 'frontend/production';
-$route['digital-pr'] = 'frontend/digitalpr';
-$route['movies'] = 'frontend/movie';
-$route['brands'] = 'frontend/brand';
-$route['serial'] = 'frontend/serial';
-$route['songs'] = 'frontend/songs';
-$route['user/newpage'] = 'frontend/user/newpage';
-$route['user/addpage'] = 'frontend/user/addpage';
+// ab isko push kr dena
+
 $route['logout'] = 'frontend/logout';
 
 $route['default_controller/login'] = 'login';

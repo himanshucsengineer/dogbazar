@@ -1,0 +1,48 @@
+.topbar {
+  height: 2.6rem;
+  background-color: $fontblack;
+}
+
+.header {
+  padding: 2rem;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 1px 4px rgba(122, 122, 122, 0.767);
+}
+
+// Title Strip
+
+//  1. Brown
+.title_strip_brown {
+  background-color: $dbrown;
+  margin: 1rem 0;
+
+  &_h1 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  &_ul {
+    background-color: $dyellow;
+    height: 3px;
+    margin-left: 1rem;
+  }
+}
+
+// 2. Yellow
+.title_strip_yellow {
+  background-color: $dyellow;
+  margin: 1rem 0;
+
+  &_h1 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  &_ul {
+    background-color: $dbrown;
+    height: 3px;
+    margin-left: 1rem;
+  }
+}
