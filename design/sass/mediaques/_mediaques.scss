@@ -1,1 +1,51 @@
 //  Header Media query
+@media only screen and (max-width: 780px) {
+  // Mobile Header Code
+
+  .handburger {
+    display: block;
+  }
+
+  .desktopmenu {
+    display: none;
+  }
+
+  .header_mobile {
+    display: block;
+    position: fixed;
+    height: 100%;
+    background-color: rgb(235, 235, 235);
+    box-shadow: 1px 1px 3px rgb(212, 212, 212);
+
+    top: 0;
+    left: -100%;
+    opacity: 0;
+    width: 70%;
+    transition: all 0.3s ease;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .nav_mob_items {
+    background-color: rgb(255, 255, 255);
+    color: rgb(80, 80, 80);
+    padding: 1rem 0rem;
+    border-bottom: 1px solid rgb(180, 180, 180);
+  }
+
+  .nav_mob_items:hover {
+    background-color: $dyellow;
+    color: #fff;
+  }
+
+  .active_header {
+    left: 0;
+    opacity: 1;
+    width: 70%;
+    transition: all 0.3s ease;
+  }
+
+  // End Mobile Header
+}
