@@ -52,8 +52,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'home';
 
 
-// ab isko push kr dena
-
+$route['listmydog'] = 'frontend/listmydog';
+$route['adopt'] = 'frontend/adopt';
+$route['adoptpet'] = 'frontend/adoptpet';
+$route['donate'] = 'frontend/donate';
+$route['franchies'] = 'frontend/franchies';
+$route['mydogs'] = 'frontend/mydogs';
+$route['profile'] = 'frontend/profile';
 $route['logout'] = 'frontend/logout';
 
 $route['default_controller/login'] = 'login';

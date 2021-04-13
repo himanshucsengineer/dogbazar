@@ -1,5 +1,5 @@
 <?php
-    class Home extends CI_controller{
+    class Donate extends CI_controller{
         public function __construct()
     {
         parent::__construct();
@@ -12,7 +12,7 @@
             $this->load->view('frontend/template/header');
            // $this->load->view('frontend/template/navbar');
             
-            $this->load->view('frontend/home');
+            $this->load->view('frontend/donate');
             $this->load->view('frontend/template/footer');
 
         }
