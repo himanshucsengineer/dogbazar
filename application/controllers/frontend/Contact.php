@@ -1,5 +1,5 @@
 <?php
-    class Profile extends CI_controller{
+    class Contact extends CI_controller{
         public function __construct()
     {
         parent::__construct();
@@ -12,7 +12,7 @@
             $this->load->view('frontend/template/header');
             $this->load->view('frontend/template/navbar');
             
-            $this->load->view('frontend/profile');
+            $this->load->view('frontend/contact');
             $this->load->view('frontend/template/footer');
 
         }

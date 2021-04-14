@@ -17,6 +17,10 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
+main {
+  min-height: 60vh;
+}
+
 .container {
-  max-width: 117rem !important;
+  max-width: 116rem !important;
 }

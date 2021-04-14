@@ -1,28 +1,5 @@
 
 
-<body>
-
-    <!-- Components -->
-
-    <div class="topbar"></div>
-    <header class="header">
-        <div class="container">
-            <div class="row justify-content-between align-item-center">
-                <div class="col-2 ">
-                    logo
-                </div>
-                <div class="col-8 ">
-                    <div class="row justify-content-center ">
-                        <div class="col-md-2">Home</div>
-                        <div class="col-md-2">Franchies</div>
-                        <div class="col-md-2">Contact</div>
-                        <div class="col-md-2">About</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
 
     <main>
 
@@ -152,13 +129,13 @@
                 <div class="col-md-12">
                     <div class="row justify-content-around">
                         <div class="col-md-6 ">
-                            <!-- Form  -->
+                        <?php echo form_open(base_url( 'frontend/franchies/insert_data'), array('id'=>'franchiesform','method'=>'POST'));?>
 
                             <div class="row px-4">
                                 <div class="col">
                                     <div class="mb-3">
                                         <label for="" class="donate_input_lable pb-3">Name (Required)</label>
-                                        <input type="email" class="form-control base_input" name="donar_email"
+                                        <input type="text" class="form-control base_input" name="name"
                                             id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Anshu">
                                     </div>
                                 </div>
@@ -167,7 +144,7 @@
                                 <div class="col">
                                     <div class="mb-3">
                                         <label for="" class="donate_input_lable pb-3">Email (Required)</label>
-                                        <input type="email" class="form-control base_input" name="donar_email"
+                                        <input type="email" class="form-control base_input" name="email"
                                             id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Anshu">
                                     </div>
                                 </div>
@@ -176,7 +153,7 @@
                                 <div class="col">
                                     <div class="mb-3">
                                         <label for="" class="donate_input_lable pb-3">Subject *</label>
-                                        <input type="email" class="form-control base_input" name="donar_email"
+                                        <input type="text" class="form-control base_input" name="sub"
                                             id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Anshu">
                                     </div>
                                 </div>
@@ -188,7 +165,7 @@
                                             Message</label>
                                         <div class="form-floating base_input">
                                             <textarea class="form-control" placeholder="Leave a comment here"
-                                                name="donar_message" id="floatingTextarea2"
+                                                name="msg" id="floatingTextarea2"
                                                 style="height: 100px"></textarea>
                                         </div>
                                     </div>
@@ -200,7 +177,7 @@
                                     <button class="btn brown_btn">Submit</button>
                                 </div>
                             </div>
-
+                            <?php echo form_close(); ?> 
                         </div>
                         <div class="col-md-5 ">
 
@@ -216,8 +193,38 @@
         <!-- End Main -->
 
     </main>
+    <div class="modal" id="myModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <!-- Modal Header -->
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <span id="validation" class="form_errors"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
+    <script>
+    $("#franchiesform").submit(function(event){
+	event.preventDefault();
+	var post_url = $(this).attr("action"); 
+	var request_method = $(this).attr("method"); 
+	var form_data = $(this).serialize(); 
+	
+	$.ajax({
+		url : post_url,
+		type: request_method,
+		data : form_data,
+	}).done(function(response){ //
+        console.log(response);
+        $('#validation').html(response);
+        $('#myModal').modal('show').fadeIn('slow');
+        $("#healthform").trigger("reset");
+	});
+});
 
-
+</script>
 
   

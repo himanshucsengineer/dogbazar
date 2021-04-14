@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Document</title>
+    <title>Dog Bazar</title>
 
     <!-- Seo Tags -->
     <meta name="description" content="">
@@ -37,7 +37,7 @@
     <!-- End Google Fonts -->
 
     <!-- Css Link -->
-    <link rel="stylesheet" href="assest/css/main.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assest/css/main.css">
     <!-- End Css Link -->
 
 

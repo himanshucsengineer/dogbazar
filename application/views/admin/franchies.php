@@ -1,20 +1,13 @@
 <link href="<?php echo base_url(); ?>admin/assets/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url(); ?>admin/assets/css/core.css" rel="stylesheet" type="text/css" />
-
+<link href="<?php echo base_url(); ?>admin/assets/css/core.css" rel="stylesheet" type="text/css" />
 <script src="<?php echo base_url(); ?>admin/assets/js/jquery.dataTables.min.js"></script>
-
-
 <style type="text/css">
-
 a.edit {
     display: none;
 }
-
-
 .btn-group, .btn-group-vertical {
     float: right;
 }
-
 .btn {
     color: #4e73df;
 }
@@ -40,56 +33,41 @@ a.edit {
     font-size:14px;
     margin-bottom:1rem;
 }
-
 </style>
 
 <div class="all_post">
     <div class="container">
-        <h3>User Data</h3><hr>
-        
+        <h3>Franchies Request</h3><hr>
         <?php
-      if($this->session->flashdata('success'))
-      {
-      echo '<div class="alert alert-success">'.$this->session->flashdata('success').'</div>';
-      }
-      else if($this->session->flashdata('error'))
-      {
-      echo '<div class="alert alert-danger">'.$this->session->flashdata('error').'</div>';
-      }
-
-
-      ?>
-
-       
+            if($this->session->flashdata('success'))
+                {
+                echo '<div class="alert alert-success">'.$this->session->flashdata('success').'</div>';
+                }
+                else if($this->session->flashdata('error'))
+                {
+                echo '<div class="alert alert-danger">'.$this->session->flashdata('error').'</div>';
+            }
+        ?>
         <div class="row">
-          <div class="col-md-12">
+            <div class="col-md-12">
+                <div class="card-box table-responsive" >
+                    <table id="lowinventory" data-order='[[ 0, "desc" ]]'  style="width:100%" class="table table-striped table-bordered table_shop_custom display">
+                        <thead>
+                            <tr> 
+                                <th >Sr. No.</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Subject</th>
+                                <th>Message</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
-            <div class="card-box table-responsive" >
-             
-              <table id="lowinventory" data-order='[[ 0, "desc" ]]'  style="width:100%" class="table table-striped table-bordered table_shop_custom display">
-                <thead>
-                <tr> 
-                
-                     <th >Sr. No.</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Whatsapp Number</th>
-                    <th>Brand or url</th>
-                    <th>Service</th>
-                    <th>Description</th>
-                   
-                    
-                    <th>Action</th>
-
-                  </tr>
-
-                </thead>
-                <tbody>
-
-                </tbody>
-              </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-          </div>
         </div>
         
     </div>
@@ -106,7 +84,7 @@ a.edit {
 
     <div id="deletePurchaseModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-    <?php echo form_open(base_url('admin/branddata/deletebranddetail'), array('method'=>'post'));?>
+    <?php echo form_open(base_url('admin/user/deletecardetail'), array('method'=>'post'));?>
     <div class="modal-content">
     <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">�</button>
@@ -133,7 +111,7 @@ a.edit {
 <script>
   $(document).ready(function() {
     $('#lowinventory').DataTable( {
-        "ajax": "<?php echo base_url(); ?>admin/branddata/addinventory_api"
+        "ajax": "<?php echo base_url(); ?>admin/franchies/addinventory_api"
     } );
 
 

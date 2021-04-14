@@ -10,7 +10,7 @@
             
            
             $this->load->view('frontend/template/header');
-           // $this->load->view('frontend/template/navbar');
+           $this->load->view('frontend/template/navbar');
             
             $this->load->view('frontend/mydogs');
             $this->load->view('frontend/template/footer');

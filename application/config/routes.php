@@ -59,6 +59,8 @@ $route['donate'] = 'frontend/donate';
 $route['franchies'] = 'frontend/franchies';
 $route['mydogs'] = 'frontend/mydogs';
 $route['profile'] = 'frontend/profile';
+$route['about-us'] = 'frontend/about';
+$route['contact-us'] = 'frontend/contact';
 $route['logout'] = 'frontend/logout';
 
 $route['default_controller/login'] = 'login';

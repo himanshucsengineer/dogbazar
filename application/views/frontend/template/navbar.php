@@ -1,18 +1,65 @@
-<div class="topbar"></div>
+<body>
+
+    <!-- Components -->
+
+    <div class="topbar"></div>
     <header class="header">
         <div class="container">
             <div class="row justify-content-between align-item-center">
-                <div class="col-2 ">
-                    logo
+                <div class="col-2">
+                    <a href="<?php echo base_url(); ?>">Logo</a>
                 </div>
-                <div class="col-8 ">
-                    <div class="row justify-content-center ">
-                        <div class="col-md-2">Home</div>
-                        <div class="col-md-2">Franchies</div>
-                        <div class="col-md-2">Contact</div>
-                        <div class="col-md-2">About</div>
-                    </div>
+                <div class="col-md-9 desktopmenu">
+                    <ul class="h_nav_links d-flex justify-content-end mt-1">
+                        <li><a href="<?php echo base_url(); ?>">Home</a></li>
+                        <li><a href="<?php echo base_url(); ?>franchies">Franchies</a></li>
+                        <li><a href="<?php echo base_url(); ?>contact-us">Contact</a></li>
+                        <li><a href="<?php echo base_url(); ?>about-us">About</a></li>
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">News & Events</a></li>
+                        <li><a href="<?php echo base_url(); ?>" class="">Login</a> / <a href="<?php echo base_url(); ?>" class="">Signup</a></li>
+                    </ul>
+                </div>
+                <div class="col-2 text-center handburger">
+                    <div id="hb"> btn</div>
                 </div>
             </div>
         </div>
+
+        <!-- Mobile Menu  -->
+        <div class="header_mobile" id="mobhead">
+            <div class="nav d-flex flex-column">
+                <a href="">
+                    <div class="nav_mob_items text-center">
+                        &nbsp;
+                    </div>
+                </a>
+                <a href="">
+                    <div class="nav_mob_items px-5">
+                        Home
+                    </div>
+                </a>
+                <a href="">
+                    <div class="nav_mob_items px-5">
+                        Franchies
+                    </div>
+                </a>
+                <a href="">
+                    <div class="nav_mob_items px-5">
+                        Traning
+                    </div>
+                </a>
+                <a href="">
+                    <div class="nav_mob_items px-5">
+                        About
+                    </div>
+                </a>
+                <a href="">
+                    <div class="nav_mob_items px-5">
+                        Contact us
+                    </div>
+                </a>
+            </div>
+        </div>
+
     </header>
