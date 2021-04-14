@@ -6,7 +6,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Welcome to Digifever</title>
+        <title>Welcome to Dog Bazar</title>
         <link href="<?php echo base_url(); ?>admin/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url(); ?>admin/assets/css/core.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url(); ?>admin/assets/css/components.css" rel="stylesheet" type="text/css" />
@@ -18,7 +18,7 @@
         <style>
         .account-pages
         {
-        background: url(admin/assets/images/about-2.png);
+        background: url(admin/assets/images/dog_bg.jpg);
         position: absolute;
         height: 100%;
         width: 100%;

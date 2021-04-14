@@ -221,7 +221,7 @@
         console.log(response);
         $('#validation').html(response);
         $('#myModal').modal('show').fadeIn('slow');
-        $("#healthform").trigger("reset");
+        $("#franchiesform").trigger("reset");
 	});
 });
 
