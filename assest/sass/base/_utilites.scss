@@ -39,6 +39,21 @@
   font-size: 1.9rem;
 }
 
+.fbtn {
+  border: none;
+  background-color: $dbrown;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.fbtn:hover {
+  background-color: #be3636;
+}
+
 //  All Ancors
 .nodecoration {
   text-decoration: none !important;
@@ -48,4 +63,9 @@
 .nodecoration:hover {
   text-decoration: none !important;
   color: $fontblack !important;
+}
+
+.nospacing {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }

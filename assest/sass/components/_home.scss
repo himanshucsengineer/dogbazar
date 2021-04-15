@@ -2,25 +2,98 @@
   height: 50rem;
 }
 
+.homecrousal {
+  z-index: -10;
+}
+
+.three_feature {
+  z-index: 10;
+  // margin-top: -10rem;
+}
+
+.boxShadow {
+  box-shadow: 0px 2px 4px rgb(156, 156, 156);
+}
+
+// Feature Box
 .showbox {
-  height: 30rem;
+  height: 35rem;
   border: 10px solid #eee;
   //   background-color: rgb(243, 116, 116);
 
-  background-image: linear-gradient(
-      rgba(238, 84, 84, 0.473),
-      rgba(238, 84, 84, 0.637)
-    ),
+  background-image: linear-gradient(#490d0db0, #d44444be),
     url("/images/img1.jpg");
   background-size: cover;
   background-position: center;
 }
 
-.home_feature_box {
+.showbox_middle {
+  height: 35rem;
+  border: 10px solid #eee;
+  //   background-color: rgb(243, 116, 116);
+  background-color: $dyellow;
+}
+
+.showbox_content {
   h1 {
-    color: #fff;
+    font-weight: 800;
     font-size: 3.5rem;
-    font-weight: 700;
-    border-bottom:  4px solid #fff;
+    color: #fff;
+    margin-top: 2.6rem;
+  }
+
+  p {
+    color: #fff;
+    margin-top: 1.5rem;
   }
 }
+
+.about_section_left {
+  background-color: $dbrown;
+  padding: 4rem;
+
+  h2 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 3.5rem;
+  }
+  p {
+    color: #fff;
+  }
+}
+
+.about_sec_img {
+  width: 100%;
+  padding: 0 !important;
+}
+
+// PetBlog
+.pet_blog_box {
+  padding: 0.8rem;
+
+  img {
+    width: 100%;
+    box-shadow: 0px 1px 2px rgb(187, 187, 187);
+    height: 22rem;
+    border-radius: 2px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $fontblack;
+  }
+
+  h3 {
+    font-size: 2.3rem;
+    font-weight: 600;
+  }
+}
+
+// .home_feature_box {
+//   h1 {
+//     color: #fff;
+//     font-size: 3.5rem;
+//     font-weight: 700;
+//     border-bottom: 4px solid #fff;
+//   }
+// }

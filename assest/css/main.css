@@ -21,7 +21,7 @@ main {
 }
 
 .container {
-  max-width: 116rem !important;
+  max-width: 119rem !important;
 }
 
 .spacer {
@@ -60,6 +60,21 @@ main {
   font-size: 1.9rem;
 }
 
+.fbtn {
+  border: none;
+  background-color: #d44444;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.fbtn:hover {
+  background-color: #be3636;
+}
+
 .nodecoration {
   text-decoration: none !important;
   color: #2f2f2f !important;
@@ -68,6 +83,11 @@ main {
 .nodecoration:hover {
   text-decoration: none !important;
   color: #2f2f2f !important;
+}
+
+.nospacing {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 h1 {
@@ -181,19 +201,83 @@ p {
   height: 50rem;
 }
 
+.homecrousal {
+  z-index: -10;
+}
+
+.three_feature {
+  z-index: 10;
+}
+
+.boxShadow {
+  box-shadow: 0px 2px 4px #9c9c9c;
+}
+
 .showbox {
-  height: 30rem;
+  height: 35rem;
   border: 10px solid #eee;
-  background-image: linear-gradient(rgba(238, 84, 84, 0.473), rgba(238, 84, 84, 0.637)), url("/images/img1.jpg");
+  background-image: linear-gradient(#490d0db0, #d44444be), url("/images/img1.jpg");
   background-size: cover;
   background-position: center;
 }
 
-.home_feature_box h1 {
-  color: #fff;
+.showbox_middle {
+  height: 35rem;
+  border: 10px solid #eee;
+  background-color: #f6a23f;
+}
+
+.showbox_content h1 {
+  font-weight: 800;
   font-size: 3.5rem;
+  color: #fff;
+  margin-top: 2.6rem;
+}
+
+.showbox_content p {
+  color: #fff;
+  margin-top: 1.5rem;
+}
+
+.about_section_left {
+  background-color: #d44444;
+  padding: 4rem;
+}
+
+.about_section_left h2 {
+  color: #fff;
   font-weight: 700;
-  border-bottom: 4px solid #fff;
+  font-size: 3.5rem;
+}
+
+.about_section_left p {
+  color: #fff;
+}
+
+.about_sec_img {
+  width: 100%;
+  padding: 0 !important;
+}
+
+.pet_blog_box {
+  padding: 0.8rem;
+}
+
+.pet_blog_box img {
+  width: 100%;
+  box-shadow: 0px 1px 2px #bbbbbb;
+  height: 22rem;
+  border-radius: 2px;
+}
+
+.pet_blog_box a {
+  text-decoration: none;
+  color: #2f2f2f;
+}
+
+.pet_blog_box h3 {
+  font-size: 2.3rem;
+  font-weight: 600;
 }
 
 .amt_lable {
