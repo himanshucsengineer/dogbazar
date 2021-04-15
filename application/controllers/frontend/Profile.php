@@ -8,7 +8,6 @@
 
         public function index(){
             
-           
             $this->load->view('frontend/template/header');
             $this->load->view('frontend/template/navbar');
             

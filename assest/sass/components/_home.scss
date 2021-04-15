@@ -1,0 +1,26 @@
+.cimgheight {
+  height: 50rem;
+}
+
+.showbox {
+  height: 30rem;
+  border: 10px solid #eee;
+  //   background-color: rgb(243, 116, 116);
+
+  background-image: linear-gradient(
+      rgba(238, 84, 84, 0.473),
+      rgba(238, 84, 84, 0.637)
+    ),
+    url("/images/img1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.home_feature_box {
+  h1 {
+    color: #fff;
+    font-size: 3.5rem;
+    font-weight: 700;
+    border-bottom:  4px solid #fff;
+  }
+}
