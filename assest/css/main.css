@@ -21,7 +21,7 @@ main {
 }
 
 .container {
-  max-width: 119rem !important;
+  max-width: 120rem !important;
 }
 
 .spacer {
@@ -362,7 +362,7 @@ p {
   border: 1px solid #c4c4c4;
   box-shadow: 0px 1px 2px #d4d4d4;
   background-color: #fff;
-  padding: 0.6rem;
+  padding: 0.2rem;
   border-radius: 3px;
 }
 
@@ -381,6 +381,11 @@ p {
 
 .petinfo_card:hover {
   border: 1px solid #d44444;
+}
+
+.petinfo_card_status {
+  font-weight: 600;
+  color: #197a16;
 }
 
 .petinfo_card_img {
@@ -418,13 +423,22 @@ ul {
 
 .somemore_pets {
   background-color: whitesmoke;
+  border: 1px solid #cacaca;
   padding: 2.5rem 2rem;
 }
 
 .adopt_me_btn {
   background-color: #d44444;
+  padding: 0.6rem;
+  border-radius: 3px;
   color: #fff;
-  font-size: 2.2rem;
+  font-size: 2rem;
+  border: none;
+  transition: all 0.2 ease;
+}
+
+.adopt_me_btn:hover {
+  background-color: #bd3838;
 }
 
 .fc_underline {
