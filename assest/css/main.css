@@ -55,7 +55,7 @@ main {
 }
 
 .yellow_btn {
-  background-color: #f6a23f;
+  background-color: #f39933;
   color: #fff;
   font-size: 1.9rem;
 }
@@ -124,6 +124,7 @@ p {
   font-size: 1.8rem;
   position: relative;
   box-shadow: 0px 1px 4px rgba(122, 122, 122, 0.767);
+  z-index: 44;
 }
 
 .title_strip_brown {
@@ -138,13 +139,13 @@ p {
 }
 
 .title_strip_brown_ul {
-  background-color: #f6a23f;
+  background-color: #f39933;
   height: 3px;
   margin-left: 1rem;
 }
 
 .title_strip_yellow {
-  background-color: #f6a23f;
+  background-color: #f39933;
   margin: 1rem 0;
 }
 
@@ -197,8 +198,14 @@ p {
   display: none;
 }
 
+.home_h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #d44444;
+}
+
 .cimgheight {
-  height: 50rem;
+  height: 45rem;
 }
 
 .homecrousal {
@@ -216,7 +223,7 @@ p {
 .showbox {
   height: 35rem;
   border: 10px solid #eee;
-  background-image: linear-gradient(#490d0db0, #d44444be), url("/images/img1.jpg");
+  background-image: linear-gradient(#490d0db0, #d444447c), url("../../images/img1.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -224,7 +231,7 @@ p {
 .showbox_middle {
   height: 35rem;
   border: 10px solid #eee;
-  background-color: #f6a23f;
+  background-color: #f39933;
 }
 
 .showbox_content h1 {
@@ -240,6 +247,8 @@ p {
 }
 
 .about_section_left {
+  background-image: linear-gradient(rgba(212, 68, 68, 0.822), rgba(212, 68, 68, 0.726)), url("/images/dogpattern.png");
+  background-size: contain;
   background-color: #d44444;
   padding: 4rem;
 }
@@ -257,6 +266,12 @@ p {
 .about_sec_img {
   width: 100%;
   padding: 0 !important;
+}
+
+.pet_blog {
+  background-color: #fff7ea;
+  background-image: linear-gradient(rgba(255, 247, 234, 0.801), rgba(255, 247, 234, 0.904)), url("/images/dogpattern.png");
+  padding: 5rem 0;
 }
 
 .pet_blog_box {
@@ -338,7 +353,7 @@ p {
 }
 
 .adopt_search_btn {
-  background-color: #f6a23f;
+  background-color: #f39933;
   color: #fff;
   font-size: 2rem;
 }
@@ -423,7 +438,7 @@ ul {
 }
 
 .fc_banner {
-  background-color: #f6a23f;
+  background-color: #f39933;
 }
 
 .fc_banner_color {
@@ -488,7 +503,7 @@ ul {
 .footer_headings {
   font-size: 1.8rem;
   color: #fff;
-  border-bottom: 2px solid #f6a23f;
+  border-bottom: 2px solid #f39933;
   width: 60%;
 }
 
@@ -503,7 +518,7 @@ ul {
 }
 
 .footerTag_Line {
-  background-color: #f6a23f;
+  background-color: #f39933;
   color: #fff;
 }
 
@@ -519,7 +534,7 @@ ul {
 
 .footerbtn {
   border: none;
-  background-color: #f6a23f;
+  background-color: #f39933;
   border-radius: 3px;
   padding: 0.6rem;
   color: #fff;
@@ -559,7 +574,7 @@ ul {
     border-bottom: 1px solid #b4b4b4;
   }
   .nav_mob_items:hover {
-    background-color: #f6a23f;
+    background-color: #f39933;
     color: #fff;
   }
   .active_header {
