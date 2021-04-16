@@ -438,7 +438,7 @@ ul {
 }
 
 .fc_banner {
-  background-color: #f39933;
+  background-color: #d44444;
 }
 
 .fc_banner_color {
@@ -448,6 +448,10 @@ ul {
 .writetous {
   border: 1px dashed #d6d6d6;
   border-radius: 5px;
+}
+
+.franchies_form {
+  width: 100%;
 }
 
 .client_dashboard {
