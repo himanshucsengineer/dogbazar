@@ -106,10 +106,10 @@
     <li class="nav-item <?php echo ($parts == 'franchies')?"active":""?>">
       <a class="nav-link " href="<?php echo base_url(); ?>admin/franchies"><i class="fas fa-fw fa-table" ></i><span >Franchies Request</span></a>
     </li>
-    <!--li class="nav-item <?php echo ($parts == 'yourpage')?"active":""?>">
-      <a class="nav-link " href="<?php echo base_url(); ?>admin/yourpage"><i class="fas fa-fw fa-table" ></i><span >Page Request</span></a>
+    <li class="nav-item <?php echo ($parts == 'volunteer')?"active":""?>">
+      <a class="nav-link " href="<?php echo base_url(); ?>admin/volunteer"><i class="fas fa-fw fa-table" ></i><span >volunteer Request</span></a>
     </li>
-    <li class="nav-item <?php echo ($parts == 'account')?"active":""?>">
+    <!--li class="nav-item <?php echo ($parts == 'account')?"active":""?>">
       <a class="nav-link " href="<?php echo base_url(); ?>admin/account"><i class="fas fa-fw fa-table" ></i><span >Login Request</span></a>
     </li>
     
@@ -141,9 +141,9 @@
     <li class="nav-item <?php echo ($parts == 'user')?"active":""?>">
       <a class="nav-link " href="<?php echo base_url(); ?>admin/user"><i class="fas fa-fw fa-table" ></i><span >Users</span></a>
     </li>
-    <!--li class="nav-item <?php echo ($parts == 'branddata')?"active":""?>">
-      <a class="nav-link " href="<?php echo base_url(); ?>admin/branddata"><i class="fas fa-fw fa-table" ></i><span >Brand Data</span></a>
-    </li-->
+    <li class="nav-item <?php echo ($parts == 'contactdata')?"active":""?>">
+      <a class="nav-link " href="<?php echo base_url(); ?>admin/contactdata"><i class="fas fa-fw fa-table" ></i><span >Contact Data</span></a>
+    </li>
     
     <hr class="sidebar-divider">
 

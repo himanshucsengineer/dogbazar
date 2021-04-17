@@ -1,3 +1,11 @@
+<style>
+    .login{
+        width: 100%;
+        height: auto;
+        border-radius: 0px !important;
+    }
+
+</style>
 <footer class="footer">
 
 <div class="container">
@@ -61,6 +69,167 @@
 </div>
 <!-- Experiment -->
 
+
+<div class="modal fade login" id="loginModal">
+	    <div class="modal-dialog login animated">
+    		<div class="modal-content">
+    		    <div class="modal-header signup">
+    		        
+                    <h4 class="modal-title">Login with International Dog Bazar</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <?php
+                        if($this->session->flashdata('error')){
+                            echo "<script>$('#loginModal').modal('show');</script>";
+                            echo '<p class="text-danger">'.$this->session->flashdata('error').'</p>';
+                        }
+                    ?>
+                    <?php
+                        if($this->session->flashdata('success')){
+                            echo "<script>$('#loginModal').modal('hide');</script>";
+                            echo '<p class="text-success">'.$this->session->flashdata('success').'</p>';
+                        }
+                    ?>
+                    <?php 
+                        if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')   
+                            $url = "https://";   
+                        else  
+                            $url = "http://";   
+                                // Append the host(domain name, ip) to the URL.   
+                            $url.= $_SERVER['HTTP_HOST'];   
+                            // Append the requested resource location to the URL   
+                            $url.= $_SERVER['REQUEST_URI'];    
+                            $_SESSION['url'] =$url;
+                    ?>
+                    <div class="box">
+                        <div class="form loginBox">
+                            <form method="post" action="<?php echo base_url() ; ?>frontend/login/login">
+				                <input id="email" class="form-control chng" type="text" placeholder="Email" name="email" required>
+				                <!-- id-"password"--><input id="input_login" class="form-control chng" type="password" placeholder="Password" name="password" required><span class="hide" type="button" onclick="hideeLogin()"><i class="fa fa-eye" aria-hidden="true"></i></span>
+				                <input  type="submit" class="btn btn-default btn-login bu-chng" value="Login">
+                            </form>   
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="content registerBox" style="display:none;">
+                            <div class="form">
+                                <form method="post" action="<?php echo base_url() ; ?>frontend/login/signup">
+                                    <input id="name" class="form-control chng" type="text" placeholder="Name" name="name" required>
+                                    <input id="username" class="form-control chng" type="text" placeholder="Enter Username" name="uname" required>
+                                    <input id="email" class="form-control chng" type="text" placeholder="Email" name="email" required>
+                                    <input id="input" class="form-control chng" type="password" placeholder="Password" name="password" required><span class="hide" type="button" onclick="hidee()"><i class="fa fa-eye" aria-hidden="true"></i></span>
+                                    <!--input id="password_confirmation" class="form-control chng" type="password" placeholder="Repeat Password" name="cpassword" required-->
+                                    <div class="reeee">
+                                        <div  class="left">
+                                            <p>Have a Refferal Code?</p>
+                                        </div>    
+                                        <div class="right">
+                                            <input class="ref" type="text" name="ref">
+                                        </div>    
+                                    </div>    
+                                    <div class="chck" >
+                                        <input type="checkbox" value="none" id="checkbox_1" name="contact1"/>
+                                        <label for="checkbox_1" class="checkbox"><span class="chk">I agree to the Term and Conditon</span></label>
+                                    </div>  
+                                    <input class="btn btn-default btn-register bu-chng" type="submit" value="Create account" name="commit" >
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="forgot login-footer">
+                        <span style="float: left;"><a href="<?php echo base_url();?>frontend/forgetpass">Forgot password?</a> </span>
+                        <span style="float: right;">Looking to
+                        <a href="javascript: showRegisterForm();">create an account</a>
+                        ?</span>
+                    </div>
+                    <div class="forgot register-footer" style="display:none">
+                        <span>Already have an account?</span>
+                        <a href="javascript: showLoginForm();">Login</a>
+                    </div>
+                </div>
+    		</div>
+<script>
+/*
+ *
+ * login-register modal
+ * Autor: Creative Tim
+ * Web-autor: creative.tim
+ * Web script: https://creative-tim.com
+ * 
+ */
+function showRegisterForm(){
+    $('.loginBox').fadeOut('fast',function(){
+        $('.registerBox').fadeIn('fast');
+        $('.login-footer').fadeOut('fast',function(){
+            $('.register-footer').fadeIn('fast');
+        });
+        $('.modal-title').html('Register with International Dog Bazar');
+    }); 
+    $('.error').removeClass('alert alert-danger').html('');
+       
+}
+function showLoginForm(){
+    $('#loginModal .registerBox').fadeOut('fast',function(){
+        $('.loginBox').fadeIn('fast');
+        $('.register-footer').fadeOut('fast',function(){
+            $('.login-footer').fadeIn('fast');    
+        });
+        
+        $('.modal-title').html('Login with International Dog Bazar');
+    });       
+     $('.error').removeClass('alert alert-danger').html(''); 
+}
+
+function openLoginModal(){
+    showLoginForm();
+    setTimeout(function(){
+        $('#loginModal').modal('show');    
+    }, 230);
+    
+}
+function openRegisterModal(){
+    showRegisterForm();
+    setTimeout(function(){
+        $('#loginModal').modal('show');    
+    }, 230);
+    
+}
+
+
+
+function shakeModal(){
+    $('#loginModal .modal-dialog').addClass('shake');
+             $('.error').addClass('alert alert-danger').html("Invalid email/password combination");
+             $('input[type="password"]').val('');
+             setTimeout( function(){ 
+                $('#loginModal .modal-dialog').removeClass('shake'); 
+    }, 1000 ); 
+}
+
+</script>
+<script>
+function hidee() {
+  var x = document.getElementById("input");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+<script>
+function hideeLogin() {
+  var x = document.getElementById("input_login");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
 
 <script>
 

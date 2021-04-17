@@ -23,6 +23,37 @@
                 }
                  echo json_encode(array('data'=>$arrya_json));
             }
+
+
+
+            public function deletefranchiesdetail(){ 
+    
+                if($this->input->post('deletesliderId'))
+            {
+              $this->form_validation->set_rules('deletesliderId','text','required');
+              if($this->form_validation->run() == true)
+              {
+                $getDeleteStatus = $this->Franchiesmodel->deletefranchiesdata($this->input->post('deletesliderId'));
+                if($getDeleteStatus['message'] == 'yes')
+                {
+                  $this->session->set_flashdata('success','Gallery  deleted successfully');
+                  redirect(base_url()."admin/franchies");
+                }
+                else
+                {
+                  $this->session->set_flashdata('error','Something went wrong. Please try again');
+                redirect(base_url()."admin/franchies");
+                  
+                }
+              }
+              else
+              {
+                $this->session->set_flashdata('error','Something went wrong. Please try again');
+                redirect(base_url()."admin/franchies");
+
+              }
+            }
+          }
     }
 
 ?>

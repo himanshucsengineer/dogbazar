@@ -39,32 +39,7 @@
             
             
             
-            public function user(){
-            $file_name = 'User_Data'.'.csv';
-            header("Content-Description: File Transfer");
-            header("Content-Disposition: attachment; filename=$file_name");
-            header("Content-Type: application/csv");
-            
-            
-            
-            $getPurchaseData = $this->invoicedatamodel->fetch_user();
-            
-            $file = fopen('php://output','w');
-            
-            $header = array("Email", "Name", "Number", "Address", "password", "refer id ", "Earn", "Refer Count", "bank Account", "Ifsc", "Account Name","referance name", 'referance refer id');
-            
-            fputcsv($file, $header);
-            
-            foreach ($getPurchaseData as $key => $value) { 
-                    fputcsv($file, $value);                
-
-                
-            }
-            fclose($file);
-            exit;
-                
-            
-        }
+           
             
            public function deletecardetail(){ 
     
