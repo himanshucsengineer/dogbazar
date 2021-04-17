@@ -12,7 +12,8 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.8rem !important;
+  font-size: 1.6rem !important;
+  color: #2e2e2e;
   background-color: white;
 }
 
@@ -42,6 +43,8 @@ main {
 
 .base_input {
   font-size: 2rem;
+  outline: #eee;
+  border: 1px solid #bebebe;
 }
 
 .base_input::placeholder {
@@ -52,6 +55,13 @@ main {
   background-color: #d44444;
   color: #fff;
   font-size: 1.9rem;
+  border: none;
+  padding: 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.brown_btn:hover {
+  background-color: #c23a3a;
 }
 
 .yellow_btn {
@@ -128,14 +138,17 @@ p {
 }
 
 .title_strip_brown {
-  background-color: #d44444;
-  margin: 1rem 0;
+  background-image: linear-gradient(to right, rgba(212, 68, 68, 0.973), rgba(212, 68, 68, 0.788)), url("/images/dogpattern.png");
+  background-size: contain;
+  background-repeat: repeat;
+  padding: 1.8rem;
 }
 
 .title_strip_brown_h1 {
   color: #fff;
-  font-size: 3rem;
-  font-weight: 600;
+  font-size: 4rem;
+  font-weight: 700;
+  padding-left: 4.5rem;
 }
 
 .title_strip_brown_ul {
@@ -360,8 +373,8 @@ p {
 
 .petinfo_card {
   border: 1px solid #c4c4c4;
-  box-shadow: 0px 1px 2px #d4d4d4;
-  background-color: #fff;
+  box-shadow: 0px 1px 2px #cacaca;
+  background-color: #fafafa;
   padding: 0.2rem;
   border-radius: 3px;
 }

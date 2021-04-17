@@ -16,13 +16,22 @@
 
 //  1. Brown
 .title_strip_brown {
-  background-color: $dbrown;
-  margin: 1rem 0;
+  // background-color: $dbrown;
+  background-image: linear-gradient(
+      to right,
+      rgba(212, 68, 68, 0.973),
+      rgba(212, 68, 68, 0.788)
+    ),
+    url("/images/dogpattern.png");
+  background-size: contain;
+  background-repeat: repeat;
+  padding: 1.8rem;
 
   &_h1 {
     color: #fff;
-    font-size: 3rem;
-    font-weight: 600;
+    font-size: 4rem;
+    font-weight: 700;
+    padding-left: 4.5rem;
   }
 
   &_ul {

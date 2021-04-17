@@ -20,6 +20,8 @@
 
 .base_input {
   font-size: 2rem;
+  outline: #eee;
+  border: 1px solid rgb(190, 190, 190);
 }
 
 .base_input::placeholder {
@@ -31,6 +33,13 @@
   background-color: $dbrown;
   color: #fff;
   font-size: 1.9rem;
+  border: none;
+  padding: 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.brown_btn:hover {
+  background-color: rgb(194, 58, 58);
 }
 
 .yellow_btn {
