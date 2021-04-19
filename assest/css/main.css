@@ -133,7 +133,7 @@ p {
   background-color: white;
   font-size: 1.8rem;
   position: relative;
-  box-shadow: 0px 1px 4px rgba(122, 122, 122, 0.767);
+  box-shadow: 0px 1px 4px rgba(212, 68, 68, 0.342);
   z-index: 44;
 }
 
@@ -457,7 +457,9 @@ ul {
 .fc_underline {
   border-bottom: 4px solid #d44444;
   padding-bottom: 1rem;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .fc_options_h1 {
@@ -466,6 +468,7 @@ ul {
 
 .fc_banner {
   background-color: #d44444;
+  background-image: linear-gradient(rgba(212, 68, 68, 0.808), rgba(212, 68, 68, 0.801)), url("/images/pattern2@2x.png");
 }
 
 .fc_banner_color {
@@ -473,12 +476,71 @@ ul {
 }
 
 .writetous {
-  border: 1px dashed #d6d6d6;
+  border: 1px dashed #d44444;
+  padding: 5rem;
   border-radius: 5px;
 }
 
 .franchies_form {
   width: 100%;
+}
+
+.nande {
+  padding: 3rem 0.5rem;
+}
+
+.nande p {
+  padding: 0.2rem;
+  margin: 0 !important;
+}
+
+.nande p span {
+  font-size: 1.4rem;
+}
+
+.nande a {
+  text-decoration: none;
+  color: #d44444;
+}
+
+.nande h3 {
+  color: #2f2f2f;
+  font-weight: 600;
+  padding: 0.4rem 0;
+  line-height: 2.7rem;
+}
+
+.nande_main {
+  padding: 1rem;
+}
+
+.nande_main h3 {
+  font-size: 2.8rem;
+}
+
+.nande_img_sub {
+  width: 100%;
+  height: 12rem;
+  border: 7px solid #d44444;
+}
+
+.nande_img_main {
+  width: 100%;
+  height: 40rem;
+  border: 7px solid #d44444;
+}
+
+.nande_link {
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .nande_img_main {
+    height: 29rem;
+  }
+  .nande_main h3 {
+    font-size: 2.5rem;
+  }
 }
 
 .client_dashboard {
