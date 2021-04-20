@@ -33,9 +33,20 @@
                             contained in our plant lists is not meant to be all-inclusive.</p>
 
                         <h3>Choose Your Donation Amount</h3>
+                        <?php
+      if($this->session->flashdata('success'))
+      {
+      echo '<div class="alert alert-success">'.$this->session->flashdata('success').'</div>';
+      }
+      else if($this->session->flashdata('error'))
+      {
+      echo '<div class="alert alert-danger">'.$this->session->flashdata('error').'</div>';
+      }
 
+
+      ?>
                         <!-- Form Start  -->
-                        <form action="">
+                        <form action="<?php echo base_url()?>register/pay" method="post">
 
                             <p><span class="amt_lable">In Rupess</span></p>
 
@@ -43,8 +54,8 @@
                                 <div class="col-md-9">
                                     <div class="mb-3">
                                         <!-- <label for="" class="donate_input_lable pb-3"></label> -->
-                                        <input type="text" class="form-control base_input donar_input_pay"
-                                            name="donar_amount" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                        <input type="number" class="form-control base_input donar_input_pay"
+                                            name="amount" id="exampleInputEmail1" aria-describedby="emailHelp"
                                             placeholder="Enter Your Amount">
                                     </div>
                                 </div>
@@ -58,7 +69,7 @@
                                             <div class="mb-3">
                                                 <label for="" class="donate_input_lable pb-3">Full Name</label>
                                                 <input type="text" class="form-control base_input"
-                                                    id="exampleInputEmail1" name="donar_first_name"
+                                                    id="exampleInputEmail1" name="name"
                                                     aria-describedby="emailHelp" placeholder="Your Name">
                                             </div>
                                         </div>
@@ -75,7 +86,7 @@
                                         <div class="col">
                                             <div class="mb-3">
                                                 <label for="" class="donate_input_lable pb-3">Enter Your Email</label>
-                                                <input type="email" class="form-control base_input" name="donar_email"
+                                                <input type="email" class="form-control base_input" name="email"
                                                     id="exampleInputEmail1" aria-describedby="emailHelp"
                                                     placeholder="Email">
                                             </div>
@@ -85,7 +96,7 @@
                                         <div class="col">
                                             <div class="mb-3">
                                                 <label for="" class="donate_input_lable pb-3">Mobile Number</label>
-                                                <input type="number" class="form-control base_input" name="donar_mobile"
+                                                <input type="number" class="form-control base_input" name="mob"
                                                     id="exampleInputEmail1" aria-describedby="emailHelp"
                                                     placeholder="Phone Number">
                                             </div>
@@ -98,7 +109,7 @@
                                                     Message</label>
                                                 <div class="form-floating base_input">
                                                     <textarea class="form-control" placeholder="Leave a comment here"
-                                                        name="donar_message" id="floatingTextarea2"
+                                                        name="msg" id="floatingTextarea2"
                                                         style="height: 100px"></textarea>
                                                 </div>
                                             </div>
