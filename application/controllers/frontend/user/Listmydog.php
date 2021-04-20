@@ -12,7 +12,7 @@
             $this->load->view('frontend/template/header');
            $this->load->view('frontend/template/navbar');
             
-            $this->load->view('frontend/listmydog');
+            $this->load->view('frontend/user/listmydog');
             $this->load->view('frontend/template/footer');
 
         }

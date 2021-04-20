@@ -52,13 +52,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'home';
 
 
-$route['listmydog'] = 'frontend/listmydog';
+$route['listmydog'] = 'frontend/user/listmydog';
 $route['adopt'] = 'frontend/adopt';
 $route['adoptpet'] = 'frontend/adoptpet';
 $route['donate'] = 'frontend/donate';
 $route['franchies'] = 'frontend/franchies';
-$route['mydogs'] = 'frontend/mydogs';
-$route['profile'] = 'frontend/profile';
+$route['mydogs'] = 'frontend/user/mydogs';
+$route['profile'] = 'frontend/user/profile';
 $route['about-us'] = 'frontend/about';
 $route['contact-us'] = 'frontend/contact';
 $route['volunteer'] = 'frontend/volunteer';

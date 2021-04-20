@@ -3,7 +3,7 @@
         public function __construct()
     {
         parent::__construct();
-        $this->load->model('frontend/Franchiesmodel');
+        $this->load->model('frontend/Franchiesmodel');            
     }
 
     public function index(){

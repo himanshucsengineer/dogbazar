@@ -13,13 +13,13 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="<?php echo base_url();?>assest/images/img1.jpg" class="d-block w-100 cimgheight" alt="...">
+                        <img src="<?php echo base_url()?>assest/images/img1.jpg" class="d-block w-100 cimgheight" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="<?php echo base_url();?>assest/images/img2.jpg" class="d-block w-100 cimgheight" alt="...">
+                        <img src="<?php echo base_url()?>assest/images/img2.jpg" class="d-block w-100 cimgheight" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="<?php echo base_url();?>assest/images/img3.jpg" class="d-block w-100 cimgheight" alt="...">
+                        <img src="<?php echo base_url()?>assest/images/img3.jpg" class="d-block w-100 cimgheight" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -36,8 +36,9 @@
         </div>
         <!-- End Crousal -->
 
-        <!-- Three Features  -->
+        <div class="spacer_m"></div>
 
+        <!-- Three Features  -->
         <div class="three_feature">
             <div class="container">
                 <div class="row justify-content-center">
@@ -52,7 +53,7 @@
                                             ships
                                             staffed by amazing volunteers.</p>
                                     </div>
-                                    <a href="<?php echo base_url();?>donate"><button class="fbtn">DONATE NOW</button></a>
+                                    <a href="<?php echo base_url()?>donate"><button class="fbtn">DONATE NOW</button></a>
                                 </div>
                             </div>
                             <div class="col-md-4 showbox_middle px-5">
@@ -70,7 +71,7 @@
                                             ships
                                             staffed by amazing volunteers.</p>
                                     </div>
-                                    <a href="<?php echo base_url();?>volunteer"><button class="fbtn">APPLY NOW</button></a>
+                                    <a href="<?php echo base_url()?>volunteer"><button class="fbtn">APPLY NOW</button></a>
                                 </div>
                             </div>
                         </div>
@@ -85,6 +86,7 @@
         <div class="spacer_m"></div>
         <div class="spacer_m"></div>
 
+
         <!-- About Us -->
         <div class="about_section">
             <div class="container">
@@ -97,7 +99,7 @@
                         </p>
                     </div>
                     <div class="col-md-6 about_section_right px-0">
-                        <img src="<?php echo base_url();?>assest/images/img3.jpg" alt="" class="about_sec_img">
+                        <img src="<?php echo base_url()?>assest/images/img1.jpg" alt="" class="about_sec_img">
                     </div>
                 </div>
             </div>
@@ -113,6 +115,11 @@
         <!-- Pet Care -->
         <div class="pet_blog">
             <div class="container">
+                <div class="row mb-2">
+                    <div class="col text-center">
+                        <h2 class="home_h2">Pet Care</h2>
+                    </div>
+                </div>
                 <div class="row justify-content-center">
                     <div class="col-md-12">
                         <div class="row justify-content-center">
@@ -120,7 +127,7 @@
                                 <div class="pet_blog_box">
                                     <a href="">
                                         <div class="py-2">
-                                            <img src="<?php echo base_url();?>assest/images/img3.jpg" alt="">
+                                            <img src="<?php echo base_url()?>assest/images/img3.jpg" alt="">
                                         </div>
                                         <div class="px-3">
                                             <h3>How can i make my pet Smile?</h3>
@@ -132,7 +139,7 @@
                                 <div class="pet_blog_box">
                                     <a href="">
                                         <div class="py-2">
-                                            <img src="<?php echo base_url();?>assest/images/img1.jpg" alt="">
+                                            <img src="<?php echo base_url()?>assest/images/img1.jpg" alt="">
                                         </div>
                                         <div class="px-3">
                                             <h3>How can i make my pet Smile?</h3>
@@ -144,7 +151,7 @@
                                 <div class="pet_blog_box">
                                     <a href="">
                                         <div class="py-2">
-                                            <img src="<?php echo base_url();?>assest/images/img2.jpg" alt="">
+                                            <img src="<?php echo base_url()?>assest/images/img2.jpg" alt="">
                                         </div>
                                         <div class="px-3">
                                             <h3>How can i make my pet Smile?</h3>
@@ -159,18 +166,18 @@
                 </div>
             </div>
         </div>
-
         <!-- end Pet Care -->
         <div class="spacer_m"></div>
         <div class="spacer_m"></div>
         <div class="spacer_m"></div>
+
 
         <!-- About Us -->
         <div class="about_section">
             <div class="container">
                 <div class="row boxShadow">
                     <div class="col-md-5 about_section_right px-0">
-                        <img src="<?php echo base_url();?>assest/images/img3.jpg" alt="" class="about_sec_img">
+                        <img src="<?php echo base_url()?>assest/images/img3.jpg" alt="" class="about_sec_img">
                     </div>
                     <div class="col-md-7  about_section_left ">
                         <h2>Become Our Franchies Patner</h2>
@@ -184,7 +191,7 @@
                             </p>
                         </div>
 
-                        <a href="<?php echo base_url();?>franchies"><button class="fbtn">Become Franchies</button></a>
+                        <a href="<?php echo base_url()?>franchies"><button class="fbtn">Become Franchies</button></a>
                     </div>
 
 
@@ -197,5 +204,6 @@
         <div class="spacer_m"></div>
         <div class="spacer_m"></div>
         <div class="spacer_m"></div>
+
 
     </main>

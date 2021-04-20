@@ -6,18 +6,18 @@
             <div class="container">
                 <div class="row py-4">
                     <div class="col">
-                        <h1 class="title_strip_brown_h1">Hello, Anshul</h1>
+                        <h1 class="title_strip_brown_h1">Hi, Anshul</h1>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="">
+        <!-- <div class="">
             <div class="container">
                 <div class="row">
                     <div class="col-2 title_strip_brown_ul"></div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- End Title Strip -->
 
         <div class="spacer_m"></div>
@@ -38,9 +38,9 @@
                             <div class="col-md-3 ">
                                 <div class="spacer_s"></div>
                                 <ul>
-                                    <li><a href="">Profile</a></li>
-                                    <li><a href="">My Dogs</a></li>
-                                    <li><a href="">List My Dog</a></li>
+                                    <li><a href="<?php echo base_url();?>profile">Profile</a></li>
+                                    <li><a href="<?php echo base_url();?>mydogs">My Dogs</a></li>
+                                    <li><a href="<?php echo base_url();?>listmydog">List My Dog</a></li>
                                 </ul>
                                 <div class="spacer_s"></div>
                             </div>
@@ -54,28 +54,28 @@
                                 <hr>
 
                                 <div class="row px-4">
-                                    <div class="col-md-7">
+                                    <div class="col-md-10">
                                         <div class="mb-3">
                                             <label for="" class="donate_input_lable pb-3">Name</label>
-                                            <input type="email" class="form-control base_input" name="donar_email"
+                                            <input type="text" class="form-control base_input" name="donar_email"
                                                 id="exampleInputEmail1" aria-describedby="emailHelp"
-                                                placeholder="Anshu">
+                                                placeholder="Enter Your Name" value="<?php echo $name;?>">
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row px-4">
-                                    <div class="col-md-7">
+                                    <div class="col-md-10">
                                         <div class="mb-3">
                                             <label for="" class="donate_input_lable pb-3">Email</label>
                                             <input type="email" class="form-control base_input" name="donar_email"
                                                 id="exampleInputEmail1" aria-describedby="emailHelp"
-                                                placeholder="Anshus2085@gmail.com">
+                                                placeholder="Enter Your Email" value="<?php echo $email?>">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row px-4">
-                                    <div class="col-md-7">
+                                    <div class="col-md-8">
                                         <div class="mb-3">
                                             <label for="" class="donate_input_lable pb-3">Gender</label>
                                             <div>
@@ -96,7 +96,7 @@
                                     </div>
                                 </div>
                                 <div class="row px-4 mb-3">
-                                    <div class="col-md-7">
+                                    <div class="col-md-10">
                                         <div class="mb-3">
                                             <label for="" class="donate_input_lable pb-3">Mobile Number</label>
                                             <input type="email" class="form-control base_input" name="donar_email"
@@ -156,8 +156,7 @@
 
         <!-- End Main -->
 
+        <div class="spacer_m"></div>
 
 
     </main>
-
-    

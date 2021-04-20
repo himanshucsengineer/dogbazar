@@ -4,7 +4,20 @@ if(!isset($_SESSION["email"]))
     $button='<li><a data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();" class="">Login / Signup</a></li>  ';
 }
 else{
-  $button='<li>'.$_SESSION["name"].'</li>'; 
+  $button='<li class="nav-item dropdown">
+                <a class=" dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            '.$_SESSION["name"].'
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="'.base_url().'profile">Dashboard</a></li>
+                <li><a class="dropdown-item" href="'.base_url().'logout">Logout</a></li>
+               
+            </ul>
+        </li>
+  
+  
+  
+'; 
 }
 ?>
 
@@ -12,8 +25,6 @@ else{
 <body>
 
     <!-- Components -->
-
-    <div class="topbar"></div>
     <header class="header">
         <div class="container">
             <div class="row justify-content-between align-item-center">
@@ -23,10 +34,11 @@ else{
                 <div class="col-md-9 desktopmenu">
                     <ul class="h_nav_links d-flex justify-content-end mt-1">
                         <li><a href="<?php echo base_url(); ?>">Home</a></li>
-                        <li><a href="<?php echo base_url(); ?>contact-us">Contact</a></li>
-                        <li><a href="<?php echo base_url(); ?>about-us">About</a></li>
-                        <li><a href="<?php echo base_url();?>blog">Blogs</a></li>
-                        <li><a href="#">News & Events</a></li>
+                        <li><a href="<?php echo base_url(); ?>franchies">Franchies</a></li>
+                        <li><a href="<?php echo base_url(); ?>blog">Blogs</a></li>
+                        <li><a href="<?php echo base_url(); ?>newsandevents">News & Events</a></li>
+                        <li><a href="<?php echo base_url(); ?>contact">Contact</a></li>
+                        <li><a href="<?php echo base_url(); ?>about">About</a></li>
                         <?php echo $button;?>
                     </ul>
                 </div>
@@ -73,3 +85,11 @@ else{
         </div>
 
     </header>
+
+
+
+
+
+
+
+    

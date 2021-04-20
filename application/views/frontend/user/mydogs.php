@@ -1,7 +1,4 @@
-
-
-
-    <main>
+<main>
 
 
         <!-- Title Strip  -->
@@ -9,18 +6,18 @@
             <div class="container">
                 <div class="row py-4">
                     <div class="col">
-                        <h1 class="title_strip_brown_h1">Hello, Anshul</h1>
+                        <h1 class="title_strip_brown_h1">All Your Dogs</h1>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="">
+        <!-- <div class="">
             <div class="container">
                 <div class="row">
                     <div class="col-2 title_strip_brown_ul"></div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- End Title Strip -->
 
         <div class="spacer_m"></div>
@@ -46,9 +43,9 @@
                             <div class="col-md-3 ">
                                 <div class="spacer_s"></div>
                                 <ul>
-                                    <li><a href="">Profile</a></li>
-                                    <li><a href="">My Dogs</a></li>
-                                    <li><a href="">List My Dog</a></li>
+                                    <li><a href="<?php echo base_url();?>profile">Profile</a></li>
+                                    <li><a href="<?php echo base_url();?>mydogs">My Dogs</a></li>
+                                    <li><a href="<?php echo base_url();?>listmydog">List My Dog</a></li>
                                 </ul>
                                 <div class="spacer_s"></div>
                             </div>
@@ -166,8 +163,7 @@
 
         <!-- End Main -->
 
+        <div class="spacer_m"></div>
 
 
     </main>
-
-   
