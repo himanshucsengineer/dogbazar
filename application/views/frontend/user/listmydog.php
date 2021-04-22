@@ -1,3 +1,26 @@
+<?php 
+    $email = $_SESSION["email"];
+    $name =  $_SESSION["name"];
+    $add =  $_SESSION["add"];
+    $number =  $_SESSION["number"];
+?>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.css" />
+
+ <script src="https://maps.googleapis.com/maps/api/js?key=*********&libraries=places">
+</script>
+
+
+<script>
+(function () {
+    navigator.geolocation.getCurrentPosition(function (position) {
+       console.log(position.coords.latitude)
+       console.log(position.coords.longitude)
+    },
+    function (error) {
+        console.log("The Locator was denied. :(")
+    })
+})();
+</script>    
 <main>
 
 
@@ -47,8 +70,9 @@
                                 <div class="spacer_s"></div>
                                 <ul>
                                     <li><a href="<?php echo base_url();?>profile">Profile</a></li>
+                                    <li><a href="<?php echo base_url();?>listmydog">List A Dog</a></li>
                                     <li><a href="<?php echo base_url();?>mydogs">My Dogs</a></li>
-                                    <li><a href="<?php echo base_url();?>listmydog">List My Dog</a></li>
+                                   
                                 </ul>
                                 <div class="spacer_s"></div>
                             </div>
@@ -60,13 +84,53 @@
 
                                 <h3>List My Dog</h3>
                                 <hr>
+                                <form action="<?php echo base_url()?>frontend/user/listmydog/insert" method="post" enctype="multipart/form-data">
+                                <?php
+      if($this->session->flashdata('success'))
+      {
+      echo '<div class="alert alert-success">'.$this->session->flashdata('success').'</div>';
+      }
+      else if($this->session->flashdata('error'))
+      {
+      echo '<div class="alert alert-danger">'.$this->session->flashdata('error').'</div>';
+      }
+
+
+      ?>
+                                <div class="row px-4 mb-1">
+                                    <div class="col-md-10">
+                                        <div class="mb-3">
+                                            <label for="" class="donate_input_lable pb-3">Your Name</label>
+                                            <input type="text" class="form-control base_input" name="name"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Name" value="<?php echo $name?>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row px-4 mb-1">
+                                    <div class="col-md-10">
+                                        <div class="mb-3">
+                                            <label for="" class="donate_input_lable pb-3">Your Email</label>
+                                            <input type="email" class="form-control base_input" name="email"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Email" value="<?php echo $email?>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row px-4 mb-1">
+                                    <div class="col-md-10">
+                                        <div class="mb-3">
+                                            <label for="" class="donate_input_lable pb-3">Your Number</label>
+                                            <input type="number" class="form-control base_input" name="number"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Number">
+                                        </div>
+                                    </div>
+                                </div>
 
                                 <div class="row px-4 mb-1">
                                     <div class="col-md-10">
                                         <div class="mb-3">
-                                            <label for="" class="donate_input_lable pb-3">Dog Name</label>
-                                            <input type="email" class="form-control base_input" name="donar_email"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Mike">
+                                            <label for="" class="donate_input_lable pb-3">Dog Age</label>
+                                            <input type="text" class="form-control base_input" name="age"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Dog Age(approx.)">
                                         </div>
                                     </div>
                                 </div>
@@ -75,42 +139,25 @@
                                     <div class="col-md-10">
                                         <div class="mb-3">
                                             <label for="" class="donate_input_lable pb-3">Select Breed</label>
-                                            <select class="form-select base_input" name="donar_email"
+                                            <select class="form-select base_input" name="breed"
                                                 aria-label="Default select example">
                                                 <option selected>Open this select menu</option>
-                                                <option value="1">One</option>
+                                                <option value="zermon">One</option>
                                             </select>
 
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="row px-4 mb-5">
+                                <div class="row px-4 mb-1">
                                     <div class="col-md-10">
-                                        <label for="exampleInputEmail1" class="donate_input_lable pb-3">Upload Images
-                                            of your Dog</label>
-                                        <div class="row">
-
-                                            <div class="col-3">
-                                                <div class="preview text-center py-5 mb-1">Upload</div>
-                                                <input type="file" placeholder="choose file" class="choose">
-                                            </div>
-                                            <div class="col-3">
-                                                <div class="preview text-center py-5 mb-1">Upload</div>
-                                                <input type="file" placeholder="choose file" class="choose">
-                                            </div>
-                                            <div class="col-3">
-                                                <div class="preview text-center py-5 mb-1">Upload</div>
-                                                <input type="file" placeholder="choose file" class="choose">
-                                            </div>
-                                            <div class="col-3">
-                                                <div class="preview text-center py-5 mb-1">Upload</div>
-                                                <input type="file" placeholder="choose file" class="choose">
-                                            </div>
-
+                                        <div class="mb-3">
+                                            <label for="" class="donate_input_lable pb-3">Upload Dog Images</label>
+                                            <input type="file" class="form-control base_input" name="images"
+                                                id="fileupload" aria-describedby="emailHelp" placeholder="Upload Dog Photo">
                                         </div>
                                     </div>
                                 </div>
+                                
 
 
                                 <!-- // FIXME Gender box -->
@@ -123,14 +170,14 @@
                                                     <label for="" class="donate_input_lable pb-3">Gender</label>
                                                 </div>
                                                 <div class="col-4">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                    <input class="form-check-input" type="radio" name="gender"
                                                         id="flexRadioDefault1">
                                                     <label class="form-check-label" for="flexRadioDefault1">
                                                         <span class="donate_input_lable">Male</span>
                                                     </label>
                                                 </div>
                                                 <div class="col-4">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                    <input class="form-check-input" type="radio" name="gender"
                                                         id="flexRadioDefault1">
                                                     <label class="form-check-label" for="flexRadioDefault1">
                                                         <span class="donate_input_lable">Female</span>
@@ -144,23 +191,8 @@
                                 <div class="row px-4  mb-1">
                                     <div class="col-md-10">
                                         <div class="mb-3">
-                                            <label for="" class="donate_input_lable pb-3">Status</label>
-                                            <select class="form-select base_input" name="donar_email"
-                                                aria-label="Default select example">
-                                                <option selected>Open this select menu</option>
-                                                <option value="1">Adopted</option>
-                                                <option value="1">Available</option>
-                                            </select>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row px-4  mb-1">
-                                    <div class="col-md-10">
-                                        <div class="mb-3">
                                             <label for="" class="donate_input_lable pb-3">Condition</label>
-                                            <select class="form-select base_input" name="donar_email"
+                                            <select class="form-select base_input" name="condition"
                                                 aria-label="Default select example">
                                                 <option selected>Open this select menu</option>
                                                 <option value="1">Healthy</option>
@@ -170,30 +202,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="row px-4  mb-1">
-                                    <div class="col-md-10">
-                                        <div class="mb-3">
-                                            <label for="" class="donate_input_lable pb-3">Age</label>
-                                            <input type="email" class="form-control base_input" name="donar_email"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp"
-                                                placeholder="ex- write like 1year 4months">
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="row px-4 mb-3  mb-1">
-                                    <div class="col-md-10">
-                                        <div class="mb-3">
-                                            <label for="" class="donate_input_lable pb-3">Owner Mobile Number</label>
-                                            <input type="email" class="form-control base_input" name="donar_email"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp"
-                                                placeholder="479658236">
-                                        </div>
-                                    </div>
-                                </div>
-
                                 <div class="row px-4 mb-3  mb-1">
                                     <div class="col-md-10">
                                         <div class="mb-3">
@@ -201,9 +209,18 @@
                                                 About Dog</label>
                                             <div class="form-floating base_input">
                                                 <textarea class="form-control" placeholder="Leave a comment here"
-                                                    name="donar_message" id="floatingTextarea2"
+                                                    name="msg" id="floatingTextarea2"
                                                     style="height: 100px"></textarea>
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row px-4 mb-1">
+                                    <div class="col-md-10">
+                                        <div class="mb-3">
+                                            <label for="" class="donate_input_lable pb-3">Enter Location</label>
+                                            <input type="text" class="form-control base_input" name="city"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Dog's Location">
                                         </div>
                                     </div>
                                 </div>
@@ -215,7 +232,7 @@
                                 </div>
 
 
-
+                                </form>
 
 
 
@@ -243,3 +260,36 @@
 
 
     </main>
+
+
+
+    <script language="javascript" type="text/javascript">
+
+$(function () {
+    $("#fileupload").change(function () {
+        $("#dvPreview").html("");
+        var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.png)$/;
+        if (regex.test($(this).val().toLowerCase())) {
+            if ($.browser.msie && parseFloat(jQuery.browser.version) <= 9.0) {
+                $("#dvPreview").show();
+                $("#dvPreview")[0].filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = $(this).val();
+            }
+            else {
+                if (typeof (FileReader) != "undefined") {
+                    $("#dvPreview").show();
+                    $("#dvPreview").append("<img class='thunbnail_image images_preview'/>");
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $("#dvPreview img").attr("src", e.target.result);
+                    }
+                    reader.readAsDataURL($(this)[0].files[0]);
+                } else {
+                    alert("This browser does not support FileReader.");
+                }
+            }
+        } else {
+            alert("Please upload a valid file.");
+        }
+    });
+});
+</script>

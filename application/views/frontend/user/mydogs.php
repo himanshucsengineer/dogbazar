@@ -1,3 +1,11 @@
+<?php
+    foreach($fetch_dogs as $value){
+        
+    }
+?>
+
+
+
 <main>
 
 
@@ -44,8 +52,9 @@
                                 <div class="spacer_s"></div>
                                 <ul>
                                     <li><a href="<?php echo base_url();?>profile">Profile</a></li>
+                                    <li><a href="<?php echo base_url();?>listmydog">List A Dog</a></li>
                                     <li><a href="<?php echo base_url();?>mydogs">My Dogs</a></li>
-                                    <li><a href="<?php echo base_url();?>listmydog">List My Dog</a></li>
+                                    
                                 </ul>
                                 <div class="spacer_s"></div>
                             </div>
@@ -58,7 +67,7 @@
                                 <h3>My Dogs</h3>
                                 <hr>
 
-                                <div class="row bod mx-3 ">
+                                <!--div class="row bod mx-3 ">
                                     <div class="col">
 
                                         <div class="mydogs text-center py-5">
@@ -69,9 +78,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div-->
 
-                                or if Dogs
+                                
 
 
                                 <div class="row">

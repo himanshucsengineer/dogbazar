@@ -37,6 +37,7 @@
                         $_SESSION["email"]=$value["email"];
                         $_SESSION["name"]=$value["name"];
                         $_SESSION["number"]=$value["number"];
+                        $_SESSION["add"]=$value["address"];
                         $login_success=1;
                         break;
                     
@@ -70,6 +71,9 @@
                
                 $password = $this->input->post('password');
                 if($this->Signupmodel->signup($email,$name,$password) ){
+                    $_SESSION["email"]=$this->input->post('email');
+                    $_SESSION["name"]=$this->input->post('name');
+                   
                 $this->session->set_flashdata('success','Signup Successful'); 
                 redirect(base_url().'profile'); 
                 
@@ -109,13 +113,13 @@
             $this->form_validation->set_rules('name', 'Name', 'required');
             $this->form_validation->set_rules('email', 'Email', 'required');
             $this->form_validation->set_rules('number', 'Number', 'required');
-            $this->form_validation->set_rules('upi', 'Address', 'required');
+            $this->form_validation->set_rules('add', 'Address', 'required');
             if ($this->form_validation->run()){ 
                
                $name = $this->input->post('name');
                         $email = $this->input->post('email');
                         $number = $this->input->post('number');
-                        $addrs = $this->input->post('upi');
+                        $addrs = $this->input->post('add');
                         
                 
                     if($this->Signupmodel->update_pro($name,$number,$email,$addrs)){
@@ -124,7 +128,7 @@
                         $_SESSION["name"]=$this->input->post('name');
                         $_SESSION["email"]=$this->input->post('email');
                         $_SESSION["number"]=$this->input->post('number');
-                        $_SESSION["upi"]=$this->input->post('upi');
+                        $_SESSION["add"]=$this->input->post('add');
                         echo "<h6 class='text-danger text-center'>Error In Submission</h6>"; 
                         
                     }

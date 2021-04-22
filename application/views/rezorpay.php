@@ -6,7 +6,7 @@
     <input type="hidden" name="razorpay_signature"  id="razorpay_signature" >
 </form>
 <script>
-// Checkout details as a json
+// Checkout details as a json                                                                                                
 var options = <?php echo json_encode($data);?>;
 /**
  * The entire list of Checkout fields is available at

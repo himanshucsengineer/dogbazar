@@ -85,11 +85,11 @@
 
                                                 <img src="<?php echo base_url()?>assest/images/testimg1.png" alt="" class="petinfo_card_img">
 
-                                                <h3>Mike</h3>
-                                                <p>Status: &nbsp; <span class="petinfo_card_status">Available</span></p>
-                                                <p>Female, Child</p>
+                                                <h3>Breed: &nbsp; <span class="petinfo_card_status">Xyz</span></h3>
+                                                <p>Gender: &nbsp; <span class="petinfo_card_status">Male</span></p>
+                                                <p>Age: &nbsp; <span class="petinfo_card_status">1 year</span></p>
 
-                                                <p>Ram Nagar, Jaipur, Rajasthan</p>
+                                                <p>Location: Ram Nagar, Jaipur, Rajasthan</p>
 
                                             </div>
                                         </a>
@@ -187,7 +187,7 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <button class="btn donar_pay">Lets Donate</button>
+                                <a href="<?php echo base_url()?>donate"><button class="btn donar_pay">Lets Donate</button></a>
                             </div>
                         </div>
                     </div>

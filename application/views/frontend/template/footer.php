@@ -4,7 +4,85 @@
         height: auto;
         border-radius: 0px !important;
     }
-
+    .login .modal-header{
+        width:100%;
+        height: auto;
+        background-color: #f7f7f7 !important;
+        border-bottom:1px solid #cdcdcd;
+    }
+    .login .modal-header h3{
+        color:#4a4a4a !important;
+        font: 22px !important;
+    }
+    .login .modal-body {
+        width: 100%;
+        height: auto;
+        background-color: white;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #cdcdcd;
+    }
+    .login .modal-body input[type="text"], input[type="email"], input[type="password"]{
+        width: 100%;
+        height: auto;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        padding-left: 1rem;
+        border: 1px solid  #cdcdcd;
+        outline: none;
+        margin-bottom: 1rem;
+    }
+    .login .modal-body input[type="submit"]{
+        width: 100%;
+        height: auto;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        color: white;
+        border: none;
+        outline: none;
+        background-color: #d44444;
+        transition: .5s;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    .login .modal-body input[type="submit"]:hover{
+        opacity: .7;
+    }
+    .login .modal-body .chck{
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+    .login .modal-footer{
+        width: 100%;
+        height: auto;
+        padding: 1rem !important;
+    }
+    .login .modal-footer a{
+        color: #d44444;
+        text-decoration: none;
+    }
+    .login .modal-footer .login-footer{
+        width: 100%;
+        height: auto;
+        display: flex;
+     
+    }
+    .login .modal-footer .register-footer{
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    .login .modal-footer .login-footer .left{
+        width: 50%;
+        height: auto;
+    }
+    .login .modal-footer .login-footer .right{
+        width: 100%;
+        height: auto;
+        text-align: right;
+    }
+    
 </style>
 <footer class="footer">
 
@@ -75,8 +153,8 @@
 <div class="modal fade " id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog login">
         <div class="modal-content">
-            <div class="modal-header signup">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel">Modal title</h3>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -106,9 +184,9 @@
                 <div class="box">
                     <div class="form loginBox">
                         <form method="post" action="<?php echo base_url() ; ?>frontend/login/login">
-				            <input id="email" class="form-control chng" type="text" placeholder="Email" name="email" required>
-				            <!-- id-"password"--><input id="input_login" class="form-control chng" type="password" placeholder="Password" name="password" required><span class="hide" type="button" onclick="hideeLogin()"><i class="fa fa-eye" aria-hidden="true"></i></span>
-				            <input  type="submit" class="btn btn-default btn-login bu-chng" value="Login">
+				            <input id="email"  type="text" placeholder="Email" name="email" required>
+				            <!-- id-"password"--><input id="input_login"  type="password" placeholder="Password" name="password" required><span class="hide" type="button" onclick="hideeLogin()"><i class="fa fa-eye" aria-hidden="true"></i></span>
+				            <input  type="submit"  value="Login">
                         </form>   
                     </div>
                 </div>
@@ -116,15 +194,15 @@
                     <div class="content registerBox" style="display:none;">
                         <div class="form">
                             <form method="post" action="<?php echo base_url() ; ?>frontend/login/signup">
-                                <input id="name" class="form-control chng" type="text" placeholder="Name" name="name" required>
-                                <input id="email" class="form-control chng" type="text" placeholder="Email" name="email" required>
-                                <input id="input" class="form-control chng" type="password" placeholder="Password" name="password" required><span class="hide" type="button" onclick="hidee()"><i class="fa fa-eye" aria-hidden="true"></i></span>
+                                <input id="name"  type="text" placeholder="Name" name="name" required>
+                                <input id="email"  type="text" placeholder="Email" name="email" required>
+                                <input id="input"  type="password" placeholder="Password" name="password" required><span class="hide" type="button" onclick="hidee()"><i class="fa fa-eye" aria-hidden="true"></i></span>
                                 <!--input id="password_confirmation" class="form-control chng" type="password" placeholder="Repeat Password" name="cpassword" required-->
                                 <div class="chck" >
                                     <input type="checkbox" value="none" id="checkbox_1" name="contact1"/>
                                     <label for="checkbox_1" class="checkbox"><span class="chk">I agree to the Term and Conditon</span></label>
                                 </div>  
-                                <input class="btn btn-default btn-register bu-chng" type="submit" value="Create account" name="commit" >
+                                <input  type="submit" value="Create account" name="commit" >
                             </form>
                         </div>
                     </div>
@@ -132,8 +210,8 @@
             </div>
             <div class="modal-footer">
                 <div class="forgot login-footer">
-                    <span style="float: left;"><a href="#">Forgot password?</a> </span>
-                    <span style="float: right;">Looking to
+                    <span class="left"><a href="#">Forgot password?</a> </span>
+                    <span class="right">Looking to
                     <a href="javascript: showRegisterForm();">create an account</a>
                     ?</span>
                 </div>

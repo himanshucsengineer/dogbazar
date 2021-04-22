@@ -144,6 +144,9 @@
     <li class="nav-item <?php echo ($parts == 'contactdata')?"active":""?>">
       <a class="nav-link " href="<?php echo base_url(); ?>admin/contactdata"><i class="fas fa-fw fa-table" ></i><span >Contact Data</span></a>
     </li>
+    <li class="nav-item <?php echo ($parts == 'donation')?"active":""?>">
+      <a class="nav-link " href="<?php echo base_url(); ?>admin/donation"><i class="fas fa-fw fa-table" ></i><span >Donate Data</span></a>
+    </li>
     
     <hr class="sidebar-divider">
 

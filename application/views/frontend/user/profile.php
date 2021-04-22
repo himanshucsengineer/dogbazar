@@ -1,3 +1,10 @@
+<?php 
+    $email = $_SESSION["email"];
+    $name =  $_SESSION["name"];
+    $add =  $_SESSION["add"];
+    $number =  $_SESSION["number"];
+?>
+
 <main>
 
 
@@ -6,7 +13,7 @@
             <div class="container">
                 <div class="row py-4">
                     <div class="col">
-                        <h1 class="title_strip_brown_h1">Hi, Anshul</h1>
+                        <h1 class="title_strip_brown_h1">Hi, <?php echo $name;?></h1>
                     </div>
                 </div>
             </div>
@@ -39,8 +46,9 @@
                                 <div class="spacer_s"></div>
                                 <ul>
                                     <li><a href="<?php echo base_url();?>profile">Profile</a></li>
+                                    <li><a href="<?php echo base_url();?>listmydog">List A Dog</a></li>
                                     <li><a href="<?php echo base_url();?>mydogs">My Dogs</a></li>
-                                    <li><a href="<?php echo base_url();?>listmydog">List My Dog</a></li>
+                                    
                                 </ul>
                                 <div class="spacer_s"></div>
                             </div>
@@ -52,12 +60,13 @@
 
                                 <h3>Profile Info</h3>
                                 <hr>
+                                <?php echo form_open(base_url( 'frontend/login/update_pro'), array('id'=>'updateprofileform','method'=>'POST'));?>
 
                                 <div class="row px-4">
                                     <div class="col-md-10">
                                         <div class="mb-3">
                                             <label for="" class="donate_input_lable pb-3">Name</label>
-                                            <input type="text" class="form-control base_input" name="donar_email"
+                                            <input type="text" class="form-control base_input" name="name"
                                                 id="exampleInputEmail1" aria-describedby="emailHelp"
                                                 placeholder="Enter Your Name" value="<?php echo $name;?>">
                                         </div>
@@ -68,51 +77,40 @@
                                     <div class="col-md-10">
                                         <div class="mb-3">
                                             <label for="" class="donate_input_lable pb-3">Email</label>
-                                            <input type="email" class="form-control base_input" name="donar_email"
+                                            <input type="email" class="form-control base_input" name="email"
                                                 id="exampleInputEmail1" aria-describedby="emailHelp"
                                                 placeholder="Enter Your Email" value="<?php echo $email?>">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row px-4">
-                                    <div class="col-md-8">
-                                        <div class="mb-3">
-                                            <label for="" class="donate_input_lable pb-3">Gender</label>
-                                            <div>
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                    id="flexRadioDefault1">
-                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                    <span class="donate_input_lable">Male</span>
-                                                </label>
-                                            </div>
-                                            <div>
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                    id="flexRadioDefault1">
-                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                    <span class="donate_input_lable">Female</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row px-4 mb-3">
                                     <div class="col-md-10">
                                         <div class="mb-3">
-                                            <label for="" class="donate_input_lable pb-3">Mobile Number</label>
-                                            <input type="email" class="form-control base_input" name="donar_email"
+                                            <label for="" class="donate_input_lable pb-3">Number</label>
+                                            <input type="number" class="form-control base_input" name="number"
                                                 id="exampleInputEmail1" aria-describedby="emailHelp"
-                                                placeholder="479658236">
+                                                placeholder="Enter Your Email" value="<?php echo $number?>">
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row px-4">
+                                    <div class="col-md-10">
+                                        <div class="mb-3">
+                                            <label for="" class="donate_input_lable pb-3">Address</label>
+                                            <textarea class="form-control base_input" name="add" id="" cols="30" rows="5"><?php echo $add?></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                
 
                                 <div class="row px-4">
                                     <div class="col">
-                                        <button class="btn brown_btn px-4">Edit</button>
+                                        <button class="btn brown_btn px-4">Update</button>
                                     </div>
                                 </div>
 
-
+                                <?php echo form_close(); ?> 
 
                             </div>
                         </div>
@@ -160,3 +158,37 @@
 
 
     </main>
+
+    <div class="modal" id="myModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <!-- Modal Header -->
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <span id="validation" class="form_errors"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+    <script>
+    $("#updateprofileform").submit(function(event){
+	event.preventDefault();
+	var post_url = $(this).attr("action"); 
+	var request_method = $(this).attr("method"); 
+	var form_data = $(this).serialize(); 
+	
+	$.ajax({
+		url : post_url,
+		type: request_method,
+		data : form_data,
+	}).done(function(response){ //
+        console.log(response);
+        $('#validation').html(response);
+        $('#myModal').modal('show').fadeIn('slow');
+        $("#updateprofileform").trigger("reset");
+	});
+});
+
+</script>

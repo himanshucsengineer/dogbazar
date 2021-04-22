@@ -136,7 +136,7 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col">
-                        <button class="adopt_me_btn">Lets Donate</button>
+                        <a href="<?php echo base_url();?>donate"><button class="adopt_me_btn">Lets Donate</button></a>
                     </div>
                 </div>
                 <div class="row">
