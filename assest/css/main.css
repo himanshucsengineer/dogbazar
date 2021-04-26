@@ -22,7 +22,7 @@ main {
 }
 
 .container {
-  max-width: 115rem !important;
+  max-width: 120rem !important;
 }
 
 .spacer {
@@ -39,6 +39,10 @@ main {
 
 .bod {
   border: 1px solid red;
+}
+
+ul {
+  margin-left: 1.2rem;
 }
 
 .base_input {
@@ -121,6 +125,12 @@ h3 {
 p {
   font-size: 1.7rem;
   padding: 0 !important;
+}
+
+.h1_head {
+  font-weight: 600;
+  font-size: 4rem;
+  color: #353535;
 }
 
 .topbar {
@@ -209,6 +219,23 @@ p {
 
 .handburger {
   display: none;
+}
+
+.breadcrumb {
+  padding: 2.6rem 0rem 0.6rem 0rem;
+  margin: 1rem;
+}
+
+.bc_link {
+  color: #d44444 !important;
+}
+
+.bc_link:hover {
+  color: #2666ef !important;
+}
+
+.bc_link_active {
+  color: #525252 !important;
 }
 
 .home_h2 {
@@ -355,6 +382,23 @@ p {
   background-color: #5caf43;
   color: #fff;
   font-size: 2rem;
+}
+
+.blog_date {
+  font-size: 1.4rem;
+}
+
+.blog_side_head {
+  font-size: 2.2rem !important;
+}
+
+.blog_sidetag {
+  font-size: 1.3rem;
+  color: #d44444 !important;
+}
+
+.blog_sidetitle {
+  font-weight: 600;
 }
 
 .adopt_input_search {
