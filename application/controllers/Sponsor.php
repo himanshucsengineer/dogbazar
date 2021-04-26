@@ -3,7 +3,7 @@
 require_once(APPPATH."libraries/razorpay/razorpay-php/Razorpay.php");
 use Razorpay\Api\Api;
 use Razorpay\Api\Errors\SignatureVerificationError;
-class Register extends CI_Controller {
+class Sponsor extends CI_Controller {
   public function __construct()
     {
         parent::__construct();
@@ -38,7 +38,7 @@ class Register extends CI_Controller {
     $razorpayOrderId = $razorpayOrder['id'];
     $_SESSION['razorpay_order_id'] = $razorpayOrderId;
     $data = $this->prepareData($amount,$razorpayOrderId);
-    $this->load->view('rezorpay',array('data' => $data));
+    $this->load->view('sponserpay',array('data' => $data));
   }
   /**
    * This function verifies the payment,after successful payment
@@ -70,20 +70,20 @@ class Register extends CI_Controller {
         'msg' =>$_SESSION['msg'],
         'amount' =>$_SESSION['payable_amount'],
       );
-       if($this->Donatemodel->insert_data($data) ){
+       if($this->Donatemodel->insert_spondor_data($data) ){
         $this->session->set_flashdata('success','Thank You For Your Donation'); 
-        redirect(base_url().'donate');
+        redirect(base_url().'sponsor-an-animal');
            
        }
        else{
           $this->session->set_flashdata('error','Error In submisstion'); 
-          redirect(base_url().'donate');
+          redirect(base_url().'sponsor-an-animal');
        }
       
     }
     else {
       $this->session->set_flashdata('error','Error In payment Method'); 
-      redirect(base_url().'donate');
+      redirect(base_url().'sponsor-an-animal');
     }
   }
   public function prepareData($amount,$razorpayOrderId)

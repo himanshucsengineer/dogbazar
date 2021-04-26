@@ -204,6 +204,18 @@
     <li class="nav-item <?php echo ($parts == 'donation')?"active":""?>">
       <a class="nav-link " href="<?php echo base_url(); ?>admin/donation"><i class="fas fa-fw fa-table" ></i><span >Donate Data</span></a>
     </li>
+
+    <li class="nav-item <?php echo ($parts == 'sponsoranimal')?"active":""?>">
+      <a class="nav-link " href="<?php echo base_url(); ?>admin/sponsoranimal"><i class="fas fa-fw fa-table" ></i><span >Sponsor animal Data</span></a>
+    </li>
+
+    <li class="nav-item <?php echo ($parts == 'giftgiving')?"active":""?>">
+      <a class="nav-link " href="<?php echo base_url(); ?>admin/giftgiving"><i class="fas fa-fw fa-table" ></i><span >Gift Giving Data</span></a>
+    </li>
+
+    <li class="nav-item <?php echo ($parts == 'petmemorial')?"active":""?>">
+      <a class="nav-link " href="<?php echo base_url(); ?>admin/petmemorial"><i class="fas fa-fw fa-table" ></i><span >Pet memorial Data</span></a>
+    </li>
     
     <hr class="sidebar-divider">
 

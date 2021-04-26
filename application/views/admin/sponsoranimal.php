@@ -104,7 +104,7 @@ a.edit {
 
     <div id="deletePurchaseModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-    <?php echo form_open(base_url('admin/donation/deletedonationdetail'), array('method'=>'post'));?>
+    <?php echo form_open(base_url('admin/sponsoranimal/delete_sponsor_detail'), array('method'=>'post'));?>
     <div class="modal-content">
     <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">�</button>
@@ -131,7 +131,7 @@ a.edit {
 <script>
   $(document).ready(function() {
     $('#lowinventory').DataTable( {
-        "ajax": "<?php echo base_url(); ?>admin/donation/addinventory_api"
+        "ajax": "<?php echo base_url(); ?>admin/sponsoranimal/addinventory_api"
     } );
 
 

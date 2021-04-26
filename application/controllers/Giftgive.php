@@ -3,7 +3,7 @@
 require_once(APPPATH."libraries/razorpay/razorpay-php/Razorpay.php");
 use Razorpay\Api\Api;
 use Razorpay\Api\Errors\SignatureVerificationError;
-class Register extends CI_Controller {
+class Giftgive extends CI_Controller {
   public function __construct()
     {
         parent::__construct();
@@ -27,6 +27,7 @@ class Register extends CI_Controller {
     $_SESSION['email']=$this->input->post('email');
     $_SESSION['mob']=$this->input->post('mob');
     $_SESSION['msg']=$this->input->post('msg');
+    $_SESSION['gift']=$this->input->post('gift');
     $_SESSION['payable_amount'] = $this->input->post('amount');
     $razorpayOrder = $api->order->create(array(
       'receipt'         => rand(),
@@ -38,7 +39,7 @@ class Register extends CI_Controller {
     $razorpayOrderId = $razorpayOrder['id'];
     $_SESSION['razorpay_order_id'] = $razorpayOrderId;
     $data = $this->prepareData($amount,$razorpayOrderId);
-    $this->load->view('rezorpay',array('data' => $data));
+    $this->load->view('giftgivepay',array('data' => $data));
   }
   /**
    * This function verifies the payment,after successful payment
@@ -68,22 +69,23 @@ class Register extends CI_Controller {
           'email' => $_SESSION['email'],
         'number' => $_SESSION['mob'],
         'msg' =>$_SESSION['msg'],
+        'gift' =>$_SESSION['gift'],
         'amount' =>$_SESSION['payable_amount'],
       );
-       if($this->Donatemodel->insert_data($data) ){
+       if($this->Donatemodel->insert_gift_data($data) ){
         $this->session->set_flashdata('success','Thank You For Your Donation'); 
-        redirect(base_url().'donate');
+        redirect(base_url().'gift-giving');
            
        }
        else{
           $this->session->set_flashdata('error','Error In submisstion'); 
-          redirect(base_url().'donate');
+          redirect(base_url().'gift-giving');
        }
       
     }
     else {
       $this->session->set_flashdata('error','Error In payment Method'); 
-      redirect(base_url().'donate');
+      redirect(base_url().'gift-giving');
     }
   }
   public function prepareData($amount,$razorpayOrderId)

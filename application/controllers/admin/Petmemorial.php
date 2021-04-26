@@ -1,5 +1,5 @@
 <?php
-    class Donation extends CI_controller{
+    class Petmemorial extends CI_controller{
 
         public function __construct()
         {
@@ -17,7 +17,7 @@
             $this->load->view('admin/template/header');
             $this->load->view('admin/template/sidebar');
             $this->load->view('admin/template/topbar');
-            $this->load->view('admin/Donation');
+            $this->load->view('admin/petmemorial');
             $this->load->view('admin/template/footer');
         }
         
@@ -25,7 +25,7 @@
        
         public function addinventory_api(){
 
-            $getPurchaseData = $this->Donationmodel->fetchinventory_api();
+            $getPurchaseData = $this->Donationmodel->fetch_pet_memorial_data();
     
     
             foreach ($getPurchaseData as $key => $value) { 
@@ -41,30 +41,30 @@
             
            
             
-           public function deletedonationdetail(){ 
+           public function deletepetmemodetail(){ 
     
                     if($this->input->post('deletesliderId'))
                 {
                   $this->form_validation->set_rules('deletesliderId','text','required');
                   if($this->form_validation->run() == true)
                   {
-                    $getDeleteStatus = $this->Donationmodel->deletedonationdata($this->input->post('deletesliderId'));
+                    $getDeleteStatus = $this->Donationmodel->delete_pet_memo_data($this->input->post('deletesliderId'));
                     if($getDeleteStatus['message'] == 'yes')
                     {
                       $this->session->set_flashdata('success','Gallery  deleted successfully');
-                      redirect(base_url()."admin/donation");
+                      redirect(base_url()."admin/petmemorial");
                     }
                     else
                     {
                       $this->session->set_flashdata('error','Something went wrong. Please try again');
-                    redirect(base_url()."admin/donation");
+                    redirect(base_url()."admin/petmemorial");
                       
                     }
                   }
                   else
                   {
                     $this->session->set_flashdata('error','Something went wrong. Please try again');
-                    redirect(base_url()."admin/donation");
+                    redirect(base_url()."admin/petmemorial");
     
                   }
                 }
