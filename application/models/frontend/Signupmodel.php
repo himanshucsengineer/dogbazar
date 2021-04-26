@@ -2,28 +2,20 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Signupmodel extends CI_Model {
-    function signup($email,$name,$password,$number,$link){
-        
+    function signup($email,$name,$password){
         $data = array(
-            
-            
-                        'pass' => $password,
-                        'number' => $number,
-                        'pa_link' => $link,
-                        'name' => $name,
-                       
-                        'email' => $email,
-                    );
-        
-        
-        return  $this->db->insert('referandearn',$data);
+            'pass' => $password,
+            'name' => $name,
+            'email' => $email,
+        );
+        return  $this->db->insert('user',$data);
     }
     
     
     function fetchModeldata(){
         $response = array();
         $this->db->select('*');
-        $q = $this->db->get('referandearn');
+        $q = $this->db->get('user');
         $response = $q->result_array();
         return $response;
     }
@@ -33,12 +25,12 @@ class Signupmodel extends CI_Model {
                        'name' =>$name,
                        'email' => $email,
                        'number' => $number,
-                       'upi' => $addrs,
+                       'address' => $addrs,
                    );
                    
        $this->db->set($data);
        $this->db->where('email',$email);
-        $this->db->update('referandearn',$data);
+        $this->db->update('user',$data);
    }
 
 

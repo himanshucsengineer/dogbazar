@@ -50,22 +50,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'home';
-
-
-$route['listmydog'] = 'frontend/listmydog';
-$route['adopt'] = 'frontend/adopt';
-$route['adoptpet'] = 'frontend/adoptpet';
-$route['donate'] = 'frontend/donate';
-$route['franchies'] = 'frontend/franchies';
-$route['mydogs'] = 'frontend/mydogs';
-$route['profile'] = 'frontend/profile';
-$route['about-us'] = 'frontend/about';
-$route['contact-us'] = 'frontend/contact';
-$route['volunteer'] = 'frontend/volunteer';
 $route['logout'] = 'frontend/logout';
 
+$route['listmydog'] = 'frontend/user/listmydog';
+$route['adopt'] = 'frontend/adopt';
+$route['adoptpet'] = 'frontend/adoptpet';
+
+$route['franchies'] = 'frontend/franchies';
+$route['news'] = 'frontend/news';
+$route['mydogs'] = 'frontend/user/mydogs';
+$route['profile'] = 'frontend/user/profile';
+$route['about-us'] = 'frontend/about';
+$route['petcare'] = 'frontend/petcare/petcare';
+$route['contact-us'] = 'frontend/contact';
+$route['volunteer'] = 'frontend/volunteer';
+
+/* ways to give */
+$route['donate'] = 'frontend/waystogive/donate';
+$route['pet-memorial'] = 'frontend/waystogive/petmemorial';
+$route['gift-giving'] = 'frontend/waystogive/giftgiving';
+$route['other-ways-to-give'] = 'frontend/waystogive/otherways';
+$route['sponsor-an-animal'] = 'frontend/waystogive/sponsor';
+/* end */
+
+
+
 $route['default_controller/login'] = 'login';
-// $route['car-insurance'] = 'frontend/carinsurance';
-//$route['default_controller/welcome'] = 'admin/welcome';
- $route['404_override'] = '';
+$route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

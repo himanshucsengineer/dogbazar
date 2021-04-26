@@ -115,22 +115,79 @@
     
     <li class="nav-item <?php echo ($parts == 'campaign')?"active":""?>">
       <a class="nav-link " href="<?php echo base_url(); ?>admin/campaign"><i class="fas fa-fw fa-table" ></i><span >Campaign</span></a>
-    </li>
+    </li-->
   
    <li class="nav-item ">
       <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePagesss" aria-expanded="true" aria-controls="collapsePages">
         <i class="fas fa-fw fa-folder" ></i>
-        <span >Explore</span>
+        <span >Training</span>
       </a>
       <div id="collapsePagesss" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
         <div class="py-2 collapse-inner rounded">
-          <a class="collapse-item " href="<?php echo base_url(); ?>admin/explore" style="font-size:1.3rem; ">New Post</a>
-          <a class="collapse-item " href="<?php echo base_url(); ?>admin/exploreall" style="font-size:1.3rem; ">All Post</a>
-          
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/dogcare/training/newpost" style="font-size:1.3rem; ">Training New Post</a>
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/dogcare/training/allpost" style="font-size:1.3rem; ">Training All Post</a>
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/dogcare/training/category" style="font-size:1.3rem; ">Training Category</a>
           <div class="collapse-divider"></div>
         </div>
       </div>
-    </li-->
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+        <i class="fas fa-fw fa-folder" ></i>
+        <span >Nutrition</span>
+      </a>
+      <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div class="py-2 collapse-inner rounded">
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/dogcare/nutrition/newpost" style="font-size:1.3rem; ">Nutrition New Post</a>
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/dogcare/nutrition/allpost" style="font-size:1.3rem; ">Nutrition All Post</a>
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/dogcare/nutrition/category" style="font-size:1.3rem; ">Nutrition Category</a>
+          <div class="collapse-divider"></div>
+        </div>
+      </div>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#grooming" aria-expanded="true" aria-controls="collapsePages">
+        <i class="fas fa-fw fa-folder" ></i>
+        <span >Dog Grooming</span>
+      </a>
+      <div id="grooming" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div class="py-2 collapse-inner rounded">
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/dogcare/grooming/newpost" style="font-size:1.3rem; ">Dog Grooming New Post</a>
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/dogcare/grooming/allpost" style="font-size:1.3rem; ">Dog Grooming All Post</a>
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/dogcare/grooming/category" style="font-size:1.3rem; ">Dog Grooming Category</a>
+          <div class="collapse-divider"></div>
+        </div>
+      </div>
+    </li>
+
+    <li class="nav-item ">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Problems" aria-expanded="true" aria-controls="collapsePages">
+        <i class="fas fa-fw fa-folder" ></i>
+        <span >Problems</span>
+      </a>
+      <div id="Problems" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div class="py-2 collapse-inner rounded">
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/dogcare/problems/newpost" style="font-size:1.3rem; ">Problems New Post</a>
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/dogcare/problems/allpost" style="font-size:1.3rem; ">Problems All Post</a>
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/dogcare/problems/category" style="font-size:1.3rem; ">Problems Category</a>
+          <div class="collapse-divider"></div>
+        </div>
+      </div>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#petcare" aria-expanded="true" aria-controls="collapsePages">
+        <i class="fas fa-fw fa-folder" ></i>
+        <span >Pet Care video</span>
+      </a>
+      <div id="petcare" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div class="py-2 collapse-inner rounded">
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/dogcare/petcare/newpost" style="font-size:1.3rem; ">Petcare New Post</a>
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/dogcare/petcare/allpost" style="font-size:1.3rem; ">Petcare All Post</a>
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/dogcare/petcare/category" style="font-size:1.3rem; ">Petcare Category</a>
+          <div class="collapse-divider"></div>
+        </div>
+      </div>
+    </li>
     
   
     <!-- Divider -->
@@ -143,6 +200,21 @@
     </li>
     <li class="nav-item <?php echo ($parts == 'contactdata')?"active":""?>">
       <a class="nav-link " href="<?php echo base_url(); ?>admin/contactdata"><i class="fas fa-fw fa-table" ></i><span >Contact Data</span></a>
+    </li>
+    <li class="nav-item <?php echo ($parts == 'donation')?"active":""?>">
+      <a class="nav-link " href="<?php echo base_url(); ?>admin/donation"><i class="fas fa-fw fa-table" ></i><span >Donate Data</span></a>
+    </li>
+
+    <li class="nav-item <?php echo ($parts == 'sponsoranimal')?"active":""?>">
+      <a class="nav-link " href="<?php echo base_url(); ?>admin/sponsoranimal"><i class="fas fa-fw fa-table" ></i><span >Sponsor animal Data</span></a>
+    </li>
+
+    <li class="nav-item <?php echo ($parts == 'giftgiving')?"active":""?>">
+      <a class="nav-link " href="<?php echo base_url(); ?>admin/giftgiving"><i class="fas fa-fw fa-table" ></i><span >Gift Giving Data</span></a>
+    </li>
+
+    <li class="nav-item <?php echo ($parts == 'petmemorial')?"active":""?>">
+      <a class="nav-link " href="<?php echo base_url(); ?>admin/petmemorial"><i class="fas fa-fw fa-table" ></i><span >Pet memorial Data</span></a>
     </li>
     
     <hr class="sidebar-divider">
