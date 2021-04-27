@@ -220,6 +220,36 @@
         </div>
       </div>
     </li>
+
+    <li class="nav-item ">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#getting" aria-expanded="true" aria-controls="collapsePages">
+        <i class="fas fa-fw fa-folder" ></i>
+        <span >Getting a Dog</span>
+      </a>
+      <div id="getting" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div class="py-2 collapse-inner rounded">
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/dogcare/getting/newpost" style="font-size:1.3rem; "> New Post</a>
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/dogcare/getting/allpost" style="font-size:1.3rem; "> All Post</a>
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/dogcare/getting/category" style="font-size:1.3rem; ">Category</a>
+          <div class="collapse-divider"></div>
+        </div>
+      </div>
+    </li>
+
+    <li class="nav-item ">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#news" aria-expanded="true" aria-controls="collapsePages">
+        <i class="fas fa-fw fa-folder" ></i>
+        <span >News and Events</span>
+      </a>
+      <div id="news" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div class="py-2 collapse-inner rounded">
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/news/newpost" style="font-size:1.3rem; "> New Post</a>
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/news/allpost" style="font-size:1.3rem; "> All Post</a>
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/news/category" style="font-size:1.3rem; ">Category</a>
+          <div class="collapse-divider"></div>
+        </div>
+      </div>
+    </li>
   
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
