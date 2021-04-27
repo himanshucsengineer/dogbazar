@@ -114,16 +114,17 @@
                     <label>upload new Image</label>
                     <input name="images" id="fileupload" type="file" >
                     <p>Update Featured Image</p>
+                    <input class="hidden" name="id" type="text" value="<?php echo $value['id'];?>">
                 </div> 
                 
                  
-                <div class="box">
+                <!--div class="box">
                     <label>Meta Tags</label>
                     <textarea name="tags"  required><?php echo $value['tag'];?></textarea>
-                    <input class="hidden" name="id" type="text" value="<?php echo $value['id'];?>">
+                    
                     <p>Separate tags with commas</p>
                     
-                </div> 
+                </div--> 
                   
             </div>    
         </div>
@@ -134,7 +135,7 @@
                 
                 
         
-        <div class="box">
+        <!--div class="box">
             <label>Meta Title</label>
                 <input name="mtitle" type="text" placeholder="Enter Meta Title" value="<?php echo $value['mt_title'];?>">
                 
@@ -144,7 +145,7 @@
                 
                 <label>Meta Keywords</label>
                 <input name="mkey" type="text" placeholder="Enter Meta Keywords" value="<?php echo $value['m_key'];?>">
-        </div> 
+        </div--> 
         <?php }}?>
             </form>
     </div>

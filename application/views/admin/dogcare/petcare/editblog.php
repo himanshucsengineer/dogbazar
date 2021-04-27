@@ -108,24 +108,25 @@
                     <button name="formSubmit">Update</button>
                 </div>
                 <div class="box">
-                    <label>Featured Image</label>
+                    <label>Featured Video</label>
                     <video width="100%" height="auto" controls>
                         <source src="<?php echo $value['image'];?>" type="video/mp4">
-                        </video>
+                    </video>
                     <p>Your Featured Video</p>
                     <label>upload new video</label>
                     <input name="images" id="fileupload" type="file" >
-                    <p>Update Featured Image</p>
+                    <p>Update Featured Video</p>
+                    <input class="hidden" name="id" type="text" value="<?php echo $value['id'];?>">
                 </div> 
                 
                  
-                <div class="box">
+                <!--div class="box">
                     <label>Meta Tags</label>
                     <textarea name="tags"  required><?php echo $value['tag'];?></textarea>
-                    <input class="hidden" name="id" type="text" value="<?php echo $value['id'];?>">
+                    
                     <p>Separate tags with commas</p>
                     
-                </div> 
+                </div--> 
                   
             </div>    
         </div>
@@ -136,7 +137,7 @@
                 
                 
         
-        <div class="box">
+        <!--div class="box">
             <label>Meta Title</label>
                 <input name="mtitle" type="text" placeholder="Enter Meta Title" value="<?php echo $value['mt_title'];?>">
                 
@@ -146,7 +147,7 @@
                 
                 <label>Meta Keywords</label>
                 <input name="mkey" type="text" placeholder="Enter Meta Keywords" value="<?php echo $value['m_key'];?>">
-        </div> 
+        </div--> 
         <?php }}?>
             </form>
     </div>
@@ -160,7 +161,7 @@
 $(function () {
     $("#fileupload").change(function () {
         $("#dvPreview").html("");
-        var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.png)$/;
+        var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.mp4)$/;
         if (regex.test($(this).val().toLowerCase())) {
             if ($.browser.msie && parseFloat(jQuery.browser.version) <= 9.0) {
                 $("#dvPreview").show();

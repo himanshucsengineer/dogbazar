@@ -72,13 +72,16 @@ $route['problems'] = 'frontend/dogcare/problems/problems';
 $route['petcare'] = 'frontend/dogcare/petcare/petcare';
 $route['training'] = 'frontend/dogcare/training/training';
 $route['breed'] = 'frontend/dogcare/breed/breed';
-
+$route['givingup'] = 'frontend/dogcare/givingup/givingup';
+$route['behave'] = 'frontend/dogcare/behave/behave';
 
 $route['nutrition/(:any)'] = 'frontend/dogcare/nutrition/postview/index/$1';
 $route['grooming/(:any)'] = 'frontend/dogcare/grooming/postview/index/$1';
 $route['problems/(:any)'] = 'frontend/dogcare/problems/postview/index/$1';
 $route['petcare/(:any)'] = 'frontend/dogcare/petcare/postview/index/$1';
 $route['training/(:any)'] = 'frontend/dogcare/training/postview/index/$1';
+$route['givingup/(:any)'] = 'frontend/dogcare/givingup/postview/index/$1';
+$route['behave/(:any)'] = 'frontend/dogcare/behave/postview/index/$1';
 /* end */
 
 /* ways to give */

@@ -17,18 +17,16 @@ class Allpostmodel extends CI_Model {
     return $query->result();
 }
    
-   function update_pro($head,$content,$tag,$id,$link,$imageurl,$mtitle,$mdesc,$mkey){
+   function update_pro($head,$content,$id,$link,$imageurl){
       
          $data = array(
                         'head' =>$head,
                         'link' => $link,
                         'content' => $content,
-                        'tag' => $tag,
+                       
                         'id' => $id,
                         'image' => $imageurl,
-                        'mt_title' => $mtitle,
-                        'm_desc' => $mdesc,
-                        'm_key' => $mkey
+                        
                     );
                     
         $this->db->set($data);

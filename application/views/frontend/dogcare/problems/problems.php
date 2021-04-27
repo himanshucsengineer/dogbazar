@@ -109,7 +109,7 @@
         <div class="col-md-9">
             <div class="petcare_main">
                 <div class="petcare_head">
-                    <h2>Training</h2>
+                    <h2>Problems</h2>
                 </div> 
                 <h4>The key to a good dog is a well-trained dog. When you train together, an unspoken language builds between you through words, hand signals, whistles and other methods. Test your training skills.</h4>   
                 <div class="flex">

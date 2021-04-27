@@ -107,17 +107,17 @@
                 </div> 
                  
                  
-                <div class="box">
+                <!--div class="box">
                     <label>Meta Tags</label>
                     <textarea name="tags" required></textarea>
                     <p>Separate tags with commas</p>
-                </div>
+                </div-->
             </div>    
         </div>
         
         
         
-        <div class="box">
+        <!--div class="box">
             <label>Meta Title</label>
                 <input name="mtitle" type="text" placeholder="Enter Meta Title">
                 
@@ -127,7 +127,7 @@
                 
                 <label>Meta Keywords</label>
                 <input name="mkey" type="text" placeholder="Enter Meta Keywords">
-        </div>   
+        </div-->   
         </form>
     </div>
 </div>

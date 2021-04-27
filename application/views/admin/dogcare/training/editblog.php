@@ -114,9 +114,10 @@
                     <label>upload new Image</label>
                     <input name="images" id="fileupload" type="file" >
                     <p>Update Featured Image</p>
+                    <input class="hidden" name="id" type="text" value="<?php echo $value['id'];?>">
                 </div> 
                 
-                <input class="hidden" name="id" type="text" value="<?php echo $value['id'];?>">
+                
                 <!--div class="box">
                     <label>Meta Tags</label>
                     <textarea name="tags"  required><?php echo $value['tag'];?></textarea>

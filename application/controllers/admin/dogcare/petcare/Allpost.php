@@ -30,7 +30,7 @@
 
             foreach ($getPurchaseData as $key => $value) { 
            
-                $arrya_json[] = array($value['id'],$value['head'],'<a href="'.$value['image'].'" target="_blank">View Video</a>',$value['cate'],$value['tag'],$value['date'],'<a href="'.base_url().'admin/dogcare/petcare/editpost?id='.$value['id'].'"    >Edit</a>',
+                $arrya_json[] = array($value['id'],$value['head'],'<a href="'.$value['image'].'" target="_blank">View Video</a>',$value['cate'],$value['date'],'<a href="'.base_url().'admin/dogcare/petcare/editpost?id='.$value['id'].'"    >Edit</a>',
                '<a class="delete_sliders" data-id="'.$value['id'].'"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a>' );
                 }
                  echo json_encode(array('data'=>$arrya_json));

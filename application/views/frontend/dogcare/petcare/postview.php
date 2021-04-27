@@ -1,3 +1,9 @@
+<style>
+    .blog_img{
+        width: 100%;
+    }
+</style>    
+
 <div class="spacer_m"></div>
 
 
@@ -35,13 +41,12 @@
                         <!-- End Blog Heading -->
 
                         <!-- Featured Image Section -->
-                        <div class="blog_img">
-                        <iframe width="420" height="315"
-src="https://www.youtube.com/embed/tgbNymZ7vqY">
-</iframe>
-                            <iframe  width="440" height="372" src="https://www.youtube.com/watch?v=Oido0SZRRNY"></iframe>
+                     
+                            <video class="blog_img" controls>
+                                <source src="<?php echo @$blog->image;?>" type="video/mp4">
+                            </video>
                             <?php echo @$blog->tag?>
-                        </div>
+                  
                         <!-- End Featured Image Section -->
                         <div class="spacer_s"></div>
 
@@ -66,7 +71,10 @@ src="https://www.youtube.com/embed/tgbNymZ7vqY">
                         <a href="<?php echo base_url() . "petcare/" . @$rel->link ?>" class="nodecoration">
                             <div class="row mb-3">
                                 <div class="col-4 py-3">
-                                    <img src="<?php echo @$rel->image?>" alt="" class="w-100">
+                                    <video  class="w-100">
+                                        <source src="<?php echo @$blog->image;?>" type="video/mp4">
+                                    </video>
+                                    
                                 </div>
                                 <div class="col-8">
                                     <p class="m-0"><span class="blog_sidetag"><?php echo @$rel->cate?></span></p>
@@ -89,7 +97,9 @@ src="https://www.youtube.com/embed/tgbNymZ7vqY">
                         <a href="<?php echo base_url() . "petcare/" . @$recent->link ?>" class="nodecoration">
                             <div class="row mb-3">
                                 <div class="col-4 py-3">
-                                    <img src="<?php echo @$recent->image ?>" alt="" class="w-100">
+                                <video  class="w-100">
+                                        <source src="<?php echo @$blog->image;?>" type="video/mp4">
+                                    </video>
                                 </div>
                                 <div class="col-8">
                                     <p class="m-0"><span class="blog_sidetag"><?php echo @$recent->cate ?></span></p>

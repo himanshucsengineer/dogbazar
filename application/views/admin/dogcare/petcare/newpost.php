@@ -107,11 +107,11 @@
                 </div> 
                  
                  
-                <div class="box">
+                <!--div class="box">
                     <label>Video Link</label>
                     <input type="text" required placeholder="Enter youtube video link" name="tag">
                   
-                </div>
+                </div-->
             </div>    
         </div>
         
@@ -140,7 +140,7 @@
 $(function () {
     $("#fileupload").change(function () {
         $("#dvPreview").html("");
-        var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.png)$/;
+        var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.mp4)$/;
         if (regex.test($(this).val().toLowerCase())) {
             if ($.browser.msie && parseFloat(jQuery.browser.version) <= 9.0) {
                 $("#dvPreview").show();

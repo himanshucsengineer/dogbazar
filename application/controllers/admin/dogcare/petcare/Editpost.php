@@ -31,11 +31,11 @@
             $this->form_validation->set_rules('heading', 'Name', 'required');
             $this->form_validation->set_rules('link', 'Email', 'required');
             $this->form_validation->set_rules('content', 'Number', 'required');
-            $this->form_validation->set_rules('tags', 'Address', 'required');
-            $this->form_validation->set_rules('mtitle', 'Meta Title', 'required');
-            $this->form_validation->set_rules('mdesc', 'Meta Description', 'required');
+           // $this->form_validation->set_rules('tags', 'Address', 'required');
+           //// $this->form_validation->set_rules('mtitle', 'Meta Title', 'required');
+           // $this->form_validation->set_rules('mdesc', 'Meta Description', 'required');
             $this->form_validation->set_rules('id', 'Id', 'required');
-            $this->form_validation->set_rules('mkey', 'Meta Keyword', 'required');
+           // $this->form_validation->set_rules('mkey', 'Meta Keyword', 'required');
             if ($this->form_validation->run()){ 
                 
                 if (!empty($_FILES['images']['name'])){
@@ -43,7 +43,7 @@
                     $config['upload_path'] = APPPATH . '../upload/dogcare/petcare';
                     $config['file_name'] = $File_name;
                     $config['overwrite'] = TRUE;
-                    $config["allowed_types"] = 'wmv|mp4|avi|mov|gif';
+                    $config["allowed_types"] = 'mp4';
                     $config["max_size"] = '';
                     $this->load->library('upload', $config);
                     if(!$this->upload->do_upload('images')) {
@@ -69,13 +69,13 @@
                $head = $this->input->post('heading');
                         $link = $this->input->post('link');
                         $content = $this->input->post('content');
-                        $tag = $this->input->post('tags');
+                      //  $tag = $this->input->post('tags');
                         $id = $this->input->post('id');
-                        $mtitle = $this->input->post('mtitle');
-                        $mdesc = $this->input->post('mdesc');
-                        $mkey = $this->input->post('mkey');
+                       // $mtitle = $this->input->post('mtitle');
+                       // $mdesc = $this->input->post('mdesc');
+                       // $mkey = $this->input->post('mkey');
                 
-                    if($this->Allpostmodel->update_pro($head,$content,$tag,$id,$link,$imageurl,$mtitle,$mdesc,$mkey)){
+                    if($this->Allpostmodel->update_pro($head,$content,$id,$link,$imageurl)){
                         
                         
                         

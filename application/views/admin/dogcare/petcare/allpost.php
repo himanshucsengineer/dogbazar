@@ -46,7 +46,7 @@
                     <th>Title</th>
                     <th>Fetured video</th>
                     <th>Category</th>
-                    <th>Tags</th>
+                 
                     <th>Date</th>
                     <th>Edit</th>
                     

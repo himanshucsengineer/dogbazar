@@ -55,7 +55,7 @@
         margin-left: 1rem;
         margin-right: 1rem;
     }
-    .petcare .petcare_main .flex .card img{ 
+    .petcare .petcare_main .flex .card img,video{ 
         width: 100%;
         margin-bottom: 1rem;
     }
@@ -116,9 +116,12 @@
                     <?php foreach($blogs as $value) {?>
                         
                     <div class="card">
+                        
                     <a href="<?php echo base_url() . "petcare/" . $value['link'] ?>">
                         <div class="inner_card">
-                        <img src="<?php echo $value['image'];?>">
+                        <video >
+                            <source src="<?php echo $value['image'];?>" type="video/mp4">
+                        </video>
                         <div class="inner_text">
                             <h5><?php echo $value['cate'];?></h5>
                             <h3><?php echo $value['head'];?></h3>
