@@ -1,35 +1,34 @@
 <?php
-if(!isset($_SESSION["email"]))
-{
-    $button='<li><a data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();" class="">Login / Signup</a></li>  ';
-}
-else{
-  $button='<li class="nav-item dropdown">
+if (!isset($_SESSION["email"])) {
+    $button = '<li><a data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();" class="">Login / Signup</a></li>  ';
+} else {
+    $button = '<li class="nav-item dropdown">
                 <a class=" dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            '.$_SESSION["name"].'
+            ' . $_SESSION["name"] . '
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <a class="" href="'.base_url().'profile"><button>Dashboard</button></a>
-                <a class="" href="'.base_url().'logout"><button>Logout</button></a>
+                <a class="" href="' . base_url() . 'profile"><button>Dashboard</button></a>
+                <a class="" href="' . base_url() . 'logout"><button>Logout</button></a>
                
             </div>
         </li>
   
   
   
-'; 
+';
 }
 ?>
 <style>
-    .dropdown-menu{
+    .dropdown-menu {
         width: 100%;
         height: auto;
         border: 1px solid #cdcdcd;
         border-radius: 0px !important;
-        padding-top: 0px  !important;
+        padding-top: 0px !important;
         padding-bottom: 0px !important;
     }
-    .dropdown-menu button{
+
+    .dropdown-menu button {
         width: 100%;
         height: auto;
         padding-top: .8rem;
@@ -39,6 +38,7 @@ else{
         border-bottom: 1px solid #cdcdcd;
     }
 </style>
+
 <body>
 
     <!-- Components -->
@@ -56,7 +56,7 @@ else{
                         <li><a href="<?php echo base_url(); ?>news">News & Events</a></li>
                         <li><a href="<?php echo base_url(); ?>contact-us">Contact</a></li>
                         <li><a href="<?php echo base_url(); ?>about-us">About</a></li>
-                        <?php echo $button;?>
+                        <?php echo $button; ?>
                     </ul>
                 </div>
                 <div class="col-2 text-center handburger">
@@ -102,13 +102,3 @@ else{
         </div>
 
     </header>
-
-    
-
-
-
-
-
-
-
-    

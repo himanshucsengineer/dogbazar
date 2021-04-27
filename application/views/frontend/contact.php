@@ -1,25 +1,29 @@
 <style>
-  .con .flex{
+  .con .flex {
     width: 100%;
     height: auto;
     display: flex;
     margin-bottom: 2rem;
   }
-  .con .flex .left{
+
+  .con .flex .left {
     width: 15%;
     height: auto;
-    
+
   }
-  .con .flex .left .fa{
+
+  .con .flex .left .fa {
     font-size: 35px;
     color: #d44444;
   }
-  .con .flex .right{
+
+  .con .flex .right {
     width: 85%;
     height: auto;
     margin-top: -1rem;
   }
-  .con .flex .right h1{
+
+  .con .flex .right h1 {
     color: #d44444;
     font-weight: 600;
   }
@@ -68,7 +72,7 @@
                 </div>
               </div>
             </div>
-          
+
             <div class="row px-4 mb-3">
               <div class="col">
                 <div class="mb-3">
@@ -133,16 +137,16 @@
 
 </main>
 <div class="modal" id="myModal">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                
-                  <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <span id="validation" class="form_errors"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <span id="validation" class="form_errors"></span>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <!--style>

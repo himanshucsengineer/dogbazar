@@ -73,5 +73,4 @@ class Donationmodel extends CI_Model
       return array('message' => 'no');
     }
   }
-
 }

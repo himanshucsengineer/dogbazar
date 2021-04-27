@@ -15,7 +15,7 @@ class Getting extends CI_controller
         $this->load->view('frontend/template/header');
         $this->load->view('frontend/template/navbar');
 
-        $this->load->view('frontend/dogcare/getting/behave',$data);
+        $this->load->view('frontend/dogcare/getting/behave', $data);
         $this->load->view('frontend/template/footer');
     }
 }

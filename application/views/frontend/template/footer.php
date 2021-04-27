@@ -151,7 +151,8 @@
         width: 85%;
         height: auto;
     }
-    .hide{
+
+    .hide {
         float: right;
         position: absolute;
         margin-top: .7rem !important;

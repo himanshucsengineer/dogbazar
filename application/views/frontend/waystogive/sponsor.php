@@ -1,11 +1,16 @@
 <style>
-    .test-class{
+    .test-class {
         width: 100%;
         height: auto;
         padding-top: 4rem;
         padding-bottom: 4rem;
     }
-    .test-class input[type="email"], input[type="text"], input[type="number"], select , textarea{
+
+    .test-class input[type="email"],
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea {
         width: 100%;
         height: auto;
         padding-top: .5rem;
@@ -15,7 +20,8 @@
         outline: none;
         margin-bottom: 1rem;
     }
-    .test-class button{
+
+    .test-class button {
         width: 15rem;
         height: auto;
         padding-top: .5rem;
@@ -29,15 +35,15 @@
 <div class="test-class">
     <div class="row justify-content-center">
         <div class="col-md-6">
-        <?php
-                    if ($this->session->flashdata('success')) {
-                        echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
-                    } else if ($this->session->flashdata('error')) {
-                        echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
-                    }
+            <?php
+            if ($this->session->flashdata('success')) {
+                echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
+            } else if ($this->session->flashdata('error')) {
+                echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
+            }
 
 
-                    ?>
+            ?>
             <form action="<?php echo base_url() ?>sponsor/pay" method="post">
                 <input type="text" name="name" placeholder="enter your name">
                 <input type="email" name="email" placeholder="enter your email">

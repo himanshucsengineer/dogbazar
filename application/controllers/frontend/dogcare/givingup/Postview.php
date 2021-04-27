@@ -12,13 +12,13 @@ class Postview extends CI_controller
     {
 
         $data['blog'] = $this->Allpostmodel->blog_detail($slug);
-        $data['recents']=$this->db->limit(5)->order_by('id','DESC')->get('givingup_newpost')->result();
-        $data['releted']=$this->db->where('cate', $data['blog']->cate)->limit(5)->order_by('id','DESC')->get('givingup_newpost')->result();
-        
+        $data['recents'] = $this->db->limit(5)->order_by('id', 'DESC')->get('givingup_newpost')->result();
+        $data['releted'] = $this->db->where('cate', $data['blog']->cate)->limit(5)->order_by('id', 'DESC')->get('givingup_newpost')->result();
+
         $this->load->view('frontend/template/header');
         $this->load->view('frontend/template/navbar');
 
-        $this->load->view('frontend/dogcare/givingup/postview',$data);
+        $this->load->view('frontend/dogcare/givingup/postview', $data);
         $this->load->view('frontend/template/footer');
     }
 }

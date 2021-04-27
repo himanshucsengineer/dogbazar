@@ -15,7 +15,7 @@ class Problems extends CI_controller
         $this->load->view('frontend/template/header');
         $this->load->view('frontend/template/navbar');
 
-        $this->load->view('frontend/dogcare/problems/problems',$data);
+        $this->load->view('frontend/dogcare/problems/problems', $data);
         $this->load->view('frontend/template/footer');
     }
 }
