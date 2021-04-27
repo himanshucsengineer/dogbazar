@@ -61,9 +61,25 @@ $route['news'] = 'frontend/news';
 $route['mydogs'] = 'frontend/user/mydogs';
 $route['profile'] = 'frontend/user/profile';
 $route['about-us'] = 'frontend/about';
-$route['petcare'] = 'frontend/petcare/petcare';
+
 $route['contact-us'] = 'frontend/contact';
 $route['volunteer'] = 'frontend/volunteer';
+
+/* dog care */
+$route['nutrition'] = 'frontend/dogcare/nutrition/nutrition';
+$route['grooming'] = 'frontend/dogcare/grooming/grooming';
+$route['problems'] = 'frontend/dogcare/problems/problems';
+$route['petcare'] = 'frontend/dogcare/petcare/petcare';
+$route['training'] = 'frontend/dogcare/training/training';
+$route['breed'] = 'frontend/dogcare/breed/breed';
+
+
+$route['nutrition/(:any)'] = 'frontend/dogcare/nutrition/postview/index/$1';
+$route['grooming/(:any)'] = 'frontend/dogcare/grooming/postview/index/$1';
+$route['problems/(:any)'] = 'frontend/dogcare/problems/postview/index/$1';
+$route['petcare/(:any)'] = 'frontend/dogcare/petcare/postview/index/$1';
+$route['training/(:any)'] = 'frontend/dogcare/training/postview/index/$1';
+/* end */
 
 /* ways to give */
 $route['donate'] = 'frontend/waystogive/donate';

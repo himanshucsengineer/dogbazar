@@ -51,13 +51,13 @@
            
            $datas = array(
                 'head' => $this->input->post('heading'),
-                 'mt_title' => $this->input->post('mtitle'),
-                 'm_desc' => $this->input->post('mdesc'),
-                 'm_key' => $this->input->post('mkey'),
+                // 'mt_title' => $this->input->post('mtitle'),
+                // 'm_desc' => $this->input->post('mdesc'),
+                // 'm_key' => $this->input->post('mkey'),
                 'content' => $this->input->post('content'),
                 'cate' => $this->input->post('category'),
                 'link' => $this->input->post('link'),
-                'tag' => $this->input->post('tags'),
+                //'tag' => $this->input->post('tags'),
                 
                 'image' =>$imageurl,
         );

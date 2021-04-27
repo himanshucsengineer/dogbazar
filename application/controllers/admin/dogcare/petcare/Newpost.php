@@ -32,7 +32,7 @@
                     $config['upload_path'] = APPPATH . '../upload/dogcare/petcare';
                     $config['file_name'] = $File_name;
                     $config['overwrite'] = TRUE;
-                    $config["allowed_types"] = 'wmv|mp4|avi|mov|gif';
+                    $config["allowed_types"] = 'jpg|png|jpeg';
                     $config["max_size"] = '';
                     $this->load->library('upload', $config);
                     if(!$this->upload->do_upload('images')) {
@@ -51,13 +51,13 @@
            
            $datas = array(
                 'head' => $this->input->post('heading'),
-                 'mt_title' => $this->input->post('mtitle'),
-                 'm_desc' => $this->input->post('mdesc'),
-                 'm_key' => $this->input->post('mkey'),
+                 //'mt_title' => $this->input->post('mtitle'),
+                // 'm_desc' => $this->input->post('mdesc'),
+               //  'm_key' => $this->input->post('mkey'),
                 'content' => $this->input->post('content'),
                 'cate' => $this->input->post('category'),
                 'link' => $this->input->post('link'),
-                'tag' => $this->input->post('tags'),
+                'tag' => $this->input->post('tag'),
                 
                 'image' =>$imageurl,
         );

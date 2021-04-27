@@ -160,7 +160,7 @@
 $(function () {
     $("#fileupload").change(function () {
         $("#dvPreview").html("");
-        var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.wmv|.mp4|.avi|.mov|.gif)$/;
+        var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.png)$/;
         if (regex.test($(this).val().toLowerCase())) {
             if ($.browser.msie && parseFloat(jQuery.browser.version) <= 9.0) {
                 $("#dvPreview").show();

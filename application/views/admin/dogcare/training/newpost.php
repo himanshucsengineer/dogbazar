@@ -86,7 +86,7 @@
                 <div class="box">
                     <label>Post Link</label>
                     <input name="link" type="text" placeholder="Enter Post name">
-                    <p>Genrate Your Own Post Link</p>
+                    <p>Genrate Your Own Post Link(please do not give space between two words use - for the space)</p>
                 </div>
                 <div class="box">
                     <label>Select Category</label>
@@ -107,17 +107,17 @@
                 </div> 
                  
                  
-                <div class="box">
+                <!--div class="box">
                     <label>Meta Tags</label>
                     <textarea name="tags" required></textarea>
                     <p>Separate tags with commas</p>
-                </div>
+                </div-->
             </div>    
         </div>
         
         
         
-        <div class="box">
+        <!--div class="box">
             <label>Meta Title</label>
                 <input name="mtitle" type="text" placeholder="Enter Meta Title">
                 
@@ -127,7 +127,7 @@
                 
                 <label>Meta Keywords</label>
                 <input name="mkey" type="text" placeholder="Enter Meta Keywords">
-        </div>   
+        </div-->   
         </form>
     </div>
 </div>

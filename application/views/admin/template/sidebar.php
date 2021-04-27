@@ -189,6 +189,37 @@
       </div>
     </li>
     
+
+    <li class="nav-item ">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#behave" aria-expanded="true" aria-controls="collapsePages">
+        <i class="fas fa-fw fa-folder" ></i>
+        <span >Behaviour</span>
+      </a>
+      <div id="behave" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div class="py-2 collapse-inner rounded">
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/dogcare/behave/newpost" style="font-size:1.3rem; ">behave New Post</a>
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/dogcare/behave/allpost" style="font-size:1.3rem; ">behave All Post</a>
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/dogcare/behave/category" style="font-size:1.3rem; ">behave Category</a>
+          <div class="collapse-divider"></div>
+        </div>
+      </div>
+    </li>
+
+
+    <li class="nav-item ">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#givingup" aria-expanded="true" aria-controls="collapsePages">
+        <i class="fas fa-fw fa-folder" ></i>
+        <span >Giving Up Your Dog</span>
+      </a>
+      <div id="givingup" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div class="py-2 collapse-inner rounded">
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/dogcare/givingup/newpost" style="font-size:1.3rem; "> New Post</a>
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/dogcare/givingup/allpost" style="font-size:1.3rem; "> All Post</a>
+          <a class="collapse-item " href="<?php echo base_url(); ?>admin/dogcare/givingup/category" style="font-size:1.3rem; ">Category</a>
+          <div class="collapse-divider"></div>
+        </div>
+      </div>
+    </li>
   
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">

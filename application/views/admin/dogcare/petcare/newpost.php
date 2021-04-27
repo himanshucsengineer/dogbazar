@@ -108,16 +108,16 @@
                  
                  
                 <div class="box">
-                    <label>Meta Tags</label>
-                    <textarea name="tags" required></textarea>
-                    <p>Separate tags with commas</p>
+                    <label>Video Link</label>
+                    <input type="text" required placeholder="Enter youtube video link" name="tag">
+                  
                 </div>
             </div>    
         </div>
         
         
         
-        <div class="box">
+        <!--div class="box">
             <label>Meta Title</label>
                 <input name="mtitle" type="text" placeholder="Enter Meta Title">
                 
@@ -127,7 +127,7 @@
                 
                 <label>Meta Keywords</label>
                 <input name="mkey" type="text" placeholder="Enter Meta Keywords">
-        </div>   
+        </div-->   
         </form>
     </div>
 </div>
@@ -140,7 +140,7 @@
 $(function () {
     $("#fileupload").change(function () {
         $("#dvPreview").html("");
-        var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.wmv|.mp4|.avi|.mov|.gif)$/;
+        var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.png)$/;
         if (regex.test($(this).val().toLowerCase())) {
             if ($.browser.msie && parseFloat(jQuery.browser.version) <= 9.0) {
                 $("#dvPreview").show();
