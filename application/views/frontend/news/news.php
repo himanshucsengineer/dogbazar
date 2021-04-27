@@ -1,25 +1,4 @@
 <main>
-
-
-    <!-- Title Strip  -->
-    <!-- <div class="title_strip_yellow">
-    <div class="container">
-        <div class="row py-4">
-            <div class="col">
-                <h1 class="title_strip_yellow_h1">Adopt a pet</h1>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="">
-    <div class="container">
-        <div class="row">
-            <div class="col-2 title_strip_yellow_ul"></div>
-        </div>
-    </div>
-</div> -->
-    <!-- End Title Strip -->
-
     <div class="spacer_m"></div>
 
     <!-- Main Content -->
@@ -59,7 +38,7 @@
                                 <a href="" class="nande_link">
                                     <div class="row">
                                         <div class="col-6">
-                                            <img src="../images/img1.jpg" alt="" class="nande_img_sub">
+                                            <img src="<?php echo base_url() ?>assest/images/img1.jpg" alt="" class="nande_img_sub">
                                         </div>
                                         <div class="col-6">
                                             <p><span>ANIMAL</span></p>
@@ -72,7 +51,7 @@
                                 <a href="" class="nande_link">
                                     <div class="row">
                                         <div class="col-6">
-                                            <img src="../images/img2.jpg" alt="" class="nande_img_sub">
+                                            <img src="<?php echo base_url() ?>assest/images/img2.jpg" alt="" class="nande_img_sub">
                                         </div>
                                         <div class="col-6">
                                             <p><span>PETS</span></p>
@@ -85,7 +64,7 @@
                                 <a href="" class="nande_link">
                                     <div class="row">
                                         <div class="col-6">
-                                            <img src="../images/img3.jpg" alt="" class="nande_img_sub">
+                                            <img src="<?php echo base_url() ?>assest/images/img3.jpg" alt="" class="nande_img_sub">
                                         </div>
                                         <div class="col-6">
                                             <p><span>BIRDS</span></p>
@@ -107,7 +86,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <div>
-                                            <img src="../images/img3.jpg" alt="" class="nande_img_main">
+                                            <img src="<?php echo base_url() ?>assest/images/img3.jpg" alt="" class="nande_img_main">
                                         </div>
                                     </div>
                                 </div>

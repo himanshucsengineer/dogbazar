@@ -8,8 +8,13 @@ class Listmydogmodel extends CI_Model
 
         return  $this->db->insert('listdog', $data);
     }
-    public function fetch_dogs($id)
+    public function fetch_adopt_all()
     {
-        return  $this->db->where('email', $id)->get('listdog')->result_array();
+        return  $this->db->get('listdog')->result_array();
     }
+    public function blog_detail($slug = '')
+  {
+    return $this->db->where('link', $slug)->get('listdog')->row();
+  }
+
 }

@@ -13,7 +13,7 @@ class News extends CI_controller
         $this->load->view('frontend/template/header');
         $this->load->view('frontend/template/navbar');
 
-        $this->load->view('frontend/news');
+        $this->load->view('frontend/news/news');
         $this->load->view('frontend/template/footer');
     }
 }

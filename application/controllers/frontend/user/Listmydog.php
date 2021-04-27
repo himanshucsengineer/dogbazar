@@ -85,7 +85,7 @@ class Listmydog extends CI_controller
                 'condition' => $this->input->post('condition'),
                 'msg' => $this->input->post('msg'),
                 'city' => $this->input->post('city'),
-                'image' => $imageurl,
+                'image' => $imageurl, 
                 'link' => $new_url
             );
             if ($this->Listmydogmodel->insert_data($data)) {

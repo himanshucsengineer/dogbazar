@@ -1,8 +1,14 @@
+<style>
+    .adoptpetimage{
+        width: 100%;
+    }
+</style>    
+
 <main>
 
 
     <!-- Title Strip  -->
-    <div class="title_strip_brown">
+    <!--div class="title_strip_brown">
         <div class="container">
             <div class="row py-4">
                 <div class="col">
@@ -11,7 +17,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div-->
     <!-- <div class="">
     <div class="container">
         <div class="row">
@@ -31,14 +37,14 @@
                 <!--  Left Side Content -->
                 <div class="col-md-9 pxy-1 ">
                     <div class="py-3">
-                        <h2>Rocky, German Shepherd for Adoption, Delhi</h2>
+                        <h2><?php echo @$list->breed ?>, <?php echo @$list->city ?></h2>
                     </div>
 
                     <div class="row mb-4">
                         <div class="col-md-10 p-2 about_pet bod">
                             <div class="row ">
                                 <div class="col">
-                                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                    <!--div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                         <div class="carousel-inner">
                                             <div class="carousel-item active">
                                                 <img src="<?php echo base_url() ?>assest/images/img1.jpg" class="d-block w-100" alt="...">
@@ -48,7 +54,7 @@
                                             </div>
                                             <!-- <div class="carousel-item">
                                             <img src="./images/testimg2.jpg" class="d-block w-100" alt="...">
-                                        </div> -->
+                                        </div> >
                                         </div>
                                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -58,7 +64,8 @@
                                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                             <span class="sr-only">Next</span>
                                         </a>
-                                    </div>
+                                    </div-->
+                                    <img class="adoptpetimage" src="<?php echo @$list->image ?>" alt="test">
                                 </div>
                             </div>
 
@@ -70,7 +77,7 @@
 
                     <div class="row mb-1">
                         <div class="col">
-                            <h3>More About Mike</h3>
+                            <h3>More About Pet</h3>
                         </div>
                     </div>
 
@@ -79,19 +86,12 @@
                             <div class="row">
                                 <div class="col-6">
                                     <ul>
-                                        <li><span class="about_pet_point_li">Breed :</span> Persian</li>
-                                        <li><span class="about_pet_point_li">Color :</span> Persian</li>
-                                        <li><span class="about_pet_point_li">Age :</span> Persian</li>
+                                        <li><span class="about_pet_point_li">Breed :</span> <?php echo @$list->breed ?></li>
+                                        <li><span class="about_pet_point_li">Sex :</span> <?php echo @$list->gender ?></li>
+                                        <li><span class="about_pet_point_li">Age :</span> <?php echo @$list->age ?></li>
                                     </ul>
                                 </div>
-                                <div class="col-6">
-                                    <ul>
-                                        <li><span class="about_pet_point_li">Sex :</span> Persian</li>
-                                        <li><span class="about_pet_point_li">Hair :</span> Persian</li>
-                                        <li><span class="about_pet_point_li">Status :</span> Available</li>
-
-                                    </ul>
-                                </div>
+                               
                             </div>
 
 
@@ -100,11 +100,8 @@
 
                     <div class="row mb-3">
                         <div class="col">
-                            <h3>Info :</h3>
-                            <p>German Shepherd boy Rocky was abandoned by unknown persons somewhere in Delhi, and
-                                brought at the Sanjay Gandhi animal shelter Raja Garden, New Delhi. He has wounds on
-                                both his front paws, which are healing. Rocky is extremely friendly and gentle, and
-                                other than the wounds, he has no medical issues. </p>
+                            <h3>Info : </h3>
+                            <p><?php echo @$list->msg ?> </p>
                         </div>
                     </div>
 

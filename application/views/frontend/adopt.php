@@ -77,86 +77,26 @@
                     <div class="row px-4">
                         <div class="col">
                             <div class="row">
+                                <?php foreach($adopt as $value){?>
                                 <div class="col-md-4 mb-5 px-3">
-                                    <a href="" class="nodecoration">
+                                    <a href="<?php echo base_url() . "adopt/" . $value['link'] ?>" class="nodecoration">
                                         <div class="petinfo_card">
 
-                                            <img src="<?php echo base_url() ?>assest/images/testimg1.png" alt="" class="petinfo_card_img">
+                                            <img src="<?php echo $value['image'] ?>" alt="" class="petinfo_card_img">
 
-                                            <h3>Breed: &nbsp; <span class="petinfo_card_status">Xyz</span></h3>
-                                            <p>Gender: &nbsp; <span class="petinfo_card_status">Male</span></p>
-                                            <p>Age: &nbsp; <span class="petinfo_card_status">1 year</span></p>
+                                            <h3>Breed: &nbsp; <span class="petinfo_card_status"><?php echo $value['breed'] ?></span></h3>
+                                            <p>Gender: &nbsp; <span class="petinfo_card_status"><?php echo $value['gender'] ?></span></p>
+                                            <p>Age: &nbsp; <span class="petinfo_card_status"><?php echo $value['age'] ?></span></p>
 
-                                            <p>Location: Ram Nagar, Jaipur, Rajasthan</p>
+                                            <p><?php echo $value['city'] ?></p>
 
                                         </div>
                                     </a>
                                 </div>
+                                <?php }?>
+                           
 
-                                <div class="col-md-4 mb-5 px-3">
-                                    <a href="" class="nodecoration">
-                                        <div class="petinfo_card">
-
-                                            <img src="<?php echo base_url() ?>assest/images/testimg1.png" alt="" class="petinfo_card_img">
-
-                                            <h3>Mike</h3>
-                                            <p>Status: &nbsp; <span class="petinfo_card_status">Available</span></p>
-                                            <p>Female, Child</p>
-
-                                            <p>Ram Nagar, Jaipur, Rajasthan</p>
-
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="col-md-4 mb-5 px-3">
-                                    <a href="" class="nodecoration">
-                                        <div class="petinfo_card">
-
-                                            <img src="<?php echo base_url() ?>assest/images/testimg1.png" alt="" class="petinfo_card_img">
-
-                                            <h3>Mike</h3>
-                                            <p>Status: &nbsp; <span class="petinfo_card_status">Available</span></p>
-                                            <p>Female, Child</p>
-
-                                            <p>Ram Nagar, Jaipur, Rajasthan</p>
-
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="col-md-4 mb-5 px-3">
-                                    <a href="" class="nodecoration">
-                                        <div class="petinfo_card">
-
-                                            <img src="<?php echo base_url() ?>assest/images/testimg1.png" alt="" class="petinfo_card_img">
-
-                                            <h3>Mike</h3>
-                                            <p>Status: &nbsp; <span class="petinfo_card_status">Available</span></p>
-                                            <p>Female, Child</p>
-
-                                            <p>Ram Nagar, Jaipur, Rajasthan</p>
-
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="col-md-4 mb-5 px-3">
-                                    <a href="" class="nodecoration">
-                                        <div class="petinfo_card">
-
-                                            <img src="<?php echo base_url() ?>assest/images/testimg1.png" alt="" class="petinfo_card_img">
-
-                                            <h3>Mike</h3>
-
-                                            <p>Status: &nbsp; <span class="petinfo_card_status">Available</span></p>
-                                            <p>Female, Child</p>
-
-                                            <p>Ram Nagar, Jaipur, Rajasthan</p>
-
-                                        </div>
-                                    </a>
-                                </div>
+                                
 
 
 

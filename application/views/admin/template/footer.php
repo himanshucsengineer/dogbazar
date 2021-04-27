@@ -1,6 +1,6 @@
 <style>
     .footer {
-        position: relative !important;
+        position: inherit !important;
         width: 100% !important;
     }
 </style>
@@ -8,9 +8,9 @@
 <footer class="footer text-center " style="padding-bottom:20px;">
 
     <hr style="border:1px solid black;">
-    © 2018. All rights reserved.
+    <p style="text-align: center;">© 2018. All rights reserved.</p>
 
-    <p style="color:rgba(197, 190, 190, 0.61);">
+    <p style="color:rgba(197, 190, 190, 0.61); text-align:center;">
         POWERED BY <a target="_blank" href="https://www.eniacoder.com/" style="text-decoration:none; color:rgba(197, 190, 190, 0.61);">Eniacoder</a></p>
 </footer>
 
