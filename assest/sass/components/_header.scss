@@ -98,3 +98,44 @@
 .handburger {
   display: none;
 }
+
+// header_2
+.header_2 {
+  padding: 2rem 0rem;
+}
+
+.header_btn {
+  min-width: 10rem;
+  background-color: $dbrown;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #fff !important;
+  padding: 1rem 1.3rem;
+  margin-left: 1rem;
+}
+
+.header_2_nav {
+  background-color: $dbrown;
+}
+
+.head_top {
+  margin-bottom: 2.5rem;
+}
+
+.head_nav_links {
+  list-style-type: none;
+  color: #fff;
+  min-width: 12rem;
+  padding: 1.3rem;
+  transition: all 0.2s ease;
+}
+
+.head_nav_links:hover {
+  background-color: rgb(180, 33, 33);
+}
+
+.nav_links {
+  min-width: 10rem;
+  list-style-type: none;
+  color: #fff;
+}
