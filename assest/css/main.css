@@ -467,27 +467,63 @@ p {
   padding: 1.2rem;
 }
 
-.tranning_about {
+.breed_about {
   background-color: #fdf9f9;
   padding: 5rem 0rem;
 }
 
-.tranning_section_left {
+.breed_section_left {
   padding: 3rem 4rem;
 }
 
-.tranning_section_left h2 {
+.breed_section_left h2 {
   color: #d44444;
   font-weight: 700;
   font-size: 3.5rem;
 }
 
-.tranning_section_left p {
+.breed_section_left p {
   color: #5f5a5a;
 }
 
-.tranning_section_right {
+.breed_section_right {
   padding: 5rem 0rem;
+}
+
+.tranning_side_links {
+  list-style-type: none;
+  padding: 0.8rem 0rem;
+  border-bottom: 2px solid #eee;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding-left: 1.3rem;
+  margin-bottom: 0.6rem;
+  transition: all 0.2s ease;
+}
+
+.tranning_side_links:hover {
+  color: #d44444;
+}
+
+.tranning_page_head {
+  background-color: #d44444;
+  color: #fff;
+  padding: 1.8rem 2.6rem;
+  border-radius: 3px;
+}
+
+.tranning_card img {
+  height: 20rem;
+}
+
+.tranning_card_p {
+  font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .m_hide {
+    display: none;
+  }
 }
 
 ul {
