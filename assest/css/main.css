@@ -263,6 +263,12 @@ p {
   margin-bottom: 2.5rem;
 }
 
+.btn_remove {
+  background-color: #d44444;
+  border: none;
+  color: #fff;
+}
+
 .head_nav_links {
   list-style-type: none;
   color: #fff;

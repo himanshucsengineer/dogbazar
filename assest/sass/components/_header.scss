@@ -122,6 +122,16 @@
   margin-bottom: 2.5rem;
 }
 
+.btn_remove {
+  background-color: $dbrown;
+  border: none;
+  color: #fff;
+}
+
+// .btn_remove:hover {
+//   background-color: rgb(180, 33, 33);
+// }
+
 .head_nav_links {
   list-style-type: none;
   color: #fff;

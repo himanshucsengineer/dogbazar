@@ -129,9 +129,11 @@
                             <a href="" class="nodecoration">
                                 <li class="head_nav_links text-center">Contact</li>
                             </a>
-                            <a href="" class="nodecoration">
-                                <li class="head_nav_links text-center">Ways to Give</li>
-                            </a>
+
+                            <li class="head_nav_links text-center">Pet Care
+                               
+                            </li>
+
                             <a href="" class="nodecoration">
                                 <li class="head_nav_links text-center">Dog Care</li>
                             </a>
@@ -154,7 +156,16 @@
 
     <main>
 
-
+        <div class="dropdown">
+            <button type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown button
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
 
 
     </main>
@@ -227,6 +238,11 @@
 
 
     <script>
+
+        var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+        var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+            return new bootstrap.Dropdown(dropdownToggleEl)
+        })
 
         var hb = document.querySelector('#hb');
         var mobhead = document.querySelector('#mobhead');
