@@ -198,7 +198,7 @@ p {
 
 .h_nav_links li {
   list-style-type: none;
-  padding: 0rem 1.5rem;
+  padding: 0rem 3rem;
 }
 
 .h_nav_links li a {
@@ -447,6 +447,47 @@ p {
 
 .petinfo_card_img {
   width: 100%;
+}
+
+.detail_heads {
+  color: #d44444;
+  font-size: 2rem;
+  font-weight: 600;
+  padding-right: 1.3rem;
+}
+
+.detail_heads_hgl {
+  font-weight: 600;
+  color: #2450ad;
+}
+
+.bq_hg {
+  background-color: #d44444;
+  color: #fff;
+  padding: 1.2rem;
+}
+
+.tranning_about {
+  background-color: #fdf9f9;
+  padding: 5rem 0rem;
+}
+
+.tranning_section_left {
+  padding: 3rem 4rem;
+}
+
+.tranning_section_left h2 {
+  color: #d44444;
+  font-weight: 700;
+  font-size: 3.5rem;
+}
+
+.tranning_section_left p {
+  color: #5f5a5a;
+}
+
+.tranning_section_right {
+  padding: 5rem 0rem;
 }
 
 ul {
