@@ -39,12 +39,15 @@ class Volunteer extends CI_controller
             );
 
             if ($this->Volunteermodel->insert_data($data)) {
-                echo "<h6 class='text-success text-center'>Your data have been submitted</h6>";
+                $this->session->set_flashdata('success', 'Your data have been submitted');
+                redirect(base_url() . "volunteer");
             } else {
-                echo "<h6 class='text-danger text-center'>Error In Submission</h6>";
+                $this->session->set_flashdata('error', 'Error In Submission');
+                redirect(base_url() . "volunteer");
             }
         } else {
-            echo "<h6 class='text-danger text-center'>Please Fill All The Fields</h6>";
+            $this->session->set_flashdata('error', 'Please Fill All The Fields');
+            redirect(base_url() . "volunteer");
         }
     }
 }

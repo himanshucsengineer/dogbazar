@@ -1,148 +1,108 @@
-<style>
-    .petcare {
-        width: 100%;
-        height: auto;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-    }
-
-    .petcare button {
-        width: 100%;
-        height: auto;
-        padding-top: .8rem;
-        padding-bottom: .8rem;
-        outline: none;
-        border: none;
-        border-bottom: 2px solid #cdcdcd;
-    }
-
-    .petcare .petcare_main {
-        width: 100%;
-        height: auto;
-        padding-left: 2rem;
-
-    }
-
-    .petcare .petcare_main .petcare_head {
-        width: 100%;
-        height: auto;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        background-color: #d44444;
-        border-radius: 6px;
-        padding-left: 2rem;
-        margin-bottom: 2rem;
-    }
-
-    .petcare .petcare_main .petcare_head h2 {
-        color: white;
-        text-transform: uppercase;
-    }
-
-    .petcare .petcare_main .flex {
-        width: 100%;
-        height: auto;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .petcare .petcare_main .flex .card {
-        width: 33.33%;
-        height: auto;
-        border: none !important;
-        padding: 1rem;
-    }
-
-    .petcare .petcare_main .flex .card .inner_card {
-        border: 1px solid #cdcdcd;
-    }
-
-    .petcare .petcare_main .flex .card .inner_card .inner_text {
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-
-    .petcare .petcare_main .flex .card img {
-        width: 100%;
-        margin-bottom: 1rem;
-    }
-
-    .petcare .navi {
-        width: 100%;
-        height: auto;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-    }
-
-    .petcare .box {
-        width: 100%;
-        height: auto;
-        border: 1px solid #cdcdcd;
-        background-color: white;
-    }
-
-    .petcare .box button {
-        width: 100%;
-        height: auto;
-        padding-top: .5rem;
-        padding-bottom: .5rem;
-        padding-left: 1.5rem;
-        color: #575757;
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid #cdcdcd;
-        outline: none;
-        text-align: left;
-        font-weight: 600;
-        transition: .5s;
-        font-size: 1.7rem;
-    }
-
-    .petcare .box button:hover {
-        color: #d44444;
-        border-bottom: 1px solid #d44444;
-    }
-</style>
-<div class="petcare">
+<div class="breadcrumb">
     <div class="container">
-        <p class="navi">Home/ Behaviour</p>
         <div class="row">
-            <div class="col-md-3">
-                <div class="box">
-                    <button>Behaviour</button>
-                    <button>Training</button>
-                    <button>Giving Up Your Dog</button>
-                    <button>Getting A Dog</button>
-                </div>
-            </div>
-            <div class="col-md-9">
-                <div class="petcare_main">
-                    <div class="petcare_head">
-                        <h2>Giving Up Your Dog</h2>
-                    </div>
-                    <h4>The key to a good dog is a well-trained dog. When you train together, an unspoken language builds between you through words, hand signals, whistles and other methods. Test your training skills.</h4>
-                    <div class="flex">
-                        <?php foreach ($blogs as $value) { ?>
-
-                            <div class="card">
-                                <a href="<?php echo base_url() . "givingup/" . $value['link'] ?>">
-                                    <div class="inner_card">
-                                        <img src="<?php echo $value['image']; ?>">
-                                        <div class="inner_text">
-                                            <h5><?php echo $value['cate']; ?></h5>
-                                            <h3><?php echo $value['head']; ?></h3>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                        <?php } ?>
-
-                    </div>
-                </div>
+            <div class="col">
+                <p><a href="<?php echo base_url() ?>" class="nodecoration bc_link">Home</a> /
+                    <a href="<?php echo base_url() ?>givingup" class=" nodecoration bc_link bc_link_active">Giving Up Your Dog</a>
+                </p>
             </div>
         </div>
     </div>
 </div>
+<!-- End BreadCrumb -->
+
+
+
+<main>
+
+    <div class="container">
+        <div class="row justify-content-between ">
+            <div class="col-md-3 px-5 m_hide">
+                <div class="row">
+                    <div class="col">
+                        <h3>Giving Up Your Dog</h3>
+                    </div>
+                </div>
+
+                <div class="space"></div>
+
+                <div class="row">
+                    <div class="col">
+                        <ul class="p-0 m-0">
+                            <a href="<?php echo base_url()?>behave" class="nodecoration">
+                                <li class="tranning_side_links">Behaviour</li>
+                            </a>
+                            
+                            <a href="<?php echo base_url()?>training" class="nodecoration">
+                                <li class="tranning_side_links">Training</li>
+                            </a>
+                            <a href="<?php echo base_url()?>givingup" class="nodecoration">
+                                <li class="tranning_side_links">Giving Up Your Dog</li>
+                            </a>
+                            <a href="<?php echo base_url()?>getting" class="nodecoration">
+                                <li class="tranning_side_links">Getting A Dog</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-9 px-4">
+
+                <div class="row">
+                    <div class="col">
+                        <div class="tranning_page_head">
+                            <h2 class="h2_head">Giving Up Your Dog</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spacer_s"></div>
+                <div class="row px-4">
+                    <div class="col">
+                        <p>looking Scarlett Johansson once. As a matter of fact, this got us thinking. About burgers
+                            and the
+                            ways people love eating them. Found in every part of the world and a favorite among
+                            various age
+                            groups from freckled teenagers to the wiser generation, </p>
+
+                        <p>looking Scarlett Johansson once. As a matter of fact, this got us thinking. About burgers
+                            and the
+                            ways people love eating them. Found in every part of the world and a favorite among
+                            various age
+                            groups from freckled teenagers to the wiser generation, </p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-12">
+                        <div class="row px-4">
+                            <?php foreach ($blogs as $value) { ?>
+                                <div class="col-md-4 py-2">
+                                    <div class="pet_blog_box tranning_card">
+                                        <a href="<?php echo base_url() . "givingup/" . $value['link'] ?>">
+                                            <div class="py-2">
+                                                <img src="<?php echo $value['image']; ?>" alt="">
+                                            </div>
+                                            <div class="px-3">
+                                                <p class="m-0"><span class="blog_sidetag"><?php echo $value['cate']; ?></span></p>
+                                                <p class="m-0"><span class="blog_sidetitle tranning_card_p"><?php echo $value['head']; ?></span>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            <?php } ?>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="spacer_m"></div>
+
+</main>

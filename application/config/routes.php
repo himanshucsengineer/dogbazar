@@ -14,9 +14,10 @@ $route['news'] = 'frontend/news/news';
 $route['mydogs'] = 'frontend/user/mydogs';
 $route['profile'] = 'frontend/user/profile';
 $route['about-us'] = 'frontend/about';
-
+$route['adoptpet/adoption/(:any)'] = 'frontend/adoptionform/index/$1';
 $route['contact-us'] = 'frontend/contact';
 $route['volunteer'] = 'frontend/volunteer';
+$route['privacy-policy'] = 'frontend/privacy';
 
 /* dog care */
 $route['nutrition'] = 'frontend/dogcare/nutrition/nutrition';
@@ -29,6 +30,7 @@ $route['givingup'] = 'frontend/dogcare/givingup/givingup';
 $route['behave'] = 'frontend/dogcare/behave/behave';
 $route['getting'] = 'frontend/dogcare/getting/getting';
 
+
 $route['nutrition/(:any)'] = 'frontend/dogcare/nutrition/postview/index/$1';
 $route['grooming/(:any)'] = 'frontend/dogcare/grooming/postview/index/$1';
 $route['problems/(:any)'] = 'frontend/dogcare/problems/postview/index/$1';
@@ -37,6 +39,7 @@ $route['training/(:any)'] = 'frontend/dogcare/training/postview/index/$1';
 $route['givingup/(:any)'] = 'frontend/dogcare/givingup/postview/index/$1';
 $route['behave/(:any)'] = 'frontend/dogcare/behave/postview/index/$1';
 $route['getting/(:any)'] = 'frontend/dogcare/getting/postview/index/$1';
+$route['breed/(:any)'] = 'frontend/dogcare/breed/postview/index/$1';
 /* end */
 
 /* ways to give */

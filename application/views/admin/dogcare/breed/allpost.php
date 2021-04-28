@@ -31,7 +31,7 @@
         <h3>All Post</h3>
       </div>
       <div class="col-md-6">
-        <a href="<?php echo base_url(); ?>admin/dogcare/grooming/newpost"><button class="ad">+</button></a>
+        <a href="<?php echo base_url(); ?>admin/dogcare/breed/newpost"><button class="ad">+</button></a>
       </div>
     </div>
 
@@ -45,10 +45,13 @@
             <thead>
               <tr>
                 <th>ID</th>
-                <th>Title</th>
+                <th>Breed Name</th>
                 <th>Fetured Image</th>
-                <th>Category</th>
-                <th>Tags</th>
+                <th>Temporant</th>
+                <th>Height</th>
+                <th>Weight</th>
+                <th>Life Experiance</th>
+                <th>Group</th>
                 <th>Date</th>
                 <th>Edit</th>
 
@@ -73,7 +76,7 @@
 
 <div id="deletePurchaseModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <?php echo form_open(base_url('admin/dogcare/grooming/allpost/deletepost'), array('method' => 'post')); ?>
+    <?php echo form_open(base_url('admin/dogcare/breed/allpost/deletepost'), array('method' => 'post')); ?>
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">�</button>
@@ -100,7 +103,7 @@
 <script>
   $(document).ready(function() {
     $('#lowinventory').DataTable({
-      "ajax": "<?php echo base_url(); ?>admin/dogcare/grooming/allpost/addinventory_api"
+      "ajax": "<?php echo base_url(); ?>admin/dogcare/breed/allpost/addinventory_api"
     });
 
 
