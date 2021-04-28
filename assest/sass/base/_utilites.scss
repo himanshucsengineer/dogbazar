@@ -4,7 +4,7 @@
 
 //Margin
 
-.col_fff{
+.col_fff {
   color: #fff !important;
 }
 
@@ -22,7 +22,7 @@
   border: 1px solid red;
 }
 
-ul{
+ul {
   margin-left: 1.2rem;
 }
 
@@ -85,4 +85,8 @@ ul{
 .nospacing {
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+
+.modal_head {
+  color: $dbrown;
 }

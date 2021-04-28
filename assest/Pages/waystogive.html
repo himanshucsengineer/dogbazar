@@ -216,7 +216,7 @@
                     </div>
 
                     <div class="spacer_m"></div>
-                    <a href="" class="nodecoration">
+                    <a href="" class="nodecoration" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                         <div class="row">
                             <div class="col-md-3 py-4">
                                 <img src="../images/img1.jpg" alt="" class="w-100">
@@ -231,6 +231,95 @@
                             </div>
                         </div>
                     </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Lets Bring The Smile</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="px-3 py-3">
+                            <h2 class="modal_head">Give Your Donation Like Pro</h2>
+                            <p>looking Scarlett Johansson once. As a matter of fact, this got us thinking. About burgers
+                                and the. </p>
+                        </div>
+
+
+                        <div class="row mb-3 px-4">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <!-- <label for="" class="donate_input_lable pb-3"></label> -->
+                                            <input type="text" class="form-control base_input donar_input_pay"
+                                                name="donar_amount" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                placeholder="Enter Your Amount">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <!-- <label for="" class="donate_input_lable pb-3">Full Name</label> -->
+                                            <input type="text" class="form-control base_input" id="exampleInputEmail1"
+                                                name="donar_first_name" aria-describedby="emailHelp"
+                                                placeholder="Your Name">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <!-- <label for="" class="donate_input_lable pb-3">Enter Your Email</label> -->
+                                            <input type="email" class="form-control base_input" name="donar_email"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                placeholder="Email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <!-- <label for="" class="donate_input_lable pb-3">Mobile Number</label> -->
+                                            <input type="number" class="form-control base_input" name="donar_mobile"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                placeholder="Phone Number">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mb-4">
+                                            <!-- <label for="exampleInputEmail1" class="donate_input_lable pb-3">Your
+                                                Message</label> -->
+                                            <div class="form-floating base_input">
+                                                <textarea class="form-control" placeholder="Leave a comment here"
+                                                    name="donar_message" id="floatingTextarea2"
+                                                    style="height: 100px"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <button class=" brown_btn w-100">Lets Donate</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -305,6 +394,16 @@
 
 
     <script>
+
+
+        // Model Box Pop Up
+
+        var myModal = document.getElementById('myModal')
+        var myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', function () {
+            myInput.focus()
+        })
 
         var hb = document.querySelector('#hb');
         var mobhead = document.querySelector('#mobhead');
