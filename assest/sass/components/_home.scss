@@ -28,7 +28,7 @@
   //   background-color: rgb(243, 116, 116);
 
   background-image: linear-gradient(#490d0db0, #d444447c),
-    url("../../images/img1.jpg");
+    url("../images/img1.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -59,7 +59,7 @@
       rgba(212, 68, 68, 0.822),
       rgba(212, 68, 68, 0.726)
     ),
-    url("/images/dogpattern.png");
+    url("../images/dogpattern.png");
   background-size: contain;
   background-color: $dbrown;
   padding: 4rem;
@@ -81,8 +81,11 @@
 
 .pet_blog {
   background-color: rgb(255, 247, 234);
-  background-image: linear-gradient(rgba(255, 247, 234, 0.801), rgba(255, 247, 234, 0.904)),
-    url("/images/dogpattern.png");
+  background-image: linear-gradient(
+      rgba(255, 247, 234, 0.801),
+      rgba(255, 247, 234, 0.904)
+    ),
+    url("../images/dogpattern.png");
   padding: 5rem 0;
 }
 
