@@ -99,11 +99,11 @@
                     <div class="row">
                         <div class="col-md-9">
                             <div class="box">
-                                <label>Post Heading</label>
-                                <input type="text" name="heading" placeholder="Enter Heading" value="<?php echo $value['head']; ?>">
+                                <label>Breed Name</label>
+                                <input type="text" name="name" placeholder="Enter Heading" value="<?php echo $value['name']; ?>">
 
-                                <label>Post Content</label>
-                                <textarea name="content" id="textareaContent" placeholder="Type Your Blog Here...." required><?php echo $value['content']; ?></textarea>
+                                <label>About Breed</label>
+                                <textarea name="about" id="textareaContent" placeholder="Type Your Blog Here...." required><?php echo $value['about']; ?></textarea>
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -125,11 +125,18 @@
 
 
                             <div class="box">
-                                <label>Meta Tags</label>
-                                <textarea name="tags" required><?php echo $value['tag']; ?></textarea>
+                                <label>Temperament:</label>
+                                <textarea name="temp" required><?php echo $value['temp']; ?></textarea>
                                 <input class="hidden" name="id" type="text" value="<?php echo $value['id']; ?>">
                                 <p>Separate tags with commas</p>
-
+                                <label for="">Height</label>
+                                <input type="text" name="height" value="<?php echo $value['height']?>">
+                                <label for="">Weight</label>
+                                <input type="text" name="weight" value="<?php echo $value['weight']?>">
+                                <label for="">Life Expectancy</label>
+                                <input type="text" name="exp" value="<?php echo $value['exp']?>">
+                                <label for="">Group</label>
+                                <input type="text" name="grp" value="<?php echo $value['grp']?>">
                             </div>
 
                         </div>
@@ -141,7 +148,7 @@
 
 
 
-                    <div class="box">
+                    <!--div class="box">
                         <label>Meta Title</label>
                         <input name="mtitle" type="text" placeholder="Enter Meta Title" value="<?php echo $value['mt_title']; ?>">
 
@@ -151,7 +158,7 @@
 
                         <label>Meta Keywords</label>
                         <input name="mkey" type="text" placeholder="Enter Meta Keywords" value="<?php echo $value['m_key']; ?>">
-                    </div>
+                    </div-->
             <?php }
             } ?>
         </form>

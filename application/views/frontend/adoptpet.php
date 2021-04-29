@@ -33,7 +33,15 @@
     <div class="body_content">
         <div class="container px-4">
             <div class="row justify-content-between ">
+            <?php
+                        if ($this->session->flashdata('success')) {
+                            echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
+                        } else if ($this->session->flashdata('error')) {
+                            echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
+                        }
 
+
+                        ?>
                 <!--  Left Side Content -->
                 <div class="col-md-9 pxy-1 ">
                     <div class="py-3">
@@ -107,7 +115,7 @@
 
                     <div class="row mt-1 mb-1">
                         <div class="col">
-                            <button class=" adopt_me_btn">Interested</button>
+                            <a href="<?php echo base_url() ?>adoptpet/adoption/<?php echo @$list->link ?>"><button class=" adopt_me_btn">Interested</button></a>
                         </div>
                     </div>
 

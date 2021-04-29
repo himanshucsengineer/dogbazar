@@ -80,11 +80,11 @@
             <div class="row">
                 <div class="col-md-9">
                     <div class="box">
-                        <label>Post Heading</label>
-                        <input type="text" name="heading" placeholder="Enter Heading">
+                        <label>Breed Name</label>
+                        <input type="text" name="name" placeholder="Enter Heading">
 
-                        <label>Post Content</label>
-                        <textarea name="content" id="textareaContent" placeholder="Type Your Blog Here...." required></textarea>
+                        <label>About Breed</label>
+                        <textarea name="about" id="textareaContent" placeholder="Type Your Blog Here...." required></textarea>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -94,14 +94,9 @@
                         <p>Genrate Your Own Post Link</p>
                     </div>
                     <div class="box">
-                        <label>Select Category</label>
-                        <select name="category">
-                            <option>Select Category</option>
-                            <?php foreach ($fetch_category as $value) { ?>
-                                <option><?php echo $value['cate_name']; ?></option>
-                            <?php } ?>
-                        </select>
-                        <p>Select Post Category</p>
+                        <label>Temperament:</label>
+                        <input type="text" placeholder="enter Temperament" name="temp">
+                        <p>Breed Temperament</p>
                         <label>Publish Your Post</label>
                         <button name="formSubmit">Publish</button>
                     </div>
@@ -113,16 +108,21 @@
 
 
                     <div class="box">
-                        <label>Meta Tags</label>
-                        <textarea name="tags" required></textarea>
-                        <p>Separate tags with commas</p>
+                        <label>Enter Height</label>
+                        <textarea name="height" required></textarea>
+                        <label>Enter Weight</label>
+                        <textarea name="weight" required></textarea>
+                        <label>Enter Life Experiance</label>
+                        <textarea name="exp" required></textarea>
+                        <label>Groupe</label>
+                        <textarea name="grp" required></textarea>
                     </div>
                 </div>
             </div>
 
 
 
-            <div class="box">
+            <!--div class="box">
                 <label>Meta Title</label>
                 <input name="mtitle" type="text" placeholder="Enter Meta Title">
 
@@ -132,7 +132,7 @@
 
                 <label>Meta Keywords</label>
                 <input name="mkey" type="text" placeholder="Enter Meta Keywords">
-            </div>
+            </div-->
         </form>
     </div>
 </div>

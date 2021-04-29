@@ -126,8 +126,16 @@
             <div class="col-md-12">
                 <div class="row justify-content-around">
                     <div class="col-md-6 ">
-                        <?php echo form_open(base_url('frontend/franchies/insert_data'), array('id' => 'franchiesform', 'method' => 'POST')); ?>
+                    <?php
+                        if ($this->session->flashdata('success')) {
+                            echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
+                        } else if ($this->session->flashdata('error')) {
+                            echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
+                        }
 
+
+                        ?>
+                        <form action="<?php echo base_url()?>frontend/franchies/insert_data" method="post">
                         <div class="row px-4">
                             <div class="col">
                                 <div class="mb-3">
@@ -169,7 +177,7 @@
                                 <button class="btn brown_btn">Submit</button>
                             </div>
                         </div>
-                        <?php echo form_close(); ?>
+                        </form>
                     </div>
                     <div class="col-md-5 ">
 
@@ -185,35 +193,3 @@
     <!-- End Main -->
 
 </main>
-<div class="modal" id="myModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <!-- Modal Header -->
-            <!-- Modal body -->
-            <div class="modal-body">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <span id="validation" class="form_errors"></span>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $("#franchiesform").submit(function(event) {
-        event.preventDefault();
-        var post_url = $(this).attr("action");
-        var request_method = $(this).attr("method");
-        var form_data = $(this).serialize();
-
-        $.ajax({
-            url: post_url,
-            type: request_method,
-            data: form_data,
-        }).done(function(response) { //
-            console.log(response);
-            $('#validation').html(response);
-            $('#myModal').modal('show').fadeIn('slow');
-            $("#franchiesform").trigger("reset");
-        });
-    });
-</script>

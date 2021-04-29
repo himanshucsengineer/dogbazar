@@ -27,12 +27,15 @@ class Contact extends CI_controller
             $mob = $this->input->post('mob');
             $msg = $this->input->post('msg');
             if ($this->Contactmodel->insert_data($name, $email, $mob, $msg)) {
-                echo "<h6 class='text-success text-center'>Your data have been submitted</h6>";
+                $this->session->set_flashdata('success', 'Your data have been submitted');
+                redirect(base_url() . "contact-us");
             } else {
-                echo "<h6 class='text-danger text-center'>Error In Submission</h6>";
+                $this->session->set_flashdata('error', 'Error In Submission');
+                redirect(base_url() . "contact-us");
             }
         } else {
-            echo "<h6 class='text-danger text-center'>Please Fill All The Fields</h6>";
+            $this->session->set_flashdata('error', 'Please Fill All The Fields');
+            redirect(base_url() . "contact-us");
         }
     }
 }

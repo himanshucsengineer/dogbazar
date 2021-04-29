@@ -106,6 +106,12 @@ $parts = basename($url);
         <li class="nav-item <?php echo ($parts == 'franchies') ? "active" : "" ?>">
           <a class="nav-link " href="<?php echo base_url(); ?>admin/franchies"><i class="fas fa-fw fa-table"></i><span>Franchies Request</span></a>
         </li>
+        <li class="nav-item <?php echo ($parts == 'adoption') ? "active" : "" ?>">
+          <a class="nav-link " href="<?php echo base_url(); ?>admin/adoption"><i class="fas fa-fw fa-table"></i><span>Adoption Request</span></a>
+        </li>
+        <li class="nav-item <?php echo ($parts == 'doglist') ? "active" : "" ?>">
+          <a class="nav-link " href="<?php echo base_url(); ?>admin/doglist"><i class="fas fa-fw fa-table"></i><span>Dog Lists</span></a>
+        </li>
         <li class="nav-item <?php echo ($parts == 'volunteer') ? "active" : "" ?>">
           <a class="nav-link " href="<?php echo base_url(); ?>admin/volunteer"><i class="fas fa-fw fa-table"></i><span>volunteer Request</span></a>
         </li>
@@ -246,6 +252,20 @@ $parts = basename($url);
               <a class="collapse-item " href="<?php echo base_url(); ?>admin/news/newpost" style="font-size:1.3rem; "> New Post</a>
               <a class="collapse-item " href="<?php echo base_url(); ?>admin/news/allpost" style="font-size:1.3rem; "> All Post</a>
               <a class="collapse-item " href="<?php echo base_url(); ?>admin/news/category" style="font-size:1.3rem; ">Category</a>
+              <div class="collapse-divider"></div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Breed" aria-expanded="true" aria-controls="collapsePages">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Breed</span>
+          </a>
+          <div id="Breed" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="py-2 collapse-inner rounded">
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/dogcare/breed/newpost" style="font-size:1.3rem; "> Upload Breed</a>
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/dogcare/breed/allpost" style="font-size:1.3rem; "> All Breeds</a>
+
               <div class="collapse-divider"></div>
             </div>
           </div>

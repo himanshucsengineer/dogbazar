@@ -120,67 +120,75 @@
                 <div class="row justify-content-center">
                     <div class="col-md-9 ">
                         <!-- Form  -->
+                        <?php
+                        if ($this->session->flashdata('success')) {
+                            echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
+                        } else if ($this->session->flashdata('error')) {
+                            echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
+                        }
 
+
+                        ?>
                         <div class="writetous">
-                            <?php echo form_open(base_url('frontend/volunteer/insert_data'), array('id' => 'volunteerform', 'method' => 'POST')); ?>
 
-                            <div class="row px-4">
-                                <div class="col">
-                                    <div class="mb-3">
-                                        <label for="" class="donate_input_lable pb-3">Name*</label>
-                                        <input type="text" class="form-control base_input" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Name">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row px-4">
-                                <div class="col">
-                                    <div class="mb-3">
-                                        <label for="" class="donate_input_lable pb-3">Email*</label>
-                                        <input type="email" class="form-control base_input" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Email">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row px-4">
-                                <div class="col">
-                                    <div class="mb-3">
-                                        <label for="" class="donate_input_lable pb-3">Number*</label>
-                                        <input type="number" class="form-control base_input" name="mob" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Number">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row px-4">
-                                <div class="col">
-                                    <div class="mb-3">
-                                        <label for="" class="donate_input_lable pb-3">Qualification*</label>
-                                        <input type="text" class="form-control base_input" name="edu" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Qualification">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row px-4">
-                                <div class="col">
-                                    <div class="mb-3">
-                                        <label for="" class="donate_input_lable pb-3">City/Town/village*</label>
-                                        <input type="text" class="form-control base_input" name="city" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your City">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row px-4 mb-3">
-                                <div class="col">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="donate_input_lable pb-3">Address*</label>
-                                        <div class="form-floating base_input">
-                                            <textarea class="form-control" placeholder="Leave a comment here" name="add" id="floatingTextarea2" style="height: 100px"></textarea>
+                            <form action="<?php echo base_url() ?>frontend/volunteer/insert_data" method="post">
+                                <div class="row px-4">
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <label for="" class="donate_input_lable pb-3">Name*</label>
+                                            <input type="text" class="form-control base_input" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Name">
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="row px-4">
-                                <div class="col">
-                                    <button class="btn brown_btn">Submit</button>
+                                <div class="row px-4">
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <label for="" class="donate_input_lable pb-3">Email*</label>
+                                            <input type="email" class="form-control base_input" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Email">
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <?php echo form_close(); ?>
+                                <div class="row px-4">
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <label for="" class="donate_input_lable pb-3">Number*</label>
+                                            <input type="number" class="form-control base_input" name="mob" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Number">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row px-4">
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <label for="" class="donate_input_lable pb-3">Qualification*</label>
+                                            <input type="text" class="form-control base_input" name="edu" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Qualification">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row px-4">
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <label for="" class="donate_input_lable pb-3">City/Town/village*</label>
+                                            <input type="text" class="form-control base_input" name="city" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your City">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row px-4 mb-3">
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="donate_input_lable pb-3">Address*</label>
+                                            <div class="form-floating base_input">
+                                                <textarea class="form-control" placeholder="Leave a comment here" name="add" id="floatingTextarea2" style="height: 100px"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row px-4">
+                                    <div class="col">
+                                        <button class="btn brown_btn">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
 
@@ -198,45 +206,3 @@
     <!-- End Main -->
 
 </main>
-
-
-
-
-
-
-
-
-
-
-<div class="modal" id="myModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <!-- Modal Header -->
-            <!-- Modal body -->
-            <div class="modal-body">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <span id="validation" class="form_errors"></span>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $("#volunteerform").submit(function(event) {
-        event.preventDefault();
-        var post_url = $(this).attr("action");
-        var request_method = $(this).attr("method");
-        var form_data = $(this).serialize();
-
-        $.ajax({
-            url: post_url,
-            type: request_method,
-            data: form_data,
-        }).done(function(response) { //
-            console.log(response);
-            $('#validation').html(response);
-            $('#myModal').modal('show').fadeIn('slow');
-            $("#volunteerform").trigger("reset");
-        });
-    });
-</script>
