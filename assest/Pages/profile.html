@@ -25,6 +25,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
         rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/36a236c794.js" crossorigin="anonymous"></script>
+    <!-- end Font Awesome -->
+
     <!-- Jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
@@ -48,7 +52,7 @@
     <!-- Components -->
     <!-- 
     <div class="topbar"></div> -->
-    <header class="header">
+    <!-- <header class="header">
         <div class="container">
             <div class="row justify-content-between align-item-center">
                 <div class="col-2">
@@ -69,7 +73,7 @@
             </div>
         </div>
 
-        <!-- Mobile Menu  -->
+        
         <div class="header_mobile" id="mobhead">
             <div class="nav d-flex flex-column">
                 <a href="">
@@ -105,29 +109,11 @@
             </div>
         </div>
 
-    </header>
+    </header> -->
 
     <main>
 
 
-        <!-- Title Strip  -->
-        <div class="title_strip_brown">
-            <div class="container">
-                <div class="row py-4">
-                    <div class="col">
-                        <h1 class="title_strip_brown_h1">Hi, Anshul</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="">
-            <div class="container">
-                <div class="row">
-                    <div class="col-2 title_strip_brown_ul"></div>
-                </div>
-            </div>
-        </div> -->
-        <!-- End Title Strip -->
 
         <div class="spacer_m"></div>
 
@@ -137,90 +123,139 @@
                 <div class="row justify-content-start">
 
                     <!-- Content Left -->
-                    <div class="col-md-10 pxy-2">
-                        <h2>Yes! I want to save the life of an animal in need.</h2>
-                        <p>This list contains plants that have been reported as having systemic effects on animals
-                            and/or intense effects on the gastrointestinal tract. </p>
+                    <div class="col pxy-2">
 
-                        <div class="row justify-content-between client_dashboard">
+                        <div class="row justify-content-around">
 
                             <div class="col-md-3 ">
+
+                                <!-- Option1  -->
+                                <!-- <div class="spacer_s"></div>
                                 <div class="spacer_s"></div>
-                                <ul>
-                                    <li><a href="">Profile</a></li>
-                                    <li><a href="">My Dogs</a></li>
-                                    <li><a href="">List My Dog</a></li>
+                                <ul class="m-0">
+                                    <a href="" class="nodecoration">
+                                        <li class="lstn client_slide_links client_slide_links_active">Profile Settings
+                                        </li>
+                                    </a>
+                                    <a href="" class="nodecoration">
+                                        <li class="lstn client_slide_links">My Dogs List</li>
+                                    </a>
+                                    <a href="" class="nodecoration">
+                                        <li class="lstn client_slide_links">List My Dog
+                                        </li>
+                                    </a>
+                                    <a href="" class="nodecoration">
+                                        <li class="lstn client_slide_links">Logout
+                                        </li>
+                                    </a>
                                 </ul>
-                                <div class="spacer_s"></div>
+                                <div class="spacer_s"></div> -->
+                                <!-- END option 1 -->
+
+                                <!-- Options 2 -->
+                                <div class="row">
+                                    <div class="col">
+                                        <h3>Ways To Give</h3>
+                                    </div>
+                                </div>
+
+                                <div class="space"></div>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <ul class="p-0 m-0">
+                                            <a href="" class="nodecoration">
+                                                <li class="tranning_side_links"><span><i
+                                                            class="fas fa-chevron-right side"></i></span> Profile
+                                                    Settings</li>
+                                            </a>
+                                            <a href="" class="nodecoration">
+                                                <li class="tranning_side_links"><span><i
+                                                            class="fas fa-chevron-right side"></i></span> All My Dogs
+                                                </li>
+                                            </a>
+                                            <a href="" class="nodecoration">
+                                                <li class="tranning_side_links"><span><i
+                                                            class="fas fa-chevron-right side"></i></span> List My Dog
+                                                </li>
+                                            </a>
+                                            <a href="" class="nodecoration">
+                                                <li class="tranning_side_links"><span><i
+                                                            class="fas fa-chevron-right side"></i></span> Donate
+                                                </li>
+                                            </a>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- end Option 2 -->
                             </div>
 
 
 
 
-                            <div class="col-md-9 ">
+                            <div class="col-md-8 ">
 
-                                <h3>Profile Info</h3>
-                                <hr>
-
-                                <div class="row px-4">
-                                    <div class="col-md-10">
-                                        <div class="mb-3">
-                                            <label for="" class="donate_input_lable pb-3">Name</label>
-                                            <input type="email" class="form-control base_input" name="donar_email"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp"
-                                                placeholder="Anshu">
-                                        </div>
-                                    </div>
+                                <div class="mb-4">
+                                    <h3 class="h3_head">Profile Settings</h3>
+                                    <hr class="">
                                 </div>
 
-                                <div class="row px-4">
-                                    <div class="col-md-10">
-                                        <div class="mb-3">
-                                            <label for="" class="donate_input_lable pb-3">Email</label>
-                                            <input type="email" class="form-control base_input" name="donar_email"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp"
-                                                placeholder="Anshus2085@gmail.com">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row px-4">
-                                    <div class="col-md-8">
-                                        <div class="mb-3">
-                                            <label for="" class="donate_input_lable pb-3">Gender</label>
-                                            <div>
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                    id="flexRadioDefault1">
-                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                    <span class="donate_input_lable">Male</span>
-                                                </label>
-                                            </div>
-                                            <div>
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                    id="flexRadioDefault1">
-                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                    <span class="donate_input_lable">Female</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row px-4 mb-3">
-                                    <div class="col-md-10">
-                                        <div class="mb-3">
-                                            <label for="" class="donate_input_lable pb-3">Mobile Number</label>
-                                            <input type="email" class="form-control base_input" name="donar_email"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp"
-                                                placeholder="479658236">
-                                        </div>
-                                    </div>
-                                </div>
+                                <div class="px-4">
 
-                                <div class="row px-4">
+
+                                    <p>You can edit your personal information here </p>
+
+
+                                    <div class="mb-3">
+                                        <label for="" class="donate_input_lable pb-3">Name</label>
+                                        <input type="email" class="form-control base_input" name="donar_email"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Anshu">
+                                    </div>
+
+
+
+                                    <div class="mb-3">
+                                        <label for="" class="donate_input_lable pb-3">Email</label>
+                                        <input type="email" class="form-control base_input" name="donar_email"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp"
+                                            placeholder="Anshus2085@gmail.com">
+                                    </div>
+
+
+                                    <div class="mb-3">
+                                        <label for="" class="donate_input_lable pb-3">Gender</label>
+                                        <div>
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                <span class="donate_input_lable">Male</span>
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                <span class="donate_input_lable">Female</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="mb-3">
+                                        <label for="" class="donate_input_lable pb-3">Mobile Number</label>
+                                        <input type="email" class="form-control base_input" name="donar_email"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp"
+                                            placeholder="479658236">
+                                    </div>
+
+
+
                                     <div class="col">
-                                        <button class="btn brown_btn px-4">Edit</button>
+                                        <button class="brown_btn px-4">Edit</button>
                                     </div>
-                                </div>
 
+                                </div>
 
 
                             </div>

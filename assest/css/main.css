@@ -22,7 +22,7 @@ main {
 }
 
 .container {
-  max-width: 114rem !important;
+  max-width: 118rem !important;
 }
 
 .d_hide {
@@ -159,6 +159,13 @@ p {
 .h2_head {
   font-weight: 600;
   font-size: 3rem;
+  color: #3b3b3b;
+}
+
+.h3_head {
+  font-weight: 700;
+  color: #d44444 !important;
+  font-size: 2.3rem;
   color: #3b3b3b;
 }
 
@@ -650,6 +657,62 @@ p {
   }
 }
 
+.client_dashboard {
+  padding: 1rem;
+}
+
+.client_dashboard li {
+  list-style-type: none;
+  padding: 1rem 0.2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.client_dashboard li a {
+  text-decoration: none;
+  color: #d44444;
+}
+
+.my_dogs_available {
+  color: #1b5e13;
+}
+
+.my_dogs_adopted {
+  color: #d44444;
+}
+
+.my_dogs_edit {
+  color: #d44444;
+  font-size: 1.6rem;
+}
+
+.preview {
+  height: 8rem;
+  background-color: white;
+  border: 1px dashed #eee;
+  font-size: 1.6rem;
+}
+
+.choose {
+  width: 10rem;
+  font-size: 1.2rem;
+}
+
+.client_slide_links {
+  background-color: #f7f7f7;
+  color: #5a5a5a;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #acacac;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.client_slide_links_active {
+  background-color: #d44444;
+  color: white;
+  border-bottom: 3px solid #d44444;
+}
+
 .wtg_img {
   width: 100%;
   height: 40rem;
@@ -804,46 +867,6 @@ ul {
   .nande_main h3 {
     font-size: 2.5rem;
   }
-}
-
-.client_dashboard {
-  padding: 1rem;
-}
-
-.client_dashboard li {
-  list-style-type: none;
-  padding: 1rem 0.2rem;
-  border-bottom: 1px solid #eee;
-}
-
-.client_dashboard li a {
-  text-decoration: none;
-  color: #d44444;
-}
-
-.my_dogs_available {
-  color: #1b5e13;
-}
-
-.my_dogs_adopted {
-  color: #d44444;
-}
-
-.my_dogs_edit {
-  color: #d44444;
-  font-size: 1.6rem;
-}
-
-.preview {
-  height: 8rem;
-  background-color: white;
-  border: 1px dashed #eee;
-  font-size: 1.6rem;
-}
-
-.choose {
-  width: 10rem;
-  font-size: 1.2rem;
 }
 
 .contactus {
