@@ -4,6 +4,10 @@
 
 //Margin
 
+.d_hide {
+  display: none;
+}
+
 .col_fff {
   color: #fff !important;
 }
@@ -89,4 +93,9 @@ ul {
 
 .modal_head {
   color: $dbrown;
+}
+
+.lstn {
+  list-style-type: none;
+  padding: 0.6rem 1rem;
 }
