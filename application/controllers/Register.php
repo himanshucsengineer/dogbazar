@@ -29,7 +29,11 @@ class Register extends CI_Controller
     $_SESSION['name'] = $this->input->post('name');
     $_SESSION['email'] = $this->input->post('email');
     $_SESSION['mob'] = $this->input->post('mob');
-    $_SESSION['msg'] = $this->input->post('msg');
+    $_SESSION['address'] = $this->input->post('add');
+    $_SESSION['state'] = $this->input->post('state');
+    $_SESSION['city'] = $this->input->post('city');
+    $_SESSION['citizen'] = $this->input->post('citizen');
+    $_SESSION['motive'] = $this->input->post('motive');
     $_SESSION['payable_amount'] = $this->input->post('amount');
     $razorpayOrder = $api->order->create(array(
       'receipt'         => rand(),
@@ -70,7 +74,12 @@ class Register extends CI_Controller
         'name' => $_SESSION['name'],
         'email' => $_SESSION['email'],
         'number' => $_SESSION['mob'],
-        'msg' => $_SESSION['msg'],
+        'address' => $_SESSION['address'],
+        'state' => $_SESSION['state'],
+        'city' => $_SESSION['city'],
+        'citizen' => $_SESSION['citizen'],
+        'motive' => $_SESSION['motive'],
+       
         'amount' => $_SESSION['payable_amount'],
       );
       if ($this->Donatemodel->insert_data($data)) {

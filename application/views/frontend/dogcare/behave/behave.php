@@ -85,7 +85,7 @@
                                                 <img src="<?php echo $value['image']; ?>" alt="">
                                             </div>
                                             <div class="px-3">
-                                                <p class="m-0"><span class="blog_sidetag"><?php echo $value['cate']; ?></span></p>
+                                                 <p class="m-0"><span class="blog_sidetag"><?php echo $value['cate']; ?></span></p>
                                                 <p class="m-0"><span class="blog_sidetitle tranning_card_p"><?php echo $value['head']; ?></span>
                                                 </p>
                                             </div>

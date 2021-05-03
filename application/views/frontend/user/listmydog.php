@@ -131,11 +131,9 @@ $number =  $_SESSION["number"];
                                 <div class="row px-4  mb-1">
                                     <div class="col-md-10">
                                         <div class="mb-3">
-                                            <label for="" class="donate_input_lable pb-3">Select Breed</label>
-                                            <select class="form-select base_input" name="breed" aria-label="Default select example">
-                                                <option selected>Open this select menu</option>
-                                                <option value="zermon">One</option>
-                                            </select>
+                                            <label for="" class="donate_input_lable pb-3">Dog Name</label>
+                                            <input type="text" class="form-select base_input" name="breed" placeholder="Enter Dog Name">
+                                            
 
                                         </div>
                                     </div>

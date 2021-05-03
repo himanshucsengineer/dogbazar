@@ -74,8 +74,13 @@
                   <th>Name</th>
                   <th>Email</th>
                   <th>Number</th>
+                  <th>Address</th>
+                  <th>State</th>
+                  <th>city</th>
+                  <th>Citizen</th>
+                  <th>Motivate</th>
                   <th>Amount</th>
-                  <th>Message</th>
+                  
                   <th>Order Id</th>
                   <th>Action</th>
 

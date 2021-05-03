@@ -22,3 +22,4 @@ class Postview extends CI_controller
         $this->load->view('frontend/template/footer');
     }
 }
+ 

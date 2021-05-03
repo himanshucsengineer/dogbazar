@@ -48,6 +48,7 @@ $route['pet-memorial'] = 'frontend/waystogive/petmemorial';
 $route['gift-giving'] = 'frontend/waystogive/giftgiving';
 $route['other-ways-to-give'] = 'frontend/waystogive/otherways';
 $route['sponsor-an-animal'] = 'frontend/waystogive/sponsor';
+$route['sponsor/(:any)'] = 'frontend/waystogive/sponsorsingle/index/$1';
 /* end */
 
 

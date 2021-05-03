@@ -65,7 +65,7 @@
     }
 </style>
 
-<div class="new-post">
+<!--div class="new-post">
     <div class="container">
         <?php
         if ($this->session->flashdata('success')) {
@@ -112,34 +112,50 @@
                     </div>
 
 
-                    <!--div class="box">
-                    <label>Meta Tags</label>
-                    <textarea name="tags" required></textarea>
-                    <p>Separate tags with commas</p>
-                </div-->
+                  
                 </div>
             </div>
 
 
 
-            <!--div class="box">
-            <label>Meta Title</label>
-                <input name="mtitle" type="text" placeholder="Enter Meta Title">
-                
-                <label>Meta Description</label>
-               
-                <textarea name="mdesc" required></textarea>
-                
-                <label>Meta Keywords</label>
-                <input name="mkey" type="text" placeholder="Enter Meta Keywords">
-        </div-->
+            
+        </form>
+    </div>
+</div--->
+
+<div class="new-post">
+    <div class="container">
+    <?php
+        if ($this->session->flashdata('success')) {
+            echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
+        } else if ($this->session->flashdata('error')) {
+            echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
+        }
+        ?>
+        <h3>List Dog For Sponsorship</h3>
+
+        <form method="post" action="newpost/post" enctype="multipart/form-data">
+        <div class="box">
+        <label for="">Dog name</label>
+            <input type="text" name="name" placeholder="Enter Dog Name">
+            <label for="">Age</label>
+            <input type="text" name="age" placeholder="Enter Dog AGE">
+            <label for="">Color</label>
+            <input type="text" name="color" placeholder="Enter Dog Color">
+            <label for="">Gender</label>
+            <select name="gender" id="">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <label for="">Uplaod Image</label>
+            <input type="file" name="images" id="fileupload" >
+            <label>About Dog</label>
+            <textarea name="about" id="textareaContent" placeholder="Type Your Blog Here...." required></textarea>
+            <button style="margin-top:2rem">Submit</button>
+        </div>
         </form>
     </div>
 </div>
-
-
-
-
 <script language="javascript" type="text/javascript">
     $(function() {
         $("#fileupload").change(function() {

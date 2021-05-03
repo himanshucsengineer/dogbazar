@@ -18,7 +18,7 @@
                         } else if ($this->session->flashdata('error')) {
                             echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
                         }
-
+ 
 
                         ?>
                 
@@ -256,15 +256,14 @@
             </div>
             <div class="col-md-6">
                 <div class="right">
-                <h3><?php echo @$list->breed ?></h3>
+                <h3><?php echo @$list->name ?></h3>
                 <h5>Age: <span><?php echo @$list->age ?></span></h5>
-                <h5>Colour: <span><?php echo @$list->colour ?></span></h5>
-                <h5>Weight: <span><?php echo @$list->weight ?></span></h5>
-                <h5>Condition:<span><?php echo @$list->condition ?></span></h5>
+                <h5>Colour: <span><?php echo @$list->color ?></span></h5>
+                
                 <h5>Gender:<span><?php echo @$list->gender ?></span></h5>
-                <h5>Location:<span><?php echo @$list->city ?></span></h5>
+               
                 <div class="adopp_butt">
-                    <a href="<?php echo base_url() ?>adoptpet/adoption/<?php echo @$list->link ?>"><button>Adopt Pet Now</button></a>
+                    <button>Sponsor Pet Now</button>
                 </div>
                 </div>
             </div>
@@ -273,7 +272,7 @@
         <div class="about">
             <h3>More Information About Dog:</h3>
             <hr>
-            <p><?php echo @$list->msg ?></p>
+            <p><?php echo @$list->about ?></p>
         </div>
     </div>
 </div>

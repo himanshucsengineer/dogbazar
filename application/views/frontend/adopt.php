@@ -1,7 +1,7 @@
-<main>
+<!--main>
 
 
-    <!-- Title Strip  -->
+
     <div class="title_strip_brown">
         <div class="container">
             <div class="row py-4">
@@ -11,23 +11,16 @@
             </div>
         </div>
     </div>
-    <!-- <div class="">
-            <div class="container">
-                <div class="row">
-                    <div class="col-2 title_strip_yellow_ul"></div>
-                </div>
-            </div>
-        </div> -->
-    <!-- End Title Strip -->
+   
 
     <div class="spacer_m"></div>
 
-    <!-- Main Content -->
+  
     <div class="body_content">
         <div class="container px-4">
             <div class="row justify-content-between ">
 
-                <!--  Left Side Content -->
+            
                 <div class="col-md-9 pxy-2 ">
                     <h2>More Then 300 Dogs Breed are here to Adopt</h2>
                     <p>From more than 17,000 animal shelters & rescues. Please note that the information
@@ -35,7 +28,7 @@
 
                     <h3>Enter Location</h3>
 
-                    <!-- Form Start  -->
+                 
                     <form action="">
 
                         <p><span class="amt_lable">Search Your Pet at any Location in India</span></p>
@@ -43,7 +36,7 @@
                         <div class="row">
                             <div class="col-md-10">
                                 <div class="mb-4">
-                                    <!-- <label for="" class="donate_input_lable pb-3"></label> -->
+                                
                                     <input type="text" class="form-control base_input adopt_input_search" name="donar_amount" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search Your Pet">
                                 </div>
                             </div>
@@ -68,7 +61,7 @@
 
 
                     </form>
-                    <!-- End Form  -->
+                  
 
                     <hr>
                     <div class="spacer_s"></div>
@@ -77,7 +70,7 @@
                     <div class="row px-4">
                         <div class="col">
                             <div class="row">
-                                <?php foreach($adopt as $value){?>
+                                <?php foreach ($adopt as $value) { ?>
                                 <div class="col-md-4 mb-5 px-3">
                                     <a href="<?php echo base_url() . "adopt/" . $value['link'] ?>" class="nodecoration">
                                         <div class="petinfo_card">
@@ -93,7 +86,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <?php }?>
+                                <?php } ?>
                            
 
                                 
@@ -111,10 +104,9 @@
 
                 </div>
 
-                <!-- end Left Side Content -->
 
 
-                <!-- Side Bar  -->
+    
 
                 <div class="col-md-3 px-3  ">
                     <div class="row mb-2">
@@ -130,7 +122,7 @@
                     </div>
                 </div>
 
-                <!-- End Side Bar -->
+     
 
 
             </div>
@@ -138,9 +130,209 @@
 
     </div>
 
-    <!-- End Main -->
+
 
     <div class="spacer_m"></div>
     <div class="spacer_m"></div>
 
-</main>
+</main-->
+<style>
+    .adopt_dog {
+        width: 100%;
+        height: auto;
+        padding-bottom: 3rem;
+        padding-top: 5rem;
+    }
+
+    .adopt_dog img {
+        width: 100%;
+        height: 400px;
+        margin-bottom: 1rem;
+    }
+
+    .adopt_dog p {
+        color: #444;
+        text-align: justify;
+    }
+
+    .adopt_dog .flex {
+        width: 100%;
+        height: auto;
+        display: flex;
+
+    }
+
+    .adopt_dog .flex .left {
+        width: 50%;
+        height: auto;
+    }
+
+    .adopt_dog .flex .left input[type="text"] {
+        width: 100%;
+        height: auto;
+        padding-top: .8rem;
+        padding-bottom: .8rem;
+        padding-left: 1.5rem;
+        outline: none;
+        border: 1px solid #cdcdcd;
+    }
+
+    .adopt_dog .flex .right {
+        width: 10%;
+        height: auto;
+    }
+
+    .adopt_dog .flex .right button {
+        width: 100%;
+        height: auto;
+        padding-top: .8rem;
+        padding-bottom: .8rem;
+        color: white;
+        background-color: #f39933;
+        border: 1px solid #f39933;
+        outline: none;
+    }
+
+    .adopt_dog .adopt_hori_line {
+        width: 100%;
+        opacity: 1;
+        background-color: none;
+        border-bottom: 2px solid #f39933;
+        margin-top: 2rem;
+    }
+
+    .adopt_dog .adopt_card_main {
+        width: 100%;
+        height: auto;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .adopt_dog .adopt_card_main .card {
+        width: 25%;
+        height: auto;
+        padding: 1rem;
+        border: none;
+        border-radius: 0px;
+        background-color: transparent;
+    }
+    .adopt_dog .adopt_card_main .card a{
+        text-decoration: none;
+    }
+    .adopt_dog .adopt_card_main .card .card_inner {
+        border: 1px solid #cdcdcd;
+        padding: 2rem;
+    }
+
+    .adopt_dog .adopt_card_main .card .card_inner img {
+        width: 100%;
+        height: 170px;
+    }
+
+    .adopt_dog .adopt_card_main .card .card_inner h3 {
+        text-align: center;
+        color: #f39933;
+    }
+
+    .adopt_dog .adopt_card_main .card .card_inner h6 {
+        font-size: 1.4rem;
+        color: #444;
+    }
+    .adopt_dog .adopt_card_main .card .card_inner .adop_butt {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .adopt_dog .adopt_card_main .card .card_inner .adop_butt button{
+        width: 15rem;
+        height: auto;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        color: white;
+        text-transform: capitalize;
+        background-color: #f39933;
+        border: 1px solid #f39933;
+        outline: none;
+        border-radius: 25px;
+    }
+    @media screen and (max-width: 600px) {
+        .adopt_dog .flex .left {
+            width: 65%;
+            height: auto;
+        }
+
+        .adopt_dog .flex .right {
+            width: 25%;
+            height: auto;
+        }
+
+        .adopt_dog .adopt_card_main .card {
+            width: 50%;
+            height: auto;
+            padding: .5rem;
+        }
+
+        .adopt_dog .adopt_card_main .card .card_inner {
+
+            padding: 1rem;
+        }
+
+        .adopt_dog .adopt_card_main .card .card_inner img {
+
+            height: 100px;
+        }
+
+        .adopt_dog .adopt_card_main .card .card_inner h3 {
+            font-size: 1.7rem;
+        }
+
+        .adopt_dog .adopt_card_main .card .card_inner h6 {
+
+            font-size: 1.1rem;
+        }
+    }
+</style>
+<div class="adopt_dog">
+
+    <!--img src="<?php echo base_url() ?>assest/images/adopt.jpg" alt="adopt aimage">
+    <p>At the International Dog Bazar shelter, hundreds of dogs wait in anticipation of loving homes. Many have been rescued from suffering on the streets or as survivors of the Asian dog meat trade. All are deserving of a forever home and the process is a lot easier than you think. Search below to find the perfect companion for your home and family. Thank you for wanting to adopt a rescue; Soi Dog Foundation will help you every step of the way.</p-->
+    <div class="container">
+        <div class="flex justify-content-center">
+            <div class="left">
+                <input type="text" placeholder="Search By City">
+            </div>
+            <div class="right">
+                <button>Search</button>
+            </div>
+        </div>
+
+        <div class="adopt_card_main ">
+        <?php foreach ($adopt as $value) { ?>
+            
+            <div class="card">
+            <a href="<?php echo base_url() . "adopt/" . $value['link'] ?>">
+                <div class="card_inner">
+                    <h3><?php echo $value['breed'] ?></h3>
+                    <img src="<?php echo $value['image'] ?>" alt="dog image">
+                    <h6>Gender: <?php echo $value['gender'] ?></h6>
+                    <h6>Age: <?php echo $value['age'] ?></h6>
+                    <h6><?php echo $value['city'] ?></h6>
+                    <div class="adop_butt">
+                    <a href="<?php echo base_url() . "adopt/" . $value['link'] ?>"><button>Adopt Now</button></a>
+                    </div>
+                </div>
+                </a>
+            </div>
+            
+            <?php }?>
+            
+            
+            
+            
+        </div>
+
+    </div>
+</div>

@@ -1,187 +1,169 @@
-<?php
-$email = $_SESSION["email"];
-$name =  $_SESSION["name"];
-$add =  $_SESSION["add"];
-$number =  $_SESSION["number"];
-?>
+<style>
+    .user_panel{
+        width: 100%;
+        height: auto;
+        background-color: #ECF0F1;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    .user_panel .box{
+        width: 100%;
+        height: auto;
+        
+    }
+    .user_panel .box button{
+        width: 100%;
+        height: auto;
+        padding-top: .8rem;
+        padding-bottom: .8rem;
+        padding-left: 1.5rem;
+        text-align: left;
+        background-color: white;
+        border-bottom: 1px solid #cdcdcd;
+        outline: none;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        transition:.5s
+    }
+    .user_panel .box button:hover{
+        background-color: #d44444;
+        color: white;
+        border-bottom: 1px solid #d44444;
+    }
+    .user_panel .box .active{
+        background-color: #d44444;
+        color: white;
+        border-bottom: 1px solid #d44444;
+    }
+    .user_panel .box2{
+        width: 100%;
+        height: auto;
+        border: 1px solid #cdcdcd;
 
-<main>
-
-
-    <!-- Title Strip  -->
-    <div class="title_strip_brown">
-        <div class="container">
-            <div class="row py-4">
-                <div class="col">
-                    <h1 class="title_strip_brown_h1">Hi, <?php echo $name; ?></h1>
-                </div>
+    }
+    .user_panel .box2 .head{
+        width: 100%;
+        height: auto;
+        background-color: #f9f9f9;
+        color: #d44444;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        border-bottom: 1px solid #cdcdcd;
+    }
+    .user_panel .box2 .box2_body{
+        width: 100%;
+        height: auto;
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        background-color: white;
+    }
+    .user_panel .box2 .box2_body input[type="text"], input[type="email"], input[type="number"], textarea{
+        width: 100%;
+        height: auto;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        padding-left: 1rem;
+        border: 1px solid #cdcdcd;
+        outline:none;
+        margin-bottom: 1rem;
+    }
+    .user_panel .box2 .box2_body button{
+        width: 15rem;
+        height: auto;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        color: white;
+        background-color: #d44444;
+        border: 1px solid #d44444;
+        outline: none;
+        transition: .5s;
+        border-radius: 2px;
+    }
+    .user_panel .box2 .box2_body button:hover{
+        color: black;
+        background-color: transparent;
+        border: 1px solid #f39933;
+        border-radius: 25px;
+    }
+</style>
+<div class="user_panel">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-3">
+                <div class="box">
+                    <button class="active">Profile & Setting</button>
+                    <button>Donation History</button>
+                    <button>Listed Dogs</button>
+                </div>    
             </div>
-        </div>
-    </div>
-    <!-- <div class="">
-            <div class="container">
-                <div class="row">
-                    <div class="col-2 title_strip_brown_ul"></div>
-                </div>
-            </div>
-        </div> -->
-    <!-- End Title Strip -->
+            <div class="col-md-9">
+                <div class="box2">
+                    <div class="head">
+                        <h3>Profile And Settings</h3>
+                    </div>
+                    <div class="box2_body">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <p>Name:</p>
+                            </div>
+                            <div class="col-md-7">
+                                <input type="text" placeholder="enter your name">
+                            </div>
+                            <div class="col-md-3">
 
-    <div class="spacer_m"></div>
-
-    <!-- Main Content -->
-    <div class="body_content">
-        <div class="container px-3">
-            <div class="row justify-content-start">
-
-                <!-- Content Left -->
-                <div class="col-md-10 pxy-2">
-                    <h2>Yes! I want to save the life of an animal in need.</h2>
-                    <p>This list contains plants that have been reported as having systemic effects on animals
-                        and/or intense effects on the gastrointestinal tract. </p>
-
-                    <div class="row justify-content-between client_dashboard">
-
-                        <div class="col-md-3 ">
-                            <div class="spacer_s"></div>
-                            <ul>
-                                <li><a href="<?php echo base_url(); ?>profile">Profile</a></li>
-                                <li><a href="<?php echo base_url(); ?>listmydog">List A Dog</a></li>
-                                <li><a href="<?php echo base_url(); ?>mydogs">My Dogs</a></li>
-
-                            </ul>
-                            <div class="spacer_s"></div>
+                            </div>
                         </div>
-
-
-
-
-                        <div class="col-md-9 ">
-
-                            <h3>Profile Info</h3>
-                            <hr>
-                            <?php echo form_open(base_url('frontend/login/update_pro'), array('id' => 'updateprofileform', 'method' => 'POST')); ?>
-
-                            <div class="row px-4">
-                                <div class="col-md-10">
-                                    <div class="mb-3">
-                                        <label for="" class="donate_input_lable pb-3">Name</label>
-                                        <input type="text" class="form-control base_input" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Name" value="<?php echo $name; ?>">
-                                    </div>
-                                </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <p>Email:</p>
                             </div>
-
-                            <div class="row px-4">
-                                <div class="col-md-10">
-                                    <div class="mb-3">
-                                        <label for="" class="donate_input_lable pb-3">Email</label>
-                                        <input type="email" class="form-control base_input" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Email" value="<?php echo $email ?>">
-                                    </div>
-                                </div>
+                            <div class="col-md-7">
+                                <input type="email" placeholder="enter your Email">
                             </div>
-                            <div class="row px-4">
-                                <div class="col-md-10">
-                                    <div class="mb-3">
-                                        <label for="" class="donate_input_lable pb-3">Number</label>
-                                        <input type="number" class="form-control base_input" name="number" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Email" value="<?php echo $number ?>">
-                                    </div>
-                                </div>
+                            <div class="col-md-3">
+
                             </div>
-                            <div class="row px-4">
-                                <div class="col-md-10">
-                                    <div class="mb-3">
-                                        <label for="" class="donate_input_lable pb-3">Address</label>
-                                        <textarea class="form-control base_input" name="add" id="" cols="30" rows="5"><?php echo $add ?></textarea>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <p>Number:</p>
                             </div>
-
-
-
-                            <div class="row px-4">
-                                <div class="col">
-                                    <button class="btn brown_btn px-4">Update</button>
-                                </div>
+                            <div class="col-md-7">
+                                <input type="number" placeholder="enter your Number">
                             </div>
+                            <div class="col-md-3">
 
-                            <?php echo form_close(); ?>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <p>Address:</p>
+                            </div>
+                            <div class="col-md-7">
+                                <textarea name="" id="" cols="30" rows="5" placeholder="enter your address"></textarea>
+                            </div>
+                            <div class="col-md-3">
 
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                
+                            </div>
+                            <div class="col-md-7">
+                                <button>Update Profile</button>
+                            </div>
+                            <div class="col-md-3">
+
+                            </div>
                         </div>
                     </div>
-
-                    <div class="spacer_s"></div>
-
                 </div>
-                <!-- End Content Left -->
-
-
-                <!-- Side Bar  -->
-
-                <!-- <div class="col-md-3 px-2 ">
-                        <div class="row">
-                            <div class="col">
-                                <h2>Our Address</h2>
-                                <p>Raj Nagar behind 30 s
-                                    PO Box 1037
-                                    Jaipur</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <h3>Follow Us On</h3>
-                                <div class="row">
-                                    <div class="col-1">f</div>
-                                    <div class="col-1">t</div>
-                                    <div class="col-1">li</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-
-                <!-- End Side Bar -->
-
-
-            </div>
-        </div>
-
-    </div>
-
-    <!-- End Main -->
-
-    <div class="spacer_m"></div>
-
-
-</main>
-
-<div class="modal" id="myModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <!-- Modal Header -->
-            <!-- Modal body -->
-            <div class="modal-body">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <span id="validation" class="form_errors"></span>
             </div>
         </div>
     </div>
 </div>
-
-<script>
-    $("#updateprofileform").submit(function(event) {
-        event.preventDefault();
-        var post_url = $(this).attr("action");
-        var request_method = $(this).attr("method");
-        var form_data = $(this).serialize();
-
-        $.ajax({
-            url: post_url,
-            type: request_method,
-            data: form_data,
-        }).done(function(response) { //
-            console.log(response);
-            $('#validation').html(response);
-            $('#myModal').modal('show').fadeIn('slow');
-            $("#updateprofileform").trigger("reset");
-        });
-    });
-</script>

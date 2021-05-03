@@ -77,7 +77,7 @@
                                     <th>Email</th>
                                     <th>Number</th>
                                     <th>Age</th>
-                                    <th>Breed</th>
+                                    <th>Name</th>
                                     <th>Gender</th>
                                     <th>Condition</th>
                                     <th>Message</th>

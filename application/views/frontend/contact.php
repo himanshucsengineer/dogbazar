@@ -1,24 +1,63 @@
+<style>
+    .contact_us_input {
+        width: 100%;
+        height: auto;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        padding-left: 1rem;
+        border: 1px solid #cdcdcd;
+        margin-bottom: 1rem;
+        outline: none;
+    }
+
+    .contact_submit {
+        width: 100%;
+        height: auto;
+        padding-top: .8rem;
+        padding-bottom: .8rem;
+        color: white;
+        background-color: #d44444;
+        border: none;
+        outline: none;
+    }
+
+    .cont .flex {
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin-left: 2rem;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+
+    .cont .flex .left {
+        width: 15%;
+        height: auto;
+    }
+
+    .cont .flex .left .fa {
+        font-size: 30px;
+        color: #d44444;
+    }
+
+    .cont .flex .right {
+        width: 85%;
+        height: auto;
+        margin-top: -1.5rem;
+    }
+    @media screen and (max-width: 600px) {
+        .writetous{
+            padding: 0rem !important;
+            border: none;
+            border-radius: 0px ;
+            background-color: white;
+            box-shadow: 0px 4px 7px -2px rgb(0 0 0 / 20%);
+        }
+}
+</style>
+
 <main>
 
-
-    <!-- Title Strip  -->
-    <!-- <div class="title_strip_yellow">
-            <div class="container">
-                <div class="row py-4">
-                    <div class="col">
-                        <h1 class="title_strip_yellow_h1">Adopt a pet</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="">
-            <div class="container">
-                <div class="row">
-                    <div class="col-2 title_strip_yellow_ul"></div>
-                </div>
-            </div>
-        </div> -->
-    <!-- End Title Strip -->
 
     <div class="spacer_m"></div>
 
@@ -65,74 +104,41 @@
 
                             ?>
                             <form action="<?php echo base_url() ?>frontend/contact/insert_data" method="post">
-                                <div class="row px-4">
-                                    <div class="col">
-                                        <div class="mb-3">
-                                            <!-- <label for="" class="donate_input_lable pb-3">Name (Required)</label> -->
-                                            <input type="text" class="form-control base_input" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Name">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row px-4">
-                                    <div class="col">
-                                        <div class="mb-3">
-                                            <!-- <label for="" class="donate_input_lable pb-3">Email (Required)</label> -->
-                                            <input type="email" class="form-control base_input" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Email">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row px-4">
-                                    <div class="col">
-                                        <div class="mb-3">
-                                            <!-- <label for="" class="donate_input_lable pb-3">Email (Required)</label> -->
-                                            <input type="number" class="form-control base_input" name="mob" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Number">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--div class="row px-4">
-                                    <div class="col">
-                                        <div class="mb-3">
-                                            
-                                            <input type="email" class="form-control base_input" name="donar_email"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp"
-                                                placeholder="Subject">
-                                        </div>
-                                    </div>
-                                </div-->
-                                <div class="row px-4 mb-3">
-                                    <div class="col">
-                                        <div class="mb-3">
-                                            <!-- <label for="exampleInputEmail1" class="donate_input_lable pb-3">Your
-                                                Message</label> -->
-                                            <div class="form-floating base_input">
-                                                <textarea class="form-control" placeholder="Your
-                                                Message" name="msg" id="floatingTextarea2" style="height: 100px"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row px-4">
-                                    <div class="col">
-                                        <button class="btn brown_btn">Get In Touch</button>
-                                    </div>
-                                </div>
+                                <input class="contact_us_input" type="text" name="name" placeholder="Enter Your Name">
+                                <input class="contact_us_input" type="email" name="email" placeholder="Enter Your Email">
+                                <input class="contact_us_input" type="number" name="mob" placeholder="Enter Contact Number">
+                                <textarea class="contact_us_input" name="msg" placeholder="Enter Message For us" cols="30" rows="5"></textarea>
+                                <button class="contact_submit">Submit</button>
                             </form>
                         </div>
-                        <div class="col-md-6  px-4 ">
-                            <div>
-                                <h2 class="h2_head base_heading_h2">Our Office</h2>
-                                <p>Ground Floor, Rajmahal Complex, Opp. PLA Petrol Pump, Delhi Road, Hisar Haryana
-                                    125001 </p>
+                        <div class="col-md-6  px-4 cont">
+                            <div class="flex">
+                                <div class="left">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                </div>
+                                <div class="right">
+                                    <h2 class="h2_head base_heading_h2">Our Office</h2>
+                                    <p>Ground Floor, Rajmahal Complex, Opp. PLA Petrol Pump, Delhi Road, Hisar Haryana 125001 </p>
+                                </div>
                             </div>
-                            <div>
-                                <h2 class="h2_head base_heading_h2">Give Us a Call</h2>
-                                <p>+91 8957450000</p>
-                                <p>+91 8957450000</p>
+                            <div class="flex">
+                                <div class="left">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </div>
+                                <div class="right">
+                                    <h2 class="h2_head base_heading_h2">Give Us a Call</h2>
+                                    <p>+91 8957450000</p>
+                                    <p>+91 8957450000</p>
+                                </div>
                             </div>
-                            <div>
-                                <h2 class="h2_head base_heading_h2">Email</h2>
-                                <p>Info@dogbazar.com </p>
+                            <div class="flex">
+                                <div class="left">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                </div>
+                                <div class="right">
+                                    <h2 class="h2_head base_heading_h2">Email</h2>
+                                    <p>Info@dogbazar.com </p>
+                                </div>
                             </div>
                         </div>
                     </div>

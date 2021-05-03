@@ -1,25 +1,32 @@
+<style>
+    .franchies_form_fill{
+        width: 100%;
+        height: auto;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        padding-left: 1rem;
+        border: 1px solid #cdcdcd;
+        outline: none;
+        margin-bottom: 1.5rem;
+    }
+    .franchies_submit{
+        width: 100%;
+        height: auto;
+        padding-top: .7rem;
+        padding-bottom: .7rem;
+        border: 1px solid #f39933;
+        background-color: #f39933;
+        color: white;
+        outline: none;
+        text-transform: uppercase;
+        transition: .5s;
+    }
+    .franchies_submit:hover{
+        border-radius: 25px;
+    }
+
+</style>
 <main>
-
-
-    <!-- Title Strip  -->
-    <!-- <div class="title_strip_yellow">
-            <div class="container">
-                <div class="row py-4">
-                    <div class="col">
-                        <h1 class="title_strip_yellow_h1">Adopt a pet</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="">
-            <div class="container">
-                <div class="row">
-                    <div class="col-2 title_strip_yellow_ul"></div>
-                </div>
-            </div>
-        </div> -->
-    <!-- End Title Strip -->
-
     <div class="spacer_m"></div>
 
     <!-- Main Content -->
@@ -126,7 +133,7 @@
             <div class="col-md-12">
                 <div class="row justify-content-around">
                     <div class="col-md-6 ">
-                    <?php
+                        <?php
                         if ($this->session->flashdata('success')) {
                             echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
                         } else if ($this->session->flashdata('error')) {
@@ -135,48 +142,19 @@
 
 
                         ?>
-                        <form action="<?php echo base_url()?>frontend/franchies/insert_data" method="post">
-                        <div class="row px-4">
-                            <div class="col">
-                                <div class="mb-3">
-                                    <label for="" class="donate_input_lable pb-3">Name (Required)</label>
-                                    <input type="text" class="form-control base_input" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Anshu">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row px-4">
-                            <div class="col">
-                                <div class="mb-3">
-                                    <label for="" class="donate_input_lable pb-3">Email (Required)</label>
-                                    <input type="email" class="form-control base_input" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Anshu">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row px-4">
-                            <div class="col">
-                                <div class="mb-3">
-                                    <label for="" class="donate_input_lable pb-3">Subject *</label>
-                                    <input type="text" class="form-control base_input" name="sub" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Anshu">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row px-4 mb-3">
-                            <div class="col">
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="donate_input_lable pb-3">Your
-                                        Message</label>
-                                    <div class="form-floating base_input">
-                                        <textarea class="form-control" placeholder="Leave a comment here" name="msg" id="floatingTextarea2" style="height: 100px"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <form action="<?php echo base_url() ?>frontend/franchies/insert_data" method="post">
+                            <label for="" class="donate_input_lable pb-3">Name (Required)</label>
+                            <input type="text" class="franchies_form_fill base_input" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Name">
+                            <label for="" class="donate_input_lable pb-3">Email (Required)</label>
+                            <input type="email" class="franchies_form_fill base_input" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Email">
+                            <label for="" class="donate_input_lable pb-3">Subject *</label>
+                            <input type="text" class="franchies_form_fill base_input" name="sub" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Subject">
+                            <label for="exampleInputEmail1" class="donate_input_lable pb-3">Your Message</label>
+                            <textarea name="msg" id="" class="franchies_form_fill" placeholder="Leave a comment here" cols="30" rows="5"></textarea>
 
-                        <div class="row px-4">
-                            <div class="col">
-                                <button class="btn brown_btn">Submit</button>
-                            </div>
-                        </div>
+                            <button class="franchies_submit">Submit</button>
+
+
                         </form>
                     </div>
                     <div class="col-md-5 ">

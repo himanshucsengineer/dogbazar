@@ -48,24 +48,32 @@ class Newpost extends CI_controller
                 $imageurl = base_url() . 'upload/dogcare/behave/' . $dataimage_return['file_name'];
             }
         }
-
+        $str = $this->input->post('name');
+    
+       
+        $code = '';
+        for ($i = 0; $i < 10; $i++) {
+            $code .= mt_rand(0, 9);
+        }
+        $new_url = $str . "" . $code;
+       
 
 
 
         $datas = array(
-            'head' => $this->input->post('heading'),
-            // 'mt_title' => $this->input->post('mtitle'),
-            // 'm_desc' => $this->input->post('mdesc'),
-            //  'm_key' => $this->input->post('mkey'),
-            'content' => $this->input->post('content'),
-            'cate' => $this->input->post('category'),
-            'link' => $this->input->post('link'),
-            // 'tag' => $this->input->post('tags'),
+            'name' => $this->input->post('name'),
+             'age' => $this->input->post('age'),
+             'color' => $this->input->post('color'),
+              'gender' => $this->input->post('gender'),
+            'about' => $this->input->post('about'),
+         
+            'link' => $new_url,
+            
 
             'image' => $imageurl,
         );
         if ($this->newpostmodel->newpost($datas)) {
-            $this->session->set_flashdata('success', 'Post Published');
+            $this->session->set_flashdata('success', 'Dog Listed');
             redirect(base_url() . 'admin/dogcare/behave/newpost');
         } else {
             $this->session->set_flashdata('error', 'Error In Updating Please Try Again');

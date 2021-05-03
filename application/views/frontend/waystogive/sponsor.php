@@ -1,6 +1,6 @@
 
-<!-- BreadCrumb -->
-<div class="breadcrumb">
+
+<!--div class="breadcrumb">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -11,7 +11,7 @@
             </div>
         </div>
     </div>
-    <!-- End BreadCrumb -->
+
 
 
 
@@ -156,7 +156,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="mb-3">
-                                            <!-- <label for="" class="donate_input_lable pb-3"></label> -->
+                                          
                                             <input type="text" class="form-control base_input donar_input_pay"
                                                 name="amount" id="exampleInputEmail1" aria-describedby="emailHelp"
                                                 placeholder="Enter Your Amount">
@@ -166,7 +166,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="mb-3">
-                                            <!-- <label for="" class="donate_input_lable pb-3">Full Name</label> -->
+                                           
                                             <input type="text" class="form-control base_input" id="exampleInputEmail1"
                                                 name="name" aria-describedby="emailHelp"
                                                 placeholder="Your Name">
@@ -177,7 +177,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="mb-3">
-                                            <!-- <label for="" class="donate_input_lable pb-3">Enter Your Email</label> -->
+                                           
                                             <input type="email" class="form-control base_input" name="email"
                                                 id="exampleInputEmail1" aria-describedby="emailHelp"
                                                 placeholder="Email">
@@ -187,28 +187,18 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="mb-3">
-                                            <!-- <label for="" class="donate_input_lable pb-3">Mobile Number</label> -->
+                                          
                                             <input type="number" class="form-control base_input" name="mob"
                                                 id="exampleInputEmail1" aria-describedby="emailHelp"
                                                 placeholder="Phone Number">
                                         </div>
                                     </div>
                                 </div>
-                                <!--div class="row">
-                                    <div class="col">
-                                        <div class="mb-3">
-                                           
-                                            <input type="text" class="form-control base_input" name="gift"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp"
-                                                placeholder="Enter Gift Name">
-                                        </div>
-                                    </div>
-                                </div-->
+                               
                                 <div class="row">
                                     <div class="col">
                                         <div class="mb-4">
-                                            <!-- <label for="exampleInputEmail1" class="donate_input_lable pb-3">Your
-                                                Message</label> -->
+                                          
                                             <div class="form-floating base_input">
                                                 <textarea class="form-control" placeholder="Leave a comment here"
                                                     name="msg" id="floatingTextarea2"
@@ -240,7 +230,7 @@
     <script>
 
 
-// Model Box Pop Up
+
 
 var myModal = document.getElementById('myModal')
 var myInput = document.getElementById('myInput')
@@ -256,4 +246,132 @@ hb.addEventListener('click', () => {
     mobhead.classList.toggle('active_header');
 });
 
-</script>
+</script-->
+<style>
+    .sponser_new{
+        width: 100%;
+        height: auto;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        background-color: white;
+    }
+    .sponser_new img{
+        width: 100%;
+        height: 500px;
+    }
+    .sponser_new h1{
+        margin-top: 2rem;
+        font-size: 30px ;
+        font-weight: 300 !important;
+        margin-left: 1rem;
+    }
+    .sponser_new p{
+        font-size: 15px;
+        margin-top: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .sponser_new .sponsor_dog_card{
+        width: 100%;
+        height: auto;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .sponser_new .sponsor_dog_card .flex{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .sponser_new .sponsor_dog_card .flex .card{
+        width: 33%;
+        height: auto;
+        border: none;
+        padding: 1rem;
+        background-color: white;
+    }
+    .sponser_new .sponsor_dog_card .flex .card .inner_card{
+        width: 100%;
+        height: auto;
+        border:1px solid #cdcdcd ;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-right: 5rem;
+        padding-left: 5rem;
+    }
+    .sponser_new .sponsor_dog_card .flex .card  a{
+        text-decoration: none;
+    }
+    .sponser_new .sponsor_dog_card .flex .card .inner_card img{
+        width: 100%;
+        height: 200px;
+    }
+    .sponser_new .sponsor_dog_card .flex .card .inner_card h3{
+        text-align: center;
+        margin-bottom: 1rem;
+        color: #f39933;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .sponser_new .sponsor_dog_card .flex .card .inner_card h5{
+        text-align: center;
+        margin-top: 1rem;
+        color: #444;
+        font-size: 15px;
+        
+    }
+    .sponser_new .sponsor_dog_card .flex .card .inner_card .sponsor_buttt{
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    .sponser_new .sponsor_dog_card .flex .card .inner_card .sponsor_buttt button{
+        width: 15rem;
+        height: auto;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        color: white;
+        background-color: #f39933;
+        border:  1px solid #f39933;
+        border-radius: 25px;
+        outline: none;
+        margin-top: 1.5rem;
+    }
+</style>
+<div class="sponser_new">
+    <div class="container">
+        <img src="<?php echo base_url()?>/assest/images/adopt.jpg" alt="">
+        <h1>Canine companions - Sponsor a dog</h1>
+        <p>You can ensure that the thousands of dogs at the International Dog Bazar get the care they need and deserve.</p>
+        <p>IDB cares for thousands of animals every year and some require more time and attention than others. This can be for a variety of reasons, such as behavioural or medical issues. By sponsoring a dog, you will not only change their life, but you'll also change the lives of many others in desperate need. Your monthly gift will help fund the shelter, food, and veterinary care for dogs that have nowhere else to go. Sponsoring a dog means that your donation will go towards International Dog Bazar efforts helping the neglected and abused animals of Asia. Your gift of sponsorship is used to help your sponsored dog and all the other animals International Dog Bazar cares for to provide shelter, food & medicine and veterinary care.</p>
+        <p>When you join the Sponsor Club you will receive regular updates throughout the year on your sponsor dog. Your gift will mean everything to your sponsor dog, and the hundreds of other dogs in our care.</p>
+
+
+        <div class="sponsor_dog_card">
+            <div class="flex">
+            <?php foreach ($blogs as $value) { ?>
+                <div class="card">
+                <a href="<?php echo base_url() . "sponsor/" . $value['link'] ?>">
+                    <div class="inner_card">
+                        <h3><?php echo $value['name']?></h3>
+                        <img src="<?php echo $value['image']?>" alt="">
+                        <h5><?php echo $value['gender']?></h5>
+                        <h5><?php echo $value['age']?></h5>
+                        <div class="sponsor_buttt">
+                            <button>Sponsor Me</button>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                <?php }?>
+                
+                
+              
+               
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
