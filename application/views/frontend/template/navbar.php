@@ -136,7 +136,7 @@ if (!isset($_SESSION["email"])) {
     .header_btn{
         float: right;
         text-align: center;
-        background-color: #f39933;
+        background-color: #A6341B;
         border-radius:25px;
         font-size: 12px;
         padding: .8rem 1.5rem;
@@ -154,13 +154,17 @@ if (!isset($_SESSION["email"])) {
         border: 1px solid #f39933;
     }
     .header_nav{
-        background-color: #d44444;
+        background-color: #FC8817;
     }
     .nav_items{
         background-color: transparent;
         border-right:1px solid #f39933 ;
         color: white;
         padding: .8rem 1rem;
+        transition: .5s;
+    }
+    .nav_items:hover{
+        background-color: #A6341B !important;
     }
     .first{
         border-left: 1px solid #f39933;
@@ -170,7 +174,7 @@ if (!isset($_SESSION["email"])) {
         font-size: 1.38rem;
     }
     .nav_items_dropdown_link{
-        background-color: #d44444;
+        background-color: #A6341B;
         border-bottom: 2px solid #f39933;
         transition: .5s;
     }

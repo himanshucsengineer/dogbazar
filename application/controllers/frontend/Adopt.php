@@ -16,4 +16,22 @@ class Adopt extends CI_controller
         $this->load->view('frontend/adopt' , $data);
         $this->load->view('frontend/template/footer');
     }
+    public function getCityDepartment()
+    {
+        // POST data 
+        $postData = $this->input->post();
+
+        // load model 
+        $this->load->model('frontend/Listmydogmodel');
+
+        // get data 
+        if($postData==null){
+            $data = $this->Listmydogmodel->fetch_adopt_all();
+            echo json_encode($data);
+        }else{
+            $data = $this->Listmydogmodel->getCityDepartment($postData);
+        echo json_encode($data);
+        }
+        
+    }
 }

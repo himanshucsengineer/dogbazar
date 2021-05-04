@@ -189,8 +189,8 @@
     /* Style the active class, and buttons on mouse-over */
     .active,
     .donation_button_new:hover {
-        background-color: #d44444;
-        border: 1px solid #d44444;
+        background-color: #A6341B;
+        border: 1px solid #A6341B;
     }
 
     .donation_button_new2 {
@@ -211,8 +211,8 @@
     /* Style the active class, and buttons on mouse-over */
     .acti,
     .donation_button_new2:hover {
-        background-color: #d44444;
-        border: 1px solid #d44444;
+        background-color: #A6341B;
+        border: 1px solid #A6341B;
     }
 
     .donation_form_new .amount {
@@ -237,8 +237,8 @@
     /* Style the active class, and buttons on mouse-over */
     .activ,
     .donation_button_new3:hover {
-        background-color: #d44444;
-        border: 1px solid #d44444;
+        background-color: #A6341B;
+        border: 1px solid #A6341B;
     }
 
     .donation_form_new .make_payment {
@@ -271,18 +271,27 @@
         width: 100%;
         height: auto;
         display: flex;
+        margin-top: 3rem;
     }
 
     .why_donate .flex .left {
         width: 30%;
         height: auto;
+        padding: 1.5rem;
+        margin-right: 1rem;
     }
-
+    .why_donate .flex .left img{
+        width: 100%;
+        height: 70px;
+        margin-top: -2rem;
+    }
     .why_donate .flex .right {
         width: 70%;
         height: auto;
     }
-
+    .why_donate .flex .right p{
+        font-size: 1.5rem;
+    }
     .why_donate .hori_line {
         border-bottom: 1px solid gray;
         margin-bottom: 4rem;
@@ -303,7 +312,10 @@
    }
    .feqs .accordion-button{
        color: black;
-       font-size: 17px;
+       font-size: 25px;
+   }
+   .feqs .accordion-button:not(.collapsed){
+       background-color: white !important;
    }
 </style>
 
@@ -404,7 +416,7 @@
             <div class="col-md-4">
                 <div class="flex">
                     <div class="left">
-
+                    <img src="<?php echo base_url()?>/assest/images/Why1.png" alt=" why 1" />
                     </div>
                     <div class="right">
                         <p>To liberate animals from unnecessary suffering</p>
@@ -414,7 +426,7 @@
             <div class="col-md-4">
                 <div class="flex">
                     <div class="left">
-
+                    <img src="<?php echo base_url()?>/assest/images/Why2.png" alt="">
                     </div>
                     <div class="right">
                         <p>To help fellow animal lovers strengthen the movement</p>
@@ -424,7 +436,7 @@
             <div class="col-md-4">
                 <div class="flex">
                     <div class="left">
-
+                    <img src="<?php echo base_url()?>/assest/images/Why3.png" alt="">
                     </div>
                     <div class="right">
                         <p>To create a future where animals are free from human exploitation</p>
@@ -446,38 +458,134 @@
             <div class="col-md-4">
                 <div class="flex">
                     <div class="left">
-
+                    <img src="<?php echo base_url()?>/assest/images/What1.png" alt=" why 1" />
                     </div>
                     <div class="right">
-                        <p>To liberate animals from unnecessary suffering</p>
+                        <p>Ending dairy cruelty against cows & buffaloes</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="flex">
                     <div class="left">
-
+                    <img src="<?php echo base_url()?>/assest/images/What2.png" alt=" why 1" />
                     </div>
                     <div class="right">
-                        <p>To help fellow animal lovers strengthen the movement</p>
+                        <p>Addressing unethical & illegal slaughter practices</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="flex">
                     <div class="left">
-
+                    <img src="<?php echo base_url()?>/assest/images/What3.png" alt=" why 1" />
                     </div>
                     <div class="right">
-                        <p>To create a future where animals are free from human exploitation</p>
+                        <p>Empowering local communities with right information on rabies</p>
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-4">
+                <div class="flex">
+                    <div class="left">
+                    <img src="<?php echo base_url()?>/assest/images/What4.png" alt=" why 1" />
+                    </div>
+                    <div class="right">
+                        <p>Ending human-dog conflict in cities and small towns</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="flex">
+                    <div class="left">
+                    <img src="<?php echo base_url()?>/assest/images/What5.png" alt=" why 1" />
+                    </div>
+                    <div class="right">
+                        <p>Building India’s largest animal rights network across 70+ cities</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="flex">
+                    <div class="left">
+                    <img src="<?php echo base_url()?>/assest/images/What6.png" alt=" why 1" />
+                    </div>
+                    <div class="right">
+                        <p>Helping people have a compassionate & plant-based lifestyle</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="flex">
+                    <div class="left">
+                    <img src="<?php echo base_url()?>/assest/images/What7.png" alt=" why 1" />
+                    </div>
+                    <div class="right">
+                        <p>Empowering activists with skills for mobilizing & awareness building</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="flex">
+                    <div class="left">
+                    <img src="<?php echo base_url()?>/assest/images/What8.png" alt=" why 1" />
+                    </div>
+                    <div class="right">
+                        <p>Supporting animal NGOs in India in their efforts to protect animals</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="flex">
+                    <div class="left">
+                    <img src="<?php echo base_url()?>/assest/images/What9.png" alt=" why 1" />
+                    </div>
+                    <div class="right">
+                        <p>Facilitating adoption of plant-based alternatives by companies</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="flex">
+                    <div class="left">
+                    <img src="<?php echo base_url()?>/assest/images/What10.png" alt=" why 1" />
+                    </div>
+                    <div class="right">
+                        <p>Protecting elephants in captivity & in the wild</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="flex">
+                    <div class="left">
+                    <img src="<?php echo base_url()?>/assest/images/What11.png" alt=" why 1" />
+                    </div>
+                    <div class="right">
+                        <p>Legal advocacy to speak on behalf of animals who have suffered</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="flex">
+                    <div class="left">
+                    <img src="<?php echo base_url()?>/assest/images/What12.png" alt=" why 1" />
+                    </div>
+                    <div class="right">
+                        <p>Providing emergency help for animals in suffering</p>
+                    </div>
+                </div>
+            </div>
+
+            
         </div>
+        <hr>
     </div>
 </div>
 
-
+                
 
 <div class="feqs">
     <div class="container">

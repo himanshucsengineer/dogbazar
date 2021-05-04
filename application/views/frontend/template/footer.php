@@ -132,8 +132,8 @@
         padding-top: .3rem;
         padding-bottom: .3rem;
         color: white;
-        background: #f3cb38;
-        border: 1px solid #f3cb38;
+        background: #FC8817;
+        border: 1px solid #FC8817;
         outline: none;
     }
 
@@ -158,7 +158,15 @@
         margin-top: .7rem !important;
         margin-left: 3rem !important;
     }
+    .footer{
+        background-color: #66120e !important;
+    }
+    .footerTag_copyright{
+        background-color: #A6341B !important;
+    }
 </style>
+
+
 <footer class="footer">
 
     <div class="container">

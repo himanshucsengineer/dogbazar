@@ -1,4 +1,10 @@
 <style>
+    .contact_us_new{
+        width: 100%;
+        height: auto;
+        padding-top: 4rem;
+        background-color: #ECF0F1;
+    }
     .contact_us_input {
         width: 100%;
         height: auto;
@@ -16,7 +22,7 @@
         padding-top: .8rem;
         padding-bottom: .8rem;
         color: white;
-        background-color: #d44444;
+        background-color: #FC8817;
         border: none;
         outline: none;
     }
@@ -37,13 +43,35 @@
 
     .cont .flex .left .fa {
         font-size: 30px;
-        color: #d44444;
+        color: #FC8817;
     }
 
     .cont .flex .right {
         width: 85%;
         height: auto;
         margin-top: -1.5rem;
+    }
+    .contact_us_new .lets{
+        width: 100%;
+        text-align: center;
+        font-weight: 600;
+    }
+    .contact_us_new .lets .eno{
+        color: #FC8817 !important;
+    }
+    .contact_us_new .sabline_contact{
+        text-align: center;
+        font-size: 15px;
+    }
+    .writetous{
+        padding: 3rem !important;
+        border: 1px solid #cdcdcd;
+        background-color: white !important;
+        border-radius: 0px !important;
+        box-shadow: 0px 4px 7px -2px rgb(0 0 0 / 20%);
+    }
+    .contact_us_new .base_heading_h2{
+        color: #FC8817 !important;
     }
     @media screen and (max-width: 600px) {
         .writetous{
@@ -56,37 +84,10 @@
 }
 </style>
 
-<main>
-
-
-    <div class="spacer_m"></div>
-
-    <!-- Main Content -->
-
-    <!-- Franchies Heading -->
-    <div class="container px-4 mb-5">
-
-        <!-- Heading -->
-        <div class="row mb-3 justify-content-center">
-            <div class="col-md-4 text-center px-3">
-                <h1 class="fc_underline">Contact Us</h1>
-            </div>
-        </div>
-        <!-- End Heading -->
-        <!-- Top para -->
-        <div class="row mb-2 justify-content-center">
-            <div class="col-md-8  text-center px-3">
-                <p>This list contains plants that have been reported as having systemic effects on animals and/or
-                    intense effects on the gastrointestinal tract.
-                </p>
-            </div>
-        </div>
-
-
-
-
-
-        <!-- Write To Us -->
+<main class="contact_us_new">
+    <div class="container ">
+        <h1 class="lets"><span class="eno">Enough about us</span>, lets talk about you now !</h1>
+        <p class="sabline_contact">We would love to work with you and are waiting for you to drop us a line! Please fill out the form below to get in touch with us or request for a quote here. We’ll be sure to get back to you as soon as we can.</p>
         <div class="container px-3 mb-5">
             <div class="row justify-content-center mt-5 py-5 writetous contactus">
                 <div class="col-md-12">
@@ -149,7 +150,7 @@
         </div>
 
         <div class="spacer_m"></div>
-        <div class="spacer_m"></div>
+     
 
 
         <!-- End Main -->

@@ -1,147 +1,10 @@
-<!--main>
 
-
-
-    <div class="title_strip_brown">
-        <div class="container">
-            <div class="row py-4">
-                <div class="col">
-                    <h1 class="title_strip_brown_h1">Adopt pet</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-   
-
-    <div class="spacer_m"></div>
-
-  
-    <div class="body_content">
-        <div class="container px-4">
-            <div class="row justify-content-between ">
-
-            
-                <div class="col-md-9 pxy-2 ">
-                    <h2>More Then 300 Dogs Breed are here to Adopt</h2>
-                    <p>From more than 17,000 animal shelters & rescues. Please note that the information
-                        contained in our plant lists is not meant to be all-inclusive.</p>
-
-                    <h3>Enter Location</h3>
-
-                 
-                    <form action="">
-
-                        <p><span class="amt_lable">Search Your Pet at any Location in India</span></p>
-
-                        <div class="row">
-                            <div class="col-md-10">
-                                <div class="mb-4">
-                                
-                                    <input type="text" class="form-control base_input adopt_input_search" name="donar_amount" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search Your Pet">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col">
-                                <button class=" brown_btn">Search</button>
-                            </div>
-                        </div>
-
-                        <div class="spacer_m"></div>
-
-                        <div class="row">
-                            <div class="col">
-
-                                <h3>All Featured Pets</h3>
-                                <p>10 Pets has Found In Jaipur</p>
-                            </div>
-                        </div>
-
-
-
-                    </form>
-                  
-
-                    <hr>
-                    <div class="spacer_s"></div>
-
-
-                    <div class="row px-4">
-                        <div class="col">
-                            <div class="row">
-                                <?php foreach ($adopt as $value) { ?>
-                                <div class="col-md-4 mb-5 px-3">
-                                    <a href="<?php echo base_url() . "adopt/" . $value['link'] ?>" class="nodecoration">
-                                        <div class="petinfo_card">
-
-                                            <img src="<?php echo $value['image'] ?>" alt="" class="petinfo_card_img">
-
-                                            <h3>Breed: &nbsp; <span class="petinfo_card_status"><?php echo $value['breed'] ?></span></h3>
-                                            <p>Gender: &nbsp; <span class="petinfo_card_status"><?php echo $value['gender'] ?></span></p>
-                                            <p>Age: &nbsp; <span class="petinfo_card_status"><?php echo $value['age'] ?></span></p>
-
-                                            <p><?php echo $value['city'] ?></p>
-
-                                        </div>
-                                    </a>
-                                </div>
-                                <?php } ?>
-                           
-
-                                
-
-
-
-
-
-                            </div>
-
-                        </div>
-                    </div>
-
-
-
-                </div>
-
-
-
-    
-
-                <div class="col-md-3 px-3  ">
-                    <div class="row mb-2">
-                        <div class="col">
-                            <h2>Donate to Save Pets</h2>
-                            <p>from more than 17,000 animal shelters & rescues</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <a href="<?php echo base_url() ?>donate"><button class="btn donar_pay">Lets Donate</button></a>
-                        </div>
-                    </div>
-                </div>
-
-     
-
-
-            </div>
-        </div>
-
-    </div>
-
-
-
-    <div class="spacer_m"></div>
-    <div class="spacer_m"></div>
-
-</main-->
 <style>
     .adopt_dog {
         width: 100%;
         height: auto;
         padding-bottom: 3rem;
-        padding-top: 5rem;
+        
     }
 
     .adopt_dog img {
@@ -159,11 +22,16 @@
         width: 100%;
         height: auto;
         display: flex;
-
+        padding: 1.5rem;
+        border: 1px solid #cdcdcd;
+        background-color: white;
+        margin-top: -3.5rem;
+        margin-bottom: 2rem;
+        box-shadow: 0px 4px 9px 0px #d3d4d6;
     }
-
+    
     .adopt_dog .flex .left {
-        width: 50%;
+        width: 75%;
         height: auto;
     }
 
@@ -178,7 +46,7 @@
     }
 
     .adopt_dog .flex .right {
-        width: 10%;
+        width: 25%;
         height: auto;
     }
 
@@ -258,6 +126,43 @@
         outline: none;
         border-radius: 25px;
     }
+    .adopt_dog .first_sec{
+        width: 100%;
+        height: auto;
+        padding-top: 2rem;
+        background-color: #A6341B;
+        padding-bottom: 3.5rem;
+    }
+    .adopt_dog .first_sec img{
+        width: 100%;
+        height: 180px;
+    }
+  
+    .adopt_dog .first_sec .first_sec_inner h1{
+        color: #f39933;
+        font-size: 25px;
+        font-weight: 700;
+        text-transform: capitalize;
+        margin-bottom: 1rem;
+    }
+    .adopt_dog .first_sec .first_sec_inner button{
+        width: 14rem;
+        height: auto;
+        padding-top: .8rem;
+        padding-bottom: .8rem;
+        color: white;
+        background-color: #f39933;
+        outline: none;
+        border: 1px solid #f39933;
+        border-radius: 25px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .adopt_dog .first_sec .first_sec_inner p{
+        color:white;
+        font-size: 15px;
+        text-transform: capitalize;
+    }
     @media screen and (max-width: 600px) {
         .adopt_dog .flex .left {
             width: 65%;
@@ -293,21 +198,61 @@
 
             font-size: 1.1rem;
         }
+        .adopt_dog .first_sec .first_sec_inner h1{
+            font-size: 20px;
+            margin-bottom: 1rem;
+        }
+        .adopt_dog .first_sec .first_sec_inner{
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        .adopt_dog .first_sec .first_sec_inner p{
+            font-size: 13px;
+        }
+        .adopt_dog .flex .right{
+            width: 35%;
+        }
+        .adopt_dog .adopt_card_main .card .card_inner .adop_butt button{
+            font-size: 11px;
+            width: 9rem;
+        }
     }
 </style>
 <div class="adopt_dog">
-
-    <!--img src="<?php echo base_url() ?>assest/images/adopt.jpg" alt="adopt aimage">
-    <p>At the International Dog Bazar shelter, hundreds of dogs wait in anticipation of loving homes. Many have been rescued from suffering on the streets or as survivors of the Asian dog meat trade. All are deserving of a forever home and the process is a lot easier than you think. Search below to find the perfect companion for your home and family. Thank you for wanting to adopt a rescue; Soi Dog Foundation will help you every step of the way.</p-->
+    <div class="first_sec">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="first_sec_inner">
+                    <h1>List Your Dog for Adoption</h1>
+                    <p>At the International Dog Bazar, hundreds of dogs wait in anticipation of loving homes. Many have been rescued from suffering on the streets or as survivors of the Asian dog meat trade. All are deserving of a forever home and the process is a lot easier than you think. Search below to find the perfect companion for your home and family. Thank you for wanting to adopt a rescue; International Dog Bazar will help you every step of the way.</p>
+                    <button>List A Dog</button>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <img src="<?php echo base_url()?>/assest/images/list-dog-banner.png" alt="banner">
+            </div>
+        </div>
+        </div>
+    </div>
     <div class="container">
-        <div class="flex justify-content-center">
+        <div class="row justify-content-center">
+            
+            <div class="col-md-9">
+            <div class="flex " id="aBtnGroup">
+            
             <div class="left">
-                <input type="text" placeholder="Search By City">
+                <input type="text" id="serch" placeholder="Search By City" value="">
             </div>
             <div class="right">
                 <button>Search</button>
             </div>
+            
         </div>
+            </div>
+            
+        </div>
+        
 
         <div class="adopt_card_main ">
         <?php foreach ($adopt as $value) { ?>
@@ -330,9 +275,58 @@
             <?php }?>
             
             
-            
+          
             
         </div>
 
     </div>
 </div>
+
+
+
+<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script type='text/javascript'>
+    var baseURL = "<?php echo base_url(); ?>";
+    $(document).ready(function() {
+        $('#aBtnGroup button').on('click', function() {
+            var thisBtn = $(this);
+            var btnText = thisBtn.text();
+            var srchbtn = document.getElementById("serch").value;
+            var btnValue = thisBtn.val();
+            console.log(btnText + ' - ' + btnValue);
+            console.log(srchbtn);
+
+            $.ajax({
+                url: '<?= base_url() ?>frontend/adopt/getCityDepartment',
+                method: 'post',
+                data: {
+                    course: srchbtn
+                },
+                dataType: 'json',
+                success: function(response) {
+
+                    // Remove options 
+
+                    $('#sel_depart').find('option').not(':first').remove();
+
+                    // Add options
+                    $.each(response, function(index, data) {
+                        $('#sel_depart').append('<option value="' + data['month'] + ' ' + data['amount'] + '">Get Membership in: INR' + data['month'] + ' with validity: ' + data['id'] + '</option>');
+                    });
+                },
+                
+                
+            });
+
+
+        });
+       
+    });
+  
+
+
+
+
+  
+</script-->
