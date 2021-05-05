@@ -20,22 +20,12 @@
         outline: none;
     }
 </style>
-<?php
-                if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
-                    $url = "https://";
-                else
-                    $url = "http://";
-                // Append the host(domain name, ip) to the URL.   
-                $url .= $_SERVER['HTTP_HOST'];
-                // Append the requested resource location to the URL   
-                $url .= $_SERVER['REQUEST_URI'];
-                $uniqid= basename($url);
-                ?>
+
 <div class="row justify-content-center">
     <div class="col-md-6">
     
         <form action="<?php echo base_url() ?>frontend/adoptionform/insert_data" method="post">
-        <input type="text" name="uniq_id" value="<?php echo $uniqid?>">
+        
             <input type="text" name="name" placeholder="Enter Your Name">
             <input type="email" name="email" placeholder="Enter Your Email">
             <input type="number" name="mob" placeholder="Enter Your Number">
@@ -123,6 +113,17 @@
         outline: none;
     }
 </style>
+<?php
+                if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+                    $url = "https://";
+                else
+                    $url = "http://";
+                // Append the host(domain name, ip) to the URL.   
+                $url .= $_SERVER['HTTP_HOST'];
+                // Append the requested resource location to the URL   
+                $url .= $_SERVER['REQUEST_URI'];
+                $uniqid= basename($url);
+                ?>
 <div class="form_top_new" >
     <div class="">
     <div class="container" >
@@ -137,7 +138,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="list_dod_form_inner">
-                    <form action="<?php echo base_url() ?>" method="post" enctype="multipart/form-data">
+                    <form action="<?php echo base_url() ?>frontend/adoptionform/insert_data" method="post" enctype="multipart/form-data">
                         <?php
                         if ($this->session->flashdata('success')) {
                             echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
@@ -147,19 +148,20 @@
 
 
                         ?>
+                        <input type="hidden" name="uniq_id" value="<?php echo $uniqid?>">
                         <label for="">Your Name*</label>
                         <input type="text" name="name" placeholder="Enter Your Name">
                         <label for="">Your Email*</label>
                         <input type="email" name="email" placeholder="Enter Your Email">
                         <label for="">Your Number*</label>
-                        <input type="number" name="number" placeholder="Enter Your Number">
+                        <input type="number" name="mob" placeholder="Enter Your Number">
                        
-                        <label for="">Upload ID Proof*</label>
-                        <input type="file" multiple="multiple" name="files[]" maxlength="10" placeholder="Upload Dog Images">
+                        <label for="">Upload ID Proof*(Front & Back photo)</label>
+                        <input type="file" multiple="multiple" name="files[]"  maxlength="2" placeholder="Upload Dog Images">
                       
-                        <label for="">About Dog</label>
-                        <textarea name="msg" id="" cols="30" rows="5" placeholder="Tell Us more About Dog..."></textarea>
-                        <button name='upload'>Register Dog</button>
+                        <label for="">Parmanent Address</label>
+                        <textarea name="city" id="" cols="30" rows="5" placeholder="Your Address"></textarea>
+                        <button name='upload'>Adopt Now</button>
                     </form>
                 </div>
             </div>

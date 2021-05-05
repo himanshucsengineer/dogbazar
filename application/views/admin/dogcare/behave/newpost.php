@@ -148,13 +148,13 @@
                 <option value="Female">Female</option>
             </select>
             <label for="">Uplaod Image</label>
-            <input type="file" name="images" id="fileupload" >
+            <input type="file" multiple="multiple" name="files[]"  maxlength="5" id="fileupload" >
             <label>About Dog</label>
             <textarea name="about" id="textareaContent" placeholder="Type Your Blog Here...." required></textarea>
             <button style="margin-top:2rem">Submit</button>
         </div>
         </form>
-    </div>
+    </div> 
 </div>
 <script language="javascript" type="text/javascript">
     $(function() {

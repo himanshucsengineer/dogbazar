@@ -58,15 +58,7 @@
 
                 </div>
                 <div class="col-md-9 px-4">
-                <?php
-    if ($this->session->flashdata('success')) {
-        echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
-    } else if ($this->session->flashdata('error')) {
-        echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
-    }
-
-
-    ?> 
+                
                     <div class="row">
                         <div class="col">
                             <div class="tranning_page_head">
@@ -339,6 +331,7 @@ hb.addEventListener('click', () => {
         margin-top: 1.5rem;
     }
 </style>
+
 <div class="sponser_new">
     <div class="container">
         <img src="<?php echo base_url()?>/assest/images/adopt.jpg" alt="">
@@ -347,7 +340,15 @@ hb.addEventListener('click', () => {
         <p>IDB cares for thousands of animals every year and some require more time and attention than others. This can be for a variety of reasons, such as behavioural or medical issues. By sponsoring a dog, you will not only change their life, but you'll also change the lives of many others in desperate need. Your monthly gift will help fund the shelter, food, and veterinary care for dogs that have nowhere else to go. Sponsoring a dog means that your donation will go towards International Dog Bazar efforts helping the neglected and abused animals of Asia. Your gift of sponsorship is used to help your sponsored dog and all the other animals International Dog Bazar cares for to provide shelter, food & medicine and veterinary care.</p>
         <p>When you join the Sponsor Club you will receive regular updates throughout the year on your sponsor dog. Your gift will mean everything to your sponsor dog, and the hundreds of other dogs in our care.</p>
 
+        <?php
+    if ($this->session->flashdata('success')) {
+        echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
+    } else if ($this->session->flashdata('error')) {
+        echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
+    }
 
+
+    ?> 
         <div class="sponsor_dog_card">
             <div class="flex">
             <?php foreach ($blogs as $value) { ?>

@@ -23,31 +23,55 @@ class Newpost extends CI_controller
         $this->load->view('admin/dogcare/behave/newpost', $data);
         $this->load->view('admin/template/footer');
     }
-
+ 
 
     public function post()
     {
         $this->load->model('admin/dogcare/behave/newpostmodel');
         $this->input->post('formSubmit');
+        $img_data = array();
+        // Count total files
+        $countfiles = count($_FILES['files']['name']);
+        // Looping all files
+        for ($i = 0; $i < $countfiles; $i++) {
 
+            if (!empty($_FILES['files']['name'][$i])) {
 
-        if (!empty($_FILES['images']['name'])) {
-            $File_name = '';
-            $config['upload_path'] = APPPATH . '../upload/dogcare/behave';
-            $config['file_name'] = $File_name;
-            $config['overwrite'] = TRUE;
-            $config["allowed_types"] = 'jpeg|jpg|png';
-            $config["max_size"] = 2048;
-            $this->load->library('upload', $config);
-            if (!$this->upload->do_upload('images')) {
-                $this->data['error'] = $this->upload->display_errors();
-                $this->session->set_flashdata('error', $this->upload->display_errors());
-                redirect('admin/dogcare/behave/newpost');
-            } else {
-                $dataimage_return = $this->upload->data();
-                $imageurl = base_url() . 'upload/dogcare/behave/' . $dataimage_return['file_name'];
+                // Define new $_FILES array - $_FILES['file']
+                $_FILES['file']['name'] = $_FILES['files']['name'][$i];
+                $_FILES['file']['type'] = $_FILES['files']['type'][$i];
+                $_FILES['file']['tmp_name'] = $_FILES['files']['tmp_name'][$i];
+                $_FILES['file']['error'] = $_FILES['files']['error'][$i];
+                $_FILES['file']['size'] = $_FILES['files']['size'][$i];
+
+                // Set preference
+                $config['upload_path'] = APPPATH . '../upload/dogcare/behave';
+                $config['allowed_types'] = 'jpg|jpeg|png';
+                $config['max_size'] = '5000'; // max_size in kb
+                $config['file_name'] = $_FILES['files']['name'][$i];
+
+                //Load upload library
+                $this->load->library('upload', $config);
+
+                // File upload
+                if ($this->upload->do_upload('file')) {
+                    // Get data about the file
+                    $uploadData = $this->upload->data();
+                    $filename = base_url() . 'upload/dogcare/behave/' .$uploadData['file_name'];
+                    
+
+                    // Initialize array
+                     $img_data[] = $filename;
+                   
+                }
+                
             }
         }
+
+
+
+
+
         $str = $this->input->post('name');
     
        
@@ -70,7 +94,11 @@ class Newpost extends CI_controller
             'link' => $new_url,
             
 
-            'image' => $imageurl,
+            'image' => $img_data[0],
+            'image1' => $img_data[1],
+            'image2' => $img_data[2],
+            'image3' => $img_data[3],
+            'image4' => $img_data[4],
         );
         if ($this->newpostmodel->newpost($datas)) {
             $this->session->set_flashdata('success', 'Dog Listed');

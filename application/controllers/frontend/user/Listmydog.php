@@ -122,38 +122,5 @@ class Listmydog extends CI_controller
         } 
 
         
-        
-        // if ($this->form_validation->run()) {
-
-
-        //     // if (!empty($_FILES['images']['name'])) {
-
-        //     //     $File_name = 'userimage-' . strtotime(date('YmdHis'));
-
-        //     //     $config['upload_path'] = APPPATH . '../upload/listdog';
-        //     //     $config['file_name'] = $File_name;
-        //     //     $config['overwrite'] = TRUE;
-        //     //     $config["allowed_types"] = 'png|jpg|jpeg';
-        //     //     $config["max_size"] = 2048;
-
-        //     //     $this->load->library('upload', $config);
-
-        //     //     if (!$this->upload->do_upload('images')) {
-
-        //     //         $this->data['error'] = $this->upload->display_errors();
-        //     //         $this->session->set_flashdata('error', $this->upload->display_errors());
-
-        //     //         redirect('frontend/user/listmydog');
-        //     //     } else {
-        //     //         $dataimage_return = $this->upload->data();
-        //     //         $imageurl = base_url() . 'upload/listdog/' . $dataimage_return['file_name'];
-        //     //     }
-        //     // }
-
-            
-            
-        // } else {
-            
-        // }
     
 }

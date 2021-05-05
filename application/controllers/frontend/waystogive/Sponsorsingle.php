@@ -12,6 +12,7 @@ class Sponsorsingle extends CI_controller
     {
 
         $data['list'] = $this->Allpostmodel->blog_detail($slug);
+        $data['releted'] = $this->db->where('gender', $data['list']->gender)->order_by('id', 'DESC')->get('behave_newpost')->result();
         $this->load->view('frontend/template/header');
         $this->load->view('frontend/template/navbar');
 
@@ -19,3 +20,4 @@ class Sponsorsingle extends CI_controller
         $this->load->view('frontend/template/footer');
     }
 }
+ 
