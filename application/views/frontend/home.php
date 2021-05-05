@@ -1,3 +1,12 @@
+<style>
+    
+    @media only screen and (max-width: 600px) {
+        .carousel-inner img{
+        width: 100%;
+        height: 200px;
+    }
+}
+</style>
 <main>
 
     <!-- Cousal -->

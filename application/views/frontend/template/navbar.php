@@ -182,51 +182,143 @@ if (!isset($_SESSION["email"])) {
         background-color: #f39933;
         
     }
-</style>
+    .sidepanel .flex {
+        width: 100%;
+        height: auto;
+        display: flex;
+        padding-top: 2.5rem;
+        padding-bottom: 1.8rem;
+        padding-left: 1.5rem;
+        border-bottom: 1px solid #cdcdcd;
+    }
 
+    .sidepanel .flex .side_left {
+        width: 80%;
+        height: auto;
+    }
+
+    .sidepanel .flex .side_left h4 {
+        font-size: 19px;
+        color: #eee;
+    }
+
+    .sidepanel .flex .side_right {
+        width: 20%;
+        height: auto;
+    }
+
+    .sidepanel .flex .side_right button {
+        background: transparent;
+        color: #eee;
+        font-size: 30px;
+        border: none;
+        outline: none;
+        margin-top: -2rem;
+        margin-left: 2rem;
+    }
+
+    .mobile-bar {
+        display: none !important;
+    }
+
+    .sidepanel {
+        width: 0;
+        position: fixed;
+        z-index: 100;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #b42821;
+        overflow-x: hidden;
+        transition: 0.2s;
+
+    }
+
+    .sidepanel a {
+        width: 100%;
+        height: auto;
+        padding-left: 1.5rem;
+        border-bottom: 1px solid #cdcdcd;
+        display: block;
+        text-decoration: none;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        color: #eee;
+        font-size: 20px;
+
+    }
+
+    .sidepanel a:hover {
+        color: #ffc107;
+    }
+
+    .sidepanel .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+    }
+
+    .openbtn {
+        font-size: 2rem;
+        padding-right: 5px;
+        padding-left: 5px;
+        outline: none;
+        cursor: pointer;
+        background-color: transparent;
+        color:#b42821 ;
+        border: 1px solid #cdcdcd;
+    }
+    @media only screen and (max-width: 600px) {
+        .mobile-bar {
+            display: block !important;
+            float: right;
+            margin-top: -2.5rem;
+        }
+
+    }
+</style>
+<div id="mySidepanel" class="sidepanel">
+    <div class="flex">
+        <div class="side_left">
+            <h4>DogBazar</h4>
+        </div>
+        <div class="side_right">
+            <button href="javascript:void(0)" class="" onclick="closeNav()">×</button>
+        </div>
+    </div>
+
+    <a href="<?php echo base_url() ?>">Home</a>
+   
+    <a href="<?php echo base_url() ?>menu">Menu</a>
+    <a href="<?php echo base_url() ?>plans">Plans</a>
+    <a href="<?php echo base_url() ?>membership">Membership</a>
+    <a href="<?php echo base_url() ?>about-us">About Us</a>
+    <a href="<?php echo base_url() ?>contact-us">Contact Us</a>
+   
+
+   
+
+</div>
 
 
     <header class="header_2">
         <div class="container">
             <div class="row  head_top">
                 <div class="col-md-6"><a href="">logo</a> </div>
-                <div class="col-md-6 m_hide">
-                    <a href="" class="nodecoration header_btn">LOGIN / SIGNUP</a>
-                    <a href="<?php echo base_url()?>donate" class="nodecoration header_btn">DONATE</a>
-                    
+                <div class="col-md-6 ">
+                    <a href="" class="nodecoration header_btn m_hide">LOGIN / SIGNUP</a>
+                    <a href="<?php echo base_url()?>donate" class="nodecoration header_btn m_hide">DONATE</a>
+                    <div class="mobile-bar ">
+                        <button class="openbtn" onclick="openNav()">☰ </button>
+                    </div>
                 </div>
-                <!--div class="col-3 d_hide m_display">
-                    this
-                </div-->
+                
 
             </div>
         </div>
 
-        <!-- <div class="header_2_nav ">
-            <div class="container">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col">
-                        <ul class="d-flex m-0">
-                            <a href="" class="nodecoration">
-                                <li class="head_nav_links text-center">Home</li>
-                            </a>
-                            <a href="" class="nodecoration">
-                                <li class="head_nav_links text-center">Contact</li>
-                            </a>
-                            <a href="" class="nodecoration">
-                                <li class="head_nav_links text-center">Dog Care</li>
-                            </a>
-                            <a href="" class="nodecoration">
-                                <li class="head_nav_links text-center">Blog</li>
-                            </a>
-                            <a href="" class="nodecoration">
-                                <li class="head_nav_links text-center">List a dog</li>
-                            </a>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+     
 
         <div class="header_nav m_hide">
             <div class="container">
@@ -286,5 +378,13 @@ if (!isset($_SESSION["email"])) {
         </div>
 
     </header>
+    <script>
+    function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+    }
 
+    function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+    }
+</script>
     
