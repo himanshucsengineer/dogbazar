@@ -1,4 +1,4 @@
-<style>
+<!--style>
     .search{
         width: 100%;
         height: auto;
@@ -20,7 +20,7 @@
         </div>
     </div>
 </div>
-<!-- End BreadCrumb -->
+
 
 
 
@@ -126,8 +126,228 @@
 
     <div class="spacer_m"></div>
 
-</main>
+</main-->
 
+
+
+<style>
+    .breed_new{
+        width: 100%;
+        height: auto;
+        padding-bottom: 5rem;
+    }
+    .breed_new .breed_new_top{
+        width: 100%;
+        height: auto;
+        padding-top: 2rem;
+        background-color: #A6341B;
+        padding-bottom: 5rem;
+    }
+    .breed_new .breed_new_top img{
+        width: 100%;
+       
+    }
+    .breed_new .breed_new_top h1{
+        font-size: 28px;
+        font-weight: 700;
+        color: #FC8817;
+        text-transform: capitalize;
+        margin-bottom: 1rem;
+    }
+    .breed_new .breed_new_top p{
+        font-size: 15px;
+        text-transform: capitalize;
+        color: white;
+    }
+    .breed_new .inner_search {
+        width: 100%;
+        height: auto;
+        padding: 1.5rem;
+        border: 1px solid #cdcdcd;
+        background-color: white;
+        box-shadow: 0px 4px 9px 0px #d3d4d6;
+        margin-top: -4rem;
+    }
+    .breed_new .inner_search .search{
+        width: 100%;
+        height: auto;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1.5rem;
+        border: 1px solid #cdcdcd;
+        outline: none;
+        
+    }
+    .breed_new .flex{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+    }
+    .breed_new .flex .card{
+        width: 33%;
+        height: auto;
+        padding: 1rem;
+        border: 0px !important;
+    }
+    .breed_new .flex .card .inner_card{
+        width: 100%;
+        height: auto;
+       box-shadow: 0 3px 4px -1px rgb(0 0 0 / 40%);
+        border: 1px solid #cdcdcd;
+    }
+    .breed_new .flex .card .inner_card img{
+        width: 100%;
+        height: 200px;
+       
+    }
+    .breed_new .flex .card .inner_card h3{
+        color: #f39933;
+       margin-left: 1.5rem;
+    }
+    .breed_new .flex .card .inner_card h6{
+        color: #444;
+       font-size: 1.4rem;
+       margin-left: 1.5rem;
+       
+    }
+    .breed_new .flex .card .inner_card .breed_but button{
+        width: 13rem;
+        height: auto;
+       padding-top: .6rem;
+       padding-bottom: .6rem;
+       color: white;
+       background-color: #FC8817;
+       border: 1px solid #FC8817;
+       outline: none;
+       border-radius: 25px;
+       margin-bottom: 2rem;
+       margin-top: 1rem;
+    }
+    .breed_new .flex .card .inner_card .breed_but{
+       text-align: center;
+    }
+    @media only screen and (max-width: 600px) {
+        .breed_new .breed_new_top h1{
+            font-size:25px ;
+            margin-left: .5rem;
+        }
+        .breed_new .breed_new_top p{
+            font-size:13px ;
+            margin-left: .5rem;
+        }
+        .breed_new .flex .card{
+            width: 100%;
+        }
+}
+</style>
+<div class="breed_new">
+    <div class="breed_new_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <h1>Get Information About Breed</h1>
+                    <p>Dog types are broad categories of dogs based on form, function or style of work, lineage, or appearance. In contrast, modern dog breeds are particular breed standards, sharing a common set of heritable characteristics, determined by the kennel club that recognizes the breed.</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="<?php echo base_url()?>/assest/images/list-dog-banner.png" alt="">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 ">
+                <div class="inner_search">
+                <input type="text" class="search dropdown-toggle" placeholder="Search Breed" list="da" id="dynamic_select">
+                <datalist id="da">
+                    <?php foreach ($blogs as $value) { ?>
+                        <option value="<?php echo  $value['link'] ?>"></option>
+                    <?php } ?>
+                </datalist>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="flex">
+            <div class="card">
+                <div class="inner_card">
+                    
+                    <img src="<?php echo base_url()?>/assest/images/testimg1.png" alt="">
+                    <h3>NAME</h3>
+                    <h6>Temproant</h6>
+                    <h6>Group</h6>
+                    <div class="breed_but">
+                    <button>View Breed</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="inner_card">
+                    
+                    <img src="<?php echo base_url()?>/assest/images/testimg1.png" alt="">
+                    <h3>NAME</h3>
+                    <h6>Temproant</h6>
+                    <h6>Group</h6>
+                    <div class="breed_but">
+                    <button>View Breed</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="inner_card">
+                    
+                    <img src="<?php echo base_url()?>/assest/images/testimg1.png" alt="">
+                    <h3>NAME</h3>
+                    <h6>Temproant</h6>
+                    <h6>Group</h6>
+                    <div class="breed_but">
+                    <button>View Breed</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="inner_card">
+                    
+                    <img src="<?php echo base_url()?>/assest/images/testimg1.png" alt="">
+                    <h3>NAME</h3>
+                    <h6>Temproant</h6>
+                    <h6>Group</h6>
+                    <div class="breed_but">
+                    <button>View Breed</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="inner_card">
+                   
+                    <img src="<?php echo base_url()?>/assest/images/testimg1.png" alt="">
+                    <h3>NAME</h3>
+                    <h6>Temproant</h6>
+                    <h6>Group</h6>
+                    <div class="breed_but">
+                    <button>View Breed</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="inner_card">
+                    
+                    <img src="<?php echo base_url()?>/assest/images/testimg1.png" alt="">
+                    <h3>NAME</h3>
+                    <h6>Temproant</h6>
+                    <h6>Group</h6>
+                    <div class="breed_but">
+                    <button>View Breed</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script>
     $(function() {

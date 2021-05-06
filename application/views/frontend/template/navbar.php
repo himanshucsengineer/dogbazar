@@ -228,7 +228,7 @@ if (!isset($_SESSION["email"])) {
         height: 100%;
         top: 0;
         left: 0;
-        background-color: #b42821;
+        background-color: #A6341B !important;
         overflow-x: hidden;
         transition: 0.2s;
 
@@ -241,13 +241,48 @@ if (!isset($_SESSION["email"])) {
         border-bottom: 1px solid #cdcdcd;
         display: block;
         text-decoration: none;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding-top: .8rem;
+        padding-bottom: .8rem;
         color: #eee;
-        font-size: 20px;
+        font-size: 17px;
 
     }
+    .sidepanel .nextbutttt {
+        width: 100%;
+        height: auto;
+        padding-left: 1.5rem;
+        border-bottom: 1px solid #cdcdcd;
+        display: block;
+        text-decoration: none;
+        padding-top: .8rem;
+        padding-bottom: .8rem;
+        color: #eee;
+        font-size: 17px;
+        outline: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        background-color: transparent;
+        text-align: left;
+    }
 
+    
+    .sidepanel .right_navigation{
+        margin-left: 13rem;
+        font-size: 20px;
+        font-weight: 700 !important;
+    }
+
+    .sidepanel .right_navigati{
+        margin-left: 10rem;
+        font-size: 20px;
+        font-weight: 700 !important;
+    }
+    .sidepanel .right_navigat{
+        margin-left: 9.5rem;
+        font-size: 20px;
+        font-weight: 700 !important;
+    }
     .sidepanel a:hover {
         color: #ffc107;
     }
@@ -269,6 +304,20 @@ if (!isset($_SESSION["email"])) {
         color:#b42821 ;
         border: 1px solid #cdcdcd;
     }
+
+
+    
+    .sidepanel .sbmenuclose{
+        background-color: transparent;
+        color: white;
+        border: none;
+        outline: none;
+        width: 100%;
+        height: auto;
+        text-align: left;
+        
+        font-size: 20px;
+    }
     @media only screen and (max-width: 600px) {
         .mobile-bar {
             display: block !important;
@@ -289,12 +338,86 @@ if (!isset($_SESSION["email"])) {
     </div>
 
     <a href="<?php echo base_url() ?>">Home</a>
+    <button class="nextbutttt" onclick="opencare()">Dog Care <span class="right_navigation">></span></button>
+    <button class="nextbutttt" onclick="openways()">Ways To Give <span class="right_navigati">></span></button>
+    <button class="nextbutttt" onclick="openhelp()">Help & Advice <span class="right_navigat">></span></button>
+ 
+  
+    <a href="">Blogs</a>
+    <a href="">Adopt</a>
+    <a href="">Pet Accessories</a>
+    <a href="">News & Events</a>
+    <a href="">Franchies</a>
+    <a href="">Volunteer</a>
+    <a href="">About Us</a>
+    <a href="">Contact Us</a>
    
-    <a href="<?php echo base_url() ?>menu">Menu</a>
-    <a href="<?php echo base_url() ?>plans">Plans</a>
-    <a href="<?php echo base_url() ?>membership">Membership</a>
-    <a href="<?php echo base_url() ?>about-us">About Us</a>
-    <a href="<?php echo base_url() ?>contact-us">Contact Us</a>
+
+   
+
+</div>
+
+
+<div id="mySidepanelcare" class="sidepanel">
+    <div class="flex">
+        <div class="side_left">
+        <button href="javascript:void(0)" class="sbmenuclose" onclick="closecare()">< Main Menu</button>
+        </div>
+        <div class="side_right">
+            <button href="javascript:void(0)" class="" onclick="closeall()" >×</button>
+        </div>
+    </div>
+
+    <a href="">Breed</a>
+   
+    <a href="" >Nutrition</a>
+    <a href="">Training</a>
+    <a href="">Problems</a>
+    <a href="">Dog Grooming</a>
+    <a href="">Pet Care Videos</a>
+
+   
+
+</div>
+
+
+<div id="mySidepanelways" class="sidepanel">
+    <div class="flex">
+        <div class="side_left">
+        <button href="javascript:void(0)" class="sbmenuclose" onclick="closeways()">< Main Menu</button>
+        </div>
+        <div class="side_right">
+            <button href="javascript:void(0)" class="" onclick="closeall()" >×</button>
+        </div>
+    </div>
+
+    <a href="<?php echo base_url() ?>">Donate</a>
+   
+
+    <a href="">Pet Memorial</a>
+    <a href="">Sponsor An Animal</a>
+    
+   
+
+   
+
+</div>
+<div id="mySidepanelhelp" class="sidepanel">
+    <div class="flex">
+        <div class="side_left">
+        <button href="javascript:void(0)" class="sbmenuclose" onclick="closehelp()">< Main Menu</button>
+        </div>
+        <div class="side_right">
+            <button href="javascript:void(0)" class="" onclick="closeall()" >×</button>
+        </div>
+    </div>
+
+
+   
+
+    <a href="">Giving Up Your Dog</a>
+    <a href="">Getting A Dog</a>
+    
    
 
    
@@ -341,17 +464,17 @@ if (!isset($_SESSION["email"])) {
                                 <ul class="m-0 nav_items_dropdown d2">
                                     <li class="lstn  nav_items_dropdown_link"><a href="<?php echo base_url()?>donate" class="nodecoration ">Donate Now</a></li>
                                     <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url()?>pet-memorial" class="nodecoration">Pet Memorial</a></li>
-                                    <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url()?>gift-giving" class="nodecoration">Gift Giving</a></li>
+                                  
                                     <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url()?>sponsor-an-animal" class="nodecoration">Sponsor An Animal</a></li>
-                                    <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url()?>other-ways-to-give" class="nodecoration">Other Ways To keep</a></li>
+                                   
                                 </ul>
                                 <!-- End Dropdown -->
                             </li>
                             <li class="lstn nav_items" id="d3"><a href="" class="nodecoration ">Help & Advice</a>
                                 <!-- Dropdowns with diplay class d2 -->
                                 <ul class="m-0 nav_items_dropdown d3">
-                                    <li class="lstn  nav_items_dropdown_link"><a href="<?php echo base_url()?>behave" class="nodecoration ">Behaviour</a></li>
-                                    <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url()?>training" class="nodecoration">Training</a></li>
+                                   
+                                    
                                     <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url()?>giving" class="nodecoration">Giving Up Your Dog</a></li>
                                     <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url()?>getting" class="nodecoration">Getting a Dog</a></li>
            
@@ -387,4 +510,45 @@ if (!isset($_SESSION["email"])) {
         document.getElementById("mySidepanel").style.width = "0";
     }
 </script>
+
+<script>
+    function opencare() {
+        document.getElementById("mySidepanelcare").style.width = "250px";
+    }
+
+    function closecare() {
+        document.getElementById("mySidepanelcare").style.width = "0";
+    }
+</script>
+
+<script>
+    function openways() {
+        document.getElementById("mySidepanelways").style.width = "250px";
+    }
+
+    function closeways() {
+        document.getElementById("mySidepanelways").style.width = "0";
+    }
+</script>
+
+
+
+<script>
+    function openhelp() {
+        document.getElementById("mySidepanelhelp").style.width = "250px";
+    }
+
+    function closehelp() {
+        document.getElementById("mySidepanelhelp").style.width = "0";
+    }
+
+
+    function closeall() {
+        document.getElementById("mySidepanel").style.width = "0";
+        document.getElementById("mySidepanelhelp").style.width = "0";
+        document.getElementById("mySidepanelcare").style.width = "0";
+        document.getElementById("mySidepanelways").style.width = "0";
+    }
+</script>
+
     

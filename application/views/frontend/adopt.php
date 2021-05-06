@@ -93,6 +93,7 @@
     .adopt_dog .adopt_card_main .card .card_inner {
         border: 1px solid #cdcdcd;
         padding: 2rem;
+        box-shadow: 0 3px 4px -1px rgb(0 0 0 / 40%);
     }
 
     .adopt_dog .adopt_card_main .card .card_inner img {
@@ -128,6 +129,7 @@
         border: 1px solid #f39933;
         outline: none;
         border-radius: 25px;
+        
     }
 
     .adopt_dog .first_sec {
