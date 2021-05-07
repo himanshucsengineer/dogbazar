@@ -18,6 +18,9 @@ class Allpostmodel extends CI_Model
     return $query->result();
   }
 
+  
+
+
   function update_pro($head, $content, $id, $link, $imageurl)
   {
 

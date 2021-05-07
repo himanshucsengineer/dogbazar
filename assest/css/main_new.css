@@ -1,0 +1,414 @@
+/* dog care pages start */
+.donation_new_main{
+    background-image: url("../images/donation_bg.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  .form_top_new{
+    background-image: url("../images/list_form.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.66);
+  }
+  .sponsor_banner{
+    background-image: url("../images/sponsor_banner.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-attachment:inherit;
+    background-repeat: no-repeat;
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
+  }
+.nutrition_new_main{
+    width: 100%;
+    height: auto;
+    
+    background-color: #ECF0F1;
+}
+.nutrition_new_main .navi{
+    width: 100%;
+    height: auto;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    background-color: #A6341B;
+}
+.nutrition_new_main .navi h4{
+    font-size: 17px;
+    color: white;
+    text-transform: capitalize;
+}
+.nutrition_new_main .navi a{
+    text-decoration: none;
+    color: white;
+    
+}
+.nutrition_new_main .nutri_head{
+
+    background-color: #FC8817;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+   
+}
+.nutrition_new_main .nutri_head h1{
+    text-transform: capitalize;
+    color:  white;
+
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+.nutrition_new_main .nutri_body{
+    width: 100%;
+    height: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.nutrition_new_main .nutri_body .flex{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    
+}
+.nutrition_new_main .nutri_body .flex .card{
+    width: 33%;
+    height: auto;
+    padding: 1rem;
+    border: none;
+    background-color: transparent;
+}
+.nutrition_new_main .nutri_body .flex .card a{
+    text-decoration: none;
+}
+.nutrition_new_main .nutri_body .flex .card .inner_card{
+    width: 100%;
+    height: auto;
+    box-shadow: 0 3px 4px -1px rgb(0 0 0 / 40%);
+    border: 1px solid #cdcdcd;
+    background-color: white;
+}
+.nutrition_new_main .nutri_body .flex .card .inner_card img{
+    width: 100%;
+    height: 200px;
+    
+   
+}
+.nutrition_new_main .nutri_body .flex .card .inner_card video{
+    width: 100%;
+    height: 200px;
+    
+   
+}
+.nutrition_new_main .nutri_body .flex .card .inner_card h3{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+   margin-top: 1rem;
+   color: #A6341B;
+   text-transform: capitalize;
+}
+.nutrition_new_main .nutri_body .flex .card .inner_card p{
+    color: gray;
+    font-size: 13px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.nutrition_new_main .nutri_body .flex .card .inner_card a{
+    color: #FC8817;
+    text-decoration: none;
+}
+.nutrition_new_main .nutri_body h1{
+    text-transform: capitalize;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 600 !important;
+    color: #A6341B;
+}
+.nutrition_new_main .nutri_body .hooooriii{
+    width: 100%;
+    border-bottom: 2px solid #A6341B !important;
+    opacity: 1 !important;
+    margin: 0rem 0rem !important;
+}
+.nutrition_new_main .load_more{
+    text-align: center;
+}
+.nutrition_new_main  .load_more button{
+    width: 20rem;
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: white;
+    border: 1px solid #FC8817;
+    background-color: #FC8817;
+    outline: none;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+    font-weight: 700 !important;
+    box-shadow: 0 3px 4px -1px rgb(0 0 0 / 40%);
+    border-radius: 2px;
+}
+
+@media only screen and (max-width: 600px) {
+    .nutrition_new_main .nutri_body .flex .card{
+        width: 100%;
+    }
+}
+
+/* dog care pages end */
+
+/* dog care breed pages */
+.breed_new{
+    width: 100%;
+    height: auto;
+    padding-bottom: 5rem;
+    background-color: #ECF0F1;
+}
+.breed_new .breed_new_top{
+    width: 100%;
+    height: auto;
+    padding-top: 2rem;
+    background-color: #A6341B;
+    padding-bottom: 5rem;
+}
+.breed_new .breed_new_top img{
+    width: 100%;
+   
+}
+.breed_new .breed_new_top h1{
+    font-size: 28px;
+    font-weight: 700;
+    color: #FC8817;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+.breed_new .breed_new_top p{
+    font-size: 15px;
+    text-transform: capitalize;
+    color: white;
+}
+.breed_new .inner_search {
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+    border: 1px solid #cdcdcd;
+    background-color: white;
+    box-shadow: 0px 4px 9px 0px #d3d4d6;
+    margin-top: -4rem;
+}
+.breed_new .inner_search .search{
+    width: 100%;
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1.5rem;
+    border: 1px solid #cdcdcd;
+    outline: none;
+    
+}
+.breed_new .flex{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    background-color: transparent;
+}
+.breed_new .flex .card{
+    width: 33%;
+    height: auto;
+    padding: 1rem;
+    border: none;
+    background-color: transparent;
+    
+}
+.breed_new .flex .card .inner_card{
+    width: 100%;
+    height: auto;
+   box-shadow: 0 3px 4px -1px rgb(0 0 0 / 40%);
+    border: 1px solid #cdcdcd;
+    background-color: white;
+}
+.breed_new .flex .card .inner_card img{
+    width: 100%;
+    height: 200px;
+   
+}
+.breed_new .flex .card .inner_card h3{
+    color: #f39933;
+   margin-left: 1.5rem;
+}
+.breed_new .flex .card .inner_card h6{
+    color: #444;
+   font-size: 1.4rem;
+   margin-left: 1.5rem;
+   
+}
+.breed_new .flex .card .inner_card .breed_but button{
+    width: 13rem;
+    height: auto;
+   padding-top: .6rem;
+   padding-bottom: .6rem;
+   color: white;
+   background-color: #FC8817;
+   border: 1px solid #FC8817;
+   outline: none;
+   border-radius: 25px;
+   margin-bottom: 2rem;
+   margin-top: 1rem;
+}
+.breed_new .flex .card .inner_card .breed_but{
+   text-align: center;
+}
+@media only screen and (max-width: 600px) {
+    .breed_new .breed_new_top h1{
+        font-size:25px ;
+        margin-left: .5rem;
+    }
+    .breed_new .breed_new_top p{
+        font-size:13px ;
+        margin-left: .5rem;
+    }
+    .breed_new .flex .card{
+        width: 100%;
+    }
+}
+/* dog care breed page end */
+
+/* postview start */
+.postview_new{
+    width: 100%;
+    height: auto;
+    padding-bottom: 5rem;
+    background-color: #ECF0F1;
+}
+.postview_new .navi{
+    width: 100%;
+    height: auto;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    background-color: #A6341B;
+    margin-bottom: 4rem;
+}
+.postview_new .navi h4{
+    font-size: 17px;
+    color: white;
+    text-transform: capitalize;
+}
+.postview_new .navi a{
+    text-decoration: none;
+    color: white;
+    
+}
+.postview_new .blog_left{
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+    background-color: white;
+    box-shadow: 0 3px 3px -2px rgb(0 0 0 / 40%);
+    word-break: break-all;
+    margin-bottom: 4rem;
+}
+.postview_new .blog_left img{
+    width: 100%;
+   
+    
+}
+.postview_new .blog_left video{
+    width: 100%;
+   
+    
+}
+.postview_new .blog_left h3{
+    color: #252525;
+   font-size: 27px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.postview_new .blog_left h6{
+    color: #727272;
+   font-size: 17px;
+    margin-bottom: 1rem;
+}
+.postview_new .blog_left p{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #3a3a3a;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    line-height: 1.7rem;
+    text-transform: capitalize;
+    
+}
+.postview_new .box{
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 3px 3px -2px rgb(0 0 0 / 40%);
+    margin-bottom: 2rem;
+}
+.postview_new .box a{
+    text-decoration: none;
+    color: #3a3a3a !important;
+}
+.postview_new .box .top_side_head{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.postview_new .box .top_side_head .left{
+    width:40%;
+    height: auto;
+    
+}
+.postview_new .box .top_side_head .left h3{
+    color: #000;
+    font-weight: 300 !important;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.postview_new .box .top_side_head .right{
+    width: 60%;
+    height: auto;
+    
+}
+.postview_new .box .top_side_head .right .top_side_hori{
+    width: 100%;
+    border-bottom: 2px solid rgba(0,0,0,0.1) !important;
+    margin-top: 2rem;
+}
+.postview_new .box .post_side_head{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.postview_new .box .post_side_head .left{
+    width: 35%;
+    height: auto;
+    padding: 1rem;
+}
+.postview_new .box .post_side_head .right{
+    width: 65%;
+    height: auto;
+    padding: 1rem;
+}
+
+.postview_new .box .post_side_head .left img{
+    width: 100%;
+}
+.postview_new .box .post_side_head .left video{
+    width: 100%;
+}
+/* post view end */

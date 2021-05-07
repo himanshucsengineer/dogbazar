@@ -35,9 +35,9 @@ class Editpost extends CI_controller
         $this->form_validation->set_rules('heading', 'Name', 'required');
         $this->form_validation->set_rules('link', 'Email', 'required');
         $this->form_validation->set_rules('content', 'Number', 'required');
-        //   $this->form_validation->set_rules('tags', 'Address', 'required');
-        //   $this->form_validation->set_rules('mtitle', 'Meta Title', 'required');
-        //  $this->form_validation->set_rules('mdesc', 'Meta Description', 'required');
+        //  $this->form_validation->set_rules('tags', 'Address', 'required');
+        // $this->form_validation->set_rules('mtitle', 'Meta Title', 'required');
+        // $this->form_validation->set_rules('mdesc', 'Meta Description', 'required');
         $this->form_validation->set_rules('id', 'Id', 'required');
         //  $this->form_validation->set_rules('mkey', 'Meta Keyword', 'required');
         if ($this->form_validation->run()) {
@@ -47,7 +47,7 @@ class Editpost extends CI_controller
                 $config['upload_path'] = APPPATH . '../upload/dogcare/grooming';
                 $config['file_name'] = $File_name;
                 $config['overwrite'] = TRUE;
-                $config["allowed_types"] = 'jpeg|jpg|png';
+                $config["allowed_types"] = 'jpeg|jpg|png|mp4';
                 $config["max_size"] = 2048;
                 $this->load->library('upload', $config);
                 if (!$this->upload->do_upload('images')) {
@@ -73,9 +73,9 @@ class Editpost extends CI_controller
             $content = $this->input->post('content');
             //    $tag = $this->input->post('tags');
             $id = $this->input->post('id');
-            //  $mtitle = $this->input->post('mtitle');
+            //   $mtitle = $this->input->post('mtitle');
             //  $mdesc = $this->input->post('mdesc');
-            //  $mkey = $this->input->post('mkey');
+            // $mkey = $this->input->post('mkey');
 
             if ($this->Allpostmodel->update_pro($head, $content, $id, $link, $imageurl)) {
 

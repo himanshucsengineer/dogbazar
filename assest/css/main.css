@@ -5,29 +5,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-.donation_new_main{
-  background-image: url("../images/donation_bg.jpg");
-  background-size: cover;
-  background-position: 50% 50%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
-.form_top_new{
-  background-image: url("../images/list_form.jpg");
-  background-size: cover;
-  background-position: 50% 50%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.66);
-}
-.sponsor_banner{
-  background-image: url("../images/sponsor_banner.jpg");
-  background-size: cover;
-  background-position: 50% 50%;
-  background-attachment:inherit;
-  background-repeat: no-repeat;
-  box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
-}
+
 html {
   font-size: 62.5% !important;
 }
@@ -358,6 +336,10 @@ p {
 }
 
 #d2:hover .d2 {
+  display: block;
+}
+
+#d3:hover .d3 {
   display: block;
 }
 

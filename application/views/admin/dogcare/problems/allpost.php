@@ -3,10 +3,13 @@
 
 <script src="<?php echo base_url(); ?>admin/assets/js/jquery.dataTables.min.js"></script>
 <style>
-  td img {
-    width: 100px;
+  td  img {
+    width: 100px !important;
   }
 
+  td video{
+    width: 200px;
+  }
   .ad {
     width: 3rem;
     height: auto;
@@ -23,12 +26,16 @@
   .ad:hover {
     opacity: .7;
   }
+  iframe{
+    width: 100%;
+    height: 100px;
+  }
 </style>
 <div class="all_post">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <h3>All Post</h3>
+        <h3>Problems News All Post</h3>
       </div>
       <div class="col-md-6">
         <a href="<?php echo base_url(); ?>admin/dogcare/problems/newpost"><button class="ad">+</button></a>
@@ -48,7 +55,7 @@
                 <th>Title</th>
                 <th>Fetured Image</th>
                 <th>Category</th>
-
+                <th>Sub Category</th>
                 <th>Date</th>
                 <th>Edit</th>
 
@@ -59,7 +66,76 @@
 
             </thead>
             <tbody>
+              <?php foreach($allpost as $value){ if($value['cate'] == "news") {?>
+                <tr>
+                  <td><?php echo $value['id'] ?></td>
+                  <td><?php echo $value['head'] ?></td>
+                  <td><img  src="<?php echo $value['image'] ?>"></td>
+                  <td><?php echo $value['cate']?></td>
+                  <td><?php echo $value['subcategory']?></td>
+                  <td><?php echo $value['date']?></td>
+                  <td><a href="<?php echo base_url()?>admin/dogcare/problems/editpost?id=<?php echo $value['id'] ?>"    >Edit</a></td>
+                  <td><a class="delete_sliders" data-id="<?php echo $value['id']?>"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                </tr>
+              <?php } }?>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
+
+
+
+<div class="all_post">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Problems Video All Post</h3>
+      </div>
+      <div class="col-md-6">
+        
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="card-box table-responsive">
+
+          <table id="lowinventory2" data-order='[[ 0, "desc" ]]' style="width:100%" class="table table-striped table-bordered table_shop_custom display">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Fetured Video</th>
+                <th>Category</th>
+                <th>Sub Category</th>
+                <th>Date</th>
+                <th>Edit</th>
+
+                <th>Action</th>
+
+
+              </tr>
+
+            </thead>
+            <tbody>
+              <?php foreach($allpost as $value){ if($value['cate']=="video"){?>
+                <tr>
+                  <td><?php echo $value['id'] ?></td>
+                  <td><?php echo $value['head'] ?></td>
+                  <td><video src="<?php echo $value['image'] ?>" controls></video></td>
+                  <td><?php echo $value['cate']?></td>
+                  <td><?php echo $value['subcategory']?></td>
+                  <td><?php echo $value['date']?></td>
+                  <td><a href="<?php echo base_url()?>admin/dogcare/problems/editpost?id=<?php echo $value['id'] ?>"    >Edit</a></td>
+                  <td><a class="delete_sliders" data-id="<?php echo $value['id']?>"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                </tr>
+              <?php } }?>
             </tbody>
           </table>
         </div>
@@ -100,9 +176,11 @@
 <script>
   $(document).ready(function() {
     $('#lowinventory').DataTable({
-      "ajax": "<?php echo base_url(); ?>admin/dogcare/problems/allpost/addinventory_api"
+      
     });
-
+    $('#lowinventory2').DataTable({
+      
+    });
 
     $(document).on('click', '.delete_sliders', function() {
 
@@ -113,3 +191,4 @@
 
   });
 </script>
+

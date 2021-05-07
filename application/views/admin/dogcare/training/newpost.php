@@ -91,16 +91,23 @@
                     <div class="box">
                         <label>Post Link</label>
                         <input name="link" type="text" placeholder="Enter Post name">
-                        <p>Genrate Your Own Post Link(please do not give space between two words use - for the space)</p>
+                        <p>Genrate Your Own Post Link</p>
                     </div>
                     <div class="box">
                         <label>Select Category</label>
-                        <select name="category">
+                        <select name="category" id="sel_city">
                             <option>Select Category</option>
                             <?php foreach ($fetch_category as $value) { ?>
                                 <option><?php echo $value['cate_name']; ?></option>
                             <?php } ?>
                         </select>
+                        <p>Select Post Category</p>
+
+                        <label>Select Sub Category</label>
+                        <select name="subcategory" id='sel_depart'>
+                            <option>Select sub Category</option>
+                        </select>
+                        
                         <p>Select Post Category</p>
                         <label>Publish Your Post</label>
                         <button name="formSubmit">Publish</button>
@@ -112,27 +119,12 @@
                     </div>
 
 
-                    <!--div class="box">
-                    <label>Meta Tags</label>
-                    <textarea name="tags" required></textarea>
-                    <p>Separate tags with commas</p>
-                </div-->
                 </div>
             </div>
 
 
 
-            <!--div class="box">
-            <label>Meta Title</label>
-                <input name="mtitle" type="text" placeholder="Enter Meta Title">
-                
-                <label>Meta Description</label>
-               
-                <textarea name="mdesc" required></textarea>
-                
-                <label>Meta Keywords</label>
-                <input name="mkey" type="text" placeholder="Enter Meta Keywords">
-        </div-->
+           
         </form>
     </div>
 </div>
@@ -144,7 +136,7 @@
     $(function() {
         $("#fileupload").change(function() {
             $("#dvPreview").html("");
-            var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpeg|.jpg|.png)$/;
+            var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpeg|.jpg|.png|.mp4)$/;
             if (regex.test($(this).val().toLowerCase())) {
                 if ($.browser.msie && parseFloat(jQuery.browser.version) <= 9.0) {
                     $("#dvPreview").show();
@@ -176,3 +168,43 @@
         CKEDITOR.replace('textareaContent');
     });
 </script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script type='text/javascript'>
+  // baseURL variable
+  var baseURL= "<?php echo base_url();?>";
+ 
+  $(document).ready(function(){
+ 
+    // City change
+    $('#sel_city').change(function(){
+      var city = $(this).val();
+
+      // AJAX request
+      $.ajax({
+        url:'<?=base_url()?>admin/dogcare/training/category/getCityDepartment',
+        method: 'post',
+        data: {cate_name: city},
+        dataType: 'json',
+        success: function(response){
+
+          // Remove options 
+          
+          $('#sel_depart').find('option').not(':first').remove();
+
+          // Add options
+          $.each(response,function(index,data){
+             $('#sel_depart').append('<option value="'+data['subcate_name']+'">'+data['subcate_name']+'</option>');
+          });
+        }
+     });
+   });
+ 
+
+
+ 
+ });
+ </script>

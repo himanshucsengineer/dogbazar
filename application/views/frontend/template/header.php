@@ -40,6 +40,7 @@
     <script src="https://kit.fontawesome.com/36a236c794.js" crossorigin="anonymous"></script>
     <!-- Css Link -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assest/css/main.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>assest/css/main_new.css">
     <!-- End Css Link -->
 
 

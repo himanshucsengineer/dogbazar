@@ -16,6 +16,18 @@ class Catemodel extends CI_Model
     return $this->db->get('grooming_cate')->result_array();
   }
 
+  function getCityDepartment($postData){
+    $response = array();
+ 
+    // Select record
+    $this->db->select('*');
+    $this->db->where('cate_name', $postData['cate_name']);
+    $q = $this->db->get('grooming_cate');
+    $response = $q->result_array();
+
+    return $response;
+  }
+
   public function deletecate($data)
   {
     $explodData = explode(',', $data);

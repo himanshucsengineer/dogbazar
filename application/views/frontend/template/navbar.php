@@ -475,7 +475,7 @@ if (!isset($_SESSION["email"])) {
                                 <ul class="m-0 nav_items_dropdown d3">
                                    
                                     
-                                    <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url()?>giving" class="nodecoration">Giving Up Your Dog</a></li>
+                                    <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url()?>givingup" class="nodecoration">Giving Up Your Dog</a></li>
                                     <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url()?>getting" class="nodecoration">Getting a Dog</a></li>
            
                                 </ul>

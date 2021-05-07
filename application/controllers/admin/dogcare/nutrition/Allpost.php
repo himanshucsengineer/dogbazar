@@ -14,17 +14,17 @@ class Allpost extends CI_controller
   public function index()
   {
 
-
+   $data['allpost'] = $this->Allpostmodel->fetch_data();
 
     $this->load->view('admin/template/header');
     $this->load->view('admin/template/sidebar');
     $this->load->view('admin/template/topbar');
-    $this->load->view('admin/dogcare/nutrition/allpost');
+    $this->load->view('admin/dogcare/nutrition/allpost', $data);
     $this->load->view('admin/template/footer');
   }
 
 
-
+  
 
 
   public function addinventory_api()
@@ -35,7 +35,7 @@ class Allpost extends CI_controller
     foreach ($getPurchaseData as $key => $value) {
 
       $arrya_json[] = array(
-        $value['id'], $value['head'], '<img src="' . $value['image'] . '">', $value['cate'], $value['date'], '<a href="' . base_url() . 'admin/dogcare/nutrition/editpost?id=' . $value['id'] . '"    >Edit</a>',
+        $value['id'], $value['head'], '<iframe  src="' . $value['image'] . '">', $value['cate'],$value['subcategory'] ,$value['date'], '<a href="' . base_url() . 'admin/dogcare/nutrition/editpost?id=' . $value['id'] . '"    >Edit</a>',
         '<a class="delete_sliders" data-id="' . $value['id'] . '"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a>'
       );
     }

@@ -47,7 +47,7 @@ class Editpost extends CI_controller
                 $config['upload_path'] = APPPATH . '../upload/dogcare/nutrition';
                 $config['file_name'] = $File_name;
                 $config['overwrite'] = TRUE;
-                $config["allowed_types"] = 'jpeg|jpg|png';
+                $config["allowed_types"] = 'jpeg|jpg|png|mp4';
                 $config["max_size"] = 2048;
                 $this->load->library('upload', $config);
                 if (!$this->upload->do_upload('images')) {

@@ -1,113 +1,79 @@
-<div class="spacer_m"></div>
 
 
-
-<div class="breadcrumb">
+<?php $vallll =@$blog->image; $lasttt = basename($vallll); $exttt = explode('.', $lasttt); if($exttt[1]=="mp4"){$videotagmain = '<video src="'.@$blog->image.'" controls ></video>'; }else{$videotagmain ='<img src="'.@$blog->image.'" >';}?>
+<div class="postview_new">
+    <div class="navi">
+        <div class="container">
+        <h4><a href="<?php echo base_url() ?>">Home</a> > <a href="<?php echo base_url() ?>grooming">Dog care > Dog Grooming</a> > <?php echo @$blog->head ?></h4>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
-            <div class="col">
-                <p><a href="<?php echo base_url() ?>" class="nodecoration bc_link">Home</a> / <a href="<?php echo base_url() ?>grooming" class="nodecoration bc_link">Dog Grooming</a> /
-                    <a href="" class=" nodecoration bc_link bc_link_active"><?php echo @$blog->head ?></a>
-                </p>
+            <div class="col-md-8">
+                <div class="blog_left">
+                <h3><?php echo @$blog->head ?></h3>
+                <h6><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo @$blog->date ?></h6>
+                <?php echo $videotagmain;?>
+                <p><?php echo @$blog->content ?></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="box">
+                    <div class="top_side_head">
+                        <div class="left">
+                            <h3>Recent post</h3>
+                        </div>
+                        <div class="right">
+                            <hr class="top_side_hori">
+                        </div>
+                    </div>
+                    <?php foreach ($recents as $recent) { ?>
+                        <?php $vall =@$recent->image; $last = basename($vall); $ext = explode('.', $last); if($ext[1]=="mp4"){$videotagrecent = '<video src="'.@$recent->image.'"  ></video>'; }else{$videotagrecent ='<img src="'.@$recent->image.'" >';}?>
+                        <a href="<?php echo base_url() . "grooming/" . @$recent->link ?>" >
+                    <div class="post_side_head">
+                        <div class="left">
+                            <?php echo $videotagrecent?>
+                        </div>
+                        <div class="right">
+                            <h4><?php echo @$recent->head ?> </h4>
+                        </div>
+                    </div>
+                        </a>
+                    <?php }?>
+                    
+                </div>
+
+
+
+                <div class="box">
+                    <div class="top_side_head">
+                        <div class="left">
+                            <h3>Related post</h3>
+                        </div>
+                        <div class="right">
+                            <hr class="top_side_hori">
+                        </div>
+                    </div>
+                    <?php foreach ($releted as $rel) { ?>
+                        <?php if ($rel->id != $blog->id); ?>
+                        <?php $valll =@$rel->image; $lastt = basename($valll); $extt = explode('.', $lastt); if($extt[1]=="mp4"){$videotagrelated = '<video src="'.@$rel->image.'"  ></video>'; }else{$videotagrelated ='<img src="'.@$rel->image.'" >';}?>
+                        <a href="<?php echo base_url() . "grooming/" . @$rel->link ?>" >
+                    <div class="post_side_head">
+                        <div class="left">
+                            <?php echo $videotagrelated ; ?>
+                        </div>
+                        <div class="right">
+                            <h4><?php echo @$rel->head ?> </h4>
+                        </div>
+                    </div>
+                        </a>
+                    <?php }?>
+                    
+                    
+                </div>
+
+               
             </div>
         </div>
     </div>
 </div>
-<!-- End BreadCrumb -->
-
-
-
-<main>
-
-    <div class="blog content_section">
-        <div class="container">
-
-            <div class="row justify-content-between">
-                <div class="col-md-8 px-4">
-                    <!-- Blog Heading -->
-                    <div>
-                        <h1 class="h1_head"><?php echo @$blog->head ?></h1>
-                    </div>
-                    <div class="">
-                        <p><span class="blog_date"><i><?php echo @$blog->date ?></i></span></p>
-                    </div>
-                    <!-- End Blog Heading -->
-
-                    <!-- Featured Image Section -->
-                    <div class="blog_img">
-                        <img src="<?php echo @$blog->image ?>" alt="" class="w-100 blog_f_img">
-                    </div>
-                    <!-- End Featured Image Section -->
-                    <div class="spacer_s"></div>
-
-
-                    <div class="px-3">
-                        <p><?php echo @$blog->content ?></p>
-                    </div>
-
-
-                </div>
-                <div class="col-md-4 px-5">
-
-                    <div class="row">
-                        <div class="row mb-2 px-2">
-                            <div class="col">
-                                <h3 class="fc_underline blog_side_head">Recommended For You</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <?php foreach ($releted as $rel) : ?>
-                        <?php if ($rel->id != $blog->id); ?>
-                        <a href="<?php echo base_url() . "grooming/" . @$rel->link ?>" class="nodecoration">
-                            <div class="row mb-3">
-                                <div class="col-4 py-3">
-                                    <img src="<?php echo @$rel->image ?>" alt="" class="w-100">
-                                </div>
-                                <div class="col-8">
-                                    <p class="m-0"><span class="blog_sidetag"><?php echo @$rel->cate ?></span></p>
-                                    <p class="m-0"><span class="blog_sidetitle"><?php echo @$rel->head ?></span>
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    <?php endforeach; ?>
-
-                    <div class="spacer_m"></div>
-                    <div class="row">
-                        <div class="row mb-2 px-2">
-                            <div class="col">
-                                <h3 class="fc_underline blog_side_head">Recent Post</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <?php foreach ($recents as $recent) : ?>
-                        <a href="<?php echo base_url() . "grooming/" . @$recent->link ?>" class="nodecoration">
-                            <div class="row mb-3">
-                                <div class="col-4 py-3">
-                                    <img src="<?php echo @$recent->image ?>" alt="" class="w-100">
-                                </div>
-                                <div class="col-8">
-                                    <p class="m-0"><span class="blog_sidetag"><?php echo @$recent->cate ?></span></p>
-                                    <p class="m-0"><span class="blog_sidetitle"><?php echo @$recent->head ?></span>
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-
-                    <?php endforeach; ?>
-                </div>
-            </div>
-
-
-
-
-
-        </div>
-
-    </div>
-
-
-    <div class="spacer_m"></div>
-    <div class="spacer_m"></div>
-
-</main>

@@ -66,6 +66,10 @@
         font-weight: 300;
         font-style: italic;
     }
+    #video{
+        width: 100%;
+        height: auto;
+    }
 </style>
 
 <div class="new-post">
@@ -95,7 +99,7 @@
             ?>
             <?php foreach ($fetch_content as $value) {
                 if ($value['id'] == $rerfe[1]) { ?>
-
+                    <?php $vall =$value['image']; $last = basename($vall); $ext = explode('.', $last); if($ext[1]=="mp4"){$videotag = '<video src="'.$value['image'].'" controls id="video"></video>'; }else{$videotag ='<img src="'.$value['image'].'" id="im">';}?>
                     <div class="row">
                         <div class="col-md-9">
                             <div class="box">
@@ -116,7 +120,7 @@
                             </div>
                             <div class="box">
                                 <label>Featured Image</label>
-                                <img src="<?php echo $value['image']; ?>" id="im">
+                                <?php echo $videotag; ?>
                                 <p>Your Featured Image</p>
                                 <label>upload new Image</label>
                                 <input name="images" id="fileupload" type="file">
@@ -166,7 +170,7 @@
     $(function() {
         $("#fileupload").change(function() {
             $("#dvPreview").html("");
-            var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpeg|.jpg|.png)$/;
+            var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpeg|.jpg|.png|.mp4)$/;
             if (regex.test($(this).val().toLowerCase())) {
                 if ($.browser.msie && parseFloat(jQuery.browser.version) <= 9.0) {
                     $("#dvPreview").show();
