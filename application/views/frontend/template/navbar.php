@@ -199,7 +199,7 @@ if (!isset($_SESSION["email"])) {
 
     .sidepanel .flex .side_left h4 {
         font-size: 19px;
-        color: #eee;
+        color:#030303 !important ;
     }
 
     .sidepanel .flex .side_right {
@@ -209,7 +209,7 @@ if (!isset($_SESSION["email"])) {
 
     .sidepanel .flex .side_right button {
         background: transparent;
-        color: #eee;
+        color: #030303 !important;
         font-size: 30px;
         border: none;
         outline: none;
@@ -228,7 +228,7 @@ if (!isset($_SESSION["email"])) {
         height: 100%;
         top: 0;
         left: 0;
-        background-color: #A6341B !important;
+        background-color: white;
         overflow-x: hidden;
         transition: 0.2s;
 
@@ -243,9 +243,9 @@ if (!isset($_SESSION["email"])) {
         text-decoration: none;
         padding-top: .8rem;
         padding-bottom: .8rem;
-        color: #eee;
-        font-size: 17px;
-
+        color: #030303 !important;
+        font-size: 18px;
+        transition: .5s;
     }
     .sidepanel .nextbutttt {
         width: 100%;
@@ -256,17 +256,24 @@ if (!isset($_SESSION["email"])) {
         text-decoration: none;
         padding-top: .8rem;
         padding-bottom: .8rem;
-        color: #eee;
-        font-size: 17px;
+        color: #030303 !important;
+        font-size: 18px;
         outline: none;
         border-top: none;
         border-left: none;
         border-right: none;
         background-color: transparent;
         text-align: left;
+        transition: .5s;
     }
-
-    
+    .sidepanel .nextbutttt:hover {
+        color: #FC8817;
+        border-bottom: 1px solid #FC8817;
+    }
+    .sidepanel a:hover {
+        color: #FC8817 !important;
+        border-bottom: 1px solid #FC8817;
+    }
     .sidepanel .right_navigation{
         margin-left: 13rem;
         font-size: 20px;
@@ -309,7 +316,7 @@ if (!isset($_SESSION["email"])) {
     
     .sidepanel .sbmenuclose{
         background-color: transparent;
-        color: white;
+        color: #030303 !important;
         border: none;
         outline: none;
         width: 100%;
@@ -343,14 +350,14 @@ if (!isset($_SESSION["email"])) {
     <button class="nextbutttt" onclick="openhelp()">Help & Advice <span class="right_navigat">></span></button>
  
   
-    <a href="">Blogs</a>
-    <a href="">Adopt</a>
+    <a href="<?php echo base_url() ?>blog">Blogs</a>
+    <a href="<?php echo base_url() ?>adopt">Adopt</a>
     <a href="">Pet Accessories</a>
-    <a href="">News & Events</a>
-    <a href="">Franchies</a>
-    <a href="">Volunteer</a>
-    <a href="">About Us</a>
-    <a href="">Contact Us</a>
+    <a href="<?php echo base_url() ?>news">News & Events</a>
+    <a href="<?php echo base_url() ?>franchies">Franchies</a>
+    <a href="<?php echo base_url() ?>volunteer">Volunteer</a>
+    <a href="<?php echo base_url() ?>about-us">About Us</a>
+    <a href="<?php echo base_url() ?>contact-us">Contact Us</a>
    
 
    
@@ -368,13 +375,13 @@ if (!isset($_SESSION["email"])) {
         </div>
     </div>
 
-    <a href="">Breed</a>
+    <a href="<?php echo base_url()?>breed">Breed</a>
    
-    <a href="" >Nutrition</a>
-    <a href="">Training</a>
-    <a href="">Problems</a>
-    <a href="">Dog Grooming</a>
-    <a href="">Pet Care Videos</a>
+    <a href="<?php echo base_url()?>nutrition" >Nutrition</a>
+    <a href="<?php echo base_url()?>training">Training</a>
+    <a href="<?php echo base_url()?>problems">Problems</a>
+    <a href="<?php echo base_url()?>grooming">Dog Grooming</a>
+    <a href="<?php echo base_url()?>petcare">Pet Care Videos</a>
 
    
 
@@ -391,11 +398,11 @@ if (!isset($_SESSION["email"])) {
         </div>
     </div>
 
-    <a href="<?php echo base_url() ?>">Donate</a>
+    <a href="<?php echo base_url() ?>donate">Donate</a>
    
 
-    <a href="">Pet Memorial</a>
-    <a href="">Sponsor An Animal</a>
+    <a href="<?php echo base_url()?>pet-memorial">Pet Memorial</a>
+    <a href="<?php echo base_url()?>sponsor-an-animal">Sponsor An Animal</a>
     
    
 
@@ -415,8 +422,8 @@ if (!isset($_SESSION["email"])) {
 
    
 
-    <a href="">Giving Up Your Dog</a>
-    <a href="">Getting A Dog</a>
+    <a href="<?php echo base_url()?>givingup">Giving Up Your Dog</a>
+    <a href="<?php echo base_url()?>getting">Getting A Dog</a>
     
    
 
