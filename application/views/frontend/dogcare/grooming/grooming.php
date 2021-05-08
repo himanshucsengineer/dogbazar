@@ -46,15 +46,17 @@
             </div>
             <div class="flex">
                 <?php foreach ($blogs as $value) {if($value['cate']=="video"){ $str= $value['content']; $result = substr($str, 0, 200);?>
-                <div class="card">
+                    <div class="card">
                 
-                    <div class="inner_card">
-                    <a href="<?php echo base_url() . "grooming/" . $value['link'] ?>"><video src="<?php echo $value['image']; ?>" alt="" ></video> </a>
-                    <h3><?php echo $value['head']; ?></h3>
-                    <p><?php echo $result; ?>.... <a href="<?php echo base_url() . "grooming/" . $value['link'] ?>">Read More </a> </p>
+                <div class="inner_card">
+                    <video  src="<?php echo $value['image']; ?>" alt="" controls ></video>
+                    <h3  style="text-align: center;"><?php echo $value['head']; ?></h3>
+                    <div class="watch">
+                    <button data-bs-toggle="modal" data-video="<?php echo $value['image']; ?>" data-id="<?php echo $value['head']; ?>" data-bs-target="#video" class="vdeoscr">Watch Video</button>
                     </div>
-               
                 </div>
+           
+            </div>
                 <?php }}?>
             </div>
             <div class="load_more">
@@ -64,3 +66,39 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="video" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="modal-content videomodal">
+        <div class="modal-body">
+            <div class="gead">
+                <h1 id="videotitle">Title</h1>
+            </div>
+            
+        <video id="getvideosrc"  alt="" src="" controls></video>
+        </div>
+        
+    </div>
+  </div>
+</div>
+
+
+<script>
+    
+    $(document).ready(function() {
+        $(document).on('click', '.vdeoscr', function() {
+           var idd= $(this).attr('data-video');
+           var head= $(this).attr('data-id');
+          
+           document.getElementById('getvideosrc').src = idd;
+           document.getElementById('videotitle').innerHTML = head;
+
+        });
+
+    });
+    var srcdata = document.getElementById('modalsrcdata').value;
+    console.log(srcdata);
+</script>
+
+

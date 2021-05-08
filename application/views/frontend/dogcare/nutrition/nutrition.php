@@ -1,46 +1,5 @@
 
-<style>
-    .videomodal video{
-        width: 100% !important;
-        
-    }
-    .modal-content{
-        
-        border-radius: 0px !important;
-    }
-    .btn-close{
-        float: right;
-        color: white !important;
-        margin-right: -2.7rem;
-        margin-bottom: 1rem;
-        font-size: 20px;
-    }
-    .videomodal .gead{
-        width: 100%;
-        height: auto;
-        padding-top: 1rem;
-        padding-bottom: .5rem;
-        background-color: white;
-        border-bottom: 1px solid #cdcdcd !important;
-        margin-bottom: 1rem;
-    }
-    .videomodal .gead h1{
-        text-align: center;
-        color: #444;
-        font-weight: 600;
-        font-size: 25px;
-        text-transform: capitalize;
-    }
-@media screen and (min-width: 576px) {
-    .modal-dialog{
-        max-width: 100% !important;
-        
-        margin-left: 8rem !important;
-        margin-right: 8rem !important;
-       
-    }
-}
-</style>
+
 
 <div class="nutrition_new_main">
     <div class="navi">
@@ -90,10 +49,10 @@
                 <div class="card">
                 
                     <div class="inner_card">
-                        <video src="<?php echo $value['image']; ?>" alt="" controls ></video>
-                        <h3 style="text-align: center;"><?php echo $value['head']; ?></h3>
+                        <video  src="<?php echo $value['image']; ?>" alt="" controls ></video>
+                        <h3  style="text-align: center;"><?php echo $value['head']; ?></h3>
                         <div class="watch">
-                        <button data-bs-toggle="modal" data-id="<?php echo $value['id']; ?>" data-bs-target="#video">Watch Video</button>
+                        <button data-bs-toggle="modal" data-video="<?php echo $value['image']; ?>" data-id="<?php echo $value['head']; ?>" data-bs-target="#video" class="vdeoscr">Watch Video</button>
                         </div>
                     </div>
                
@@ -117,13 +76,32 @@
     <div class="modal-content videomodal">
         <div class="modal-body">
             <div class="gead">
-                <h1>Title</h1>
+                <h1 id="videotitle">Title</h1>
             </div>
-        <video src="<?php echo $value['image']; ?>" alt="" controls></video>
+            
+        <video id="getvideosrc"  alt="" src="" controls></video>
         </div>
         
     </div>
   </div>
 </div>
+
+
+<script>
+    
+    $(document).ready(function() {
+        $(document).on('click', '.vdeoscr', function() {
+           var idd= $(this).attr('data-video');
+           var head= $(this).attr('data-id');
+          
+           document.getElementById('getvideosrc').src = idd;
+           document.getElementById('videotitle').innerHTML = head;
+
+        });
+
+    });
+    var srcdata = document.getElementById('modalsrcdata').value;
+    console.log(srcdata);
+</script>
 
 
