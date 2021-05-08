@@ -136,182 +136,7 @@
     <div class="spacer_m"></div>
     <div class="spacer_m"></div>
 </main-->
-<style>
-    .adopt_pet_main_new {
-        width: 100%;
-        height: auto;
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-        background-color: white;
-    }
 
-    .adopt_pet_main_new .slideee img {
-        width: 100%;
-        height: 200px;
-    }
-
-    .adopt_pet_main_new .slideee .slide_head {
-        width: 100%;
-        height: auto;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        background-color: #A6341B;
-        padding-left: 2rem;
-        margin-top: 8rem;
-        border-bottom: 3px solid #f39933;
-    }
-
-    .adopt_pet_main_new .slideee .slide_body {
-        width: 100%;
-        height: auto;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        background-color: #f3f3f3;
-        padding-left: 2rem;
-        padding-right: 2rem;
-
-    }
-
-    .adopt_pet_main_new .slideee .slide_head h1 {
-
-        font-size: 30px;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: #f39933;
-    }
-
-    .adopt_pet_main_new .slideee .MultiCarousel .leftLst.over,
-    .MultiCarousel .rightLst.over {
-        background-color: #A6341B;
-    }
-
-    .adopt_pet_main_new .slideee .btn-primary {
-        font-size: 20px;
-        color: white;
-        background-color: #f39933;
-        border: #f39933;
-        padding: 5px 13px;
-    }
-
-    .adopt_pet_main_new img {
-        width: 100%;
-        height: 350px;
-    }
-
-    .adopt_pet_main_new .right {
-        width: 100%;
-        height: auto;
-        padding-left: 2rem;
-        border: 1px solid #cdcdcd;
-
-        background-color: #f8f8f8;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-    }
-
-    .adopt_pet_main_new .right .adopp_butt {
-        width: 100%;
-        height: auto;
-        text-align: center;
-        margin-top: 2rem;
-    }
-
-    .adopt_pet_main_new .right .adopp_butt button {
-        width: 20rem;
-        height: auto;
-        padding-top: .5rem;
-        padding-bottom: .5rem;
-        color: white;
-        background-color: #f39933;
-        border: 1px solid #f39933;
-        outline: none;
-        border-radius: 25px;
-    }
-
-    .adopt_pet_main_new .right h3 {
-        color: #f39933;
-        font-size: 30px;
-        text-transform: capitalize;
-    }
-
-    .adopt_pet_main_new .right h5 {
-        margin-bottom: 1rem;
-        font-size: 18px;
-        text-transform: capitalize;
-    }
-
-    .adopt_pet_main_new .right span {
-        margin-left: 2rem;
-    }
-
-    .adopt_pet_main_new .about {
-        width: 100%;
-        height: auto;
-        padding-top: 5rem;
-    }
-
-    .adopt_pet_main_new .bottom_images {
-        width: 100%;
-        height: auto;
-        margin-top: 2rem;
-        display: flex;
-    }
-
-    .adopt_pet_main_new .bottom_images .cardimage {
-        width: 20%;
-        height: auto;
-        padding: 1rem;
-    }
-
-    .adopt_pet_main_new .bottom_images .cardimage img {
-        width: 100%;
-        height: 70px;
-    }
-
-    .MultiCarousel {
-        float: left;
-        overflow: hidden;
-        padding: 15px;
-        width: 100%;
-        position: relative;
-    }
-
-    .MultiCarousel .MultiCarousel-inner {
-        transition: 1s ease all;
-        float: left;
-    }
-
-    .MultiCarousel .MultiCarousel-inner .item {
-        float: left;
-    }
-
-    .MultiCarousel .MultiCarousel-inner .item>div {
-        text-align: center;
-        border: 1px solid #A6341B;
-        margin: 8px;
-    }
-
-    .MultiCarousel .leftLst,
-    .MultiCarousel .rightLst {
-        position: absolute;
-        border-radius: 50%;
-        top: calc(50% - 20px);
-    }
-
-    .MultiCarousel .leftLst {
-        left: 0;
-    }
-
-    .MultiCarousel .rightLst {
-        right: 0;
-    }
-
-    .MultiCarousel .leftLst.over,
-    .MultiCarousel .rightLst.over {
-        pointer-events: none;
-        background: #ccc;
-    }
-</style>
 <div class="adopt_pet_main_new"> 
     <div class="container">
         <div class="row">
@@ -331,22 +156,24 @@
                                 <img src="<?php echo @$list->$img ?>" alt="adopt pet">
                             </div>
 
-                    <?php }
+                     <?php }
                     } ?>
 
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="right">
-                    <h3><?php echo @$list->breed ?></h3>
-                    <h5>Age: <span><?php echo @$list->age ?></span></h5>
-                    <h5>Colour: <span><?php echo @$list->colour ?></span></h5>
-                    <h5>Weight: <span><?php echo @$list->weight ?></span></h5>
-                    <h5>Condition:<span><?php echo @$list->condition ?></span></h5>
-                    <h5>Gender:<span><?php echo @$list->gender ?></span></h5>
-                    <h5>Location:<span><?php echo @$list->city ?></span></h5>
-                    <div class="adopp_butt">
+                    <h1><?php echo @$list->breed ?></h1>
+                    <h5>Age: <span class="declar"><?php echo @$list->age ?></span></h5>
+                    <h5>Colour: <span class="declar"><?php echo @$list->colour ?></span></h5>
+                    <h5>Weight: <span class="declar"><?php echo @$list->weight ?></span></h5>
+                    <h5>Condition:<span class="declar"><?php echo @$list->condition ?></span></h5>
+                    <h5>Gender:<span class="declar"><?php echo @$list->gender ?></span></h5>
+                    <h5>Location:<span class="declar"><?php echo @$list->city ?></span></h5>
+                    <div class="row">
+                        <div class="col-md-8">
                         <a href="<?php echo base_url() ?>adoptpet/adoption/<?php echo @$list->link ?>"><button>Adopt Pet Now</button></a>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-<style>
+<!--style>
     .franchies_form_fill{
         width: 100%;
         height: auto;
@@ -29,18 +29,16 @@
 <main>
     <div class="spacer_m"></div>
 
-    <!-- Main Content -->
-
-    <!-- Franchies Heading -->
+   
     <div class="container px-4 mb-5">
 
-        <!-- Heading -->
+
         <div class="row mb-3 justify-content-center">
             <div class="col-md-4 text-center px-3">
                 <h1 class="fc_underline">Become a Franchise</h1>
             </div>
         </div>
-        <!-- Top para -->
+   
         <div class="row mb-3 justify-content-center">
             <div class="col-md-8  text-center px-3">
                 <p>This list contains plants that have been reported as having systemic effects on animals and/or
@@ -49,7 +47,7 @@
             </div>
         </div>
 
-        <!-- Options -->
+
         <div class="row justify-content-around px-2 py-2">
             <div class="col-md-5  px-3">
                 <div class="fc_options">
@@ -85,7 +83,7 @@
 
     <div class="spacer_s"></div>
 
-    <!-- Banner -->
+
     <div class="container mb-4">
         <div class="fc_banner px-2 py-2">
             <div class="row py-4">
@@ -117,11 +115,10 @@
 
         </div>
     </div>
-    <!-- end Banner -->
+
 
     <div class="spacer_s"></div>
 
-    <!-- Write To Us -->
     <div class="container px-5 mb-5">
         <div class="row mb-3 justify-content-center">
             <div class="col-md-4 text-center px-3">
@@ -168,6 +165,88 @@
     </div>
 
 
-    <!-- End Main -->
+    <
 
-</main>
+</main-->
+
+<div class="form_top_new" >
+    <div class="">
+    <div class="container" >
+        <h1>Become a franchies</h1>
+        <p>Join With Us </p>
+    </div>
+    </div>
+</div>
+
+<div class="list_dog_form">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-11">
+                <div class="list_dod_form_inner">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter Your Name">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter Your Name">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter Your Name">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter Your Name">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter Your Name">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter Your Name">
+                            
+                        </div>
+                        <div class="col-md-6">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter Your Name">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter Your Name">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter Your Name">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter Your Name">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter Your Name">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter Your Name">
+                            
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-5">
+                            <button>Sponsor Now</button>
+                        </div>
+                    </div>
+                    <!--form action="<?php echo base_url() ?>" method="post">
+                        <?php
+                        if ($this->session->flashdata('success')) {
+                            echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
+                        } else if ($this->session->flashdata('error')) {
+                            echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
+                        }
+
+
+                        ?>
+                        <input type="hidden" name="uniq_id" value="<?php echo $uniqid?>">
+                        <label for="">Your Name*</label>
+                        <input type="text" name="name" placeholder="Enter Your Name">
+                        <label for="">Your Email*</label>
+                        <input type="email" name="email" placeholder="Enter Your Email">
+                        <label for="">Your Number*</label>
+                        <input type="number" name="mob" placeholder="Enter Your Number">
+                       
+                        <label for="">Upload ID Proof*(Front & Back photo)</label>
+                        <input type="file" multiple="multiple" name="files[]"  maxlength="2" placeholder="Upload Dog Images">
+                      
+                        <label for="">Parmanent Address</label>
+                        <textarea name="city" id="" cols="30" rows="5" placeholder="Your Address"></textarea>
+                        <button name='upload'>Adopt Now</button>
+                    </form-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -78,7 +78,7 @@
     }
 
     .adopt_dog .adopt_card_main .card {
-        width: 25%;
+        width: 33%;
         height: auto;
         padding: 1rem;
         border: none;
@@ -92,7 +92,7 @@
 
     .adopt_dog .adopt_card_main .card .card_inner {
         border: 1px solid #cdcdcd;
-        padding: 2rem;
+        padding: 2rem 4rem 2rem 4rem;
         box-shadow: 0 3px 4px -1px rgb(0 0 0 / 40%);
     }
 

@@ -77,9 +77,10 @@
     }
     .contact_us_new .base_heading_h2{
         color: #FC8817 !important;
+        font-size: 2.2rem !important;
     }
     .contact_us_new .cont h1{
-        font-size: 24px;
+        font-size: 20px;
         color: black;
         text-transform: capitalize;
         font-weight: 500 !important;
@@ -90,6 +91,7 @@
     }
     .cont .subbb{
         color: gray;
+        font-size: 1.5rem;
     }
     @media screen and (max-width: 600px) {
         .writetous{
@@ -98,6 +100,30 @@
             border-radius: 0px ;
             background-color: white;
             box-shadow: 0px 4px 7px -2px rgb(0 0 0 / 20%);
+        }
+        .contact_us_new .cont h1{
+            font-size: 17px;
+            margin-top: 3rem;
+        }
+        .cont .flex{
+            margin-left: 0rem;
+        }
+        .cont .flex .left{
+            width: 20%;
+        }
+        .cont .flex .right{
+            width: 80%;
+        }
+        .contact_us_new .base_heading_h2{
+            font-size: 2rem !important;
+            margin-bottom: .5rem !important;
+        }
+        .cont .subbb{
+            font-size: 1.3rem;
+            margin-bottom: .5rem;
+        }
+        .cont .flex .left .fa{
+            font-size: 25px;
         }
 }
 </style>

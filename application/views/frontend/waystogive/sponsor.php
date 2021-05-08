@@ -453,40 +453,7 @@ hb.addEventListener('click', () => {
        line-height: 26px;
        font-size: 14px;
     }
-    .feqs{
-        width: 100%;
-        height: auto;
-        margin-top: 5rem;
-        margin-bottom: 5rem;
-    }
-    .feqs h1{
-       text-align: center;
-       text-transform: capitalize;
-       font-weight: 300 !important;
-       margin-bottom: 3rem;
-    }
-    .feqs .accordion-item{
-       border: 1px solid #cdcdcd;
-       border-left: none;
-       border-right: none;
-       border-radius: 0px !important;
-   }
-   .feqs .accordion-header{
-       padding: 0px 0px;
-   }
-   .feqs .accordion-item:first-of-type .accordion-button{
-    border-top-left-radius:0px !important;
-    border-top-right-radius:0px !important;
-   }
-   .feqs .accordion-button{
-       padding-top: 1rem;
-       padding-bottom: 1rem;
-       outline: none !important;
-       color: #444;
-       text-transform: capitalize;
-       font-size: 20px;
-        font-weight: 300 !important;
-   }
+    
    @media only screen and (max-width: 600px) {
     .sponser_new .sponsor_dog_card .flex .card{
         width: 50%;
@@ -529,6 +496,30 @@ hb.addEventListener('click', () => {
     .sponsor_banner h1{
         font-size: 36px;
     }
+    .sponser_new .spons-ths{
+        margin-top: 0rem;
+    }
+    .sponser_new .spons-ths h2{
+        font-size: 27px;
+    }
+    .sponser_new .spons-ths p{
+        font-size: 13px;
+    }
+    .sponser_new .spons-ths .sons_butt button{
+        margin-bottom: 1rem;
+    }
+    .sponser_new .spons_choose_dog{
+        font-size: 24px;
+        font-weight: 500 !important;
+        margin-top: 1rem;
+    }
+    .sponser_new .sponsor_dog_card{
+        padding-top: 1rem;
+    }
+    .sponsor_how .flex .right p{
+        text-align: justify;
+        margin-right: 1rem;
+    }
 }
 </style>
 <div class="sponsor_banner">
@@ -543,30 +534,29 @@ hb.addEventListener('click', () => {
         </div>
     </div>
 </div>
+
 <div class="sponser_new">
-
-
-    <div class="row justify-content-center">
-        <div class="col-md-8 spons-ths">
-            <h2>Sponsor a dog today</h2>
-            <p>With around 1300 stray and abandoned dogs in our care at any one time, we really need your help. Most dogs find loving new homes within about six weeks but some pooches need a little extra care from us.</p>
-            <p>We receive no government funding and are totally dependent on the generosity of people like you. By sponsoring a dog for 1000 Rs. per week you won’t just be helping your sponsor dog but all their friends too!</p>
-            <h2>How Sponsorship works...</h2>
-            <p>It couldn't be easier to sponsor a dog in our care, or to gift a sponsorship to a friend or loved one.</p>
-            <h3>Step 1 - Pick a dog to sponsor</h3>
-            <p>We’ve got sponsor dogs of all shapes, sizes, breeds and ages! You might choose a dog who reminds you of a beloved pet, a dog with a story that tugs at your heartstrings, or a dog you’ll be able to visit.</p>
-            <h3>Step 2 - Set up your sponsorship</h3>
-            <p>Tell us where to send your doggy updates, whether you’re sponsoring for yourself or as a gift You can also choose how much you’d like to pay, and whether you'd rather pay monthly via direct debit or make a one-off annual payment.</p>
-            <h3>Step 3 - Enjoy regular updates from your Sponsor Dog</h3>
-            <p>Whichever dog you decide to sponsor, you'll receive updates from them three times a year. We’ll also send you a sponsorship pack, including a special photo certificate of your new pooch pal, a wallet-sized sponsor's card, a window sticker and fridge magnet.</p>
-            <div class="sons_butt">
-                <button>Sponsor a dog today</button>
-                <hr>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 spons-ths">
+                <h2>Sponsor a dog today</h2>
+                <p>With around 1300 stray and abandoned dogs in our care at any one time, we really need your help. Most dogs find loving new homes within about six weeks but some pooches need a little extra care from us.</p>
+                <p>We receive no government funding and are totally dependent on the generosity of people like you. By sponsoring a dog for 1000 Rs. per week you won’t just be helping your sponsor dog but all their friends too!</p>
+                <h2>How Sponsorship works...</h2>
+                <p>It couldn't be easier to sponsor a dog in our care, or to gift a sponsorship to a friend or loved one.</p>
+                <h3>Step 1 - Pick a dog to sponsor</h3>
+                <p>We’ve got sponsor dogs of all shapes, sizes, breeds and ages! You might choose a dog who reminds you of a beloved pet, a dog with a story that tugs at your heartstrings, or a dog you’ll be able to visit.</p>
+                <h3>Step 2 - Set up your sponsorship</h3>
+                <p>Tell us where to send your doggy updates, whether you’re sponsoring for yourself or as a gift You can also choose how much you’d like to pay, and whether you'd rather pay monthly via direct debit or make a one-off annual payment.</p>
+                <h3>Step 3 - Enjoy regular updates from your Sponsor Dog</h3>
+                <p>Whichever dog you decide to sponsor, you'll receive updates from them three times a year. We’ll also send you a sponsorship pack, including a special photo certificate of your new pooch pal, a wallet-sized sponsor's card, a window sticker and fridge magnet.</p>
+                <div class="sons_butt">
+                    <button>Sponsor a dog today</button>
+                    <hr>
+                </div>
             </div>
         </div>
-    </div>
-    
-    <div class="container">
+        <div class="container">
         <h2 class="spons_choose_dog">Choose A dog to sponsor</h2>
         <?php
         if ($this->session->flashdata('success')) {
@@ -605,6 +595,7 @@ hb.addEventListener('click', () => {
         <div class="load_more_but">
             <button>Load more dogs</button>
         </div>
+    </div>
     </div>
 </div>
 

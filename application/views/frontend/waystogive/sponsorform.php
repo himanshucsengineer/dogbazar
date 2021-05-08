@@ -43,76 +43,7 @@
 
 
 
-<style>
-    .form_top_new {
-        width: 100%;
-        height: auto;
-        padding-top: 4rem;
-        padding-bottom: 36rem;
-        
-    }
-    
-    .form_top_new  h1{
-        text-align: center;
-        text-transform: capitalize;
-        font-size: 35px;
-        font-weight: 800;
-        color: #FC8817;
-    }
-    .form_top_new  p{
-        text-align: center;
-        color: white;
-        font-size: 15px;
 
-    }
-    .list_dog_form{
-        width: 100%;
-        height: auto;
-        margin-top: -32rem;
-        z-index: 5;
-        margin-bottom: 8rem;
-        
-    }
-    .list_dog_form .list_dod_form_inner{
-        width: 100%;
-        height: auto;
-        padding: 1.5rem;
-        background-color: white;
-        border: 1px solid #cdcdcd;
-        padding-bottom: 3rem;
-        box-shadow: 0 1rem 1.7rem rgba(0,0,0,.2)!important;
-    }
-    .list_dog_form .list_dod_form_inner input[type="text"], input[type="email"],input[type="file"], input[type="number"], select, textarea{
-        width: 100%;
-        height: auto;
-        padding-top: .8rem;
-        padding-bottom: .8rem;
-        padding-left: 1.5rem;
-        margin-bottom: 1.5rem;
-        border: 1px solid #cdcdcd;
-        outline: none;
-    }
-    .list_dog_form .list_dod_form_inner input[type="radio"]{
-        margin-right: .5rem;
-        margin-left: 2rem;
-    }
-    .list_dog_form .list_dod_form_inner label{
-        width: 100%;
-        font-size: 15px;
-        color: gray;
-        margin-bottom: .5rem;
-    }
-    .list_dog_form .list_dod_form_inner button{
-        width: 100%;
-        height: auto;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        color: white;
-        background-color: #FC8817;
-        border: 1px solid #FC8817;
-        outline: none;
-    }
-</style>
 <?php
                 if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
                     $url = "https://";
@@ -127,7 +58,7 @@
 <div class="form_top_new" >
     <div class="">
     <div class="container" >
-        <h1>Rescue A Dog Now</h1>
+        <h1>Sponsor A Dog Now</h1>
         <p>Giving A Second life is a Good Option</p>
     </div>
     </div>
@@ -136,9 +67,46 @@
 <div class="list_dog_form">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-11">
                 <div class="list_dod_form_inner">
-                    <form action="<?php echo base_url() ?>" method="post">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter Your Name">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter Your Name">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter Your Name">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter Your Name">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter Your Name">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter Your Name">
+                            
+                        </div>
+                        <div class="col-md-6">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter Your Name">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter Your Name">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter Your Name">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter Your Name">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter Your Name">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter Your Name">
+                            
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-5">
+                            <button>Sponsor Now</button>
+                        </div>
+                    </div>
+                    <!--form action="<?php echo base_url() ?>" method="post">
                         <?php
                         if ($this->session->flashdata('success')) {
                             echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
@@ -162,7 +130,7 @@
                         <label for="">Parmanent Address</label>
                         <textarea name="city" id="" cols="30" rows="5" placeholder="Your Address"></textarea>
                         <button name='upload'>Adopt Now</button>
-                    </form>
+                    </form-->
                 </div>
             </div>
         </div>
