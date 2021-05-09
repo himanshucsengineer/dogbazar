@@ -10,7 +10,7 @@ class Profile extends CI_controller
     {
 
         $this->load->view('frontend/template/header');
-        $this->load->view('frontend/template/navbar');
+        $this->load->view('frontend/template/desh');
 
         $this->load->view('frontend/user/profile');
        //$this->load->view('frontend/template/footer');

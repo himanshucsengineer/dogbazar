@@ -1018,11 +1018,11 @@ border-top-right-radius:0px !important;
     width: 100% !important;
     
 }
-.modal-content{
+.videooomodd .modal-content{
     
     border-radius: 0px !important;
 }
-.btn-close{
+.videooomodd .btn-close{
     float: right;
     color: white !important;
     margin-right: -2.7rem;
@@ -1040,13 +1040,13 @@ border-top-right-radius:0px !important;
 }
 .videomodal .gead h1{
     text-align: center;
-    color: #444;
+    color: #444; 
     font-weight: 600;
     font-size: 25px;
     text-transform: capitalize;
 }
 @media screen and (min-width: 576px) {
-.modal-dialog{
+.videooomodd .modal-dialog{
     max-width: 100% !important;
     
     margin-left: 8rem !important;
@@ -1194,3 +1194,528 @@ border-top-right-radius:0px !important;
 }
 
 /* contact us end */
+
+/* header start */
+
+.head_top{
+    margin-bottom: 2rem;
+}
+    .header_2{
+        width: 100%;
+        height: auto;
+        padding-top: 2rem;
+        padding-bottom: 0rem !important;
+      
+        z-index: 100;
+    }
+    .header_btn{
+        float: right;
+        text-align: center;
+        background-color: #A6341B;
+        border-radius:25px;
+        font-size: 12px;
+        padding: .8rem 1.5rem;
+        transition: .5s;
+        border: 1px solid #f39933;
+    }
+    .nav_items_dropdown{
+        z-index: 300;
+        margin-left: -1rem;
+    }
+    .header_btn:hover{
+        color: #f39933;
+        background-color: transparent;
+        border-radius: 0px;
+        border: 1px solid #f39933;
+    }
+    .header_nav{
+        background-color: #FC8817;
+    }
+    .nav_items{
+        background-color: transparent;
+        border-right:1px solid #f39933 ;
+        color: white;
+        padding: .8rem 1rem;
+        transition: .5s;
+    }
+    .nav_items:hover{
+        background-color: #A6341B !important;
+    }
+    .first{
+        border-left: 1px solid #f39933;
+    }
+    .nodecoration{
+        color: white !important;
+        font-size: 1.38rem;
+    }
+    .nav_items_dropdown_link{
+        background-color: #A6341B;
+        border-bottom: 2px solid #f39933;
+        transition: .5s;
+    }
+    .nav_items_dropdown_link:hover{
+        background-color: #f39933;
+        
+    }
+    .sidepanel .flex {
+        width: 100%;
+        height: auto;
+        display: flex;
+        padding-top: 2.5rem;
+        padding-bottom: 1.8rem;
+        padding-left: 1.5rem;
+        border-bottom: 1px solid #cdcdcd;
+    }
+
+    .sidepanel .flex .side_left {
+        width: 80%;
+        height: auto;
+    }
+
+    .sidepanel .flex .side_left h4 {
+        font-size: 19px;
+        color:#030303 !important ;
+    }
+
+    .sidepanel .flex .side_right {
+        width: 20%;
+        height: auto;
+    }
+
+    .sidepanel .flex .side_right button {
+        background: transparent;
+        color: #030303 !important;
+        font-size: 30px;
+        border: none;
+        outline: none;
+        margin-top: -2rem;
+        margin-left: 2rem;
+    }
+
+    .mobile-bar {
+        display: none !important;
+    }
+
+    .sidepanel {
+        width: 0;
+        position: fixed;
+        z-index: 100;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: white;
+        overflow-x: hidden;
+        transition: 0.2s;
+
+    }
+
+    .sidepanel a {
+        width: 100%;
+        height: auto;
+        padding-left: 1.5rem;
+        border-bottom: 1px solid #cdcdcd;
+        display: block;
+        text-decoration: none;
+        padding-top: .8rem;
+        padding-bottom: .8rem;
+        color: #030303 !important;
+        font-size: 18px;
+        transition: .5s;
+    }
+    .sidepanel .nextbutttt {
+        width: 100%;
+        height: auto;
+        padding-left: 1.5rem;
+        border-bottom: 1px solid #cdcdcd;
+        display: block;
+        text-decoration: none;
+        padding-top: .8rem;
+        padding-bottom: .8rem;
+        color: #030303 !important;
+        font-size: 18px;
+        outline: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        background-color: transparent;
+        text-align: left;
+        transition: .5s;
+    }
+    .sidepanel .nextbutttt:hover {
+        color: #FC8817;
+        border-bottom: 1px solid #FC8817;
+    }
+    .sidepanel a:hover {
+        color: #FC8817 !important;
+        border-bottom: 1px solid #FC8817;
+    }
+    .sidepanel .right_navigation{
+        margin-left: 13rem;
+        font-size: 20px;
+        font-weight: 700 !important;
+    }
+
+    .sidepanel .right_navigati{
+        margin-left: 10rem;
+        font-size: 20px;
+        font-weight: 700 !important;
+    }
+    .sidepanel .right_navigat{
+        margin-left: 9.5rem;
+        font-size: 20px;
+        font-weight: 700 !important;
+    }
+    .sidepanel a:hover {
+        color: #ffc107;
+    }
+
+    .sidepanel .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+    }
+
+    .openbtn {
+        font-size: 2rem;
+        padding-right: 5px;
+        padding-left: 5px;
+        outline: none;
+        cursor: pointer;
+        background-color: transparent;
+        color:#b42821 ;
+        border: 1px solid #cdcdcd;
+    }
+
+
+    
+    .sidepanel .sbmenuclose{
+        background-color: transparent;
+        color: #030303 !important;
+        border: none;
+        outline: none;
+        width: 100%;
+        height: auto;
+        text-align: left;
+        
+        font-size: 20px;
+    }
+    @media only screen and (max-width: 600px) {
+        .mobile-bar {
+            display: block !important;
+            float: right;
+            margin-top: -2.5rem;
+        }
+
+    }
+
+/* hedare end */    
+
+/* footer start */
+.login {
+    width: 100%;
+    height: auto;
+    border-radius: 0px !important;
+}
+
+.login .modal-header {
+    width: 100%;
+    height: auto;
+    background-color: #f7f7f7 !important;
+    border-bottom: 1px solid #cdcdcd;
+}
+
+.login .modal-header h3 {
+    color: #4a4a4a !important;
+    font-size: 20px !important;
+}
+
+.login .modal-body {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #cdcdcd;
+}
+
+.login .modal-body input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    height: auto;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+    padding-left: 1.5rem;
+    border: 1px solid #cdcdcd;
+    outline: none;
+    margin-bottom: 2rem;
+}
+
+.login .modal-body input[type="submit"] {
+    width: 100%;
+    height: auto;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+    color: white;
+    border: none;
+    outline: none;
+    background-color: #FC8817;
+    transition: .5s;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.login .modal-body input[type="submit"]:hover {
+    opacity: .7;
+}
+
+.login .modal-body .chck {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.login .modal-footer {
+    width: 100%;
+    height: auto;
+    padding: 1rem !important;
+}
+
+.login .modal-footer a {
+    color: #f39933;
+    text-decoration: none;
+}
+
+.login .modal-footer .login-footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+
+}
+
+.login .modal-footer .register-footer {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.login .modal-footer .login-footer .left {
+    width: 50%;
+    height: auto;
+}
+
+.login .modal-footer .login-footer .right {
+    width: 100%;
+    height: auto;
+    text-align: right;
+}
+
+.touch .flex {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    display: flex;
+}
+
+.touch .flex .left {
+    width: 70%;
+    height: auto;
+}
+
+.touch .flex .left input[type="email"] {
+    width: 100%;
+    height: auto;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+    padding-left: 1rem;
+    border: 1px solid #cdcdcd;
+    outline: none;
+    margin-bottom: 1rem;
+}
+
+.touch .flex .right {
+    width: 30%;
+    height: auto;
+}
+
+.touch .flex .right button {
+    width: 100%;
+    height: auto;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+    color: white;
+    background: #FC8817;
+    border: 1px solid #FC8817;
+    outline: none;
+}
+
+.touch .flex .add_left {
+    width: 15%;
+    height: auto;
+}
+
+.touch .flex .add_left .fa {
+    font-size: 20px;
+    color: white;
+}
+
+.touch .flex .add_right {
+    width: 85%;
+    height: auto;
+}
+
+.hide {
+    float: right;
+    position: absolute;
+    margin-top: .7rem !important;
+    margin-left: -3rem !important;
+}
+.footer{
+    background-color: #66120e !important;
+}
+.footerTag_copyright{
+    background-color: #A6341B !important;
+}
+@media only screen and (max-width: 600px) {
+    .login .modal-header h3 {
+        
+        font-size: 13px !important;
+    }
+    .modal-header .btn-close{
+        font-size: 13px;
+    }
+    .login .modal-body input[type="text"], input[type="email"], input[type="password"]{
+        padding-top: .6rem;
+        padding-bottom: .6rem;
+        margin-bottom: 1.5rem;
+    }
+    .login .modal-body input[type="submit"]{
+        padding-top: .6rem;
+        padding-bottom: .6rem;
+        font-size: 15px;
+    }
+    .login .modal-footer .login-footer{
+        flex-wrap: wrap;
+    }
+    .login .modal-footer .login-footer .left{
+        width: 100%;
+        text-align: center;
+        font-size: 13px;
+    }
+    .login .modal-footer .login-footer .right{
+        width: 100%;
+        text-align: center;
+        font-size: 13px;
+    }
+
+}
+/* footer emd */
+
+/* dashbord hedar */
+
+.deshbo_header{
+    border-bottom: 1px solid #cdcdcd !important;
+}
+.deshbo_header .deshbo_links{
+    float: right;
+    margin-left: 2rem;
+    color: rgb( 95, 96, 96 );
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* user panel start */
+.user_panel{
+    width: 100%;
+    height: auto;
+    background-color: #ECF0F1;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.user_panel .box{
+    width: 100%;
+    height: auto;
+    
+}
+.user_panel .box button{
+    width: 100%;
+    height: auto;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+    padding-left: 1.5rem;
+    text-align: left;
+    background-color: white;
+    border-bottom: 1px solid #cdcdcd;
+    outline: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    transition:.5s
+}
+.user_panel .box button:hover{
+    background-color: #d44444;
+    color: white;
+    border-bottom: 1px solid #d44444;
+}
+.user_panel .box .active{
+    background-color: #d44444;
+    color: white;
+    border-bottom: 1px solid #d44444;
+}
+.user_panel .box2{
+    width: 100%;
+    height: auto;
+    border: 1px solid #cdcdcd;
+
+}
+.user_panel .box2 .head{
+    width: 100%;
+    height: auto;
+    background-color: #f9f9f9;
+    color: #d44444;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    border-bottom: 1px solid #cdcdcd;
+}
+.user_panel .box2 .box2_body{
+    width: 100%;
+    height: auto;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: white;
+}
+.user_panel .box2 .box2_body input[type="text"], input[type="email"], input[type="number"], textarea{
+    width: 100%;
+    height: auto;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 1rem;
+    border: 1px solid #cdcdcd;
+    outline:none;
+    margin-bottom: 1rem;
+}
+.user_panel .box2 .box2_body button{
+    width: 15rem;
+    height: auto;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    color: white;
+    background-color: #d44444;
+    border: 1px solid #d44444;
+    outline: none;
+    transition: .5s;
+    border-radius: 2px;
+}
+.user_panel .box2 .box2_body button:hover{
+    color: black;
+    background-color: transparent;
+    border: 1px solid #f39933;
+    border-radius: 25px;
+}
+
+
+/* user panel end */

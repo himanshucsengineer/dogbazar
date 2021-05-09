@@ -70,7 +70,7 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="video" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade videooomodd" id="video" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     <div class="modal-content videomodal">

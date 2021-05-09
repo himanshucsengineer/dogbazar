@@ -1,9 +1,9 @@
 <?php
 if (!isset($_SESSION["email"])) {
-    $button = '<li><a data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();" class="">Login / Signup</a></li>  ';
+    $myaccount = '<a data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();" class="nodecoration header_btn m_hide">LOGIN / SIGNUP</a> ';
 } else {
-    $button = '<li class="nav-item dropdown">
-                <a class=" dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    $myaccount = '<div class=" dropdown">
+                <a class="nodecoration header_btn m_hide dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
             ' . $_SESSION["name"] . '
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -13,14 +13,14 @@ if (!isset($_SESSION["email"])) {
                 <a class="" href="' . base_url() . 'logout"><button><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</button></a>
                
             </div>
-        </li>
+        </div>
   
   
   
 ';
 }
 ?>
-<!--style>
+<style>
     .dropdown-menu {
         width: 100%;
         height: auto;
@@ -54,7 +54,7 @@ if (!isset($_SESSION["email"])) {
     }
 </style>
 
-<body>
+<!--body>
 
 
     <header class="header">
@@ -114,226 +114,6 @@ if (!isset($_SESSION["email"])) {
             </div>
         </div>
     </header-->
-
-
-
-
-
-
-
-<style>
-.head_top{
-    margin-bottom: 2rem;
-}
-    .header_2{
-        width: 100%;
-        height: auto;
-        padding-top: 2rem;
-        padding-bottom: 0rem !important;
-      
-        z-index: 100;
-    }
-    .header_btn{
-        float: right;
-        text-align: center;
-        background-color: #A6341B;
-        border-radius:25px;
-        font-size: 12px;
-        padding: .8rem 1.5rem;
-        transition: .5s;
-        border: 1px solid #f39933;
-    }
-    .nav_items_dropdown{
-        z-index: 300;
-        margin-left: -1rem;
-    }
-    .header_btn:hover{
-        color: #f39933;
-        background-color: transparent;
-        border-radius: 0px;
-        border: 1px solid #f39933;
-    }
-    .header_nav{
-        background-color: #FC8817;
-    }
-    .nav_items{
-        background-color: transparent;
-        border-right:1px solid #f39933 ;
-        color: white;
-        padding: .8rem 1rem;
-        transition: .5s;
-    }
-    .nav_items:hover{
-        background-color: #A6341B !important;
-    }
-    .first{
-        border-left: 1px solid #f39933;
-    }
-    .nodecoration{
-        color: white !important;
-        font-size: 1.38rem;
-    }
-    .nav_items_dropdown_link{
-        background-color: #A6341B;
-        border-bottom: 2px solid #f39933;
-        transition: .5s;
-    }
-    .nav_items_dropdown_link:hover{
-        background-color: #f39933;
-        
-    }
-    .sidepanel .flex {
-        width: 100%;
-        height: auto;
-        display: flex;
-        padding-top: 2.5rem;
-        padding-bottom: 1.8rem;
-        padding-left: 1.5rem;
-        border-bottom: 1px solid #cdcdcd;
-    }
-
-    .sidepanel .flex .side_left {
-        width: 80%;
-        height: auto;
-    }
-
-    .sidepanel .flex .side_left h4 {
-        font-size: 19px;
-        color:#030303 !important ;
-    }
-
-    .sidepanel .flex .side_right {
-        width: 20%;
-        height: auto;
-    }
-
-    .sidepanel .flex .side_right button {
-        background: transparent;
-        color: #030303 !important;
-        font-size: 30px;
-        border: none;
-        outline: none;
-        margin-top: -2rem;
-        margin-left: 2rem;
-    }
-
-    .mobile-bar {
-        display: none !important;
-    }
-
-    .sidepanel {
-        width: 0;
-        position: fixed;
-        z-index: 100;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-color: white;
-        overflow-x: hidden;
-        transition: 0.2s;
-
-    }
-
-    .sidepanel a {
-        width: 100%;
-        height: auto;
-        padding-left: 1.5rem;
-        border-bottom: 1px solid #cdcdcd;
-        display: block;
-        text-decoration: none;
-        padding-top: .8rem;
-        padding-bottom: .8rem;
-        color: #030303 !important;
-        font-size: 18px;
-        transition: .5s;
-    }
-    .sidepanel .nextbutttt {
-        width: 100%;
-        height: auto;
-        padding-left: 1.5rem;
-        border-bottom: 1px solid #cdcdcd;
-        display: block;
-        text-decoration: none;
-        padding-top: .8rem;
-        padding-bottom: .8rem;
-        color: #030303 !important;
-        font-size: 18px;
-        outline: none;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        background-color: transparent;
-        text-align: left;
-        transition: .5s;
-    }
-    .sidepanel .nextbutttt:hover {
-        color: #FC8817;
-        border-bottom: 1px solid #FC8817;
-    }
-    .sidepanel a:hover {
-        color: #FC8817 !important;
-        border-bottom: 1px solid #FC8817;
-    }
-    .sidepanel .right_navigation{
-        margin-left: 13rem;
-        font-size: 20px;
-        font-weight: 700 !important;
-    }
-
-    .sidepanel .right_navigati{
-        margin-left: 10rem;
-        font-size: 20px;
-        font-weight: 700 !important;
-    }
-    .sidepanel .right_navigat{
-        margin-left: 9.5rem;
-        font-size: 20px;
-        font-weight: 700 !important;
-    }
-    .sidepanel a:hover {
-        color: #ffc107;
-    }
-
-    .sidepanel .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-    }
-
-    .openbtn {
-        font-size: 2rem;
-        padding-right: 5px;
-        padding-left: 5px;
-        outline: none;
-        cursor: pointer;
-        background-color: transparent;
-        color:#b42821 ;
-        border: 1px solid #cdcdcd;
-    }
-
-
-    
-    .sidepanel .sbmenuclose{
-        background-color: transparent;
-        color: #030303 !important;
-        border: none;
-        outline: none;
-        width: 100%;
-        height: auto;
-        text-align: left;
-        
-        font-size: 20px;
-    }
-    @media only screen and (max-width: 600px) {
-        .mobile-bar {
-            display: block !important;
-            float: right;
-            margin-top: -2.5rem;
-        }
-
-    }
-</style>
 <div id="mySidepanel" class="sidepanel">
     <div class="flex">
         <div class="side_left">
@@ -437,7 +217,7 @@ if (!isset($_SESSION["email"])) {
             <div class="row  head_top">
                 <div class="col-md-6"><a href="">logo</a> </div>
                 <div class="col-md-6 ">
-                    <a href="" class="nodecoration header_btn m_hide">LOGIN / SIGNUP</a>
+                    <?php echo $myaccount;?>
                     <a href="<?php echo base_url()?>donate" class="nodecoration header_btn m_hide">DONATE</a>
                     <div class="mobile-bar ">
                         <button class="openbtn" onclick="openNav()">☰ </button>
