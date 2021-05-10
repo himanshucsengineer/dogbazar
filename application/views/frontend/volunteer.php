@@ -178,16 +178,71 @@
 
 </main-->
 
-<div class="form_top_new" >
+<div class="form_top_new form_top_vol">
     <div class="">
-    <div class="container" >
-        <h1>Become A volunteer</h1>
-        <p>Helping an animal for a good life </p>
-    </div>
+        <div class="container">
+            <h1>Become A volunteer</h1>
+            <p>Helping an animal for a good life </p>
+        </div>
     </div>
 </div>
 
-<div class="list_dog_form">
+
+<div class="help_us_volunteer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h1>Help Us Help Them</h1>
+                <h4>And have a fun time while doing it!</h4>
+            </div>
+            <div class="col-md-8">
+                <p>Our volunteers keep animals safe, healthy, and happy as they get ready for their new lifetime homes.</p>
+                <p>There are so many ways to volunteer your time to the shelter. Whether you want to visit with the animals or offer other services like marketing expertise, event engagement, construction services, or any of the examples below, we could most certainly utilize your time.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--div class="utilize">
+    <div class="container">
+        <h1>We Could Utilize Your Services!</h1>
+        <p>We couldn’t save the lives of these animals without you. We appreciate any time or donations you can offer us.</p>
+        <div class="row">
+            <div class="col-md-4">
+                <h2>When?</h2>
+                <p>We need volunteers seven days a week from 11:00-7:00. If you even have an hour, stop by. There’s always a pet in need.</p>
+            </div>
+            <div class="col-md-4">
+                <h2>Who?</h2>
+                <p>Anyone can volunteer! You just have to love animals and be ready to work.</p>
+            </div>
+            <div class="col-md-4">
+                <h2>Why?</h2>
+                <p>We rescue thousands of abused and neglected dogs and cats every year. They all need care, help, and your love.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--div class="what_will_vonlunteer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>What will I do as a volunteer at Animal House?</h1>
+                <p>Walk and socialize with the dogs</p>
+                <p>Bathe and groom dogs</p>
+                <p>Spend quality 1-on-1 time with the animals to help socialize them and teach them tricks! (puppies, kittens & cats too)</p>
+                <p>Spend time in the ‘Free Roam’ cat room to socialize, groom or otherwise, help make their lives more comfortable</p>
+             
+            </div>
+            <div class="col-md-6">
+                <img src="<?php echo base_url()?>/assest/images/testimg1.png" alt="what will vounteer do">
+            </div>
+        </div>
+    </div>
+</div-->
+
+<div class="list_dog_form volunteer_form_new">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-11">
@@ -206,7 +261,7 @@
                             <input type="text" placeholder="Enter Your Name">
                             <label for="">Name</label>
                             <input type="text" placeholder="Enter Your Name">
-                            
+
                         </div>
                         <div class="col-md-6">
                             <label for="">Name</label>
@@ -221,7 +276,7 @@
                             <input type="text" placeholder="Enter Your Name">
                             <label for="">Name</label>
                             <input type="text" placeholder="Enter Your Name">
-                            
+
                         </div>
                     </div>
                     <div class="row justify-content-center">
@@ -239,7 +294,7 @@
 
 
                         ?>
-                        <input type="hidden" name="uniq_id" value="<?php echo $uniqid?>">
+                        <input type="hidden" name="uniq_id" value="<?php echo $uniqid ?>">
                         <label for="">Your Name*</label>
                         <input type="text" name="name" placeholder="Enter Your Name">
                         <label for="">Your Email*</label>

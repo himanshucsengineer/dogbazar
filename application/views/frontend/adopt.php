@@ -1,4 +1,85 @@
 <style>
+    .loader {
+        animation: rotate 1s infinite;
+        height: 50px;
+        width: 50px;
+    }
+
+    .loader:before,
+    .loader:after {
+        border-radius: 50%;
+        content: '';
+        display: block;
+        height: 20px;
+        width: 20px;
+    }
+
+    .loader:before {
+        animation: ball1 1s infinite;
+        background-color: #cb2025;
+        box-shadow: 30px 0 0 #f8b334;
+        margin-bottom: 10px;
+    }
+
+    .loader:after {
+        animation: ball2 1s infinite;
+        background-color: #00a096;
+        box-shadow: 30px 0 0 #97bf0d;
+    }
+
+    @keyframes rotate {
+        0% {
+            -webkit-transform: rotate(0deg) scale(0.8);
+            -moz-transform: rotate(0deg) scale(0.8);
+        }
+
+        50% {
+            -webkit-transform: rotate(360deg) scale(1.2);
+            -moz-transform: rotate(360deg) scale(1.2);
+        }
+
+        100% {
+            -webkit-transform: rotate(720deg) scale(0.8);
+            -moz-transform: rotate(720deg) scale(0.8);
+        }
+    }
+
+    @keyframes ball1 {
+        0% {
+            box-shadow: 30px 0 0 #f8b334;
+        }
+
+        50% {
+            box-shadow: 0 0 0 #f8b334;
+            margin-bottom: 0;
+            -webkit-transform: translate(15px, 15px);
+            -moz-transform: translate(15px, 15px);
+        }
+
+        100% {
+            box-shadow: 30px 0 0 #f8b334;
+            margin-bottom: 10px;
+        }
+    }
+
+    @keyframes ball2 {
+        0% {
+            box-shadow: 30px 0 0 #97bf0d;
+        }
+
+        50% {
+            box-shadow: 0 0 0 #97bf0d;
+            margin-top: -20px;
+            -webkit-transform: translate(15px, 15px);
+            -moz-transform: translate(15px, 15px);
+        }
+
+        100% {
+            box-shadow: 30px 0 0 #97bf0d;
+            margin-top: 0;
+        }
+    }
+
     .adopt_dog {
         width: 100%;
         height: auto;
@@ -129,7 +210,7 @@
         border: 1px solid #f39933;
         outline: none;
         border-radius: 25px;
-        
+
     }
 
     .adopt_dog .first_sec {
@@ -171,6 +252,29 @@
         color: white;
         font-size: 15px;
         text-transform: capitalize;
+    }
+
+    .load_more_adopt {
+        text-align: center;
+
+    }
+
+    .load_more_adopt button {
+
+        width: 20rem;
+        height: auto;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        color: white;
+        border: 1px solid #FC8817;
+        background-color: #FC8817;
+        outline: none;
+        font-weight: 700 !important;
+        box-shadow: 0 3px 4px -1px rgb(0 0 0 / 40%);
+        border-radius: 2px;
+        text-transform: capitalize;
+        margin-top: 3rem;
+        margin-bottom: 6rem;
     }
 
     @media screen and (max-width: 600px) {
@@ -241,7 +345,7 @@
                     <div class="first_sec_inner">
                         <h1>List Your Dog for Adoption</h1>
                         <p>At the International Dog Bazar, hundreds of dogs wait in anticipation of loving homes. Many have been rescued from suffering on the streets or as survivors of the Asian dog meat trade. All are deserving of a forever home and the process is a lot easier than you think. Search below to find the perfect companion for your home and family. Thank you for wanting to adopt a rescue; International Dog Bazar will help you every step of the way.</p>
-                        <a href="<?php echo base_url()?>listmydog"><button>List A Dog</button></a>
+                        <a href="<?php echo base_url() ?>listmydog"><button>List A Dog</button></a>
                     </div>
                 </div>
                 <div class="col-md-5">
@@ -254,94 +358,198 @@
         <div class="row justify-content-center">
 
             <div class="col-md-9">
+                <form action="" id="searchform">
                 <div class="flex " id="aBtnGroup">
 
                     <div class="left">
                         <input type="text" id="serch" placeholder="Search By City" value="">
                     </div>
                     <div class="right">
-                        <button>Search</button>
+                        <button id="searchnow" >Search</button>
                     </div>
 
                 </div>
+                </form>
             </div>
 
         </div>
 
 
-        <div class="adopt_card_main ">
-            <?php foreach ($adopt as $value) { ?>
+        <div class="adopt_card_main  " id="load_data">
 
-                <div class="card">
-                    <a href="<?php echo base_url() . "adopt/" . $value['link'] ?>">
-                        <div class="card_inner">
-                            <h3><?php echo $value['breed'] ?></h3>
-                            <img src="<?php echo $value['image'] ?>" alt="dog image">
-                            <h6>Gender: <?php echo $value['gender'] ?></h6>
-                            <h6>Age: <?php echo $value['age'] ?></h6>
-                            <h6><?php echo $value['city'] ?></h6>
-                            <div class="adop_butt">
-                                <a href="<?php echo base_url() . "adopt/" . $value['link'] ?>"><button>Adopt Now</button></a>
-                            </div>
-                        </div>
-                    </a>
-                </div>
 
-            <?php } ?>
 
 
 
 
         </div>
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <div class="text-center" id="load_data_message"></div>
+            </div>
+        </div>
+        <div class="adopt_card_main  " id="load_data2">
+
+
+
+
+
+
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <div class="text-center" id="load_data_message2"></div>
+            </div>
+        </div>
+
+        <div class="load_more_adopt">
+            <button id="loadmore">load more</button>
+        </div>
+
 
     </div>
 </div>
-
-
-
-<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<script type='text/javascript'>
-    var baseURL = "<?php echo base_url(); ?>";
+<script>
     $(document).ready(function() {
-        $('#aBtnGroup button').on('click', function() {
-            var thisBtn = $(this);
-            var btnText = thisBtn.text();
-            var srchbtn = document.getElementById("serch").value;
-            var btnValue = thisBtn.val();
-            console.log(btnText + ' - ' + btnValue);
-            console.log(srchbtn);
 
+        var limit = 6;
+        var start = 0;
+        var action = 'inactive';
+
+        function lazzy_loader(limit) {
+
+            for (var count = 0; count < limit; count++) {
+
+                output = '<div class="row justify-content-center"><div class="col-md-3"><div class="loader"></div></div></div>';
+            }
+            $('#load_data_message').html(output);
+        }
+
+        lazzy_loader(limit);
+
+        function load_data(limit, start) {
             $.ajax({
-                url: '<?= base_url() ?>frontend/adopt/getCityDepartment',
-                method: 'post',
+                url: "<?php echo base_url(); ?>frontend/adopt/fetch",
+                method: "POST",
                 data: {
-                    course: srchbtn
+                    limit: limit,
+                    start: start
                 },
-                dataType: 'json',
-                success: function(response) {
+                cache: false,
+                success: function(data) {
+                    if (data == '') {
+                        $('#load_data_message').html('<h3>No More Result Found</h3>');
+                        action = 'active';
+                    } else {
+                        $('#load_data').append(data);
+                        $('#load_data_message').html("");
+                        action = 'inactive';
+                    }
+                }
+            })
+        }
 
-                    // Remove options 
+        if (action == 'inactive') {
+            action = 'active';
+            load_data(limit, start);
+        }
 
-                    $('#sel_depart').find('option').not(':first').remove();
-
-                    // Add options
-                    $.each(response, function(index, data) {
-                        $('#sel_depart').append('<option value="' + data['month'] + ' ' + data['amount'] + '">Get Membership in: INR' + data['month'] + ' with validity: ' + data['id'] + '</option>');
-                    });
-                },
-                
-                
-            });
-
-
+        $('#loadmore').click(function() {
+            if ($(window).scrollTop() + $(window).height() > $("#load_data").height() && action == 'inactive') {
+                lazzy_loader(limit);
+                action = 'active';
+                start = start + limit;
+                setTimeout(function() {
+                    load_data(limit, start);
+                }, 500);
+            }
         });
-       
+
     });
-  
+</script>
+<script>
+    $(document).ready(function() {
 
 
+        $('#searchnow').click(function(e) {
+            e.preventDefault();
+            var srr = document.getElementById('serch').value;
+            console.log(srr);
+            $("#load_data").hide();
+            $("#load_data_message").hide();
+            var limit = 6;
+            var start = 0;
+            var action = 'inactive';
+
+            function lazzy_loader(limit) {
+
+                for (var count = 0; count < limit; count++) {
+
+                    output = '<div class="row justify-content-center"><div class="col-md-3"><div class="loader"></div></div></div>';
+                }
+                $('#load_data_message').html(output);
+            }
+
+            lazzy_loader(limit);
+
+            function load_data(limit, start) {
+                        $("#searchform").trigger("reset");
+                $.ajax({
+                    url: "<?php echo base_url(); ?>frontend/adopt/search",
+                    method: "POST",
+                    data: {
+                        limit: limit,
+                        start: start,
+                        search: srr
+                    },
+                    cache: false,
+                    success: function(data) {
+                        $('#load_data2').html('');
+                        if (data == '') {
+                            
+                            $('#load_data_message2').html('<h3>No More Result Found</h3>');
+                            
+                            action = 'active';
+                            
+                            
+                            
+                        } else {
+                            
+                            $('#load_data2').append(data);
+                           
+                            $('#load_data_message2').html("");
+                            
+                            action = 'inactive';
+                            
+                            
+                        }
+                        
+                    }
+                });
+                   
 
 
-  
-</script-->
+                
+                
+            }
+
+            if (action == 'inactive') {
+                action = 'active';
+                load_data(limit, start);
+            }
+            $('#loadmore').click(function() {
+            if ($(window).scrollTop() + $(window).height() > $("#load_data2").height() && action == 'inactive') {
+                lazzy_loader(limit);
+                action = 'active';
+                start = start + limit;
+                setTimeout(function() {
+                    load_data(limit, start);
+                }, 500);
+            }
+        });
+        });
+
+    });
+
+    
+</script>

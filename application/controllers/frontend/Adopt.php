@@ -16,22 +16,66 @@ class Adopt extends CI_controller
         $this->load->view('frontend/adopt' , $data);
         $this->load->view('frontend/template/footer');
     }
-    public function getCityDepartment()
+    function fetch()
     {
-        // POST data 
-        $postData = $this->input->post();
+     $output = '';
+     $this->load->model('frontend/Listmydogmodel');
+     $data = $this->Listmydogmodel->fetch_data($this->input->post('limit'), $this->input->post('start'));
+     if($data->num_rows() > 0)
+     {
+      foreach($data->result() as $row)
+      {
+       $output .= '
+       
+            <div class="card">
+               <a href="'.base_url().'adopt/'.$row->link.'">
+                   <div class="card_inner">
+                       <h3>'.$row->breed.'</h3>
+                       <img src="'.$row->image.'" alt="dog image">
+                       <h6>Gender: '.$row->gender.'</h6>
+                       <h6>Age: '.$row->age.'</h6>
+                       <h6>City: '.$row->city.'</h6>
+                       <div class="adop_butt">
+                           <a href="'.base_url().'adopt/'.$row->link.'"><button>Adopt Now</button></a>
+                       </div>
+                   </div>
+               </a>
+           </div>
+           ';
+      }
+     }
+     echo $output;
+    }
 
-        // load model 
-        $this->load->model('frontend/Listmydogmodel');
 
-        // get data 
-        if($postData==null){
-            $data = $this->Listmydogmodel->fetch_adopt_all();
-            echo json_encode($data);
-        }else{
-            $data = $this->Listmydogmodel->getCityDepartment($postData);
-        echo json_encode($data);
-        }
-        
+    function search()
+    {
+     $output = '';
+     $this->load->model('frontend/Listmydogmodel');
+     $data = $this->Listmydogmodel->search_fetch_data($this->input->post('limit'), $this->input->post('start'),$this->input->post('search'));
+     if($data->num_rows() > 0)
+     {
+      foreach($data->result() as $row)
+      {
+       $output .= '
+       
+            <div class="card">
+               <a href="'.base_url().'adopt/'.$row->link.'">
+                   <div class="card_inner">
+                       <h3>'.$row->breed.'</h3>
+                       <img src="'.$row->image.'" alt="dog image">
+                       <h6>Gender: '.$row->gender.'</h6>
+                       <h6>Age: '.$row->age.'</h6>
+                       <h6>City: '.$row->city.'</h6>
+                       <div class="adop_butt">
+                           <a href="'.base_url().'adopt/'.$row->link.'"><button>Adopt Now</button></a>
+                       </div>
+                   </div>
+               </a>
+           </div>
+           ';
+      }
+     }
+     echo $output;
     }
 }

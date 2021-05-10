@@ -16,16 +16,27 @@ class Listmydogmodel extends CI_Model
   {
     return $this->db->where('link', $slug)->get('listdog')->row();
   }
-  function getCityDepartment($postData){
-    $response = array();
- 
-    // Select record
-    $this->db->select('*');
-    $this->db->where('city', $postData['course']);
-    $q = $this->db->get('listdog');
-    $response = $q->result_array();
+  function fetch_data($limit, $start)
+ {
 
-    return $response;
-  }
+  $this->db->select("*");
+  $this->db->from("listdog");
+  $this->db->order_by("id", "DESC");
+  $this->db->limit($limit, $start);
+  $query = $this->db->get();
+  return $query;
+ }
+
+ function search_fetch_data($limit, $start,$search)
+ {
+
+  $this->db->select("*");
+  $this->db->from("listdog");
+  $this->db->where("city",$search);
+  $this->db->order_by("id", "DESC");
+  $this->db->limit($limit, $start);
+  $query = $this->db->get();
+  return $query;
+ }
 
 }

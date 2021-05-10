@@ -1654,14 +1654,14 @@ input[type="password"] {
     transition:.5s
 }
 .user_panel .box button:hover{
-    background-color: #d44444;
+    background-color: #A6341B;
     color: white;
-    border-bottom: 1px solid #d44444;
+    border-bottom: 1px solid #A6341B;
 }
 .user_panel .box .active{
-    background-color: #d44444;
+    background-color: #A6341B;
     color: white;
-    border-bottom: 1px solid #d44444;
+    border-bottom: 1px solid #A6341B;
 }
 .user_panel .box2{
     width: 100%;
@@ -1673,10 +1673,10 @@ input[type="password"] {
     width: 100%;
     height: auto;
     background-color: #f9f9f9;
-    color: #d44444;
+    color: #A6341B;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    padding-left: 1rem;
+    padding-left: 2rem;
     border-bottom: 1px solid #cdcdcd;
 }
 .user_panel .box2 .box2_body{
@@ -1684,28 +1684,29 @@ input[type="password"] {
     height: auto;
     padding-top: 2rem;
     padding-bottom: 3rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     background-color: white;
 }
 .user_panel .box2 .box2_body input[type="text"], input[type="email"], input[type="number"], textarea{
     width: 100%;
     height: auto;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-    padding-left: 1rem;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+    padding-left: 1.5rem;
     border: 1px solid #cdcdcd;
     outline:none;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    color: black !important;
 }
 .user_panel .box2 .box2_body button{
     width: 15rem;
     height: auto;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
     color: white;
-    background-color: #d44444;
-    border: 1px solid #d44444;
+    background-color: #A6341B;
+    border: 1px solid #A6341B;
     outline: none;
     transition: .5s;
     border-radius: 2px;
@@ -1716,6 +1717,96 @@ input[type="password"] {
     border: 1px solid #f39933;
     border-radius: 25px;
 }
+@media only screen and (max-width: 600px) {
+    .user_panel .box{
+        display: none;
+        
+    }
+    .user_panel .box2 .box2_body button{
+        width: 100%;
+    }
+    .user_panel .box2 .head h3{
+        text-align: center;
+    }
 
+}
 
 /* user panel end */
+
+/* volunteer page */
+
+.volunteer_form_new{
+    margin-top: 4rem !important;
+}
+.form_top_vol{
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
+}
+.help_us_volunteer{
+    width: 100%;
+    height: auto;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    background-color: white;
+}
+.help_us_volunteer h1{
+    color: #202020;
+    font-size: 36px;
+    line-height: 48px;
+    position: relative;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    font-weight: 600 !important;
+}
+.help_us_volunteer h1:after{
+    content: "";
+    position: absolute;
+    background-color: #FC8817;
+    height: 2px;
+    bottom: -10px;
+    width: 130px;
+    left: 0;
+}
+.help_us_volunteer h4{
+    font-family: "europa",Helvetica,Arial,sans-serif;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 400 !important;
+    padding-bottom: 0;
+}
+.help_us_volunteer p{
+    font-family: 'Assistant',Helvetica,Arial,Lucida,sans-serif;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    color: #666;
+    font-size: 18px;
+    font-weight: 300 !important;
+}
+.utilize{
+    width: 100%;
+    height: auto;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    background:#f39933;
+
+}
+.utilize h1{
+    color: white;
+    font-size: 36px;
+    line-height: 48px;
+    position: relative;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    font-weight: 600 !important;
+    text-align: center;
+}
+.utilize h1:after{
+    content: "";
+    position: absolute;
+    background-color: #FC8817;
+    height: 2px;
+    bottom: -10px;
+    width: 130px;
+    left: 0;
+}
+/* end */
