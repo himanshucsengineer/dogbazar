@@ -47,7 +47,7 @@ class Adopt extends CI_controller
      echo $output;
     }
 
-
+ 
     function search()
     {
      $output = '';
