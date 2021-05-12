@@ -1,7 +1,3 @@
-<style>
-    
-</style>
-
 
 <footer class="footer">
 
@@ -90,7 +86,17 @@
 </div> -->
 <div class="footerTag_copyright">
     <div class="container text-center">
-        <p>@Copyright Dog Bazar</p>
+        <h1>Follow Us On</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <a class="fa-iconbs" href=""><i class="fa fa-youtube "></i></a>
+                <a class="fa-iconbs" href=""><i class="fa fa-twitter "></i></a>
+                <a class="fa-iconbs" href=""><i class="fa fa-instagram "></i></a>
+                <a class="fa-iconbs" href=""><i class="fa fa-facebook "></i></a>
+                <a class="fa-iconbs" href=""><i class="fa fa-linkedin "></i></a>
+            </div>
+        </div>
+        <p>@2021 TIRUPATI INSURANCE ALL RIGHTS RESERVED. DEVELOPED BY <a href="">HISAR FEVER</a></p>
     </div>
 </div>
 <!-- Experiment -->

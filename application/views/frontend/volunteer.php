@@ -203,7 +203,7 @@
     </div>
 
 </div>
-<!--div class="utilize">
+<div class="utilize">
     <div class="container">
         <h1>We Could Utilize Your Services!</h1>
         <p>We couldn’t save the lives of these animals without you. We appreciate any time or donations you can offer us.</p>
@@ -224,7 +224,7 @@
     </div>
 </div>
 
-<!--div class="what_will_vonlunteer">
+<div class="what_will_vonlunteer">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -240,7 +240,7 @@
             </div>
         </div>
     </div>
-</div-->
+</div>
 
 <div class="list_dog_form volunteer_form_new">
     <div class="container">

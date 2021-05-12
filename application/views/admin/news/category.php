@@ -17,7 +17,8 @@
     }
 
     .blog-category input[type="text"],
-    textarea {
+    textarea,
+    select {
         width: 100%;
         height: auto;
         border: 1px solid #cdcdcd;
@@ -41,6 +42,10 @@
         width: 100% !important;
         height: auto;
     }
+
+    .table-responsive {
+        margin-top: 4rem;
+    }
 </style>
 <div class="blog-category">
     <div class="container">
@@ -57,9 +62,16 @@
 
 
         <form action="<?php echo base_url(); ?>admin/news/category/insert" method="post" id="referform">
+            <label for="">Sub Category</label>
+            <input type="text" name="name" placeholder="Enter Category Name" required>
+            <label for="">Select Category</label>
+            <select name="cate" id="" required>
 
-            <input type="text" name="name" placeholder="Enter Category Name">
-            <textarea name="desc" rows="5" placeholder="Enter Category Description"></textarea>
+                <option value="news">News</option>
+                <option value="events">Events</option>
+            </select>
+            <label for="">Category Description</label>
+            <textarea name="desc" rows="5" placeholder="Enter Category Description" required></textarea>
             <button name="formSubmit">Create</button>
 
         </form>
@@ -70,6 +82,7 @@
                 <thead>
                     <tr>
                         <th>Category Name</th>
+                        <th>Sub Category Name</th>
                         <th>Description</th>
                         <th>Action</th>
 

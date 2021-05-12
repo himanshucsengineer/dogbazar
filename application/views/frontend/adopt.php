@@ -359,16 +359,16 @@
 
             <div class="col-md-9">
                 <form action="" id="searchform">
-                <div class="flex " id="aBtnGroup">
+                    <div class="flex " id="aBtnGroup">
 
-                    <div class="left">
-                        <input type="text" id="serch" placeholder="Search By City" value="">
-                    </div>
-                    <div class="right">
-                        <button id="searchnow" >Search</button>
-                    </div>
+                        <div class="left">
+                            <input type="text" id="serch" placeholder="Search By City" value="">
+                        </div>
+                        <div class="right">
+                            <button id="searchnow">Search</button>
+                        </div>
 
-                </div>
+                    </div>
                 </form>
             </div>
 
@@ -468,18 +468,28 @@
     });
 </script>
 <script>
+    
+
+
+
+
     $(document).ready(function() {
 
-
+        
         $('#searchnow').click(function(e) {
             e.preventDefault();
             var srr = document.getElementById('serch').value;
+            var x = srr;
+            console.log(x)
+            srr.sessionStorage.setItem("mytime", srr);
+           
             console.log(srr);
             $("#load_data").hide();
             $("#load_data_message").hide();
+
             var limit = 6;
             var start = 0;
-            var action = 'inactive';
+
 
             function lazzy_loader(limit) {
 
@@ -493,7 +503,7 @@
             lazzy_loader(limit);
 
             function load_data(limit, start) {
-                        $("#searchform").trigger("reset");
+                $("#searchform").trigger("reset");
                 $.ajax({
                     url: "<?php echo base_url(); ?>frontend/adopt/search",
                     method: "POST",
@@ -504,52 +514,64 @@
                     },
                     cache: false,
                     success: function(data) {
-                        $('#load_data2').html('');
+
+
                         if (data == '') {
-                            
+
                             $('#load_data_message2').html('<h3>No More Result Found</h3>');
-                            
-                            action = 'active';
-                            
-                            
-                            
                         } else {
-                            
-                            $('#load_data2').append(data);
                            
-                            $('#load_data_message2').html("");
+
                             
-                            action = 'inactive';
-                            
-                            
+                            var oldv= e.oldValue;
+                            var newv =  e.newValue;
+                            console.log(oldv);
+                            console.log(newv);
+                            if (srr == getsession) {
+                                $('#load_data2').append(data);
+
+
+                                $('#load_data_message2').html("");
+
+
+                            } else {
+                                $('#load_data2').html("");
+                                if (data == '') {
+                                    $('#load_data_message2').html('<h3>No More Result Found</h3>');
+                                } else {
+                                    $('#load_data2').append(data);
+                                    $('#load_data_message2').html("");
+                                }
+                            }
+
+
+
                         }
-                        
+
                     }
                 });
-                   
 
 
-                
-                
+
+
+
             }
 
-            if (action == 'inactive') {
-                action = 'active';
-                load_data(limit, start);
-            }
-            $('#loadmore').click(function() {
-            if ($(window).scrollTop() + $(window).height() > $("#load_data2").height() && action == 'inactive') {
+
+
+            load_data(limit, start);
+
+            $("#loadmore").click(function() {
+
                 lazzy_loader(limit);
-                action = 'active';
+
                 start = start + limit;
                 setTimeout(function() {
                     load_data(limit, start);
-                }, 500);
-            }
-        });
+                }, 1000);
+
+            });
         });
 
     });
-
-    
 </script>

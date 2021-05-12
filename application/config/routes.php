@@ -11,6 +11,7 @@ $route['adopt/(:any)'] = 'frontend/adoptpet/index/$1';
 
 $route['franchies'] = 'frontend/franchies';
 $route['news'] = 'frontend/news/news';
+$route['events'] = 'frontend/news/events';
 $route['mydogs'] = 'frontend/user/mydogs';
 $route['profile'] = 'frontend/user/profile';
 $route['about-us'] = 'frontend/about';

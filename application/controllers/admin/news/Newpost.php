@@ -37,7 +37,7 @@ class Newpost extends CI_controller
             $config['file_name'] = $File_name;
             $config['overwrite'] = TRUE;
             $config["allowed_types"] = 'jpeg|jpg|png';
-            $config["max_size"] = 2048;
+            $config["max_size"] = '';
             $this->load->library('upload', $config);
             if (!$this->upload->do_upload('images')) {
                 $this->data['error'] = $this->upload->display_errors();
@@ -54,13 +54,13 @@ class Newpost extends CI_controller
 
         $datas = array(
             'head' => $this->input->post('heading'),
-            // 'mt_title' => $this->input->post('mtitle'),
+             'subcategory' => $this->input->post('subcategory'),
             // 'm_desc' => $this->input->post('mdesc'),
-            //  'm_key' => $this->input->post('mkey'),
+            // 'm_key' => $this->input->post('mkey'),
             'content' => $this->input->post('content'),
             'cate' => $this->input->post('category'),
             'link' => $this->input->post('link'),
-            'sub_cate' => $this->input->post('sub_category'),
+            //'tag' => $this->input->post('tags'),
 
             'image' => $imageurl,
         );

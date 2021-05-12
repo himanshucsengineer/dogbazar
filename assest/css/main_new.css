@@ -960,6 +960,11 @@ input[type="number"] {
     height: 70px;
     margin-top: -2rem;
 }
+.why_donate .flex .left .fff{
+    font-size: 7rem;
+    margin-top: -2rem;
+    color: #575757;
+}
 .why_donate .flex .right {
     width: 70%;
     height: auto;
@@ -1053,6 +1058,7 @@ border-top-right-radius:0px !important;
     margin-right: 8rem !important;
    
 }
+
 }
 
 /* contact us strat */
@@ -1155,6 +1161,11 @@ border-top-right-radius:0px !important;
     font-size: 1.5rem;
 }
 @media screen and (max-width: 600px) {
+    .why_donate .flex .left .fff{
+        font-size: 5rem;
+        margin-top: -1rem;
+        
+    }
     .writetous{
         padding: 0rem !important;
         border: none;
@@ -1542,8 +1553,8 @@ input[type="password"] {
 .touch .flex .right button {
     width: 100%;
     height: auto;
-    padding-top: .3rem;
-    padding-bottom: .3rem;
+    padding-top: .7rem;
+    padding-bottom: .7rem;
     color: white;
     background: #FC8817;
     border: 1px solid #FC8817;
@@ -1810,3 +1821,49 @@ input[type="password"] {
     left: 0;
 }
 /* end */
+
+.footerTag_copyright{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.footerTag_copyright h1{
+    font-family: sohne,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb( 255, 255, 255 );
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+.footerTag_copyright p{
+    font-family: sohne,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb( 226, 226, 226 );
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    margin-top: 1rem;
+}
+.footerTag_copyright a{
+   color: #f39933;
+}
+.footerTag_copyright .fa-iconbs{
+    font-size: 15px;
+    color: white !important;
+    border: 1px solid #FC8817;
+    text-align: center;
+    margin: 0px 0px 10px 4px;
+    padding: 1px 4px;
+    border-radius: 6px;
+}
+
+.what_will_vonlunteer{
+    width:100%;
+    height: auto;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    background-color: white;
+}
+.what_will_vonlunteer img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}

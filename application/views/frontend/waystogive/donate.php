@@ -217,7 +217,7 @@
             <div class="col-md-4">
                 <div class="flex">
                     <div class="left">
-                    <img src="<?php echo base_url()?>/assest/images/Why1.png" alt=" why 1" />
+                        <i class="fff fas fa-horse"></i>
                     </div>
                     <div class="right">
                         <p>To liberate animals from unnecessary suffering</p>
@@ -227,7 +227,7 @@
             <div class="col-md-4">
                 <div class="flex">
                     <div class="left">
-                    <img src="<?php echo base_url()?>/assest/images/Why2.png" alt="">
+                    <i class="fff fas fa-hands-helping"></i>
                     </div>
                     <div class="right">
                         <p>To help fellow animal lovers strengthen the movement</p>
@@ -237,7 +237,7 @@
             <div class="col-md-4">
                 <div class="flex">
                     <div class="left">
-                    <img src="<?php echo base_url()?>/assest/images/Why3.png" alt="">
+                    <i class="fff fas fa-plus"></i>
                     </div>
                     <div class="right">
                         <p>To create a future where animals are free from human exploitation</p>
@@ -372,7 +372,7 @@
             <div class="col-md-4">
                 <div class="flex">
                     <div class="left">
-                    <img src="<?php echo base_url()?>/assest/images/What12.png" alt=" why 1" />
+                    <i class="fff fas fa-hand-holding-medical"></i>
                     </div>
                     <div class="right">
                         <p>Providing emergency help for animals in suffering</p>
