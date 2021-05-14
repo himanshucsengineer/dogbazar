@@ -3,15 +3,17 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-3 py-4">
+            <div class="col-md-3 ">
                 <div class="mb-4">
                     <h3 class="footer_headings">About Dog Bazar</h3>
+                    <hr class="footer_hori">
                 </div>
                 <p>Here will come about dog bazar</p>
             </div>
             <div class="col-md-3">
                 <div class="mb-4">
                     <h3 class="footer_headings">Important Links</h3>
+                    <hr class="footer_hori">
                 </div>
                 <ul class="footer_pages">
                     <li><a href="">Home</a></li>
@@ -26,6 +28,7 @@
             <div class="col-md-3">
                 <div class="mb-4">
                     <h3 class="footer_headings">Important Links</h3>
+                    <hr class="footer_hori">
                 </div>
                 <ul class="footer_pages">
                     <li><a href="">Home</a></li>
@@ -40,6 +43,7 @@
             <div class="col-md-3 touch">
                 <div class="mb-4">
                     <h3 class="footer_headings">Get In Touch</h3>
+                    <hr class="footer_hori">
                 </div>
 
                 <div class="flex">

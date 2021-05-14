@@ -1,4 +1,8 @@
 /* dog care pages start */
+body{
+    font-family: sohne,"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+}
+
 .donation_new_main{
     background-image: url("../images/donation_bg.jpg");
     background-size: cover;
@@ -145,7 +149,7 @@
     text-transform: capitalize;
     text-align: center;
     letter-spacing: 2px;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
     color: #A6341B;
 }
 .nutrition_new_main .nutri_body .hooooriii{
@@ -348,7 +352,7 @@
     color: #252525;
    font-size: 27px;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 500;
 }
 .postview_new .blog_left h6{
     color: #727272;
@@ -392,7 +396,7 @@
     color: #000;
     font-weight: 300 !important;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .postview_new .box .top_side_head .right{
@@ -721,8 +725,8 @@
 .form_top_new  h1{
     text-align: center;
     text-transform: capitalize;
-    font-size: 35px;
-    font-weight: 800;
+    font-size: 40px;
+    font-weight: 700;
     color: #FC8817;
 }
 .form_top_new  p{
@@ -988,13 +992,18 @@ input[type="number"] {
    text-align: center;
    text-transform: capitalize;
    font-weight: 300 !important;
-   margin-bottom: 3rem;
+   font-size: 36px !important;
+   margin: 0 0 36px !important;
+   letter-spacing: -.025em !important;
+   font-family: Lato,sans-serif !important;
+   line-height: 30px !important;
 }
 .feqs .accordion-item{
-   border: 1px solid #cdcdcd;
+   border: 1px solid #e1e1e1;
    border-left: none;
    border-right: none;
    border-radius: 0px !important;
+  
 }
 .feqs .accordion-header{
    padding: 0px 0px;
@@ -1004,15 +1013,25 @@ border-top-left-radius:0px !important;
 border-top-right-radius:0px !important;
 }
 .feqs .accordion-button{
-   padding-top: 1rem;
-   padding-bottom: 1rem;
+    
    outline: none !important;
-   color: #444;
+   color: inherit;
    text-transform: capitalize;
-   font-size: 20px;
+   font-size: 22px;
     font-weight: 300 !important;
+    background-color: white;
+    padding: 12px 60px 18px 22px;
+    line-height: 26px;
+}
+.feqs .accordion-button::after{
+    color: #39c;
+    font-size: 30px;
 }
 
+.feqs .accordion-button:focus{
+    border: none;
+    box-shadow: none;
+}
 
 .breedviewabout{
     margin-bottom: 5rem;
@@ -1100,7 +1119,7 @@ border-top-right-radius:0px !important;
     height: auto;
     display: flex;
     margin-left: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     margin-top: 2rem;
 }
 
@@ -1117,7 +1136,7 @@ border-top-right-radius:0px !important;
 .cont .flex .right {
     width: 85%;
     height: auto;
-    margin-top: -1.5rem;
+    margin-top: -.5rem;
 }
 .contact_us_new .lets{
     width: 100%;
@@ -1126,11 +1145,13 @@ border-top-right-radius:0px !important;
 }
 .contact_us_new .lets .eno{
     color: #FC8817 !important;
+    font-weight: 500 !important;
 }
 .contact_us_new .sabline_contact{
     text-align: center;
     font-size: 15px;
     margin-bottom: 5rem;
+    color: rgb( 95, 96, 96 );
 }
 .contactus{
    padding: 1rem;
@@ -1140,25 +1161,35 @@ border-top-right-radius:0px !important;
     box-shadow: 0px 4px 7px -2px rgb(0 0 0 / 20%);
 }
 .contact_us_new .base_heading_h2{
-    color: #FC8817 !important;
-    font-size: 2.2rem !important;
+   font-weight: 400 !important;
+    font-size: 2.1rem !important;
+    color: black !important;
+    margin-bottom: 1rem !important;
+    margin-top: 0rem !important;
+    line-height: 1.2rem !important;
 }
 .contact_us_new .cont h1{
-    font-size: 20px;
+    font-size: 23px;
     color: black;
-    text-transform: capitalize;
-    font-weight: 500 !important;
+    line-height: 1.2;
+    font-weight: 400 !important;
+}
+.contact_us_new .cont .contact_hosri{
+    margin-top: 2rem !important;
+    margin-bottom: 2.5rem !important;
+    border-bottom: 1px solid rgba(0,0,0,.1) !important;
 }
 .contact_us_new .cont{
     padding: 1rem;
     box-shadow: 0px 4px 7px -2px rgb(0 0 0 / 20%);
     margin-bottom: -1rem;
     margin-right: -1rem;
+    margin-top: 1rem;
     
 }
 .cont .subbb{
     color: gray;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 @media screen and (max-width: 600px) {
     .why_donate .flex .left .fff{
@@ -1228,6 +1259,7 @@ border-top-right-radius:0px !important;
         padding: .8rem 1.5rem;
         transition: .5s;
         border: 1px solid #f39933;
+        font-weight: 400;
     }
     .nav_items_dropdown{
         z-index: 300;
@@ -1750,8 +1782,8 @@ input[type="password"] {
     margin-top: 4rem !important;
 }
 .form_top_vol{
-    padding-top: 6rem !important;
-    padding-bottom: 6rem !important;
+    padding-top: 8rem !important;
+    padding-bottom: 8rem !important;
 }
 .help_us_volunteer{
     width: 100%;
@@ -1767,7 +1799,7 @@ input[type="password"] {
     position: relative;
     margin-bottom: 30px;
     text-transform: capitalize;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
 }
 .help_us_volunteer h1:after{
     content: "";
@@ -1790,19 +1822,21 @@ input[type="password"] {
     margin-bottom: 20px;
     padding-bottom: 0;
     color: #666;
-    font-size: 18px;
+    font-size: 17px;
+    line-height: 4rem;
+    word-spacing: 2px;
     font-weight: 300 !important;
 }
 .utilize{
     width: 100%;
     height: auto;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-    background:#f39933;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    background:#A6341B !important;
 
 }
 .utilize h1{
-    color: white;
+    color: #f8b334;
     font-size: 36px;
     line-height: 48px;
     position: relative;
@@ -1814,11 +1848,31 @@ input[type="password"] {
 .utilize h1:after{
     content: "";
     position: absolute;
-    background-color: #FC8817;
+    background-color: #ffc107;
     height: 2px;
     bottom: -10px;
     width: 130px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.utilize p{
+    text-align: center;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.911);
+    margin-left: 2rem;
+    margin-right: 2rem;
+    line-height: 3rem;
+}
+.utilize .fas{
+    color: rgba(255, 255, 255, 0.911);
+    font-size: 10rem;
+    margin-top: 5rem;
+}
+.utilize h2{
+    text-align: center;
+    font-size: 30px;
+    line-height: 40px;
+    color: #f8b334;
 }
 /* end */
 
@@ -1867,7 +1921,58 @@ input[type="password"] {
     height: auto;
     border-radius: 10px;
 }
+.what_will_vonlunteer h1{
+    color: #202020;
+    font-size: 36px;
+    line-height: 48px;
+    position: relative;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    font-weight: 500 !important;
+}
+.what_will_vonlunteer h1:after{
+    content: "";
+    position: absolute;
+    background-color: #FC8817;
+    height: 2px;
+    bottom: -10px;
+    width: 130px;
+    left: 0;
+}
 
+.what_will_vonlunteer .flex{
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-bottom: .5rem;
+}
+.what_will_vonlunteer .flex .left{
+    width: 5%;
+    height: auto;
+    
+}
+.what_will_vonlunteer .flex .left .fas{
+    color: white;
+    font-size: 10px;
+    border-radius: 50%;
+    background-color: #ffc107;
+    padding: 4px 4px;
+    
+}
+.what_will_vonlunteer .flex .right{
+    width: 95%;
+    height:auto;
+}
+.what_will_vonlunteer .flex .right p{
+    font-family: 'Assistant',Helvetica,Arial,Lucida,sans-serif;
+   
+    margin-right: 2rem;
+    color: #666;
+    font-size: 15px;
+    line-height: 3rem;
+    
+    font-weight: 300 !important;
+}
 .loader {
     animation: rotate 1s infinite;
     height: 50px;
@@ -1947,4 +2052,32 @@ input[type="password"] {
         box-shadow: 30px 0 0 #97bf0d;
         margin-top: 0;
     }
+}
+
+
+.footer_headings{
+    width: 100% !important;
+   border-bottom: none !important;
+    font-size: 17px !important;
+    text-transform: uppercase !important;
+    font-family: sohne,"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+    margin: 10px 20px 2px 10px !important;
+    font-weight: 500 !important;
+}
+.footer_hori{
+    border-top: 1px solid #f39933!important;
+    margin-top: 0px !important;
+    opacity: 1 !important;
+}
+.footer p{
+    color: rgb( 226, 226, 226 ) !important;
+    font-family: sohne,"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+    margin-left: 10px;
+    font-size: 16px !important;
+}
+.footer a{
+    color: rgb( 226, 226, 226 ) !important;
+    font-family:sohne,"Helvetica Neue",Helvetica,Arial,sans-serif !important ;
+  
+    font-size: 16px !important;
 }

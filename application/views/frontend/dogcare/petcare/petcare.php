@@ -21,43 +21,36 @@
                     <hr class="hooooriii">
                 </div>
             </div>
-            <div class="flex">
-                <?php foreach ($blogs as $value) { $str= $value['content']; $result = substr($str, 0, 200);?>
-                    <div class="card">
+            <div class="flex" id="load_video">
                 
-                <div class="inner_card">
-                    <video  src="<?php echo $value['image']; ?>" alt="" controls ></video>
-                    <h3  style="text-align: center;"><?php echo $value['head']; ?></h3>
-                    <div class="watch">
-                    <button data-bs-toggle="modal" data-video="<?php echo $value['image']; ?>" data-id="<?php echo $value['head']; ?>" data-bs-target="#video" class="vdeoscr">Watch Video</button>
-                    </div>
-                </div>
-           
             </div>
-                <?php }?>
+            <div class="row justify-content-center">
+                <div class="col-md-3">
+                    <div class="text-center" id="load_video_message"></div>
+                </div>
             </div>
             <div class="load_more">
-                <button>Load More</button>
+                <button id="loadmorevideo">Load More</button>
             </div>
 
         </div>
     </div>
 </div>
 
-<div class="modal fade" id="video" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-    <div class="modal-content videomodal">
-        <div class="modal-body">
-            <div class="gead">
-                <h1 id="videotitle">Title</h1>
+<div class="modal fade videooomodd" id="video" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-content videomodal">
+            <div class="modal-body">
+                <div class="gead">
+                    <h1 id="videotitle">Title</h1>
+                </div>
+
+                <video id="getvideosrc" alt="" src="" controls></video>
             </div>
-            
-        <video id="getvideosrc"  alt="" src="" controls></video>
+
         </div>
-        
     </div>
-  </div>
 </div>
 
 
@@ -78,4 +71,61 @@
     console.log(srcdata);
 </script>
 
+<script>
+    $(document).ready(function() {
 
+        var limit = 6;
+        var start = 0;
+        var action = 'inactive';
+
+        function lazzy_loader(limit) {
+
+            for (var count = 0; count < limit; count++) {
+
+                output = '<div class="row justify-content-center"><div class="col-md-3"><div class="loader"></div></div></div>';
+            }
+            $('#load_video_message').html(output);
+        }
+
+        lazzy_loader(limit);
+
+        function load_data(limit, start) {
+            $.ajax({
+                url: "<?php echo base_url(); ?>frontend/dogcare/petcare/petcare/fetch_video",
+                method: "POST",
+                data: {
+                    limit: limit,
+                    start: start
+                },
+                cache: false,
+                success: function(data) {
+                    if (data == '') {
+                        $('#load_video_message').html('<h3>No More Result Found</h3>');
+                        action = 'active';
+                    } else {
+                        $('#load_video').append(data);
+                        $('#load_video_message').html("");
+                        action = 'inactive';
+                    }
+                }
+            })
+        }
+
+        if (action == 'inactive') {
+            action = 'active';
+            load_data(limit, start);
+        }
+
+        $('#loadmorevideo').click(function() {
+            if ($(window).scrollTop() + $(window).height() > $("#load_video").height() && action == 'inactive') {
+                lazzy_loader(limit);
+                action = 'active';
+                start = start + limit;
+                setTimeout(function() {
+                    load_data(limit, start);
+                }, 500);
+            }
+        });
+
+    });
+</script>

@@ -18,4 +18,27 @@ class Petcare extends CI_controller
         $this->load->view('frontend/dogcare/petcare/petcare', $data);
         $this->load->view('frontend/template/footer');
     }
+
+    function fetch_video()
+    {
+     $output = '';
+     $this->load->model('frontend/dogcare/Petcaremodel');
+     $data = $this->Petcaremodel->fetch_video($this->input->post('limit'), $this->input->post('start'));
+     if($data->num_rows() > 0)
+     {
+      foreach($data->result() as $row)
+      {
+        $output .= '<div class="card">
+                        <div class="inner_card">
+                            <video src="'.$row->image.'" alt="" controls></video>
+                            <h3>'.$row->head.'</h3>
+                            <div class="watch">
+                                <button data-bs-toggle="modal" data-video="'.$row->image.'" data-id="'.$row->head.'" data-bs-target="#video" class="vdeoscr">Watch Video</button>
+                            </div>
+                        </div>
+                    </div>';
+      }
+     }
+     echo $output;
+    }
 }

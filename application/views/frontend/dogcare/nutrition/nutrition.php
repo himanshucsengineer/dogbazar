@@ -71,7 +71,7 @@
         </div>
     </div>
 </div>
-
+ 
 
 <script>
     $(document).ready(function() {
@@ -88,7 +88,7 @@
     var srcdata = document.getElementById('modalsrcdata').value;
     console.log(srcdata);
 </script>
-
+ 
 <script>
     $(document).ready(function() {
 

@@ -74,4 +74,4 @@ class Nutrition extends CI_controller
      }
      echo $output;
     }
-}
+} 

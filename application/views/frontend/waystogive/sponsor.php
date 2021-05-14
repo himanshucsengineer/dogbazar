@@ -367,8 +367,11 @@ hb.addEventListener('click', () => {
         font-weight: 500 !important;
         text-align: center;
         text-transform: capitalize;
-        margin-bottom: -1rem !important;
-        margin-top: 3rem !important;
+        margin-bottom: 10px !important;
+        margin-top: 20px !important;
+        color: inherit;
+        font-family: inherit;
+        line-height: 1.1;
     }
 
     .sponser_new .spons-ths p {
@@ -535,6 +538,19 @@ hb.addEventListener('click', () => {
     </div>
 </div>
 
+<!--div class="sponsore_dli">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="flex">
+                    <div class="card">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div-->
 <div class="sponser_new">
     <div class="container">
         <div class="row justify-content-center">
@@ -542,6 +558,7 @@ hb.addEventListener('click', () => {
                 <h2>Sponsor a dog today</h2>
                 <p>With around 1300 stray and abandoned dogs in our care at any one time, we really need your help. Most dogs find loving new homes within about six weeks but some pooches need a little extra care from us.</p>
                 <p>We receive no government funding and are totally dependent on the generosity of people like you. By sponsoring a dog for 1000 Rs. per week you won’t just be helping your sponsor dog but all their friends too!</p>
+                <hr>
                 <h2>How Sponsorship works...</h2>
                 <p>It couldn't be easier to sponsor a dog in our care, or to gift a sponsorship to a friend or loved one.</p>
                 <h3>Step 1 - Pick a dog to sponsor</h3>
@@ -643,7 +660,7 @@ hb.addEventListener('click', () => {
                                 Accordion Item #1
                             </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                             </div>

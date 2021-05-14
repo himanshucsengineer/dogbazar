@@ -208,15 +208,19 @@
         <h1>We Could Utilize Your Services!</h1>
         <p>We couldn’t save the lives of these animals without you. We appreciate any time or donations you can offer us.</p>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 ">
+                
+                <center><i class="fas fa-calendar-alt"></i></center>
                 <h2>When?</h2>
                 <p>We need volunteers seven days a week from 11:00-7:00. If you even have an hour, stop by. There’s always a pet in need.</p>
             </div>
             <div class="col-md-4">
+                <center><i class="fas fa-users"></i></center>
                 <h2>Who?</h2>
                 <p>Anyone can volunteer! You just have to love animals and be ready to work.</p>
             </div>
             <div class="col-md-4">
+                <center><i class="fas fa-question-circle"></i></center>
                 <h2>Why?</h2>
                 <p>We rescue thousands of abused and neglected dogs and cats every year. They all need care, help, and your love.</p>
             </div>
@@ -229,14 +233,43 @@
         <div class="row">
             <div class="col-md-6">
                 <h1>What will I do as a volunteer at Animal House?</h1>
-                <p>Walk and socialize with the dogs</p>
-                <p>Bathe and groom dogs</p>
-                <p>Spend quality 1-on-1 time with the animals to help socialize them and teach them tricks! (puppies, kittens & cats too)</p>
-                <p>Spend time in the ‘Free Roam’ cat room to socialize, groom or otherwise, help make their lives more comfortable</p>
+                <div class="flex">
+                    <div class="left">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="right">
+                        <p>Walk and socialize with the dogs</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="left">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="right">
+                        <p>Bathe and groom dogs</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="left">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="right">
+                        <p>Spend quality 1-on-1 time with the animals to help socialize them and teach them tricks! (puppies, kittens & cats too)</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="left">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="right">
+                        <p>Spend time in the ‘Free Roam’ cat room to socialize, groom or otherwise, help make their lives more comfortable</p>
+                    </div>
+                </div>
+  
              
             </div>
             <div class="col-md-6">
-                <img src="<?php echo base_url()?>/assest/images/testimg1.png" alt="what will vounteer do">
+                <img src="<?php echo base_url()?>/assest/images/Volunteer_What.jpg" alt="what will vounteer do">
             </div>
         </div>
     </div>

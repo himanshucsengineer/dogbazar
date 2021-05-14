@@ -24,19 +24,20 @@
                                 <input class="contact_us_input" type="text" name="name" placeholder="Enter Your Name">
                                 <input class="contact_us_input" type="email" name="email" placeholder="Enter Your Email">
                                 <input class="contact_us_input" type="number" name="mob" placeholder="Enter Contact Number">
+                                <input class="contact_us_input" type="text" name="sub" placeholder="Enter Subject">
                                 <textarea class="contact_us_input" name="msg" placeholder="Enter Message For us" cols="30" rows="5"></textarea>
                                 <button class="contact_submit">Submit</button>
                             </form>
                         </div>
                         <div class="col-md-5  px-4 cont">
                             <h1>If you prefer a more tangible form of communication we're here:</h1>
-                            <hr>
+                            <hr class="contact_hosri">
                             <div class="flex">
                                 <div class="left">
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                                 </div>
                                 <div class="right">
-                                    
+                                    <p class="subbb">Reach us on our</p>
                                     <h2 class="h2_head base_heading_h2">Our Office</h2>
                                     <p class="subbb">Ground Floor, Rajmahal Complex,</br> Opp. PLA Petrol Pump, Delhi Road,</br> Hisar Haryana 125001 </p>
                                 </div>
@@ -46,6 +47,7 @@
                                     <i class="fa fa-phone" aria-hidden="true"></i>
                                 </div>
                                 <div class="right">
+                                    <p class="subbb">Give us a</p>
                                     <h2 class="h2_head base_heading_h2">Give Us a Call</h2>
                                     <p class="subbb">+91 8957450000</p>
                                     <p class="subbb">+91 8957450000</p>
@@ -56,6 +58,7 @@
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
                                 </div>
                                 <div class="right">
+                                    <p class="subbb">Drop On</p>
                                     <h2 class="h2_head base_heading_h2">Email</h2>
                                     <p class="subbb">Info@dogbazar.com </p>
                                 </div>
