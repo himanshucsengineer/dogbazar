@@ -343,6 +343,21 @@ p {
   display: block;
 }
 
+#d4:hover .d4 {
+  display: block;
+}
+
+#d5:hover .d5 {
+  display: block;
+}
+
+#d6:hover .d6 {
+  display: block;
+}
+#d7:hover .d7 {
+  display: block;
+}
+
 .nav_items:hover {
   background-color: #d44444;
   color: #fff !important;
