@@ -278,7 +278,7 @@
 <div class="list_dog_form volunteer_form_new">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-11">
+            <div class="col-md-12">
                 <div class="list_dod_form_inner">
                     <div class="row">
                         <div class="col-md-6">

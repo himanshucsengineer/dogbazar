@@ -237,11 +237,15 @@ hb.addEventListener('click', () => {
 });
 
 </script-->
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap" rel="stylesheet">
 <style>
     .sponser_new {
         width: 100%;
         height: auto;
-
+        font-family: Lato,sans-serif !important;
         padding-bottom: 3rem;
         background-color: white;
     }
@@ -259,10 +263,13 @@ hb.addEventListener('click', () => {
     }
 
     .sponser_new p {
-        font-size: 15px;
+        font-size: 17px;
+        font-weight:  300 !important;
+        line-height: 26px;
         margin-top: 2rem;
         margin-left: 1rem;
         margin-right: 1rem;
+        color: black;
     }
 
     .sponser_new .sponsor_dog_card {
@@ -280,22 +287,25 @@ hb.addEventListener('click', () => {
     }
 
     .sponser_new .sponsor_dog_card .flex .card {
-        width: 33%;
+        width: 25%;
         height: auto;
         border: none;
-        padding: 1rem;
+        padding: .1rem;
         background-color: white;
+        margin-bottom: 3rem;
+        
+    }
+    .sponser_new .sponsor_dog_card .flex .inner_card:hover {
+        border: 1px solid #cdcdcd;
+        transform: scale(0.95); 
     }
 
     .sponser_new .sponsor_dog_card .flex .card .inner_card {
         width: 100%;
         height: auto;
-        border: 1px solid #cdcdcd;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        padding-right: 5rem;
-        padding-left: 5rem;
-        box-shadow: 0 3px 4px -1px rgb(0 0 0 / 40%);
+        transition:transform .5s;
+        border: 1px solid white;
+        
     }
 
     .sponser_new .sponsor_dog_card .flex .card a {
@@ -304,24 +314,30 @@ hb.addEventListener('click', () => {
 
     .sponser_new .sponsor_dog_card .flex .card .inner_card img {
         width: 100%;
-        height: 200px;
+        height: 300px;
+        margin-bottom: 1rem;
     }
 
-    .sponser_new .sponsor_dog_card .flex .card .inner_card h3 {
+    .sponser_new .sponsor_dog_card .flex .card  h3 {
         text-align: center;
-        margin-bottom: 1rem;
-        color: #f39933;
-        font-size: 20px;
-        font-weight: 700;
-        text-transform: uppercase;
+        margin: 0 0 3px;
+        color: #333;
+        font-size: 26px;
+        font-weight: 500;
+        text-transform: capitalize;
+        font-family:'Mansalva', cursive;
     }
 
     .sponser_new .sponsor_dog_card .flex .card .inner_card h5 {
+        color: #8a8a8a;
+        font-size: 14px;
         text-align: center;
-        margin-top: 1rem;
-        color: #444;
-        font-size: 15px;
-
+        line-height: 16px;
+        margin: 0 0 4px;
+        font-weight: 600 !important;
+    }
+    .sponser_new .sponsor_dog_card .flex .card .inner_card .spins {
+        font-weight: 400 !important;
     }
 
     .sponser_new .sponsor_dog_card .flex .card .inner_card .sponsor_buttt {
@@ -373,14 +389,29 @@ hb.addEventListener('click', () => {
         font-family: inherit;
         line-height: 1.1;
     }
-
+    .sponser_new .spons-ths .how_word{
+        font-size: 30px;
+        font-weight: 500 !important;
+        text-align: center;
+        text-transform: capitalize;
+        margin-bottom: 25px !important;
+        margin-top: 60px !important;
+        color: inherit;
+        font-family: inherit;
+        line-height: 0 !important;
+    }
     .sponser_new .spons-ths p {
         text-align: center;
-        color: gray;
+        color: #444 !important;
     }
 
     .sponser_new .spons-ths h3 {
         text-align: center;
+        font-size: 18px !important;
+        font-weight: 700 !important;
+        line-height: 0px !important;
+        margin-top: 2rem !important;    
+        color: #333 !important;    
     }
 
     .sponser_new .spons-ths .sons_butt {
@@ -389,15 +420,17 @@ hb.addEventListener('click', () => {
 
     .sponser_new .spons-ths .sons_butt button {
         width: 22rem;
-        padding-top: .7rem;
-        padding-bottom: .7rem;
-        background-color: #f39933;
+        padding-top: .8rem;
+        padding-bottom: .8rem;
+        background-color: #f8b334;
         color: white;
         border: 1px solid #f39933;
         outline: none;
-        border-radius: 25px;
+        border-radius: 4px;
         margin-top: 3rem;
         margin-bottom: 3rem;
+        font-weight: 700;
+        box-shadow: 0 3px 4px -1px rgb(0 0 0 / 40%);
     }
 
     .sponser_new .spons_choose_dog {
@@ -426,9 +459,10 @@ hb.addEventListener('click', () => {
     .sponsor_how{
         width: 100%;
         height: auto;
-        padding-top: 3rem;
-        padding-bottom: 5rem;
-        background-color: #f39933;
+        padding-top: 82px;
+        padding-bottom: 90px;
+        background-color: #ffc800;
+        font-family: Lato,sans-serif;
     }
     .sponsor_how .flex{
         width: 100%;
@@ -441,38 +475,36 @@ hb.addEventListener('click', () => {
     }
     .sponsor_how .flex .left img{
         width: 100%;
+        margin-top: -2rem;
     }
     .sponsor_how .flex .right{
         width: 80%;
     }
     .sponsor_how .flex .right h1{
-        margin-bottom: 2rem;
+       margin: 0 0 36px;
         font-family: Lato,sans-serif;
-        font-size: 26px;
-        font-weight: 400 !important;
+        font-size: 36px;
+
+        font-weight: 300 !important;
         letter-spacing: -.025em;
     }
     .sponsor_how .flex .right p{
        line-height: 26px;
        font-size: 14px;
+       padding-right: 60px;
     }
     
    @media only screen and (max-width: 600px) {
     .sponser_new .sponsor_dog_card .flex .card{
         width: 50%;
-        padding: .5rem;
+        padding: .1rem;
     }
-    .sponser_new .sponsor_dog_card .flex .card .inner_card{
-        padding-top: 1rem ;
-        padding-bottom: 1rem;
-        padding-left: 1rem;
-        padding-right:1rem ;
-    }
+    
     .sponser_new .sponsor_dog_card .flex .card .inner_card img{
         height: 100px;
     }
-    .sponser_new .sponsor_dog_card .flex .card .inner_card h3{
-        font-size: 15px;
+    .sponser_new .sponsor_dog_card .flex .card h3{
+        font-size: 18px;
         font-weight: 500 !important;
     }
     .sponser_new .sponsor_dog_card .flex .card .inner_card h5{
@@ -491,6 +523,8 @@ hb.addEventListener('click', () => {
     }
     .sponsor_how .flex .right h1{
         margin-top: 2rem;
+        font-size: 26px;
+        margin-bottom:  26px;
     }
     .sponsor_how .flex .left{
         padding: 1rem;
@@ -522,6 +556,19 @@ hb.addEventListener('click', () => {
     .sponsor_how .flex .right p{
         text-align: justify;
         margin-right: 1rem;
+    }
+    .sponser_new .spons-ths .how_word{
+        line-height: 1.1 !important;
+    }
+    .sponser_new .spons-ths h3{
+        line-height: 1.2 !important;
+    }
+    .sponsor_how .flex .left img{
+        margin-top:-1rem ;
+    }
+    .sponsor_how{
+        padding-top:48px;
+        padding-bottom: 55px;
     }
 }
 </style>
@@ -558,9 +605,9 @@ hb.addEventListener('click', () => {
                 <h2>Sponsor a dog today</h2>
                 <p>With around 1300 stray and abandoned dogs in our care at any one time, we really need your help. Most dogs find loving new homes within about six weeks but some pooches need a little extra care from us.</p>
                 <p>We receive no government funding and are totally dependent on the generosity of people like you. By sponsoring a dog for 1000 Rs. per week you won’t just be helping your sponsor dog but all their friends too!</p>
-                <hr>
-                <h2>How Sponsorship works...</h2>
-                <p>It couldn't be easier to sponsor a dog in our care, or to gift a sponsorship to a friend or loved one.</p>
+         
+                <h2 class="how_word">How Sponsorship Works</h2>
+                <p class="below_how">It couldn't be easier to sponsor a dog in our care, or to gift a sponsorship to a friend or loved one.</p>
                 <h3>Step 1 - Pick a dog to sponsor</h3>
                 <p>We’ve got sponsor dogs of all shapes, sizes, breeds and ages! You might choose a dog who reminds you of a beloved pet, a dog with a story that tugs at your heartstrings, or a dog you’ll be able to visit.</p>
                 <h3>Step 2 - Set up your sponsorship</h3>
@@ -589,11 +636,12 @@ hb.addEventListener('click', () => {
                 <?php foreach ($blogs as $value) { ?>
                     <div class="card">
                         <a href="<?php echo base_url() . "sponsor/" . $value['link'] ?>">
+                        <h3><?php echo $value['name'] ?></h3>
                             <div class="inner_card">
-                                <h3><?php echo $value['name'] ?></h3>
+                                
                                 <img src="<?php echo $value['image'] ?>" alt="">
-                                <h5><?php echo $value['gender'] ?></h5>
-                                <h5><?php echo $value['age'] ?></h5>
+                                <h5>Gender: <span class="spins"><?php echo $value['gender'] ?></span></h5>
+                                <h5>Age: <span class="spins"><?php echo $value['age'] ?></span></h5>
                                 <div class="sponsor_buttt">
                                     <button>Sponsor Me</button>
                                 </div>
