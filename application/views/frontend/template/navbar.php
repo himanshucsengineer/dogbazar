@@ -131,9 +131,11 @@ if (!isset($_SESSION["email"])) {
                 <button href="javascript:void(0)" class="" onclick="closeall()">×</button>
             </div>
         </div>
-        <a href="">About 1</a>
-        <a href="">About 2</a>
-        
+        <a href="<?php echo base_url()?>about-viren">About Viren Sharma</a>
+        <a href="<?php echo base_url()?>about-idb">About IDB</a>
+        <a href="<?php echo base_url()?>about-mad">About MAD</a>
+        <a href="<?php echo base_url()?>about-paws">About PAWS</a>
+        <a href="<?php echo base_url()?>about-kcr">About KCR</a>        
     </div>
 <div class="top_head_new">
     <div class="container">
@@ -225,8 +227,11 @@ if (!isset($_SESSION["email"])) {
                             <li class="lstn nav_items" id="d6"><a href="" class="nodecoration ">About Us</a>
                                 <!-- Dropdowns with diplay class d2 -->
                                 <ul class="m-0 nav_items_dropdown d6">
-                                    <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url() ?>" class="">About link 1</a></li>
-                                    <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url() ?>" class="">About Link 2</a></li>
+                                    <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url()?>about-viren" class="">About Viren Sharma</a></li>
+                                    <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url()?>about-idb" class="">About IDB</a></li>
+                                    <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url()?>about-mad" class="">About MAD</a></li>
+                                    <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url()?>about-paws" class="">About PAWS</a></li>
+                                    <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url()?>about-kcr" class="">About KCR</a></li>
                                 </ul>
                             <!-- End Dropdown -->
                             </li>

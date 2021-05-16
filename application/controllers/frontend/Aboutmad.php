@@ -1,5 +1,5 @@
 <?php
-class About extends CI_controller
+class Aboutmad extends CI_controller
 {
     public function __construct()
     {
@@ -13,7 +13,7 @@ class About extends CI_controller
         $this->load->view('frontend/template/header');
         $this->load->view('frontend/template/navbar');
 
-        $this->load->view('frontend/about');
+        $this->load->view('frontend/aboutmad');
         $this->load->view('frontend/template/footer');
     }
 }
