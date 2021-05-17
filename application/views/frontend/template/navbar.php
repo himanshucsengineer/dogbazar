@@ -119,8 +119,8 @@ if (!isset($_SESSION["email"])) {
             </div>
         </div>
         <a href="<?php echo base_url() ?>adopt">Adopt</a>
-        <a href="<?php echo base_url() ?>listmydog">Register A Dog</a>
-        
+        <a href="<?php echo base_url() ?>listmydog">Rescue A Dog</a>
+        <a href="<?php echo base_url() ?>surrender">Surrender A Dog</a>
     </div>
     <div id="mySidepanelabout" class="sidepanel">
         <div class="flex">
@@ -217,7 +217,8 @@ if (!isset($_SESSION["email"])) {
                                 <!-- Dropdowns with diplay class d2 -->
                                 <ul class="m-0 nav_items_dropdown d5">
                                     <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url() ?>adopt" class="">Adopt</a></li>
-                                    <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url() ?>listmydog" class="">Register A Dog</a></li>
+                                    <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url() ?>listmydog" class="">Rescue A Dog</a></li>
+                                    <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url() ?>surrender" class="">Surrender A Dog</a></li>
                                 </ul>
                                 <!-- End Dropdown -->
                             </li>

@@ -24,18 +24,26 @@ class Volunteer extends CI_controller
         $this->form_validation->set_rules('name', 'Name', 'required');
         $this->form_validation->set_rules('email', 'Email', 'required');
         $this->form_validation->set_rules('mob', 'Mobile Number', 'required');
-        $this->form_validation->set_rules('edu', 'Qualification', 'required');
+        $this->form_validation->set_rules('state', 'Qualification', 'required');
         $this->form_validation->set_rules('city', 'City', 'required');
         $this->form_validation->set_rules('add', 'Address', 'required');
+        $this->form_validation->set_rules('zip', 'Address', 'required');
+        $this->form_validation->set_rules('age', 'Address', 'required');
+        $this->form_validation->set_rules('work', 'Address', 'required');
+        $this->form_validation->set_rules('msg', 'Address', 'required');
         if ($this->form_validation->run()) {
 
             $data = array(
                 'name' => $this->input->post('name'),
                 'email' => $this->input->post('email'),
                 'number' => $this->input->post('mob'),
-                'quali' => $this->input->post('edu'),
+                'state' => $this->input->post('state'),
                 'city' => $this->input->post('city'),
                 'addrs' => $this->input->post('add'),
+                'zip' => $this->input->post('zip'),
+                'age' => $this->input->post('age'),
+                'work' => $this->input->post('work'),
+                'message' => $this->input->post('msg'),
             );
 
             if ($this->Volunteermodel->insert_data($data)) {

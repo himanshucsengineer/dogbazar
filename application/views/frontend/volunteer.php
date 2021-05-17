@@ -280,36 +280,64 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="list_dod_form_inner">
+                <?php
+                        if ($this->session->flashdata('success')) {
+                            echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
+                        } else if ($this->session->flashdata('error')) {
+                            echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
+                        }
+
+
+                        ?>
+                    <form action="<?php echo base_url() ?>frontend/volunteer/insert_data" method="post">
                     <div class="row">
                         <div class="col-md-6">
                             <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-
+                            <input type="text" name="name" placeholder="Enter your Name">
                         </div>
                         <div class="col-md-6">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-
+                            <label for="">Email</label>
+                            <input type="email" name="email" placeholder="Enter your Email">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">Number</label>
+                            <input type="number" name="mob" placeholder="Enter your No.">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="">Address</label>
+                            <input type="text" name="add" placeholder="Enter your Address">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">City</label>
+                            <input type="text" name="city" placeholder="Enter your City">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="">State</label>
+                            <input type="text" name="state" placeholder="Enter your State">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">Zip Code</label>
+                            <input type="number" name="zip" placeholder="Enter your Zip code">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="">Age</label>
+                            <input type="text" name="age" placeholder="Enter your Age">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="">Type Of Volunteer Work You Are Interested In Doing: </label>
+                            <input type="text" name="work" placeholder="Enter Intrested Work">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="">Do You Have Any Questions We Can Prepare To Answer For You?</label>
+                            <textarea name="msg" id="" cols="30" rows="10"></textarea>
                         </div>
                     </div>
                     <div class="row justify-content-center">
@@ -317,6 +345,7 @@
                             <button>Submit</button>
                         </div>
                     </div>
+                    </form>
                     <!--form action="<?php echo base_url() ?>" method="post">
                         <?php
                         if ($this->session->flashdata('success')) {

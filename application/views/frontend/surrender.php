@@ -1,10 +1,8 @@
-
-
 <div class="form_top_new" >
     <div class="">
     <div class="container" >
-        <h1>Become a franchies</h1>
-        <p>Join With Us </p>
+        <h1>Surrender A Dog</h1>
+        <p>Saving a life is a good option</p>
     </div>
     </div>
 </div>
@@ -48,7 +46,7 @@
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-md-5">
-                            <button>Sponsor Now</button>
+                            <button>Surrender Now</button>
                         </div>
                     </div>
                     <!--form action="<?php echo base_url() ?>" method="post">

@@ -1,6 +1,6 @@
 
-<!-- BreadCrumb -->
-<div class="breadcrumb">
+
+<!--div class="breadcrumb">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -11,7 +11,7 @@
             </div>
         </div>
     </div>
-    <!-- End BreadCrumb -->
+
 
 
 
@@ -156,7 +156,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="mb-3">
-                                            <!-- <label for="" class="donate_input_lable pb-3"></label> -->
+                                            
                                             <input type="text" class="form-control base_input donar_input_pay"
                                                 name="amount" id="exampleInputEmail1" aria-describedby="emailHelp"
                                                 placeholder="Enter Your Amount">
@@ -166,7 +166,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="mb-3">
-                                            <!-- <label for="" class="donate_input_lable pb-3">Full Name</label> -->
+                                            
                                             <input type="text" class="form-control base_input" id="exampleInputEmail1"
                                                 name="name" aria-describedby="emailHelp"
                                                 placeholder="Your Name">
@@ -177,7 +177,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="mb-3">
-                                            <!-- <label for="" class="donate_input_lable pb-3">Enter Your Email</label> -->
+                                            
                                             <input type="email" class="form-control base_input" name="email"
                                                 id="exampleInputEmail1" aria-describedby="emailHelp"
                                                 placeholder="Email">
@@ -187,28 +187,18 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="mb-3">
-                                            <!-- <label for="" class="donate_input_lable pb-3">Mobile Number</label> -->
+                                           
                                             <input type="number" class="form-control base_input" name="mob"
                                                 id="exampleInputEmail1" aria-describedby="emailHelp"
                                                 placeholder="Phone Number">
                                         </div>
                                     </div>
                                 </div>
-                                <!--div class="row">
-                                    <div class="col">
-                                        <div class="mb-3">
-                                           
-                                            <input type="text" class="form-control base_input" name="gift"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp"
-                                                placeholder="Enter Gift Name">
-                                        </div>
-                                    </div>
-                                </div-->
+                               
                                 <div class="row">
                                     <div class="col">
                                         <div class="mb-4">
-                                            <!-- <label for="exampleInputEmail1" class="donate_input_lable pb-3">Your
-                                                Message</label> -->
+                                           
                                             <div class="form-floating base_input">
                                                 <textarea class="form-control" placeholder="Leave a comment here"
                                                     name="msg" id="floatingTextarea2"
@@ -256,4 +246,265 @@ hb.addEventListener('click', () => {
     mobhead.classList.toggle('active_header');
 });
 
-</script>
+</script-->
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap" rel="stylesheet">
+
+<div class="sponsor_banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h1>Pet Memorials</h1>
+            </div>
+            <div class="col-md-8">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--div class="sponsore_dli">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="flex">
+                    <div class="card">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div-->
+<div class="sponser_new">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 spons-ths">
+                <h2>Pet Memorials: Remembering a Beloved Pet</h2>
+                <p>A gift in memory of a pet honors that lasting bond and is a tangible way to honor the enduring love we have for our pets after they’ve passed.</p>
+               
+         
+                <h2>Memorial Giving</h2>
+                <p >When you make a memorial gift, your support not only pays tribute to a beloved pet or person, it supports the work of Best Friends and helps homeless pets get the love and care they need to thrive as they wait for loving families of their own.</p>
+                <h2 class="how_word">How It's Works</h2>
+                <p class="below_how">It couldn't be easier to sponsor a dog in our care, or to gift a sponsorship to a friend or loved one.</p>
+                <h3>Step 1 - Pick a dog to sponsor</h3>
+                <p>We’ve got sponsor dogs of all shapes, sizes, breeds and ages! You might choose a dog who reminds you of a beloved pet, a dog with a story that tugs at your heartstrings, or a dog you’ll be able to visit.</p>
+                <h3>Step 2 - Set up your sponsorship</h3>
+                <p>Tell us where to send your doggy updates, whether you’re sponsoring for yourself or as a gift You can also choose how much you’d like to pay, and whether you'd rather pay monthly via direct debit or make a one-off annual payment.</p>
+                <h3>Step 3 - Enjoy regular updates from your Sponsor Dog</h3>
+                <p>Whichever dog you decide to sponsor, you'll receive updates from them three times a year. We’ll also send you a sponsorship pack, including a special photo certificate of your new pooch pal, a wallet-sized sponsor's card, a window sticker and fridge magnet.</p>
+                <div class="sons_butt">
+                    <button>Pet Memorials</button>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+        <h2 class="spons_choose_dog">Pet Memorials</h2>
+        <?php
+        if ($this->session->flashdata('success')) {
+            echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
+        } else if ($this->session->flashdata('error')) {
+            echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
+        }
+
+
+        ?>
+        <div class="sponsor_dog_card">
+            <div class="flex">
+                
+                    <div class="card">
+                        <a href="#">
+                        <h3>Dog Name</h3>
+                            <div class="inner_card">
+                                
+                                <img src="<?php echo base_url()?>/assest/images/testimg1.png" alt="">
+                                <h5>About Dog</h5>
+                                
+                                <div class="sponsor_buttt">
+                                    <button>View Memorial</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                        <h3>Dog Name</h3>
+                            <div class="inner_card">
+                                
+                                <img src="<?php echo base_url()?>/assest/images/testimg1.png" alt="">
+                                <h5>About Dog</h5>
+                                
+                                <div class="sponsor_buttt">
+                                    <button>View Memorial</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                        <h3>Dog Name</h3>
+                            <div class="inner_card">
+                                
+                                <img src="<?php echo base_url()?>/assest/images/testimg1.png" alt="">
+                                <h5>About Dog</h5>
+                                
+                                <div class="sponsor_buttt">
+                                    <button>View Memorial</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                        <h3>Dog Name</h3>
+                            <div class="inner_card">
+                                
+                                <img src="<?php echo base_url()?>/assest/images/testimg1.png" alt="">
+                                <h5>About Dog</h5>
+                                
+                                <div class="sponsor_buttt">
+                                    <button>View Memorial</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                        <h3>Dog Name</h3>
+                            <div class="inner_card">
+                                
+                                <img src="<?php echo base_url()?>/assest/images/testimg1.png" alt="">
+                                <h5>About Dog</h5>
+                                
+                                <div class="sponsor_buttt">
+                                    <button>View Memorial</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                        <h3>Dog Name</h3>
+                            <div class="inner_card">
+                                
+                                <img src="<?php echo base_url()?>/assest/images/testimg1.png" alt="">
+                                <h5>About Dog</h5>
+                                
+                                <div class="sponsor_buttt">
+                                    <button>View Memorial</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                        <h3>Dog Name</h3>
+                            <div class="inner_card">
+                                
+                                <img src="<?php echo base_url()?>/assest/images/testimg1.png" alt="">
+                                <h5>About Dog</h5>
+                                
+                                <div class="sponsor_buttt">
+                                    <button>View Memorial</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+           
+
+
+
+
+
+
+            </div>
+        </div>
+        <div class="load_more_but">
+            <button>Load more Memorials</button>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!--div class="sponsor_how">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="flex">
+                    <div class="left">
+                        <img src="<?php echo base_url()?>/assest/images/sad-money.svg" alt="">
+                    </div>
+                    <div class="right">
+                        <h1>How your money helps</h1>
+                        <p>Your sponsorship contributions are used to help your sponsor dog and all the dogs in our care. The money is used to cover the costs of running the Rehoming Centre, costs such as heating the kennels and washing the dogs' bedding. The money also goes towards treats for the dogs, training and medical care - all with the ultimate goal of finding each dog a loving home.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                
+                    <div class="flex">
+                        <div class="left">
+                        <img src="<?php echo base_url()?>/assest/images/dog.svg" alt="">
+                        </div>
+                        <div class="right">
+                            <h1>Who are our sponsor dogs?</h1>
+                            <p>Most dogs in our care find loving new homes within about six weeks but some need a little extra help along the way. Whether this be specialised training and behavioural support, medical care or just a bit more TLC. Dogs Trust will be there for as long as it takes because we never put a healthy dog down.  We also receive no government funding so are totally dependent on the generosity of people like you to carry out our work.</p>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div-->
+
+
+<!--div class="feqs">
+    <div class="container">
+        <h1>Frequently asked questions</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Accordion Item #1
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Accordion Item #2
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Accordion Item #3
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div-->

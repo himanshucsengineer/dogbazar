@@ -62,6 +62,7 @@
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Mobile No.</th>
+                                <th>Subject</th>
                                 <th>Message</th>
                                 <th>Action</th>
                             </tr>

@@ -20,13 +20,15 @@ class Contact extends CI_controller
         $this->form_validation->set_rules('name', 'Name', 'required');
         $this->form_validation->set_rules('email', 'Email', 'required');
         $this->form_validation->set_rules('mob', 'Mobile Number', 'required');
+        $this->form_validation->set_rules('sub', 'Mobile Number', 'required');
         $this->form_validation->set_rules('msg', 'Message', 'required');
         if ($this->form_validation->run()) {
             $name = $this->input->post('name');
             $email = $this->input->post('email');
             $mob = $this->input->post('mob');
+            $sub = $this->input->post('sub');
             $msg = $this->input->post('msg');
-            if ($this->Contactmodel->insert_data($name, $email, $mob, $msg)) {
+            if ($this->Contactmodel->insert_data($name, $email, $mob,$sub, $msg)) {
                 $this->session->set_flashdata('success', 'Your data have been submitted');
                 redirect(base_url() . "contact-us");
             } else {

@@ -62,9 +62,13 @@
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Number</th>
-                                <th>Qualification</th>
-                                <th>City/Town</th>
                                 <th>Address</th>
+                                <th>City/Town</th>
+                                <th>State</th>
+                                <th>Zip code</th>
+                                <th>Age</th>
+                                <th>Intrested In</th>
+                                <th>Message</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
