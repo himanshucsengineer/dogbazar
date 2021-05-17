@@ -54,7 +54,7 @@ $route['pet-memorial'] = 'frontend/waystogive/petmemorial';
 $route['gift-giving'] = 'frontend/waystogive/giftgiving';
 $route['other-ways-to-give'] = 'frontend/waystogive/otherways';
 $route['sponsor-an-animal'] = 'frontend/waystogive/sponsor';
-$route['sponsor/(:any)'] = 'frontend/waystogive/sponsorsingle/index/$1';
+$route['sponsorpet/(:any)'] = 'frontend/waystogive/sponsorsingle/index/$1';
 $route['petmemorial/(:any)'] = 'frontend/waystogive/viewpetmemo/index/$1';
 
 $route['sponsor-an-animal/sponsor/(:any)'] = 'frontend/waystogive/sponsorform/index/$1';

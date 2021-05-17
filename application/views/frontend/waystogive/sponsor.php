@@ -1,19 +1,9 @@
-<!--div class="breadcrumb">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <p><a href="<?php echo base_url() ?>" class="nodecoration bc_link">Home</a> / 
-                        <a href="<?php echo base_url() ?>sponsor-an-animal" class=" nodecoration bc_link bc_link_active">Sponsor An Animal</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 
 
-    <main>
+
+    <!--main>
 
         <div class="container">
             <div class="row justify-content-between ">
@@ -255,19 +245,7 @@ hb.addEventListener('click', () => {
     </div>
 </div>
 
-<!--div class="sponsore_dli">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="flex">
-                    <div class="card">
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div-->
 <div class="sponser_new">
     <div class="container">
         <div class="row justify-content-center">
@@ -305,7 +283,7 @@ hb.addEventListener('click', () => {
             <div class="flex">
                 <?php foreach ($blogs as $value) { ?>
                     <div class="card">
-                        <a href="<?php echo base_url() . "sponsor/" . $value['link'] ?>">
+                        <a href="<?php echo base_url() . "sponsorpet/" . $value['link'] ?>">
                         <h3><?php echo $value['name'] ?></h3>
                             <div class="inner_card">
                                 

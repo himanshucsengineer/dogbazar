@@ -285,6 +285,7 @@ body{
 .breed_new .flex .card .inner_card h3{
     color: #f39933;
    margin-left: 1.5rem;
+   font-weight: 300 !important;
 }
 .breed_new .flex .card .inner_card h6{
     color: #444;

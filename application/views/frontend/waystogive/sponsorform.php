@@ -1,66 +1,21 @@
-<!--style>
-    input[type="text"],input[type="email"],input[type="number"]{
-        width: 100%;
-        height: auto;
-        padding-top: .5rem;
-        padding-bottom: .5rem;
-        padding-left: 1rem;
-        border: 1px solid #cdcdcd;
-        outline: none;
-        margin-bottom: 1rem;
-        
-    }
-    button{
-        width: 100%;
-        height: auto;
-        padding-top: .5rem;
-        padding-bottom: .5rem;
-        color: white;
-        background-color: green;
-        outline: none;
-    }
-</style>
-
-<div class="row justify-content-center">
-    <div class="col-md-6">
-    
-        <form action="<?php echo base_url() ?>frontend/adoptionform/insert_data" method="post">
-        
-            <input type="text" name="name" placeholder="Enter Your Name">
-            <input type="email" name="email" placeholder="Enter Your Email">
-            <input type="number" name="mob" placeholder="Enter Your Number">
-            <input type="text" name="city" placeholder="Enter Your City">
-            <button>Submit Request</button>
-        </form>
-    </div>
-</div-->
-
-
-
-
-
-
-
-
-
-
 <?php
-                if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
-                    $url = "https://";
-                else
-                    $url = "http://";
-                // Append the host(domain name, ip) to the URL.   
-                $url .= $_SERVER['HTTP_HOST'];
-                // Append the requested resource location to the URL   
-                $url .= $_SERVER['REQUEST_URI'];
-                $uniqid= basename($url);
-                ?>
-<div class="form_top_new" >
+if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+    $url = "https://";
+else
+    $url = "http://";
+// Append the host(domain name, ip) to the URL.   
+$url .= $_SERVER['HTTP_HOST'];
+// Append the requested resource location to the URL   
+$url .= $_SERVER['REQUEST_URI'];
+$uniqid = basename($url);
+
+?>
+<div class="form_top_new">
     <div class="">
-    <div class="container" >
-        <h1>Sponsor A Dog Now</h1>
-        <p>Giving A Second life is a Good Option</p>
-    </div>
+        <div class="container">
+            <h1>Sponsor A Dog Now</h1>
+            <p>Giving A Second life is a Good Option</p>
+        </div>
     </div>
 </div>
 
@@ -68,37 +23,71 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-11">
+            <?php
+                        if ($this->session->flashdata('success')) {
+                            echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
+                        } else if ($this->session->flashdata('error')) {
+                            echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
+                        }
+
+
+                        ?>
                 <div class="list_dod_form_inner">
+                    <form action="<?php echo base_url() ?>sponsor/pay" method="post">
+                    <input type="hidden" name="uniqid" value="<?php echo $uniqid?>">
                     <div class="row">
                         <div class="col-md-6">
                             <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            
+                            <input type="text" name="name" placeholder="Enter Your Name">
                         </div>
                         <div class="col-md-6">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            
+                            <label for="">Email</label>
+                            <input type="email" name="email" placeholder="Enter Your Email">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">Number</label>
+                            <input type="number" name="mob" placeholder="Enter Your Number">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="">Address</label>
+                            <input type="text" name="add" placeholder="Enter Your Address">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">State</label>
+                            <input type="text" name="state" placeholder="Enter Your State">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="">City</label>
+                            <input type="text" name="city" placeholder="Enter Your City">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">Are You An Indian?</label>
+                            <select name="indi" id="">
+                                <option value="yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="">What Motivated You To Sponsor?</label>
+                            <select name="moti" id="">
+                                <option value="facebook post">Facebook Post</option>
+                                <option value="email">Email</option>
+                                <option value="Our Website">Our Website</option>
+                                <option value="Crowed Funding Plateform">Crowed Funding Plateform</option>
+                                <option value="others">Others</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">Amount</label>
+                            <input type="number" name="amount" placeholder="Enter Amount">
                         </div>
                     </div>
                     <div class="row justify-content-center">
@@ -106,6 +95,7 @@
                             <button>Sponsor Now</button>
                         </div>
                     </div>
+                    </form>
                     <!--form action="<?php echo base_url() ?>" method="post">
                         <?php
                         if ($this->session->flashdata('success')) {
@@ -115,8 +105,8 @@
                         }
 
 
-                        ?>
-                        <input type="hidden" name="uniq_id" value="<?php echo $uniqid?>">
+                        ?>f
+                        <input type="hidden" name="uniq_id" value="<?php echo $uniqid ?>">
                         <label for="">Your Name*</label>
                         <input type="text" name="name" placeholder="Enter Your Name">
                         <label for="">Your Email*</label>

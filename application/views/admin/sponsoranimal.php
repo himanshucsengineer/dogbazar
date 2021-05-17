@@ -75,7 +75,12 @@
                   <th>Email</th>
                   <th>Number</th>
                   <th>Amount</th>
-                  <th>Message</th>
+                  <th>Address</th>
+                  <th>State</th>
+                  <th>City</th>
+                  <th>Indian</th>
+                  <th>Motivate</th>
+                  <th>Unique Id</th>
                   <th>Order Id</th>
                   <th>Action</th>
 
