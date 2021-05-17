@@ -177,6 +177,26 @@ body{
     border-radius: 2px;
 }
 
+
+
+.breed_new .load_more{
+    text-align: center;
+}
+.breed_new  .load_more button{
+    width: 20rem;
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: white;
+    border: 1px solid #FC8817;
+    background-color: #FC8817;
+    outline: none;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+    font-weight: 700 !important;
+    box-shadow: 0 3px 4px -1px rgb(0 0 0 / 40%);
+    border-radius: 2px;
+}
 @media only screen and (max-width: 600px) {
     .nutrition_new_main .nutri_body .flex .card{
         width: 100%;

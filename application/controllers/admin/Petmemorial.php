@@ -25,44 +25,84 @@ class Petmemorial extends CI_controller
   }
 
 
-
-  public function addinventory_api()
+  public function insert_data()
   {
+      $this->load->model('admin/Donationmodel');
+      $this->input->post('formSubmit');
+      $img_data = array();
+      // Count total files
+      $countfiles = count($_FILES['files']['name']);
+      // Looping all files
+      for ($i = 0; $i < $countfiles; $i++) {
 
-    $getPurchaseData = $this->Donationmodel->fetch_pet_memorial_data();
+          if (!empty($_FILES['files']['name'][$i])) {
 
+              // Define new $_FILES array - $_FILES['file']
+              $_FILES['file']['name'] = $_FILES['files']['name'][$i];
+              $_FILES['file']['type'] = $_FILES['files']['type'][$i];
+              $_FILES['file']['tmp_name'] = $_FILES['files']['tmp_name'][$i];
+              $_FILES['file']['error'] = $_FILES['files']['error'][$i];
+              $_FILES['file']['size'] = $_FILES['files']['size'][$i];
 
-    foreach ($getPurchaseData as $key => $value) {
-      //                $short_desc_vl=$lst_desc.'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->id.'" data-toggle="tooltip" data-original-title="Edit">Read More</a>';
+              // Set preference
+              $config['upload_path'] = APPPATH . '../upload/petmemorial';
+              $config['allowed_types'] = 'jpg|jpeg|png';
+              $config['max_size'] = '5000'; // max_size in kb
+              $config['file_name'] = $_FILES['files']['name'][$i];
 
-      $arrya_json[] = array($value['id'], $value['name'], $value['email'], $value['number'], $value['amount'], $value['msg'], $value['order_id'], '<a class="edit" href="' . base_url() . 'admin/brands/galleryedit/' . $value['id'] . '" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-               <a class="delete_sliders" data-id="' . $value['id'] . '"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a>');
-    }
-    echo json_encode(array('data' => $arrya_json));
-  }
+              //Load upload library
+              $this->load->library('upload', $config);
 
+              // File upload
+              if ($this->upload->do_upload('file')) {
+                  // Get data about the file
+                  $uploadData = $this->upload->data();
+                  $filename = base_url() . 'upload/petmemorial/' .$uploadData['file_name'];
+                  
 
-
-
-
-  public function deletepetmemodetail()
-  {
-
-    if ($this->input->post('deletesliderId')) {
-      $this->form_validation->set_rules('deletesliderId', 'text', 'required');
-      if ($this->form_validation->run() == true) {
-        $getDeleteStatus = $this->Donationmodel->delete_pet_memo_data($this->input->post('deletesliderId'));
-        if ($getDeleteStatus['message'] == 'yes') {
-          $this->session->set_flashdata('success', 'Gallery  deleted successfully');
-          redirect(base_url() . "admin/petmemorial");
-        } else {
-          $this->session->set_flashdata('error', 'Something went wrong. Please try again');
-          redirect(base_url() . "admin/petmemorial");
-        }
-      } else {
-        $this->session->set_flashdata('error', 'Something went wrong. Please try again');
-        redirect(base_url() . "admin/petmemorial");
+                  // Initialize array
+                   $img_data[] = $filename;
+                 
+              }
+              
+          }
       }
-    }
+      $link = $this->input->post('name');
+      $link = str_replace(' ', '-', $link);
+
+
+
+      $datas = array(
+          'name' => $this->input->post('name'),
+           'b_date' => $this->input->post('b_date'),
+           'b_place' => $this->input->post('b_place'),
+            'd_date' => $this->input->post('d_date'),
+          'd_place' => $this->input->post('d_place'),
+         
+          'link' => $link,
+           
+          'about' => $this->input->post('about'),
+          
+          
+
+          'image' => $img_data[0],
+          'image1' => $img_data[1],
+          'image2' => $img_data[2],
+          'image3' => $img_data[3],
+          'image4' => $img_data[4],
+      );
+      if ($this->Donationmodel->insert_data($datas)) {
+          $this->session->set_flashdata('success', 'Dog Listed');
+          redirect(base_url() . 'admin/petmemorial');
+      } else {
+          $this->session->set_flashdata('error', 'Error In Updating Please Try Again');
+          redirect(base_url() . 'admin/petmemorial');
+      }
   }
+
+
+
+
+
+  
 }

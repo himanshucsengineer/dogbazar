@@ -161,82 +161,19 @@
         </div>
     </div>
     <div class="container">
-        <div class="flex">
-            <div class="card">
-                <div class="inner_card">
-                    
-                    <img src="<?php echo base_url()?>/assest/images/testimg1.png" alt="">
-                    <h3>NAME</h3>
-                    <h6>Temproant</h6>
-                    <h6>Group</h6>
-                    <div class="breed_but">
-                    <button>View Breed</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="inner_card">
-                    
-                    <img src="<?php echo base_url()?>/assest/images/testimg1.png" alt="">
-                    <h3>NAME</h3>
-                    <h6>Temproant</h6>
-                    <h6>Group</h6>
-                    <div class="breed_but">
-                    <button>View Breed</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="inner_card">
-                    
-                    <img src="<?php echo base_url()?>/assest/images/testimg1.png" alt="">
-                    <h3>NAME</h3>
-                    <h6>Temproant</h6>
-                    <h6>Group</h6>
-                    <div class="breed_but">
-                    <button>View Breed</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="inner_card">
-                    
-                    <img src="<?php echo base_url()?>/assest/images/testimg1.png" alt="">
-                    <h3>NAME</h3>
-                    <h6>Temproant</h6>
-                    <h6>Group</h6>
-                    <div class="breed_but">
-                    <button>View Breed</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="inner_card">
-                   
-                    <img src="<?php echo base_url()?>/assest/images/testimg1.png" alt="">
-                    <h3>NAME</h3>
-                    <h6>Temproant</h6>
-                    <h6>Group</h6>
-                    <div class="breed_but">
-                    <button>View Breed</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="inner_card">
-                    
-                    <img src="<?php echo base_url()?>/assest/images/testimg1.png" alt="">
-                    <h3>NAME</h3>
-                    <h6>Temproant</h6>
-                    <h6>Group</h6>
-                    <div class="breed_but">
-                    <button>View Breed</button>
-                    </div>
-                </div>
-            </div>
+        <div class="flex" id="load_data">
         </div>
+        <div class="row justify-content-center">
+                <div class="col-md-3">
+                    <div class="text-center" id="load_data_message"></div>
+                </div>
+            </div>
+            <div class="load_more">
+                <button id="loadmore">Load More</button>
+            </div>
     </div>
 </div>
+
 
 <script>
     $(function() {
@@ -248,5 +185,65 @@
             }
             return false;
         });
+    });
+</script>
+
+
+<script>
+    $(document).ready(function() {
+
+        var limit = 6;
+        var start = 0;
+        var action = 'inactive';
+
+        function lazzy_loader(limit) {
+
+            for (var count = 0; count < limit; count++) {
+
+                output = '<div class="row justify-content-center"><div class="col-md-3"><div class="loader"></div></div></div>';
+            }
+            $('#load_data_message').html(output);
+        }
+
+        lazzy_loader(limit);
+
+        function load_data(limit, start) {
+            $.ajax({
+                url: "<?php echo base_url(); ?>frontend/dogcare/breed/breed/fetch",
+                method: "POST",
+                data: {
+                    limit: limit,
+                    start: start
+                },
+                cache: false,
+                success: function(data) {
+                    if (data == '') {
+                        $('#load_data_message').html('<h3>No More Result Found</h3>');
+                        action = 'active';
+                    } else {
+                        $('#load_data').append(data);
+                        $('#load_data_message').html("");
+                        action = 'inactive';
+                    }
+                }
+            })
+        }
+
+        if (action == 'inactive') {
+            action = 'active';
+            load_data(limit, start);
+        }
+
+        $('#loadmore').click(function() {
+            if ($(window).scrollTop() + $(window).height() > $("#load_data").height() && action == 'inactive') {
+                lazzy_loader(limit);
+                action = 'active';
+                start = start + limit;
+                setTimeout(function() {
+                    load_data(limit, start);
+                }, 500);
+            }
+        });
+
     });
 </script>

@@ -264,19 +264,7 @@ hb.addEventListener('click', () => {
     </div>
 </div>
 
-<!--div class="sponsore_dli">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="flex">
-                    <div class="card">
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div-->
 <div class="sponser_new">
     <div class="container">
         <div class="row justify-content-center">
@@ -313,9 +301,9 @@ hb.addEventListener('click', () => {
 
         ?>
         <div class="sponsor_dog_card">
-            <div class="flex">
+            <div class="flex" id="load_data">
                 
-                    <div class="card">
+                    <!--div class="card">
                         <a href="#">
                         <h3>Dog Name</h3>
                             <div class="inner_card">
@@ -412,7 +400,7 @@ hb.addEventListener('click', () => {
                                 </div>
                             </div>
                         </a>
-                    </div>
+                    </div-->
            
 
 
@@ -421,90 +409,75 @@ hb.addEventListener('click', () => {
 
 
             </div>
+            <div class="row justify-content-center">
+                <div class="col-md-3">
+                    <div class="text-center" id="load_data_message"></div>
+                </div>
+            </div>
         </div>
         <div class="load_more_but">
-            <button>Load more Memorials</button>
+            <button id="loadmore">Load more Memorials</button>
         </div>
     </div>
     </div>
 </div>
 
-<!--div class="sponsor_how">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="flex">
-                    <div class="left">
-                        <img src="<?php echo base_url()?>/assest/images/sad-money.svg" alt="">
-                    </div>
-                    <div class="right">
-                        <h1>How your money helps</h1>
-                        <p>Your sponsorship contributions are used to help your sponsor dog and all the dogs in our care. The money is used to cover the costs of running the Rehoming Centre, costs such as heating the kennels and washing the dogs' bedding. The money also goes towards treats for the dogs, training and medical care - all with the ultimate goal of finding each dog a loving home.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                
-                    <div class="flex">
-                        <div class="left">
-                        <img src="<?php echo base_url()?>/assest/images/dog.svg" alt="">
-                        </div>
-                        <div class="right">
-                            <h1>Who are our sponsor dogs?</h1>
-                            <p>Most dogs in our care find loving new homes within about six weeks but some need a little extra help along the way. Whether this be specialised training and behavioural support, medical care or just a bit more TLC. Dogs Trust will be there for as long as it takes because we never put a healthy dog down.  We also receive no government funding so are totally dependent on the generosity of people like you to carry out our work.</p>
-                        </div>
-                    </div>
-                
-            </div>
-        </div>
-    </div>
-</div-->
 
+<script>
+    $(document).ready(function() {
 
-<!--div class="feqs">
-    <div class="container">
-        <h1>Frequently asked questions</h1>
-        <div class="row justify-content-center">
-            <div class="col-md-10">
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Accordion Item #1
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Accordion Item #2
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Accordion Item #3
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div-->
+        var limit = 8;
+        var start = 0;
+        var action = 'inactive';
+
+        function lazzy_loader(limit) {
+
+            for (var count = 0; count < limit; count++) {
+
+                output = '<div class="row justify-content-center"><div class="col-md-3"><div class="loader"></div></div></div>';
+            }
+            $('#load_data_message').html(output);
+        }
+
+        lazzy_loader(limit);
+
+        function load_data(limit, start) {
+            $.ajax({
+                url: "<?php echo base_url(); ?>frontend/waystogive/petmemorial/fetch",
+                method: "POST",
+                data: {
+                    limit: limit,
+                    start: start
+                },
+                cache: false,
+                success: function(data) {
+                    if (data == '') {
+                        $('#load_data_message').html('<h3>No More Result Found</h3>');
+                        action = 'active';
+                    } else {
+                        $('#load_data').append(data);
+                        $('#load_data_message').html("");
+                        action = 'inactive';
+                    }
+                }
+            })
+        }
+
+        if (action == 'inactive') {
+            action = 'active';
+            load_data(limit, start);
+        }
+
+        $('#loadmore').click(function() {
+            if ($(window).scrollTop() + $(window).height() > $("#load_data").height() && action == 'inactive') {
+                lazzy_loader(limit);
+                action = 'active';
+                start = start + limit;
+                setTimeout(function() {
+                    load_data(limit, start);
+                }, 500);
+            }
+        });
+
+    });
+</script>

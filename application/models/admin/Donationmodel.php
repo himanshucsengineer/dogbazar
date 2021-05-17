@@ -9,6 +9,13 @@ class Donationmodel extends CI_Model
   {
     return $this->db->get('donate')->result_array();
   }
+  function insert_data($datas)
+  {
+    $this->db->insert('petmemo', $datas);
+    return true;
+  }
+
+  
 
   public function deletedonationdata($data)
   {

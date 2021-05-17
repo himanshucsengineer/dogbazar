@@ -24,4 +24,19 @@ class Donatemodel extends CI_Model
 
         return  $this->db->insert('sponsoranimal', $data);
     }
+    public function blog_detail($slug = '')
+    {
+      return $this->db->where('link', $slug)->get('petmemo')->row();
+    }
+    function fetch_data($limit, $start)
+    {
+   
+     $this->db->select("*");
+     $this->db->from("petmemo");
+     
+     $this->db->order_by("id", "DESC");
+     $this->db->limit($limit, $start);
+     $query = $this->db->get();
+     return $query;
+    }
 }

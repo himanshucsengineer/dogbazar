@@ -16,34 +16,87 @@
                         <div class="col-md-6">
                             <label for="">Name</label>
                             <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            
                         </div>
                         <div class="col-md-6">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="Enter Your Name">
-                            
+                            <label for="">Email</label>
+                            <input type="email" placeholder="Enter Your Email">
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">Contact Number</label>
+                            <input type="Number" placeholder="Enter Your Number">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="">Address</label>
+                            <input type="text" placeholder="Enter Your Address">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">Id Proof</label>
+                            <input type="file" placeholder="Enter Your Name">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="">Your Photo</label>
+                            <input type="file" placeholder="Enter Your Email">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">Species</label>
+                            <input type="text" placeholder="Enter Species">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="">Pet Name</label>
+                            <input type="text" placeholder="Enter Pet Name">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">Own Pet/ Rescued Pet</label>
+                            <select name="" id="">
+                                <option value="Owned">Owned</option>
+                                <option value="Rescued">Rescued</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="">Breed</label>
+                            <input type="text" placeholder="Enter Breed">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">Age</label>
+                            <input type="text" placeholder="Enter Pet Age">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="">Colour</label>
+                            <input type="text" placeholder="Enter Pet Colour">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">Gender</label>
+                            <input type="radio" name="gender" id="">Male
+                            <input type="radio" name="gender" id="">Female
+                        </div>
+                        <div class="col-md-6">
+                            <label for="">Adress You Picked/Forested/Rescued</label>
+                            <input type="text" placeholder="Enter Address">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">Vaccination Status</label>
+                            <input type="text" placeholder="Enter Vaccination Status">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="">Specific Diet/Regime</label>
+                            <input type="text" placeholder="Enter Specific Diet/Regime">
+                        </div>
+                    </div>
+                    <h3>Note :- If This Pet is Adopted/ Buy from International Dog Bazar Then You Can Not Surrender This Pet To us.</h3>
                     <div class="row justify-content-center">
                         <div class="col-md-5">
                             <button>Surrender Now</button>

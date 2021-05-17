@@ -29,26 +29,46 @@ class Newpost extends CI_controller
     {
         $this->load->model('admin/dogcare/breed/newpostmodel');
         $this->input->post('formSubmit');
+        $img_data = array();
+        // Count total files
+        $countfiles = count($_FILES['files']['name']);
+        // Looping all files
+        for ($i = 0; $i < $countfiles; $i++) {
 
+            if (!empty($_FILES['files']['name'][$i])) {
 
-        if (!empty($_FILES['images']['name'])) {
-            $File_name = '';
-            $config['upload_path'] = APPPATH . '../upload/dogcare/breed';
-            $config['file_name'] = $File_name;
-            $config['overwrite'] = TRUE;
-            $config["allowed_types"] = 'jpeg|jpg|png';
-            $config["max_size"] = 2048;
-            $this->load->library('upload', $config);
-            if (!$this->upload->do_upload('images')) {
-                $this->data['error'] = $this->upload->display_errors();
-                $this->session->set_flashdata('error', $this->upload->display_errors());
-                redirect('admin/dogcare/breed/newpost');
-            } else {
-                $dataimage_return = $this->upload->data();
-                $imageurl = base_url() . 'upload/dogcare/breed/' . $dataimage_return['file_name'];
+                // Define new $_FILES array - $_FILES['file']
+                $_FILES['file']['name'] = $_FILES['files']['name'][$i];
+                $_FILES['file']['type'] = $_FILES['files']['type'][$i];
+                $_FILES['file']['tmp_name'] = $_FILES['files']['tmp_name'][$i];
+                $_FILES['file']['error'] = $_FILES['files']['error'][$i];
+                $_FILES['file']['size'] = $_FILES['files']['size'][$i];
+
+                // Set preference
+                $config['upload_path'] = APPPATH . '../upload/dogcare/breed';
+                $config['allowed_types'] = 'jpg|jpeg|png';
+                $config['max_size'] = '5000'; // max_size in kb
+                $config['file_name'] = $_FILES['files']['name'][$i];
+
+                //Load upload library
+                $this->load->library('upload', $config);
+
+                // File upload
+                if ($this->upload->do_upload('file')) {
+                    // Get data about the file
+                    $uploadData = $this->upload->data();
+                    $filename = base_url() . 'upload/dogcare/breed/' .$uploadData['file_name'];
+                    
+
+                    // Initialize array
+                     $img_data[] = $filename;
+                   
+                }
+                
             }
         }
-
+        $link = $this->input->post('name');
+        $link = str_replace(' ', '-', $link);
 
 
 
@@ -59,17 +79,28 @@ class Newpost extends CI_controller
               'exp' => $this->input->post('exp'),
             'about' => $this->input->post('about'),
             'temp' => $this->input->post('temp'),
-            'link' => $this->input->post('link'),
+            'link' => $link,
              'grp' => $this->input->post('grp'),
 
-            'image' => $imageurl,
+            
+            
+
+            'image' => $img_data[0],
+            'image1' => $img_data[1],
+            'image2' => $img_data[2],
+            'image3' => $img_data[3],
+            'image4' => $img_data[4],
         );
         if ($this->newpostmodel->newpost($datas)) {
-            $this->session->set_flashdata('success', 'Post Published');
+            $this->session->set_flashdata('success', 'Dog Listed');
             redirect(base_url() . 'admin/dogcare/breed/newpost');
         } else {
             $this->session->set_flashdata('error', 'Error In Updating Please Try Again');
             redirect(base_url() . 'admin/dogcare/breed/newpost');
         }
     }
+
+
+
+    
 }

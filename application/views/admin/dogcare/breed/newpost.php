@@ -88,11 +88,11 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="box">
+                    <!--div class="box">
                         <label>Post Link</label>
                         <input name="link" type="text" placeholder="Enter Post name">
                         <p>Genrate Your Own Post Link</p>
-                    </div>
+                    </div-->
                     <div class="box">
                         <label>Temperament:</label>
                         <input type="text" placeholder="enter Temperament" name="temp">
@@ -102,7 +102,7 @@
                     </div>
                     <div class="box">
                         <label>Featured Image</label>
-                        <input name="images" id="fileupload" type="file">
+                        <input  multiple="multiple" name="files[]"  maxlength="5" id="fileupload" type="file">
                         <p>set Featured Image</p>
                     </div>
 
