@@ -29,13 +29,16 @@ class Listmydog extends CI_controller
         
             $this->form_validation->set_rules('name', 'Name', 'required');
             $this->form_validation->set_rules('email', 'Email', 'required');
-            $this->form_validation->set_rules('number', 'Number', 'required');
-            $this->form_validation->set_rules('age', 'Dog Age', 'required');
-            $this->form_validation->set_rules('breed', 'Breed', 'required');
-            $this->form_validation->set_rules('gender', 'Gender', 'required');
-            $this->form_validation->set_rules('condition', 'Condition', 'required');
-            $this->form_validation->set_rules('msg', 'Message', 'required');
-            $this->form_validation->set_rules('city', 'city', 'required');
+            $this->form_validation->set_rules('mob', 'Number', 'required');
+            $this->form_validation->set_rules('add', 'Dog Age', 'required');
+            $this->form_validation->set_rules('p_name', 'Breed', 'required');
+            $this->form_validation->set_rules('breed', 'Gender', 'required');
+            $this->form_validation->set_rules('color', 'Condition', 'required');
+            $this->form_validation->set_rules('weight', 'Message', 'required');
+            $this->form_validation->set_rules('gender', 'city', 'required');
+            $this->form_validation->set_rules('age', 'city', 'required');
+            $this->form_validation->set_rules('location', 'city', 'required');
+            $this->form_validation->set_rules('about', 'city', 'required');
 
             if ($this->form_validation->run()) {
                 $img_data = array();
@@ -94,13 +97,18 @@ class Listmydog extends CI_controller
             $data = array(
                 'name' => $this->input->post('name'),
                 'email' => $this->input->post('email'),
-                'number' => $this->input->post('number'),
+                'number' => $this->input->post('mob'),
+
+                'address' => $this->input->post('add'),
+                'p_name' => $this->input->post('p_name'),
+                'color' => $this->input->post('color'),
+                'weight' => $this->input->post('weight'),
+                'city' => $this->input->post('location'),
+
                 'age' => $this->input->post('age'),
                 'breed' => $this->input->post('breed'),
                 'gender' => $this->input->post('gender'),
-                'condition' => $this->input->post('condition'),
-                'msg' => $this->input->post('msg'),
-                'city' => $this->input->post('city'),
+                'about' => $this->input->post('about'),
                 'image' => $img_data[0],
                 'image1' => $img_data[1],
                 'image2' => $img_data[2],

@@ -163,11 +163,12 @@
             </div>
             <div class="col-md-6">
                 <div class="right">
-                    <h1><?php echo @$list->breed ?></h1>
+                    <h1><?php echo @$list->p_name ?></h1>
+                    <h5>Breed: <span class="declar"><?php echo @$list->breed ?></span></h5>
                     <h5>Age: <span class="declar"><?php echo @$list->age ?></span></h5>
-                    <h5>Colour: <span class="declar"><?php echo @$list->colour ?></span></h5>
+                    <h5>Colour: <span class="declar"><?php echo @$list->color ?></span></h5>
                     <h5>Weight: <span class="declar"><?php echo @$list->weight ?></span></h5>
-                    <h5>Condition:<span class="declar"><?php echo @$list->condition ?></span></h5>
+                    <h5>Age:<span class="declar"><?php echo @$list->age ?></span></h5>
                     <h5>Gender:<span class="declar"><?php echo @$list->gender ?></span></h5>
                     <h5>Location:<span class="declar"><?php echo @$list->city ?></span></h5>
                     <div class="row">
@@ -182,7 +183,7 @@
         <div class="about">
             <h3>More Information About Dog:</h3>
             <hr>
-            <p><?php echo @$list->msg ?></p>
+            <p><?php echo @$list->about ?></p>
         </div>
     </div>
     <div class="container slideee">
