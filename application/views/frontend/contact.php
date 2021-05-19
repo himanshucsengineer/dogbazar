@@ -8,7 +8,7 @@
             <div class="row justify-content-center  contactus">
                 <div class="col-md-12">
                     <div class="row justify-content-around">
-                        <div class="col-md-7 py-4">
+                        <div class="col-md-7">
                             <!-- Form  -->
 
                             <?php
@@ -29,7 +29,7 @@
                                 <button class="contact_submit">Submit</button>
                             </form>
                         </div>
-                        <div class="col-md-5  px-4 cont">
+                        <div class="col-md-5  cont">
                             <h1>If you prefer a more tangible form of communication we're here:</h1>
                             <hr class="contact_hosri">
                             <div class="flex">
@@ -38,8 +38,10 @@
                                 </div>
                                 <div class="right">
                                     <p class="subbb">Reach us on our</p>
-                                    <h2 class="h2_head base_heading_h2">Our Office</h2>
-                                    <p class="subbb">Ground Floor, Rajmahal Complex,</br> Opp. PLA Petrol Pump, Delhi Road,</br> Hisar Haryana 125001 </p>
+                                    <h2 class="h2_head base_heading_h2">Head Office</h2>
+                                    <p class="subbb">International Dog Bazar, New Colony,Panch Batti, M.I. Road, Jaipur</p>
+                                    <h2 class="h2_head base_heading_h2">Boarding Office</h2>
+                                    <p class="subbb">61, Surya Nagar,Gopalpura Bypass,  Jaipur – 2500934</p>
                                 </div>
                             </div>
                             <div class="flex">
@@ -49,8 +51,8 @@
                                 <div class="right">
                                     <p class="subbb">Give us a</p>
                                     <h2 class="h2_head base_heading_h2">Give Us a Call</h2>
-                                    <p class="subbb">+91 8957450000</p>
-                                    <p class="subbb">+91 8957450000</p>
+                                    <p class="subbb">+91 9829051852</p>
+                                    
                                 </div>
                             </div>
                             <div class="flex">
@@ -60,7 +62,7 @@
                                 <div class="right">
                                     <p class="subbb">Drop On</p>
                                     <h2 class="h2_head base_heading_h2">Email</h2>
-                                    <p class="subbb">Info@dogbazar.com </p>
+                                    <p class="subbb">info@dogbazar.org </p>
                                 </div>
                             </div>
                         </div>

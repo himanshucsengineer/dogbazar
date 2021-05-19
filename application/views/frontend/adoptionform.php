@@ -1,49 +1,3 @@
-<!--style>
-    input[type="text"],input[type="email"],input[type="number"]{
-        width: 100%;
-        height: auto;
-        padding-top: .5rem;
-        padding-bottom: .5rem;
-        padding-left: 1rem;
-        border: 1px solid #cdcdcd;
-        outline: none;
-        margin-bottom: 1rem;
-        
-    }
-    button{
-        width: 100%;
-        height: auto;
-        padding-top: .5rem;
-        padding-bottom: .5rem;
-        color: white;
-        background-color: green;
-        outline: none;
-    }
-</style>
-
-<div class="row justify-content-center">
-    <div class="col-md-6">
-    
-        <form action="<?php echo base_url() ?>frontend/adoptionform/insert_data" method="post">
-        
-            <input type="text" name="name" placeholder="Enter Your Name">
-            <input type="email" name="email" placeholder="Enter Your Email">
-            <input type="number" name="mob" placeholder="Enter Your Number">
-            <input type="text" name="city" placeholder="Enter Your City">
-            <button>Submit Request</button>
-        </form>
-    </div>
-</div-->
-
-
-
-
-
-
-
-
-
-
 <?php
 if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
     $url = "https://";
@@ -173,32 +127,6 @@ responsible to take care of all the future medical & related expenses of the ado
                         </div>
                     </div>
                     </form>
-
-                    <!--form action="<?php echo base_url() ?>frontend/adoptionform/insert_data" method="post" enctype="multipart/form-data">
-                        <?php
-                        if ($this->session->flashdata('success')) {
-                            echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
-                        } else if ($this->session->flashdata('error')) {
-                            echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
-                        }
-
-
-                        ?>
-                        <input type="hidden" name="uniq_id" value="<?php echo $uniqid ?>">
-                        <label for="">Your Name*</label>
-                        <input type="text" name="name" placeholder="Enter Your Name">
-                        <label for="">Your Email*</label>
-                        <input type="email" name="email" placeholder="Enter Your Email">
-                        <label for="">Your Number*</label>
-                        <input type="number" name="mob" placeholder="Enter Your Number">
-                       
-                        <label for="">Upload ID Proof*(Front & Back photo)</label>
-                        <input type="file" multiple="multiple" name="files[]"  maxlength="2" placeholder="Upload Dog Images">
-                      
-                        <label for="">Parmanent Address</label>
-                        <textarea name="city" id="" cols="30" rows="5" placeholder="Your Address"></textarea>
-                        <button name='upload'>Adopt Now</button>
-                    </form-->
                 </div>
             </div>
         </div>

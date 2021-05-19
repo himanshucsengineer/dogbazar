@@ -35,7 +35,7 @@ $route['breed'] = 'frontend/dogcare/breed/breed';
 $route['givingup'] = 'frontend/dogcare/givingup/givingup';
 $route['behave'] = 'frontend/dogcare/behave/behave';
 $route['getting'] = 'frontend/dogcare/getting/getting';
-
+$route['gallary'] = 'frontend/gallary';
 
 $route['nutrition/(:any)'] = 'frontend/dogcare/nutrition/postview/index/$1';
 $route['grooming/(:any)'] = 'frontend/dogcare/grooming/postview/index/$1';

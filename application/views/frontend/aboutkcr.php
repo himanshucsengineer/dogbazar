@@ -1,32 +1,4 @@
-<style>
-    .about_idb_new{
-        width: 100%;
-        height: auto;
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-        background-color: white;
-    }
-    .about_idb_new h3{
-        width: 100%;
-        height: auto;
-        color: #FC8817;
-        line-height: 1.4;
-        font-size: 25px;
-        text-transform: capitalize;
-        font-weight: 400;
-    }
-    .about_idb_new p{
-        color: rgb( 95, 96, 96 );
-        line-height: 26px;
-        font-size: 1.45rem;
-        margin-bottom: 1rem;
-        font-weight: 400;
-        margin-right: 1rem;
-    }
-    .about_idb_new img{
-        width: 100%;
-    }
-</style>
+
 <div class="about_idb_new">
     <div class="container">
         <div class="row">
@@ -37,7 +9,7 @@
                 
             </div>
             <div class="col-md-4">
-                <img src="<?php echo base_url()?>/assest/images/aboutidb4.png" alt="">
+                <img src="<?php echo base_url()?>/assest/images/aboutkcr.png" alt="">
             </div>
         </div>
     </div>

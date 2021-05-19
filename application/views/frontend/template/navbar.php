@@ -50,6 +50,7 @@ if (!isset($_SESSION["email"])) {
         <a href="">Pet Accessories</a>
         <a href="<?php echo base_url() ?>franchies">Franchies</a>
         <a href="<?php echo base_url() ?>volunteer">Volunteer</a>
+        <a href="<?php echo base_url() ?>gallary">Gallary</a>
         <button class="nextbutttt" onclick="openabout()">About Us <span class="right_navigation"><i class="fas fa-chevron-right"></i></span></button>
         <a href="<?php echo base_url() ?>contact-us">Contact Us</a>
         <?php echo $login?>
@@ -223,6 +224,7 @@ if (!isset($_SESSION["email"])) {
                                 <!-- End Dropdown -->
                             </li>
                             <li class="lstn nav_items"><a href="" class="nodecoration">Pet Accessories</a></li>
+                            <li class="lstn nav_items"><a href="<?php echo base_url()?>gallary" class="nodecoration">Our Gallary</a></li>
                             <li class="lstn nav_items"><a href="<?php echo base_url() ?>franchies" class="nodecoration ">Franchies</a></li>
                             <!--li class="lstn nav_items"><a href="<?php echo base_url() ?>volunteer" class="nodecoration nav_items_link">Volunteer</a></li-->
                             <li class="lstn nav_items" id="d6"><a href="" class="nodecoration ">About Us</a>

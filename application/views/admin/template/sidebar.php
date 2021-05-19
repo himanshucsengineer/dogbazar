@@ -106,6 +106,9 @@ $parts = basename($url);
         <li class="nav-item <?php echo ($parts == 'franchies') ? "active" : "" ?>">
           <a class="nav-link " href="<?php echo base_url(); ?>admin/franchies"><i class="fas fa-fw fa-table"></i><span>Franchies Request</span></a>
         </li>
+        <li class="nav-item <?php echo ($parts == 'gallary') ? "active" : "" ?>">
+          <a class="nav-link " href="<?php echo base_url(); ?>admin/gallary"><i class="fas fa-fw fa-table"></i><span>Upload Gallary</span></a>
+        </li>
         <li class="nav-item <?php echo ($parts == 'adoption') ? "active" : "" ?>">
           <a class="nav-link " href="<?php echo base_url(); ?>admin/adoption"><i class="fas fa-fw fa-table"></i><span>Adoption Request</span></a>
         </li>

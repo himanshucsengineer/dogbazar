@@ -16,28 +16,32 @@
                     <hr class="footer_hori">
                 </div>
                 <ul class="footer_pages">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Franchies</a></li>
-                    <li><a href="">Traning</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">About</a></li>
+                    <li><a href="<?php echo base_url()?>donate">Donate</a></li>
+                    <li><a href="<?php echo base_url()?>volunteer">volunteer</a></li>
+                    <li><a href="<?php echo base_url()?>franchies">Franchise</a></li>
+                    <li><a href="<?php echo base_url()?>adopt">Adopt</a></li>
+                    <li><a href="<?php echo base_url()?>surrender">Surrender A Dog</a></li>
+                    <li><a href="<?php echo base_url()?>sponsor-an-animal">Sponsor An Animal</a></li>
+                    <li><a href="<?php echo base_url()?>breed">Breed</a></li>
+                    <li><a href="<?php echo base_url()?>blog">Blogs</a></li>
                 </ul>
 
 
             </div>
             <div class="col-md-3">
                 <div class="mb-4">
-                    <h3 class="footer_headings">Important Links</h3>
+                    <h3 class="footer_headings">Quick Links</h3>
                     <hr class="footer_hori">
                 </div>
                 <ul class="footer_pages">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Volunteer</a></li>
-                    <li><a href="">Donate</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Privacy-policy</a></li>
-                    <li><a href="">Term & Condition</a></li>
+                    <li><a href="<?php echo base_url()?>contact-us">Contact Us</a></li>
+                    <li><a href="<?php echo base_url()?>about-viren">About Viren Sharma</a></li>
+                    <li><a href="<?php echo base_url()?>about-kcr">About KCR</a></li>
+                    <li><a href="<?php echo base_url()?>about-idb">About IDB</a></li>
+                    <li><a href="<?php echo base_url()?>about-mad">About MAD</a></li>
+                    <li><a href="<?php echo base_url()?>about-paws">About PAWS</a></li>
+                    <li><a href="<?php echo base_url()?>privacy-policy">Privacu-Policy</a></li>
+                    <li><a href="<?php echo base_url()?>terms">Terms & Conditions</a></li>
                 </ul>
             </div>
             <div class="col-md-3 touch">
@@ -100,7 +104,7 @@
                 <a class="fa-iconbs" href=""><i class="fa fa-linkedin "></i></a>
             </div>
         </div>
-        <p>@2021 TIRUPATI INSURANCE ALL RIGHTS RESERVED. DEVELOPED BY <a href="">HISAR FEVER</a></p>
+        <p>@2021 INTERNATIONAL DOG BAZAR ALL RIGHTS RESERVED. DEVELOPED BY <a href="">HISAR FEVER</a></p>
     </div>
 </div>
 <!-- Experiment -->
