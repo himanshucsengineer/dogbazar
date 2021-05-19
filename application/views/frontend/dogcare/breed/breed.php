@@ -7,22 +7,22 @@
                     <p>Dog types are broad categories of dogs based on form, function or style of work, lineage, or appearance. In contrast, modern dog breeds are particular breed standards, sharing a common set of heritable characteristics, determined by the kennel club that recognizes the breed.</p>
                 </div>
                 <div class="col-md-5">
-                    <img src="<?php echo base_url()?>/assest/images/list-dog-banner.png" alt="">
+                    <img src="<?php echo base_url() ?>/assest/images/list-dog-banner.png" alt="">
                 </div>
             </div>
-            
+
         </div>
     </div>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 ">
                 <div class="inner_search">
-                <input type="text" class="search dropdown-toggle" placeholder="Search Breed" list="da" id="dynamic_select">
-                <datalist id="da">
-                    <?php foreach ($blogs as $value) { ?>
-                        <option value="<?php echo  $value['link'] ?>"></option>
-                    <?php } ?>
-                </datalist>
+                    <input type="text" class="search dropdown-toggle" placeholder="Search Breed" list="da" id="dynamic_select">
+                    <datalist id="da">
+                        <?php foreach ($blogs as $value) { ?>
+                            <option value="<?php echo  $value['link'] ?>"></option>
+                        <?php } ?>
+                    </datalist>
                 </div>
             </div>
         </div>
@@ -31,13 +31,13 @@
         <div class="flex" id="load_data">
         </div>
         <div class="row justify-content-center">
-                <div class="load_msg_data">
-                    <div class="text-center" id="load_data_message"></div>
-                </div>
+            <div class="load_msg_data">
+                <div class="text-center" id="load_data_message"></div>
             </div>
-            <div class="load_more">
-                <button id="loadmore">Load More</button>
-            </div>
+        </div>
+        <div class="load_more">
+            <button id="loadmore">Load More</button>
+        </div>
     </div>
 </div>
 

@@ -1,183 +1,3 @@
-<!--style>
-    .volunteer_form_fill{
-        width: 100%;
-        height: auto;
-        padding-top: .5rem;
-        padding-bottom: .5rem;
-        padding-left: 1rem;
-        border: 1px solid #cdcdcd;
-        outline: none;
-        margin-bottom: 1.5rem;
-    }
-    .volunteer_submit{
-        width: 100%;
-        height: auto;
-        padding-top: .7rem;
-        padding-bottom: .7rem;
-        border: 1px solid #d44444;
-        background-color: #d44444;
-        color: white;
-        outline: none;
-        text-transform: uppercase;
-        transition: .5s;
-    }
-    .volunteer_submit:hover{
-        border-radius: 25px;
-    }
-    @media screen and (max-width: 600px) {
-        .writetous{
-            padding: 0rem !important;
-            border: none;
-            border-radius: 0px ;
-            background-color: white;
-            box-shadow: 0px 4px 7px -2px rgb(0 0 0 / 20%);
-        }
-}
-</style>
-<main>
-    <div class="spacer_m"></div>
-    <div class="container px-4 mb-5">
-
-
-        <div class="row mb-3 justify-content-center">
-            <div class="col-md-4 text-center px-3">
-                <h1 class="fc_underline">VOLENTEER</h1>
-            </div>
-        </div>
-
-        <div class="row mb-3 justify-content-center">
-            <div class="col-md-8  text-center px-3">
-                <p>This list contains plants that have been reported as having systemic effects on animals and/or
-                    intense effects on the gastrointestinal tract.
-                </p>
-            </div>
-        </div>
-
-
-        <div class="row justify-content-around px-2 py-2">
-            <div class="col-md-5  px-3">
-                <div class="fc_options">
-                    <h3 class="fc_options_h1">A Unique Concept</h3>
-                    <p>This list contains plants that have been reported as having systemic effects on animals
-                        and/or
-                        intense effects on the gastrointestinal tract..</p>
-                </div>
-                <div class="fc_options">
-                    <h3 class="fc_options_h1">Growth Opportunities</h3>
-                    <p>This list contains plants that have been reported as having systemic effects on animals
-                        and/or
-                        intense effects on the gastrointestinal tract..</p>
-                </div>
-            </div>
-            <div class="col-md-5  px-3">
-                <div class="fc_options">
-                    <h3 class="fc_options_h1">Creating Ecosystem for Pet Lovers</h3>
-                    <p>This list contains plants that have been reported as having systemic effects on animals
-                        and/or
-                        intense effects on the gastrointestinal tract..</p>
-                </div>
-                <div class="fc_options">
-                    <h3 class="fc_options_h1">Training Programs</h3>
-                    <p>This list contains plants that have been reported as having systemic effects on animals
-                        and/or
-                        intense effects on the gastrointestinal tract..</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="spacer_s"></div>
-
-  
-    <div class="container mb-4">
-        <div class="fc_banner px-2 py-2">
-            <div class="row py-4">
-                <div class="col-md-12">
-                    <div class="row justify-content-center">
-                        <div class="col-md-9 text-center px-3">
-                            <h3 class="fc_banner_color">JOIN YOUR HANDS AND BECOME PARTNERS IN
-                                COMPLIANCE WITH MAD:</h3>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-md-9 text-center px-3">
-                            <p class=" fc_banner_color">This list contains plants that have been reported as having
-                                systemic effects on animals and/or intense effects on the gastrointestinal tract..
-                            </p>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-
-    <div class="spacer_s"></div>
-
-
-    <div class="container px-5 mb-5">
-        <div class="row mb-3 justify-content-center">
-            <div class="col-md-4 text-center px-3">
-                <h1 class="fc_underline">Apply For Volunteering</h1>
-            </div>
-        </div>
-
-        <div class="row justify-content-center mt-5 py-5 ">
-            <div class="col-md-12 ">
-                <div class="row justify-content-center">
-                    <div class="col-md-9 ">
-                     
-                        <?php
-                        if ($this->session->flashdata('success')) {
-                            echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
-                        } else if ($this->session->flashdata('error')) {
-                            echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
-                        }
-
-
-                        ?>
-                        <div class="writetous">
-
-                            <form action="<?php echo base_url() ?>frontend/volunteer/insert_data" method="post">
-                                <label for="" class="donate_input_lable pb-3">Name*</label>
-                                <input type="text" class="volunteer_form_fill base_input" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Name">
-                                <label for="" class="donate_input_lable pb-3">Email*</label>
-                                <input type="email" class="volunteer_form_fill base_input" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Email">
-                                <label for="" class="donate_input_lable pb-3">Number*</label>
-                                <input type="number" class="volunteer_form_fill base_input" name="mob" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Number">
-                                <label for="" class="donate_input_lable pb-3">Qualification*</label>
-                                <input type="text" class="volunteer_form_fill base_input" name="edu" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Qualification">
-                                <label for="" class="donate_input_lable pb-3">City/Town/village*</label>
-                                <input type="text" class="volunteer_form_fill base_input" name="city" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your City">
-                                <label for="exampleInputEmail1" class="donate_input_lable pb-3">Address*</label>
-                                <textarea name="add"class="volunteer_form_fill" id="" cols="30" rows="5" placeholder="Leave a comment here"></textarea>
-
-                                <button class="volunteer_submit">Submit</button>
-
-
-                            </form>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-
-    <div class="spacer_m"></div>
-    <div class="spacer_m"></div>
-
-
-
-
-</main-->
-
 <div class="form_top_new form_top_vol">
     <div class="">
         <div class="container">
@@ -209,7 +29,7 @@
         <p>We couldn’t save the lives of these animals without you. We appreciate any time or donations you can offer us.</p>
         <div class="row">
             <div class="col-md-4 ">
-                
+
                 <center><i class="fas fa-calendar-alt"></i></center>
                 <h2>When?</h2>
                 <p>We need volunteers seven days a week from 11:00-7:00. If you even have an hour, stop by. There’s always a pet in need.</p>
@@ -265,11 +85,11 @@
                         <p>Spend time in the ‘Free Roam’ cat room to socialize, groom or otherwise, help make their lives more comfortable</p>
                     </div>
                 </div>
-  
-             
+
+
             </div>
             <div class="col-md-6">
-                <img src="<?php echo base_url()?>/assest/images/Volunteer_What.jpg" alt="what will vounteer do">
+                <img src="<?php echo base_url() ?>/assest/images/Volunteer_What.jpg" alt="what will vounteer do">
             </div>
         </div>
     </div>
@@ -280,97 +100,84 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="list_dod_form_inner">
-                <?php
-                        if ($this->session->flashdata('success')) {
-                            echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
-                        } else if ($this->session->flashdata('error')) {
-                            echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
-                        }
+                    <?php
+                    if ($this->session->flashdata('success')) {
+                        echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
+                    } else if ($this->session->flashdata('error')) {
+                        echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
+                    }
 
 
-                        ?>
+                    ?>
                     <form action="<?php echo base_url() ?>frontend/volunteer/insert_data" method="post">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label for="">Name</label>
-                            <input type="text" name="name" placeholder="Enter your Name">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="">Name</label>
+                                <input type="text" name="name" placeholder="Enter your Name">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="">Email</label>
+                                <input type="email" name="email" placeholder="Enter your Email">
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <label for="">Email</label>
-                            <input type="email" name="email" placeholder="Enter your Email">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="">Number</label>
+                                <input type="number" name="mob" placeholder="Enter your No.">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="">Address</label>
+                                <input type="text" name="add" placeholder="Enter your Address">
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label for="">Number</label>
-                            <input type="number" name="mob" placeholder="Enter your No.">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="">City</label>
+                                <input type="text" name="city" placeholder="Enter your City">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="">State</label>
+                                <input type="text" name="state" placeholder="Enter your State">
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <label for="">Address</label>
-                            <input type="text" name="add" placeholder="Enter your Address">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="">Zip Code</label>
+                                <input type="number" name="zip" placeholder="Enter your Zip code">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="">Age</label>
+                                <input type="text" name="age" placeholder="Enter your Age">
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label for="">City</label>
-                            <input type="text" name="city" placeholder="Enter your City">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="">Type Of Volunteer Work You Are Interested In Doing: </label>
+
+                                <select name="work" id="">
+                                    <option value="Walk Dogs">Walk Dogs</option>
+                                    <option value="Cat Attendant">Cat Attendant</option>
+                                    <option value="Events">Events</option>
+                                    <option value="Shelter Care">Shelter Care</option>
+                                    <option value="Grant Writing (Experience Preferred)">Grant Writing (Experience Preferred)</option>
+                                    <option value="Data Entry">Data Entry</option>
+                                    <option value="Greeting">Greeting</option>
+                                    <option value="Volunteer Specialist">Volunteer Specialist</option>
+                                    <option value="others">Others</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="">Do You Have Any Questions We Can Prepare To Answer For You?</label>
+                                <textarea name="msg" id="" cols="30" rows="10"></textarea>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <label for="">State</label>
-                            <input type="text" name="state" placeholder="Enter your State">
+                        <div class="row justify-content-center">
+                            <div class="col-md-5">
+                                <button>Submit</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label for="">Zip Code</label>
-                            <input type="number" name="zip" placeholder="Enter your Zip code">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="">Age</label>
-                            <input type="text" name="age" placeholder="Enter your Age">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <label for="">Type Of Volunteer Work You Are Interested In Doing: </label>
-                            <input type="text" name="work" placeholder="Enter Intrested Work">
-                        </div>
-                        <div class="col-md-12">
-                            <label for="">Do You Have Any Questions We Can Prepare To Answer For You?</label>
-                            <textarea name="msg" id="" cols="30" rows="10"></textarea>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-md-5">
-                            <button>Submit</button>
-                        </div>
-                    </div>
                     </form>
-                    <!--form action="<?php echo base_url() ?>" method="post">
-                        <?php
-                        if ($this->session->flashdata('success')) {
-                            echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
-                        } else if ($this->session->flashdata('error')) {
-                            echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
-                        }
 
-
-                        ?>
-                        <input type="hidden" name="uniq_id" value="<?php echo $uniqid ?>">
-                        <label for="">Your Name*</label>
-                        <input type="text" name="name" placeholder="Enter Your Name">
-                        <label for="">Your Email*</label>
-                        <input type="email" name="email" placeholder="Enter Your Email">
-                        <label for="">Your Number*</label>
-                        <input type="number" name="mob" placeholder="Enter Your Number">
-                       
-                        <label for="">Upload ID Proof*(Front & Back photo)</label>
-                        <input type="file" multiple="multiple" name="files[]"  maxlength="2" placeholder="Upload Dog Images">
-                      
-                        <label for="">Parmanent Address</label>
-                        <textarea name="city" id="" cols="30" rows="5" placeholder="Your Address"></textarea>
-                        <button name='upload'>Adopt Now</button>
-                    </form-->
                 </div>
             </div>
         </div>

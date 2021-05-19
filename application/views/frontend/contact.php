@@ -1,5 +1,3 @@
-
-
 <main class="contact_us_new">
     <div class="container ">
         <h1 class="lets"><span class="eno">Enough about us</span>, lets talk about you now !</h1>
@@ -41,7 +39,7 @@
                                     <h2 class="h2_head base_heading_h2">Head Office</h2>
                                     <p class="subbb">International Dog Bazar, New Colony,Panch Batti, M.I. Road, Jaipur</p>
                                     <h2 class="h2_head base_heading_h2">Boarding Office</h2>
-                                    <p class="subbb">61, Surya Nagar,Gopalpura Bypass,  Jaipur – 2500934</p>
+                                    <p class="subbb">61, Surya Nagar,Gopalpura Bypass, Jaipur – 2500934</p>
                                 </div>
                             </div>
                             <div class="flex">
@@ -52,7 +50,7 @@
                                     <p class="subbb">Give us a</p>
                                     <h2 class="h2_head base_heading_h2">Give Us a Call</h2>
                                     <p class="subbb">+91 9829051852</p>
-                                    
+
                                 </div>
                             </div>
                             <div class="flex">
@@ -74,7 +72,7 @@
         </div>
 
         <div class="spacer_m"></div>
-     
+
 
 
         <!-- End Main -->

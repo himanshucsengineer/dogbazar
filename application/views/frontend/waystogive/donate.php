@@ -1,125 +1,3 @@
-<!--main>
-
-
-
-    <div class="title_strip_brown">
-        <div class="container">
-            <div class="row py-4">
-                <div class="col">
-                    <h1 class="title_strip_brown_h1">Donate Now</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="spacer_m"></div>
-
-
-    <div class="body_content">
-        <div class="container px-4">
-            <div class="row justify-content-center">
-                <div class="col-md-10 pxy-2">
-                    <h2>Yes! I want to save the life of an animal in need.</h2>
-                    <p>This list contains plants that have been reported as having systemic effects on animals
-                        and/or intense effects on the gastrointestinal tract. Please note that the information
-                        contained in our plant lists is not meant to be all-inclusive.</p>
-
-                    <h3>Choose Your Donation Amount</h3>
-                    <?php
-                    if ($this->session->flashdata('success')) {
-                        echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
-                    } else if ($this->session->flashdata('error')) {
-                        echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
-                    }
-
-
-                    ?>
-              
-                    <form action="<?php echo base_url() ?>register/pay" method="post">
-
-                        <p><span class="amt_lable">In Rupess</span></p>
-
-                        <div class="row mb-3">
-                            <div class="col-md-9">
-                                <div class="mb-3">
-                                   
-                                    <input type="number" class="form-control base_input donar_input_pay" name="amount" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Amount">
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="row mb-3">
-                            <div class="col-md-9">
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="mb-3">
-                                            <label for="" class="donate_input_lable pb-3">Full Name</label>
-                                            <input type="text" class="form-control base_input" id="exampleInputEmail1" name="name" aria-describedby="emailHelp" placeholder="Your Name">
-                                        </div>
-                                    </div>
-                                  
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="mb-3">
-                                            <label for="" class="donate_input_lable pb-3">Enter Your Email</label>
-                                            <input type="email" class="form-control base_input" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="mb-3">
-                                            <label for="" class="donate_input_lable pb-3">Mobile Number</label>
-                                            <input type="number" class="form-control base_input" name="mob" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Phone Number">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="mb-4">
-                                            <label for="exampleInputEmail1" class="donate_input_lable pb-3">Your
-                                                Message</label>
-                                            <div class="form-floating base_input">
-                                                <textarea class="form-control" placeholder="Leave a comment here" name="msg" id="floatingTextarea2" style="height: 100px"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col">
-                                <button class=" brown_btn">Lets Donate</button>
-                            </div>
-                        </div>
-
-                    </form>
-        
-
-
-                    <div class="spacer_s"></div>
-                    <div class="spacer_s"></div>
-
-                </div>
-
-
-            </div>
-        </div>
-    </div>
-
-
-    <div class="spacer_m"></div>
-    <div class="spacer_m"></div>
-
-
-</main-->
-
-
 <div class="donation_new_main ">
     <div class="container">
         <div class="row">
@@ -227,7 +105,7 @@
             <div class="col-md-4">
                 <div class="flex">
                     <div class="left">
-                    <i class="fff fas fa-hands-helping"></i>
+                        <i class="fff fas fa-hands-helping"></i>
                     </div>
                     <div class="right">
                         <p>To help fellow animal lovers strengthen the movement</p>
@@ -237,7 +115,7 @@
             <div class="col-md-4">
                 <div class="flex">
                     <div class="left">
-                    <i class="fff fas fa-plus"></i>
+                        <i class="fff fas fa-plus"></i>
                     </div>
                     <div class="right">
                         <p>To create a future where animals are free from human exploitation</p>
@@ -259,7 +137,7 @@
             <div class="col-md-4">
                 <div class="flex">
                     <div class="left">
-                    <img src="<?php echo base_url()?>/assest/images/What1.png" alt=" why 1" />
+                        <img src="<?php echo base_url() ?>/assest/images/What1.png" alt=" why 1" />
                     </div>
                     <div class="right">
                         <p>Ending dairy cruelty against cows & buffaloes</p>
@@ -269,7 +147,7 @@
             <div class="col-md-4">
                 <div class="flex">
                     <div class="left">
-                    <img src="<?php echo base_url()?>/assest/images/What2.png" alt=" why 1" />
+                        <img src="<?php echo base_url() ?>/assest/images/What2.png" alt=" why 1" />
                     </div>
                     <div class="right">
                         <p>Addressing unethical & illegal slaughter practices</p>
@@ -279,7 +157,7 @@
             <div class="col-md-4">
                 <div class="flex">
                     <div class="left">
-                    <img src="<?php echo base_url()?>/assest/images/What3.png" alt=" why 1" />
+                        <img src="<?php echo base_url() ?>/assest/images/What3.png" alt=" why 1" />
                     </div>
                     <div class="right">
                         <p>Empowering local communities with right information on rabies</p>
@@ -290,7 +168,7 @@
             <div class="col-md-4">
                 <div class="flex">
                     <div class="left">
-                    <img src="<?php echo base_url()?>/assest/images/What4.png" alt=" why 1" />
+                        <img src="<?php echo base_url() ?>/assest/images/What4.png" alt=" why 1" />
                     </div>
                     <div class="right">
                         <p>Ending human-dog conflict in cities and small towns</p>
@@ -300,7 +178,7 @@
             <div class="col-md-4">
                 <div class="flex">
                     <div class="left">
-                    <img src="<?php echo base_url()?>/assest/images/What5.png" alt=" why 1" />
+                        <img src="<?php echo base_url() ?>/assest/images/What5.png" alt=" why 1" />
                     </div>
                     <div class="right">
                         <p>Building India’s largest animal rights network across 70+ cities</p>
@@ -310,7 +188,7 @@
             <div class="col-md-4">
                 <div class="flex">
                     <div class="left">
-                    <img src="<?php echo base_url()?>/assest/images/What6.png" alt=" why 1" />
+                        <img src="<?php echo base_url() ?>/assest/images/What6.png" alt=" why 1" />
                     </div>
                     <div class="right">
                         <p>Helping people have a compassionate & plant-based lifestyle</p>
@@ -321,7 +199,7 @@
             <div class="col-md-4">
                 <div class="flex">
                     <div class="left">
-                    <img src="<?php echo base_url()?>/assest/images/What7.png" alt=" why 1" />
+                        <img src="<?php echo base_url() ?>/assest/images/What7.png" alt=" why 1" />
                     </div>
                     <div class="right">
                         <p>Empowering activists with skills for mobilizing & awareness building</p>
@@ -331,7 +209,7 @@
             <div class="col-md-4">
                 <div class="flex">
                     <div class="left">
-                    <img src="<?php echo base_url()?>/assest/images/What8.png" alt=" why 1" />
+                        <img src="<?php echo base_url() ?>/assest/images/What8.png" alt=" why 1" />
                     </div>
                     <div class="right">
                         <p>Supporting animal NGOs in India in their efforts to protect animals</p>
@@ -341,7 +219,7 @@
             <div class="col-md-4">
                 <div class="flex">
                     <div class="left">
-                    <img src="<?php echo base_url()?>/assest/images/What9.png" alt=" why 1" />
+                        <img src="<?php echo base_url() ?>/assest/images/What9.png" alt=" why 1" />
                     </div>
                     <div class="right">
                         <p>Facilitating adoption of plant-based alternatives by companies</p>
@@ -352,7 +230,7 @@
             <div class="col-md-4">
                 <div class="flex">
                     <div class="left">
-                    <img src="<?php echo base_url()?>/assest/images/What10.png" alt=" why 1" />
+                        <img src="<?php echo base_url() ?>/assest/images/What10.png" alt=" why 1" />
                     </div>
                     <div class="right">
                         <p>Protecting elephants in captivity & in the wild</p>
@@ -362,7 +240,7 @@
             <div class="col-md-4">
                 <div class="flex">
                     <div class="left">
-                    <img src="<?php echo base_url()?>/assest/images/What11.png" alt=" why 1" />
+                        <img src="<?php echo base_url() ?>/assest/images/What11.png" alt=" why 1" />
                     </div>
                     <div class="right">
                         <p>Legal advocacy to speak on behalf of animals who have suffered</p>
@@ -372,7 +250,7 @@
             <div class="col-md-4">
                 <div class="flex">
                     <div class="left">
-                    <i class="fff fas fa-hand-holding-medical"></i>
+                        <i class="fff fas fa-hand-holding-medical"></i>
                     </div>
                     <div class="right">
                         <p>Providing emergency help for animals in suffering</p>
@@ -380,13 +258,13 @@
                 </div>
             </div>
 
-            
+
         </div>
         <hr>
     </div>
 </div>
 
-                
+
 
 <div class="feqs">
     <div class="container">

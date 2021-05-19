@@ -18,14 +18,7 @@ foreach ($fetch_dogs as $value) {
             </div>
         </div>
     </div>
-    <!-- <div class="">
-            <div class="container">
-                <div class="row">
-                    <div class="col-2 title_strip_brown_ul"></div>
-                </div>
-            </div>
-        </div> -->
-    <!-- End Title Strip -->
+
 
     <div class="spacer_m"></div>
 
@@ -66,18 +59,7 @@ foreach ($fetch_dogs as $value) {
                             <h3>My Dogs</h3>
                             <hr>
 
-                            <!--div class="row bod mx-3 ">
-                                    <div class="col">
 
-                                        <div class="mydogs text-center py-5">
-                                            <p>You Don't have any dogs Yet</p>
-
-                                            <div>
-                                                <button class="btn brown_btn"> Add Dog</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div-->
 
 
 
@@ -131,33 +113,7 @@ foreach ($fetch_dogs as $value) {
                     <div class="spacer_s"></div>
 
                 </div>
-                <!-- End Content Left -->
 
-
-                <!-- Side Bar  -->
-
-                <!-- <div class="col-md-3 px-2 ">
-                        <div class="row">
-                            <div class="col">
-                                <h2>Our Address</h2>
-                                <p>Raj Nagar behind 30 s
-                                    PO Box 1037
-                                    Jaipur</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <h3>Follow Us On</h3>
-                                <div class="row">
-                                    <div class="col-1">f</div>
-                                    <div class="col-1">t</div>
-                                    <div class="col-1">li</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-
-                <!-- End Side Bar -->
 
 
             </div>

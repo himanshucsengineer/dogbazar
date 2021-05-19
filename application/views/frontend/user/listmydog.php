@@ -26,7 +26,7 @@ $number =  $_SESSION["number"];
 
 
 
-<div class="form_top_new">
+<div class="form_top_new rescue_top">
     <div class="">
         <div class="container">
             <h1>List A Dog For Rescue</h1>
@@ -39,91 +39,91 @@ $number =  $_SESSION["number"];
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-11">
-            <?php
-                        if ($this->session->flashdata('success')) {
-                            echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
-                        } else if ($this->session->flashdata('error')) {
-                            echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
-                        }
+                <?php
+                if ($this->session->flashdata('success')) {
+                    echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
+                } else if ($this->session->flashdata('error')) {
+                    echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
+                }
 
 
-                        ?>
+                ?>
                 <div class="list_dod_form_inner">
-                    <form action="<?php echo base_url()?>frontend/user/listmydog/insert" method="post" enctype="multipart/form-data">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label for="">Name</label>
-                            <input type="text" name="name" placeholder="Enter Your Name">
+                    <form action="<?php echo base_url() ?>frontend/user/listmydog/insert" method="post" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="">Name</label>
+                                <input type="text" name="name" placeholder="Enter Your Name">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="">Email</label>
+                                <input type="email" name="email" placeholder="Enter Your Email">
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <label for="">Email</label>
-                            <input type="email" name="email" placeholder="Enter Your Email">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="">Number</label>
+                                <input type="number" name="mob" placeholder="Enter Your Number">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="">Address</label>
+                                <input type="text" name="add" placeholder="Enter Your Address">
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label for="">Number</label>
-                            <input type="number" name="mob" placeholder="Enter Your Number">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="">Pet Name</label>
+                                <input type="text" name="p_name" placeholder="Enter Pet Name">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="">Breed</label>
+                                <input type="text" name="breed" placeholder="Enter Breed">
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <label for="">Address</label>
-                            <input type="text" name="add" placeholder="Enter Your Address">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="">Colour</label>
+                                <input type="text" name="color" placeholder="Enter Pet Colour">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="">Weight</label>
+                                <input type="text" name="weight" placeholder="Enter Pet Weight">
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label for="">Pet Name</label>
-                            <input type="text" name="p_name" placeholder="Enter Pet Name">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="">Gender</label>
+                                <select name="gender" id="">
+                                    <option value="male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="">Age</label>
+                                <input type="text" name="age" placeholder="Enter Pet Age">
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <label for="">Breed</label>
-                            <input type="text" name="breed" placeholder="Enter Breed">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="">Pet Location</label>
+                                <input type="text" name="location" placeholder="Enter Pet Location">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="">Pet Photos</label>
+                                <input type="file" multiple="multiple" name="files[]" maxlength="5" id="fileupload" placeholder="Enter Pet Age">
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label for="">Colour</label>
-                            <input type="text" name="color" placeholder="Enter Pet Colour">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="">About Pet</label>
+                                <textarea name="about" id="" cols="30" rows="10" placeholder="Type Somthing about pet"></textarea>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <label for="">Weight</label>
-                            <input type="text" name="weight" placeholder="Enter Pet Weight">
+                        <div class="row justify-content-center">
+                            <div class="col-md-5">
+                                <button>Register Dog</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label for="">Gender</label>
-                            <select name="gender" id="">
-                                <option value="male">Male</option>
-                                <option value="Female">Female</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="">Age</label>
-                            <input type="text" name="age" placeholder="Enter Pet Age">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label for="">Pet Location</label>
-                            <input type="text" name="location" placeholder="Enter Pet Location">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="">Pet Photos</label>
-                            <input type="file" multiple="multiple" name="files[]"  maxlength="5" id="fileupload" placeholder="Enter Pet Age">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <label for="">About Pet</label>
-                            <textarea name="about" id="" cols="30" rows="10" placeholder="Type Somthing about pet"></textarea>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-md-5">
-                            <button>Register Dog</button>
-                        </div>
-                    </div>
 
                     </form>
 

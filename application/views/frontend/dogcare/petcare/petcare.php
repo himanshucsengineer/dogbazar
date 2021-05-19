@@ -1,10 +1,7 @@
-
-
-
 <div class="nutrition_new_main">
     <div class="navi">
         <div class="container">
-        <h4><a href="<?php echo base_url()?>">Home</a> > <a href="<?php echo base_url() ?>petcare">Dog Care > Petcare </a></h4>
+            <h4><a href="<?php echo base_url() ?>">Home</a> > <a href="<?php echo base_url() ?>petcare">Dog Care > Petcare </a></h4>
         </div>
     </div>
     <div class="nutri_head">
@@ -22,7 +19,7 @@
                 </div>
             </div>
             <div class="flex" id="load_video">
-                
+
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-3">
@@ -55,14 +52,13 @@
 
 
 <script>
-    
     $(document).ready(function() {
         $(document).on('click', '.vdeoscr', function() {
-           var idd= $(this).attr('data-video');
-           var head= $(this).attr('data-id');
-          
-           document.getElementById('getvideosrc').src = idd;
-           document.getElementById('videotitle').innerHTML = head;
+            var idd = $(this).attr('data-video');
+            var head = $(this).attr('data-id');
+
+            document.getElementById('getvideosrc').src = idd;
+            document.getElementById('videotitle').innerHTML = head;
 
         });
 

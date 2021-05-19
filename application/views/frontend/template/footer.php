@@ -1,4 +1,3 @@
-
 <footer class="footer">
 
     <div class="container">
@@ -16,14 +15,14 @@
                     <hr class="footer_hori">
                 </div>
                 <ul class="footer_pages">
-                    <li><a href="<?php echo base_url()?>donate">Donate</a></li>
-                    <li><a href="<?php echo base_url()?>volunteer">volunteer</a></li>
-                    <li><a href="<?php echo base_url()?>franchies">Franchise</a></li>
-                    <li><a href="<?php echo base_url()?>adopt">Adopt</a></li>
-                    <li><a href="<?php echo base_url()?>surrender">Surrender A Dog</a></li>
-                    <li><a href="<?php echo base_url()?>sponsor-an-animal">Sponsor An Animal</a></li>
-                    <li><a href="<?php echo base_url()?>breed">Breed</a></li>
-                    <li><a href="<?php echo base_url()?>blog">Blogs</a></li>
+                    <li><a href="<?php echo base_url() ?>donate">Donate</a></li>
+                    <li><a href="<?php echo base_url() ?>volunteer">volunteer</a></li>
+                    <li><a href="<?php echo base_url() ?>franchies">Franchise</a></li>
+                    <li><a href="<?php echo base_url() ?>adopt">Adopt</a></li>
+                    <li><a href="<?php echo base_url() ?>surrender">Surrender A Dog</a></li>
+                    <li><a href="<?php echo base_url() ?>sponsor-an-animal">Sponsor An Animal</a></li>
+                    <li><a href="<?php echo base_url() ?>breed">Breed</a></li>
+                    <li><a href="<?php echo base_url() ?>blog">Blogs</a></li>
                 </ul>
 
 
@@ -34,14 +33,14 @@
                     <hr class="footer_hori">
                 </div>
                 <ul class="footer_pages">
-                    <li><a href="<?php echo base_url()?>contact-us">Contact Us</a></li>
-                    <li><a href="<?php echo base_url()?>about-viren">About Viren Sharma</a></li>
-                    <li><a href="<?php echo base_url()?>about-kcr">About KCR</a></li>
-                    <li><a href="<?php echo base_url()?>about-idb">About IDB</a></li>
-                    <li><a href="<?php echo base_url()?>about-mad">About MAD</a></li>
-                    <li><a href="<?php echo base_url()?>about-paws">About PAWS</a></li>
-                    <li><a href="<?php echo base_url()?>privacy-policy">Privacu-Policy</a></li>
-                    <li><a href="<?php echo base_url()?>terms">Terms & Conditions</a></li>
+                    <li><a href="<?php echo base_url() ?>contact-us">Contact Us</a></li>
+                    <li><a href="<?php echo base_url() ?>about-viren">About Viren Sharma</a></li>
+                    <li><a href="<?php echo base_url() ?>about-kcr">About KCR</a></li>
+                    <li><a href="<?php echo base_url() ?>about-idb">About IDB</a></li>
+                    <li><a href="<?php echo base_url() ?>about-mad">About MAD</a></li>
+                    <li><a href="<?php echo base_url() ?>about-paws">About PAWS</a></li>
+                    <li><a href="<?php echo base_url() ?>privacy-policy">Privacu-Policy</a></li>
+                    <li><a href="<?php echo base_url() ?>terms">Terms & Conditions</a></li>
                 </ul>
             </div>
             <div class="col-md-3 touch">

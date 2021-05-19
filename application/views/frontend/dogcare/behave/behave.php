@@ -29,17 +29,17 @@
                 <div class="row">
                     <div class="col">
                         <ul class="p-0 m-0">
-                            <a href="<?php echo base_url()?>behave" class="nodecoration">
+                            <a href="<?php echo base_url() ?>behave" class="nodecoration">
                                 <li class="tranning_side_links">Behaviour</li>
                             </a>
-                            
-                            <a href="<?php echo base_url()?>training" class="nodecoration">
+
+                            <a href="<?php echo base_url() ?>training" class="nodecoration">
                                 <li class="tranning_side_links">Training</li>
                             </a>
-                            <a href="<?php echo base_url()?>givingup" class="nodecoration">
+                            <a href="<?php echo base_url() ?>givingup" class="nodecoration">
                                 <li class="tranning_side_links">Giving Up Your Dog</li>
                             </a>
-                            <a href="<?php echo base_url()?>getting" class="nodecoration">
+                            <a href="<?php echo base_url() ?>getting" class="nodecoration">
                                 <li class="tranning_side_links">Getting A Dog</li>
                             </a>
                         </ul>
@@ -85,7 +85,7 @@
                                                 <img src="<?php echo $value['image']; ?>" alt="">
                                             </div>
                                             <div class="px-3">
-                                                 <p class="m-0"><span class="blog_sidetag"><?php echo $value['cate']; ?></span></p>
+                                                <p class="m-0"><span class="blog_sidetag"><?php echo $value['cate']; ?></span></p>
                                                 <p class="m-0"><span class="blog_sidetitle tranning_card_p"><?php echo $value['head']; ?></span>
                                                 </p>
                                             </div>

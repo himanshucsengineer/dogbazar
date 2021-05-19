@@ -1,4 +1,4 @@
-<div class="adopt_pet_main_new"> 
+<div class="adopt_pet_main_new">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -17,7 +17,7 @@
                                 <img src="<?php echo @$blog->$img ?>" alt="adopt pet">
                             </div>
 
-                     <?php }
+                    <?php }
                     } ?>
 
                 </div>
@@ -29,8 +29,8 @@
                     <h5>Born Place: <span class="declar"><?php echo @$blog->b_place ?></span></h5>
                     <h5>Died Date: <span class="declar"><?php echo @$blog->d_date ?></span></h5>
                     <h5>Died Date:<span class="declar"><?php echo @$blog->d_place ?></span></h5>
-                    
-                
+
+
                 </div>
             </div>
         </div>
@@ -41,7 +41,6 @@
             <p><?php echo @$blog->about ?></p>
         </div>
     </div>
-    
-    
-</div>
 
+
+</div>

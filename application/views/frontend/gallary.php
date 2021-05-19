@@ -1,112 +1,18 @@
 <link href="https://cdn.jsdelivr.net/lightgallery/1.3.9/css/lightgallery.min.css" rel="stylesheet">
-<style>
-    .main_gallary{
-        width: 100%;
-        height: auto;
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-        background-color: white;
-    }
-    .main_gallary .flex{
-        width: 100%;
-        height: auto;
-        display:flex;
-        flex-wrap: wrap;
-    }
-    .main_gallary .flex .card{
-        width:33%;
-        height:auto;
-        border: none !important;
-        padding: 1rem;
-    }
-    .main_gallary .flex .card img{
-        -webkit-transition: -webkit-transform 0.15s ease 0s;
-        -moz-transition: -moz-transform 0.15s ease 0s;
-        -o-transition: -o-transform 0.15s ease 0s;
-        transition: transform 0.15s ease 0s;
-        -webkit-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
-        height: 350px;
-        width: 100%;
-    }
-    .main_gallary .flex .card img:hover{
-        -webkit-transform: scale3d(1.1, 1.1, 1.1);
-        transform: scale3d(1.1, 1.1, 1.1);
-    }
-    .main_gallary .flex .card a{
-        display: block;
-        overflow: hidden;
-        position: relative;
-        float: left;
-    }
-    .main_gallary h1{
-        text-align: center;
-        font-size: 30px;
-        font-weight: 600 !important;
-        line-height: 48px;
-        position: relative;
-        margin-bottom: 30px;
-        text-transform: capitalize;
-    }
-    .main_gallary h1:after{
-        position: absolute;
-        content: "";
-        height: 2px;
-        background-color: #ffc107;
-        bottom: -10px;
-        width: 150px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .lg-actions .lg-next, .lg-actions .lg-prev{
-        border: none !important;
-        outline: none !important;
-    }
-    .lg-outer .lg-thumb-item{
-        border-radius: 0px !important;
-        
-    }
-    #lg-share{
-        display: none !important;
-    }
-    #lg-actual-size{
-        display: none !important;
-    }
-    #lg-download{
-        display: none !important;
-    }
-    .lg-outer.lg-pull-caption-up.lg-thumb-open .lg-sub-html{
-        display: none !important;
-    }
-    @media only screen and (max-width: 600px) {
-        .lg-outer .lg-thumb-item{
-            width: 60px !important;
-            height: 60px !important;
-        }
-        .main_gallary .flex .card{
-            width: 100%;
-        }
-        .lg-toolbar .lg-icon{
-            font-size: 20px !important;
-            width: 35px !important;
-            height: 40px !important;
-        }
 
-    }
-</style>
 
 
 <div class="main_gallary bgdar">
     <div class="container">
         <h1>Our Gallary</h1>
         <div class="flex" id="lightgallery">
-            <?php foreach($dogss as $value){?>
-            <div class="card" data-responsive="<?php echo $value['image']?>" data-src="<?php echo $value['image']?>" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
-                <a href="">
-                    <img src="<?php echo $value['image']?>" alt="">
-                </a>
-            </div>
-            <?php }?>
+            <?php foreach ($dogss as $value) { ?>
+                <div class="card" data-responsive="<?php echo $value['image'] ?>" data-src="<?php echo $value['image'] ?>" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
+                    <a href="">
+                        <img src="<?php echo $value['image'] ?>" alt="">
+                    </a>
+                </div>
+            <?php } ?>
         </div>
     </div>
 </div>

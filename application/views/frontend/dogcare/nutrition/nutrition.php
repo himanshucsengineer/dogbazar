@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="flex" id="load_data">
-                
+
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-3">
@@ -38,7 +38,7 @@
                 </div>
             </div>
             <div class="flex" id="load_video">
-                
+
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-3">
@@ -71,7 +71,7 @@
         </div>
     </div>
 </div>
- 
+
 
 <script>
     $(document).ready(function() {
@@ -88,7 +88,7 @@
     var srcdata = document.getElementById('modalsrcdata').value;
     console.log(srcdata);
 </script>
- 
+
 <script>
     $(document).ready(function() {
 
