@@ -87,7 +87,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6 radi">
                                 <label for="">Gender</label>
                                 <input type="radio" name="gender" id="">Male
                                 <input type="radio" name="gender" id="">Female
@@ -107,7 +107,7 @@
                                 <input type="text" name="diet" placeholder="Enter Specific Diet/Regime" required>
                             </div>
                         </div>
-                        <h3>Note :- If This Pet is Adopted/ Buy from International Dog Bazar Then You Can Not Surrender This Pet To us.</h3>
+                        <h3 class="note">Note :- If This Pet is Adopted/ Buy from International Dog Bazar Then You Can Not Surrender This Pet To us.</h3>
                         <div class="row justify-content-center">
                             <div class="col-md-5">
                                 <button>Surrender Now</button>

@@ -729,8 +729,8 @@ body{
 
 @media screen and (max-width: 600px) {
     .adopt_pet_main_new{
-        padding-top: 0rem;
-        padding-bottom: 0rem !important;
+        padding-top: 1rem;
+        padding-bottom: 3rem !important;
     }
     .adopt_pet_main_new img{
         border-radius: 0px;
@@ -3131,25 +3131,11 @@ input[type="password"] {
         padding: 0rem !important;
     }
 
-    .adopt_dog .adopt_card_main .card .card_inner {
+    
 
-        padding: 1rem;
-    }
+    
 
-    .adopt_dog .adopt_card_main .card .card_inner img {
-
-        height: 100px;
-    }
-
-    .adopt_dog .adopt_card_main .card .card_inner h3 {
-        font-size: 1.7rem;
-    }
-
-    .adopt_dog .adopt_card_main .card .card_inner h6 {
-
-        font-size: 1.1rem;
-    }
-
+    
     .adopt_dog .first_sec .first_sec_inner h1 {
         font-size: 20px;
         margin-bottom: 1rem;
@@ -3168,10 +3154,7 @@ input[type="password"] {
         width: 35%;
     }
 
-    .adopt_dog .adopt_card_main .card .card_inner .adop_butt button {
-        font-size: 11px;
-        width: 9rem;
-    }
+   
 }
 
 @media only screen and (max-width: 600px) {
@@ -3436,4 +3419,56 @@ input[type="password"] {
     font-size: 15px !important;
     padding: 5px 15px !important;
 }
+
+.breed_new{
+    padding-bottom: 0rem !important;
+}
+.nutrition_new_main .nutri_body{
+    padding-bottom: 0rem !important;
+}
+.videooomodd .btn-close{
+    font-size: 15px;
+    margin-right: 0.3rem !important;
+}
+.feqs h1{
+    font-size: 25px !important;
+}
+.feqs .accordion-button{
+    padding: 12px 20px 13px 20px;
+    font-size: 17px !important;
+}
+}
+.note{
+    font-size: 15px;
+    font-weight:  300 !important;
+    font-style: italic;
+    color: lightslategray;
+}
+.radi{
+    margin-bottom: 2rem !important;
+}
+.accordion-body{
+    color: #7c7c7c;
+    font-size: 14px !important;
+    line-height: 22px;
+    padding: 0 22px 36px;
+}
+.dog_faq{
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    color: #2d2d2d;
+    display: block;
+    font-size: 29px;
+    font-style: normal;
+    font-weight:  700 !important;
+    height: 88px;
+    line-height: 82px;
+    margin: 0 auto;
+    text-align: center;
+    width: 88px;
+}
+.dog_faq_icon{
+    background-image: url('../images/sad-faq.svg');
+    background-size: 47px auto;
 }

@@ -68,7 +68,7 @@
 
                     </div>
                     <button class="btn btn-primary leftLst">
-                        << /button>
+                        <</button>
                             <button class="btn btn-primary rightLst">></button>
                 </div>
             </div>
