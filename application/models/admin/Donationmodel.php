@@ -15,7 +15,6 @@ class Donationmodel extends CI_Model
     return true;
   }
 
-  
 
   public function deletedonationdata($data)
   {

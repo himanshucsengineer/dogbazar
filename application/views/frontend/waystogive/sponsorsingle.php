@@ -43,7 +43,7 @@
                     </div>
 
 
-                    </div-->
+                   
                 </div>
             </div>
 
@@ -75,14 +75,14 @@
                             <?php endforeach; ?>
 
                         </div>
-                        <button class="btn btn-primary leftLst">
-                            << /button>
-                                <button class="btn btn-primary rightLst">></button>
+                        <button class="btn btn-primary leftLst"><</button>
+                        <button class="btn btn-primary rightLst">></button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
     <script>
         $(document).ready(function() {

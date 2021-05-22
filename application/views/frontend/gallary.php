@@ -1,10 +1,21 @@
 <link href="https://cdn.jsdelivr.net/lightgallery/1.3.9/css/lightgallery.min.css" rel="stylesheet">
 
 
+<div class="news_main gallery_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Our Gallery</h3>
+            </div>
+            <div class="col-md-6">
+                <p><a href="<?php echo base_url() ?>"><span class="acc">Home</a></span> / <a href="<?php echo base_url() ?>gallary">Gallery</a></p>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="main_gallary bgdar">
     <div class="container">
-        <h1>Our Gallary</h1>
         <div class="flex" id="lightgallery">
             <?php foreach ($dogss as $value) { ?>
                 <div class="card" data-responsive="<?php echo $value['image'] ?>" data-src="<?php echo $value['image'] ?>" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">

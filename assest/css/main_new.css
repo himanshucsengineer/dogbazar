@@ -31,11 +31,12 @@ body {
 }
 .form_top_vol {
   background-image: url("../images/volunteerbg2.jpg") !important;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.44);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.33) !important;
+}
+.gallery_bg{
+  background-image: url("../images/gallery_bg.jpg") !important;
+
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.33) !important;
 }
 .franchies_top {
   background-image: url("../images/franc.jpg") !important;
@@ -355,8 +356,8 @@ body {
 .breed_new {
   width: 100%;
   height: auto;
-  padding-bottom: 5rem;
-  background-color: #ecf0f1;
+  padding-bottom: 0rem;
+  background-color: whitesmoke;
 }
 .breed_new .breed_new_top {
   width: 100%;
@@ -606,29 +607,29 @@ body {
 .adopt_pet_main_new .slideee .slide_head {
   width: 100%;
   height: auto;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  background-color: #a6341b;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  background-color:#f5f5f5 ;
   padding-left: 2rem;
   margin-top: 8rem;
-  border-bottom: 3px solid #f39933;
+  
 }
 
 .adopt_pet_main_new .slideee .slide_body {
   width: 100%;
   height: auto;
   padding-top: 2rem;
-  padding-bottom: 2rem;
-  background-color: #f3f3f3;
-  padding-left: 2rem;
-  padding-right: 2rem;
+
+  background-color: transparent;
+ 
 }
 
 .adopt_pet_main_new .slideee .slide_head h1 {
-  font-size: 30px;
-  font-weight: 700;
+  font-size: 25px;
+  font-weight: 500;
   text-transform: uppercase;
-  color: #f39933;
+  color: #2d2d2d;
+  text-align: center;
 }
 
 .adopt_pet_main_new .slideee .MultiCarousel .leftLst.over,
@@ -750,7 +751,7 @@ body {
 .MultiCarousel {
   float: left;
   overflow: hidden;
-  padding: 15px;
+  
   width: 100%;
   position: relative;
 }
@@ -767,7 +768,7 @@ body {
 .MultiCarousel .MultiCarousel-inner .item > div {
   text-align: center;
   border: 1px solid #a6341b;
-  margin: 8px;
+  margin: 5px;
 }
 
 .MultiCarousel .leftLst,
@@ -889,6 +890,14 @@ body {
   .utilize h1 {
     font-size: 25px !important;
     line-height: 30px !important;
+  }
+
+  .volunteer_form_new h1 {
+    font-size: 25px !important;
+    line-height: 30px !important;
+  }
+  .volunteer_form_new h1:after {
+    width:150px !important;
   }
   .utilize p {
     margin-left: 0rem !important;
@@ -1394,13 +1403,11 @@ input[type="number"] {
   font-size: 1.6rem;
   margin-right: 5rem;
 }
-.slideee {
-  margin-bottom: 5rem;
-}
+
 @media screen and (max-width: 600px) {
   .load_more_adopt button {
     margin-top: 0rem !important;
-    margin-bottom: 1rem !important;
+    margin-bottom: 3rem !important;
     width: 15rem !important;
   }
   .nutrition_new_main .navi h4 {
@@ -2133,7 +2140,34 @@ textarea {
 /* volunteer page */
 
 .volunteer_form_new {
-  margin-top: 4rem !important;
+  width: 100% !important;
+  height: auto !important;
+  padding-top: 4rem !important;
+  padding-bottom: 8rem !important;
+  background-color: whitesmoke !important;
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+
+.volunteer_form_new h1 {
+  color: #202020;
+  font-size: 30px;
+  line-height: 48px;
+  position: relative;
+  margin-bottom: 5rem !important;
+  text-transform: capitalize;
+  font-weight: 400 !important;
+  text-align: center;
+}
+.volunteer_form_new h1:after {
+  content: "";
+  position: absolute;
+  background-color: #ffc107;
+  height: 2px;
+  bottom: -10px;
+  width: 330px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .form_top_vol {
   padding-top: 8rem !important;
@@ -2142,8 +2176,8 @@ textarea {
 .help_us_volunteer {
   width: 100%;
   height: auto;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: 8rem;
+  padding-bottom: 5rem;
   background-color: white;
 }
 .help_us_volunteer h1 {
@@ -2177,19 +2211,39 @@ textarea {
   padding-bottom: 0;
   color: #666;
   font-size: 17px;
-  line-height: 4rem;
+  line-height: 3rem;
   word-spacing: 2px;
   font-weight: 300 !important;
 }
 .utilize {
   width: 100%;
   height: auto;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  background: #a6341b !important;
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+  background: whitesmoke !important;
+}
+.utilize .sing_volun{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin-top: 2rem;
+}
+.utilize .sing_volun button{
+  width: 25rem;
+  height: auto;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  color: white;
+  background-color: #fcc201;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-radius: 35px;
+  font-weight: 500 !important;
+  box-shadow: 0 3px 4px -1px rgb(0 0 0 / 40%);
 }
 .utilize h1 {
-  color: #f8b334;
+  color: #202020;
   font-size: 36px;
   line-height: 48px;
   position: relative;
@@ -2211,13 +2265,14 @@ textarea {
 .utilize p {
   text-align: center;
   font-size: 15px;
-  color: rgba(255, 255, 255, 0.911);
+  color: #666;
+  font-family: "Assistant", Helvetica, Arial, Lucida, sans-serif;
   margin-left: 2rem;
   margin-right: 2rem;
   line-height: 3rem;
 }
 .utilize .fas {
-  color: rgba(255, 255, 255, 0.911);
+  color:  #f8b334;
   font-size: 10rem;
   margin-top: 5rem;
 }
@@ -2225,7 +2280,7 @@ textarea {
   text-align: center;
   font-size: 30px;
   line-height: 40px;
-  color: #f8b334;
+  color:#202020;
 }
 /* end */
 
@@ -2265,8 +2320,8 @@ textarea {
 .what_will_vonlunteer {
   width: 100%;
   height: auto;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top:6rem;
+  padding-bottom: 5rem;
   background-color: white;
 }
 .what_will_vonlunteer img {
@@ -3075,7 +3130,7 @@ textarea {
 .adopt_dog {
   width: 100%;
   height: auto;
-  padding-bottom: 3rem;
+  
 }
 
 .adopt_dog img {
@@ -3261,7 +3316,7 @@ textarea {
   box-shadow: 0 3px 4px -1px rgb(0 0 0 / 40%);
   border-radius: 2px;
   text-transform: capitalize;
-  margin-top: 3rem;
+  
   margin-bottom: 6rem;
 }
 
@@ -3322,10 +3377,10 @@ textarea {
   flex-wrap: wrap;
 }
 .main_gallary .flex .card {
-  width: 33%;
+  width: 25%;
   height: auto;
   border: none !important;
-  padding: 1rem;
+  padding: .5rem;
 }
 .main_gallary .flex .card img {
   -webkit-transition: -webkit-transform 0.15s ease 0s;

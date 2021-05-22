@@ -13,7 +13,17 @@ class Gallarymodel extends CI_Model {
   {
     return $this->db->get('gallary')->result_array();
   }
-
+  public function delete_data($data)
+  {
+    $explodData = explode(',', $data);
+    $this->db->where_in('id', $explodData);
+    $getDeleteStatus = $this->db->delete('gallary');
+    if ($getDeleteStatus == 1) {
+      return array('message' => 'yes');
+    } else {
+      return array('message' => 'no');
+    }
+  }
 
 
 

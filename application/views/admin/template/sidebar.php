@@ -87,44 +87,53 @@ $parts = basename($url);
 
     <! -- Heading -->
         <div class="sidebar-heading">
-          Home Page
+          Update Website
         </div>
 
-        <!-- Nav Item - Charts -->
+      
 
 
 
-
-        <!-- Nav Item - Tables -->
-
-
-
-
-
-
-
-        <li class="nav-item <?php echo ($parts == 'franchies') ? "active" : "" ?>">
-          <a class="nav-link " href="<?php echo base_url(); ?>admin/franchies"><i class="fas fa-fw fa-table"></i><span>Franchies Request</span></a>
+        <li class="nav-item ">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#petmemo" aria-expanded="true" aria-controls="collapsePages">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Pet Memorial</span>
+          </a>
+          <div id="petmemo" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="py-2 collapse-inner rounded">
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/petmemorial" style="font-size:1.3rem; ">Create Pet Memorial</a>
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/petmemorialdata" style="font-size:1.3rem; ">All Pet Memorial</a>
+             
+              <div class="collapse-divider"></div>
+            </div>
+          </div>
         </li>
-        <li class="nav-item <?php echo ($parts == 'gallary') ? "active" : "" ?>">
+
+
+        <li class="nav-item ">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Gallery" aria-expanded="true" aria-controls="collapsePages">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Gallery</span>
+          </a>
+          <div id="Gallery" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="py-2 collapse-inner rounded">
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/gallary" style="font-size:1.3rem; ">Upload Gallery</a>
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/gallerydata" style="font-size:1.3rem; ">All Gallery</a>
+             
+              <div class="collapse-divider"></div>
+            </div>
+          </div>
+        </li>
+        <!--li class="nav-item <?php echo ($parts == 'petmemorial') ? "active" : "" ?>">
+          <a class="nav-link " href="<?php echo base_url(); ?>admin/petmemorial"><i class="fas fa-fw fa-table"></i><span>Pet memorial Data</span></a>
+        </li-->
+
+        <!--li class="nav-item <?php echo ($parts == 'gallary') ? "active" : "" ?>">
           <a class="nav-link " href="<?php echo base_url(); ?>admin/gallary"><i class="fas fa-fw fa-table"></i><span>Upload Gallary</span></a>
-        </li>
-        <li class="nav-item <?php echo ($parts == 'adoption') ? "active" : "" ?>">
-          <a class="nav-link " href="<?php echo base_url(); ?>admin/adoption"><i class="fas fa-fw fa-table"></i><span>Adoption Request</span></a>
-        </li>
-        <li class="nav-item <?php echo ($parts == 'doglist') ? "active" : "" ?>">
-          <a class="nav-link " href="<?php echo base_url(); ?>admin/doglist"><i class="fas fa-fw fa-table"></i><span>Dog Lists</span></a>
-        </li>
-        <li class="nav-item <?php echo ($parts == 'volunteer') ? "active" : "" ?>">
-          <a class="nav-link " href="<?php echo base_url(); ?>admin/volunteer"><i class="fas fa-fw fa-table"></i><span>volunteer Request</span></a>
-        </li>
-        <!--li class="nav-item <?php echo ($parts == 'account') ? "active" : "" ?>">
-      <a class="nav-link " href="<?php echo base_url(); ?>admin/account"><i class="fas fa-fw fa-table" ></i><span >Login Request</span></a>
-    </li>
-    
-    <li class="nav-item <?php echo ($parts == 'campaign') ? "active" : "" ?>">
-      <a class="nav-link " href="<?php echo base_url(); ?>admin/campaign"><i class="fas fa-fw fa-table" ></i><span >Campaign</span></a>
-    </li-->
+        </li-->
+
+
+
 
         <li class="nav-item ">
           <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePagesss" aria-expanded="true" aria-controls="collapsePages">
@@ -293,14 +302,23 @@ $parts = basename($url);
           <a class="nav-link " href="<?php echo base_url(); ?>admin/sponsoranimal"><i class="fas fa-fw fa-table"></i><span>Sponsor animal Data</span></a>
         </li>
 
-        <li class="nav-item <?php echo ($parts == 'giftgiving') ? "active" : "" ?>">
+        <!--li class="nav-item <?php echo ($parts == 'giftgiving') ? "active" : "" ?>">
           <a class="nav-link " href="<?php echo base_url(); ?>admin/giftgiving"><i class="fas fa-fw fa-table"></i><span>Gift Giving Data</span></a>
-        </li>
+        </li-->
 
-        <li class="nav-item <?php echo ($parts == 'petmemorial') ? "active" : "" ?>">
-          <a class="nav-link " href="<?php echo base_url(); ?>admin/petmemorial"><i class="fas fa-fw fa-table"></i><span>Pet memorial Data</span></a>
-        </li>
 
+        <li class="nav-item <?php echo ($parts == 'franchies') ? "active" : "" ?>">
+          <a class="nav-link " href="<?php echo base_url(); ?>admin/franchies"><i class="fas fa-fw fa-table"></i><span>Franchies Request</span></a>
+        </li>
+        <li class="nav-item <?php echo ($parts == 'adoption') ? "active" : "" ?>">
+          <a class="nav-link " href="<?php echo base_url(); ?>admin/adoption"><i class="fas fa-fw fa-table"></i><span>Adoption Request</span></a>
+        </li>
+        <li class="nav-item <?php echo ($parts == 'doglist') ? "active" : "" ?>">
+          <a class="nav-link " href="<?php echo base_url(); ?>admin/doglist"><i class="fas fa-fw fa-table"></i><span>Dog Lists</span></a>
+        </li>
+        <li class="nav-item <?php echo ($parts == 'volunteer') ? "active" : "" ?>">
+          <a class="nav-link " href="<?php echo base_url(); ?>admin/volunteer"><i class="fas fa-fw fa-table"></i><span>volunteer Request</span></a>
+        </li>
         <hr class="sidebar-divider">
 
         <!-- Sidebar Toggler (Sidebar) -->
