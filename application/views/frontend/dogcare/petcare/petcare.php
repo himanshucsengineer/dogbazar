@@ -1,23 +1,29 @@
+<div class="news_main petcare_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Pet Care Videos</h3>
+            </div>
+            <div class="col-md-6">
+                <p><a href="<?php echo base_url() ?>"><span class="acc">Home</a></span> / <a href="<?php echo base_url() ?>petcare">Dog Care / Petcare</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
 <div class="nutrition_new_main">
-    <div class="navi">
-        <div class="container">
-            <h4><a href="<?php echo base_url() ?>">Home</a> > <a href="<?php echo base_url() ?>petcare">Dog Care > Petcare </a></h4>
-        </div>
-    </div>
-    <div class="nutri_head">
-        <div class="container">
-            <h1>***Petcare***</h1>
-        </div>
-    </div>
     <div class="nutri_body">
         <div class="container">
 
-            <div class="row justify-content-center">
+            <!--div class="row justify-content-center">
                 <div class="col-md-3">
                     <h1> Petcare Videos</h1>
                     <hr class="hooooriii">
                 </div>
-            </div>
+            </div-->
             <div class="flex" id="load_video">
 
             </div>
@@ -53,7 +59,7 @@
 
 <script>
     $(document).ready(function() {
-        $(document).on('click', '.vdeoscr', function() {
+        $(document).on('click', '.newviesrc', function() {
             var idd = $(this).attr('data-video');
             var head = $(this).attr('data-id');
 

@@ -48,9 +48,9 @@ if (!isset($_SESSION["email"])) {
         <button class="nextbutttt" onclick="openblog()">Blogs <span class="right_navigation"><i class="fas fa-chevron-right"></i></span></button>
         <button class="nextbutttt" onclick="openadopt()">Adopt <span class="right_navigation"><i class="fas fa-chevron-right"></i></span></button>
         <a href="">Pet Accessories</a>
-        <a href="<?php echo base_url() ?>franchies">Franchies</a>
+        <a href="<?php echo base_url() ?>franchies">Franchise</a>
         <a href="<?php echo base_url() ?>volunteer">Volunteer</a>
-        <a href="<?php echo base_url() ?>gallary">Gallary</a>
+        <a href="<?php echo base_url() ?>gallary">Gallery</a>
         <button class="nextbutttt" onclick="openabout()">About Us <span class="right_navigation"><i class="fas fa-chevron-right"></i></span></button>
         <a href="<?php echo base_url() ?>contact-us">Contact Us</a>
         <?php echo $login ?>
@@ -133,10 +133,10 @@ if (!isset($_SESSION["email"])) {
             </div>
         </div>
         <a href="<?php echo base_url() ?>about-viren">About Viren Sharma</a>
-        <a href="<?php echo base_url() ?>about-idb">About IDB</a>
-        <a href="<?php echo base_url() ?>about-mad">About MAD</a>
+        <a href="<?php echo base_url() ?>about-idb">About International Dog Bazaar </a>
+        <a href="<?php echo base_url() ?>about-mad">About Mad About Dogs </a>
         <a href="<?php echo base_url() ?>about-paws">About PAWS</a>
-        <a href="<?php echo base_url() ?>about-kcr">About KCR</a>
+        <a href="<?php echo base_url() ?>about-kcr">About Kennel Club Of Rajasthan</a>
     </div>
     <div class="top_head_new">
         <div class="container">
@@ -224,17 +224,17 @@ if (!isset($_SESSION["email"])) {
                             <!-- End Dropdown -->
                         </li>
                         <li class="lstn nav_items"><a href="" class="nodecoration">Pet Accessories</a></li>
-                        <li class="lstn nav_items"><a href="<?php echo base_url() ?>gallary" class="nodecoration">Our Gallary</a></li>
-                        <li class="lstn nav_items"><a href="<?php echo base_url() ?>franchies" class="nodecoration ">Franchies</a></li>
+                        <li class="lstn nav_items"><a href="<?php echo base_url() ?>gallary" class="nodecoration">Our Gallery</a></li>
+                        <li class="lstn nav_items"><a href="<?php echo base_url() ?>franchies" class="nodecoration ">Franchise</a></li>
                         <!--li class="lstn nav_items"><a href="<?php echo base_url() ?>volunteer" class="nodecoration nav_items_link">Volunteer</a></li-->
                         <li class="lstn nav_items" id="d6"><a href="" class="nodecoration ">About Us</a>
                             <!-- Dropdowns with diplay class d2 -->
                             <ul class="m-0 nav_items_dropdown d6">
                                 <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url() ?>about-viren" class="">About Viren Sharma</a></li>
-                                <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url() ?>about-idb" class="">About IDB</a></li>
-                                <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url() ?>about-mad" class="">About MAD</a></li>
+                                <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url() ?>about-idb" class="">About International Dog Bazaar </a></li>
+                                <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url() ?>about-mad" class="">About Mad About Dogs</a></li>
                                 <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url() ?>about-paws" class="">About PAWS</a></li>
-                                <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url() ?>about-kcr" class="">About KCR</a></li>
+                                <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url() ?>about-kcr" class="">About Kennel Club Of Rajasthan</a></li>
                             </ul>
                             <!-- End Dropdown -->
                         </li>

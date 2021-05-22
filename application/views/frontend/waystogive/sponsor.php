@@ -1,6 +1,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap" rel="stylesheet">
 
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
 <div class="sponsor_banner">
     <div class="container">
         <div class="row">
@@ -15,6 +18,38 @@
 </div>
 
 
+<div class="sponsor_circle">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="flex ">
+                    <div class="card">
+                        <div class="inne">
+                            <i class="fas fa-dog"></i>
+                            <p>1,300 Strays</p>
+                        </div>
+                        <h5>Help provide a dog with the home they deserve</h5>
+                    </div>
+                    <div class="card">
+                        <div class="inne">
+                            <i class="fas fa-dollar-sign"></i>
+                            <p>WEEK</p>
+                        </div>
+                        <h5>Sponsoring a dog for yourself or someone else for £1 a week helps with essentials for your sponsor dog</h5>
+                    </div>
+                    <div class="card">
+                        <div class="inne">
+                            <i class="fas fa-mail-bulk"></i>
+                            <p>3X YEARS</p>
+                        </div>
+                        <h5>Receive updates through the year, so you know exactly how much your money helps</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</div>
 <div class="sponser_new">
     <div class="container">
         <div class="row justify-content-center">
@@ -22,8 +57,9 @@
                 <h2>Sponsor a dog today</h2>
                 <p>With around 1300 stray and abandoned dogs in our care at any one time, we really need your help. Most dogs find loving new homes within about six weeks but some pooches need a little extra care from us.</p>
                 <p>We receive no government funding and are totally dependent on the generosity of people like you. By sponsoring a dog for 1000 Rs. per week you won’t just be helping your sponsor dog but all their friends too!</p>
-
-                <h2 class="how_word">How Sponsorship Works</h2>
+                <hr class="soons_horii">
+                <p>If you’re looking for the perfect gift, our friends at Dogsy have a whole range of items you can personalise with pictures of your favourite pooch! They’ve also created a range featuring each of our Sponsor Dogs! Dogsy will donate 15% of the net sale price from all items sold from their exclusive ‘Dogsy for Dogs Trust’ online shop, check out the link below:</p>
+                <!--h2 class="how_word">How Sponsorship Works</h2>
                 <p class="below_how">It couldn't be easier to sponsor a dog in our care, or to gift a sponsorship to a friend or loved one.</p>
                 <h3>Step 1 - Pick a dog to sponsor</h3>
                 <p>We’ve got sponsor dogs of all shapes, sizes, breeds and ages! You might choose a dog who reminds you of a beloved pet, a dog with a story that tugs at your heartstrings, or a dog you’ll be able to visit.</p>
@@ -34,11 +70,80 @@
                 <div class="sons_butt">
                     <button>Sponsor a dog today</button>
                     <hr>
-                </div>
+                </div-->
             </div>
         </div>
-        <div class="container">
+        
             <h2 class="spons_choose_dog">Choose A dog to sponsor</h2>
+            <div class="spons_filter">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="flex">
+                            <div class="left">
+                                <input type="text" list="citylist" name="city" id="browser" placeholder="Enter City Name">
+                                <datalist id="citylist">
+                                    <option value="Mumbai">
+                                    <option value="Delhi">
+                                    <option value="Bangalore">
+                                    <option value="Hyderabad">
+                                    <option value="Ahmedabad">
+
+                                    <option value="Chennai">
+                                    <option value="Kolkata">
+                                    <option value="Surat">
+                                    <option value="Pune">
+                                    <option value="Jaipur">
+
+                                    <option value="Lucknow">
+                                    <option value="Kanpur">
+                                    <option value="Nagpur">
+                                    <option value="Indore">
+                                    <option value="Thane">
+
+                                    <option value="Bhopal">
+                                    <option value="Visakhapatnam">
+                                    <option value="Pimpri and Chinchwad">
+                                    <option value="Patna">
+                                    <option value="Vadodara">
+
+                                    <option value="Ghaziabad">
+                                    <option value="Ludhiana">
+                                    <option value="Agra">
+                                    <option value="Nashik">
+                                    <option value="Faridabad">
+
+                                    <option value="Meerut">
+                                    <option value="Rajkot">
+                                    <option value="Kalyan and Dombivali">
+                                    <option value="Vasai Virar">
+                                    <option value="Varanasi">
+
+                                    <option value="Srinagar">
+                                    <option value="Aurangabad">
+                                    <option value="Dhanbad">
+                                    <option value="Amritsar">
+                                    <option value="Navi Mumbai">
+
+                                    <option value="Allahabad">
+                                    <option value="Haora">
+                                    <option value="Ranchi">
+                                    <option value="Gwalior">
+                                    <option value="Jabalpur">
+
+                                    <option value="Coimbatore">
+                                    <option value="Vijayawada">
+                                    <option value="Madurai">
+                                    <option value="Raipur">
+                                    <option value="Kota">
+                                </datalist>
+                            </div>
+                            <div class="right">
+                                <button>Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <?php
             if ($this->session->flashdata('success')) {
                 echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
@@ -77,7 +182,7 @@
             <div class="load_more_but">
                 <button>Load more dogs</button>
             </div>
-        </div>
+        
     </div>
 </div>
 

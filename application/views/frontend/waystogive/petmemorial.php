@@ -1,6 +1,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <div class="sponsor_banner pet_memo">
     <div class="container">
         <div class="row">
@@ -14,6 +14,38 @@
     </div>
 </div>
 
+<div class="sponsor_circle">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="flex ">
+                    <div class="card">
+                        <div class="inne">
+                            <i class="fas fa-dog"></i>
+                            <p>1,300 Strays</p>
+                        </div>
+                        <h5>Help provide a dog with the home they deserve</h5>
+                    </div>
+                    <div class="card">
+                        <div class="inne">
+                            <i class="fas fa-dollar-sign"></i>
+                            <p>WEEK</p>
+                        </div>
+                        <h5>Sponsoring a dog for yourself or someone else for £1 a week helps with essentials for your sponsor dog</h5>
+                    </div>
+                    <div class="card">
+                        <div class="inne">
+                            <i class="fas fa-mail-bulk"></i>
+                            <p>3X YEARS</p>
+                        </div>
+                        <h5>Receive updates through the year, so you know exactly how much your money helps</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</div>
 
 <div class="sponser_new">
     <div class="container">
@@ -25,22 +57,27 @@
 
                 <h2>Memorial Giving</h2>
                 <p>When you make a memorial gift, your support not only pays tribute to a beloved pet or person, it supports the work of Best Friends and helps homeless pets get the love and care they need to thrive as they wait for loving families of their own.</p>
-                <h2 class="how_word">How It's Works</h2>
-                <p class="below_how">It couldn't be easier to sponsor a dog in our care, or to gift a sponsorship to a friend or loved one.</p>
-                <h3>Step 1 - Pick a dog to sponsor</h3>
-                <p>We’ve got sponsor dogs of all shapes, sizes, breeds and ages! You might choose a dog who reminds you of a beloved pet, a dog with a story that tugs at your heartstrings, or a dog you’ll be able to visit.</p>
-                <h3>Step 2 - Set up your sponsorship</h3>
-                <p>Tell us where to send your doggy updates, whether you’re sponsoring for yourself or as a gift You can also choose how much you’d like to pay, and whether you'd rather pay monthly via direct debit or make a one-off annual payment.</p>
-                <h3>Step 3 - Enjoy regular updates from your Sponsor Dog</h3>
-                <p>Whichever dog you decide to sponsor, you'll receive updates from them three times a year. We’ll also send you a sponsorship pack, including a special photo certificate of your new pooch pal, a wallet-sized sponsor's card, a window sticker and fridge magnet.</p>
-                <div class="sons_butt">
-                    <button>Pet Memorials</button>
-                    <hr>
-                </div>
+                <hr class="soons_horii">
+                <p>If you’re looking for the perfect gift, our friends at Dogsy have a whole range of items you can personalise with pictures of your favourite pooch! They’ve also created a range featuring each of our Sponsor Dogs! Dogsy will donate 15% of the net sale price from all items sold from their exclusive ‘Dogsy for Dogs Trust’ online shop, check out the link below:</p>
             </div>
         </div>
-        <div class="container">
+        
             <h2 class="spons_choose_dog">Pet Memorials</h2>
+            <div class="spons_filter">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="flex">
+                            <div class="left">
+                                <input type="text"  name="city" id="browser" placeholder="Enter Pet Name">
+
+                            </div>
+                            <div class="right">
+                                <button>Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <?php
             if ($this->session->flashdata('success')) {
                 echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
@@ -63,7 +100,7 @@
             <div class="load_more_but">
                 <button id="loadmore">Load more Memorials</button>
             </div>
-        </div>
+      
     </div>
 </div>
 <hr>

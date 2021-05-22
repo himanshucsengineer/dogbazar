@@ -16,7 +16,7 @@
                 </div>
                 <ul class="footer_pages">
                     <li><a href="<?php echo base_url() ?>donate">Donate</a></li>
-                    <li><a href="<?php echo base_url() ?>volunteer">volunteer</a></li>
+                    <li><a href="<?php echo base_url() ?>volunteer">Volunteer</a></li>
                     <li><a href="<?php echo base_url() ?>franchies">Franchise</a></li>
                     <li><a href="<?php echo base_url() ?>adopt">Adopt</a></li>
                     <li><a href="<?php echo base_url() ?>surrender">Surrender A Dog</a></li>
@@ -39,7 +39,7 @@
                     <li><a href="<?php echo base_url() ?>about-idb">About IDB</a></li>
                     <li><a href="<?php echo base_url() ?>about-mad">About MAD</a></li>
                     <li><a href="<?php echo base_url() ?>about-paws">About PAWS</a></li>
-                    <li><a href="<?php echo base_url() ?>privacy-policy">Privacu-Policy</a></li>
+                    <li><a href="<?php echo base_url() ?>privacy-policy">Privacy-Policy</a></li>
                     <li><a href="<?php echo base_url() ?>terms">Terms & Conditions</a></li>
                 </ul>
             </div>

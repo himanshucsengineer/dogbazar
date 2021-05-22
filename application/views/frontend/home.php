@@ -59,7 +59,7 @@
                         </div>
                         <div class="col-md-4 showbox text-center">
                             <div class="showbox_content">
-                                <h1>VOLENTEER</h1>
+                                <h1>VOLUNTEER</h1>
                                 <div class="pb-5">
                                     <p>Mercy Ships brings hope and healing to developing nations by operating
                                         hospital
@@ -175,7 +175,7 @@
                     <img src="<?php echo base_url() ?>assest/images/img3.jpg" alt="" class="about_sec_img">
                 </div>
                 <div class="col-md-7  about_section_left ">
-                    <h2>Become Our Franchies Patner</h2>
+                    <h2>Franchise Partner and Become A Franchise</h2>
                     <div class="pb-5">
 
                         <p>Donate here for more pets to save Are you MAD and crazy enough to be known as an owner of

@@ -121,7 +121,7 @@ $number =  $_SESSION["number"];
                         </div>
                         <div class="row justify-content-center">
                             <div class="col-md-5">
-                                <button>Register Dog</button>
+                                <button>Rescue A Dog</button>
                             </div>
                         </div>
 

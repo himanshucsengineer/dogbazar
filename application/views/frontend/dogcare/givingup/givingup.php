@@ -1,22 +1,28 @@
+<div class="news_main givingup_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Giving Up Your Dog</h3>
+            </div>
+            <div class="col-md-6">
+                <p><a href="<?php echo base_url() ?>"><span class="acc">Home</a></span> / <a href="<?php echo base_url() ?>givingup">Dog Care / Giving uo Your Dog</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <div class="nutrition_new_main">
-    <div class="navi">
-        <div class="container">
-            <h4><a href="<?php echo base_url() ?>">Home</a> > <a href="<?php echo base_url() ?>givingup">Dog Care > Giving uo Your Dog</a></h4>
-        </div>
-    </div>
-    <div class="nutri_head">
-        <div class="container">
-            <h1>***Giving Up Your Dog***</h1>
-        </div>
-    </div>
+    
     <div class="nutri_body">
         <div class="container">
-            <div class="row justify-content-center">
+            <!--div class="row justify-content-center">
                 <div class="col-md-5">
                     <h1> Giving up Your Dog news</h1>
                     <hr class="hooooriii">
                 </div>
-            </div>
+            </div-->
 
             <div class="flex" id="load_data">
 
@@ -30,12 +36,19 @@
                 <button id="loadmore">Load More</button>
             </div>
 
-            <div class="row justify-content-center">
-                <div class="col-md-4">
-                    <h1> Giving Up Your Dog Videos</h1>
-                    <hr class="hooooriii">
-                </div>
-            </div>
+           
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="nutrition_new_main nu_main_video">
+    
+    <div class="nutri_body">
+        <div class="container">
+           
             <div class="flex" id="load_video">
 
             </div>
@@ -71,7 +84,7 @@
 
 <script>
     $(document).ready(function() {
-        $(document).on('click', '.vdeoscr', function() {
+        $(document).on('click', '.newviesrc', function() {
             var idd = $(this).attr('data-video');
             var head = $(this).attr('data-id');
 

@@ -48,8 +48,8 @@
                                 </div>
                                 <div class="right">
                                     <p class="subbb">Give us a</p>
-                                    <h2 class="h2_head base_heading_h2">Give Us a Call</h2>
-                                    <p class="subbb">+91 9829051852</p>
+                                    <h2 class="h2_head base_heading_h2">Call</h2>
+                                    <p class="subbb">+91 9982911111</p>
 
                                 </div>
                             </div>

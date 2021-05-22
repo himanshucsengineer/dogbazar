@@ -1,22 +1,28 @@
+<div class="news_main nutri_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Nutrition For Dogs</h3>
+            </div>
+            <div class="col-md-6">
+                <p><a href="<?php echo base_url() ?>"><span class="acc">Home</a></span> / <a href="<?php echo base_url() ?>nutrition">Dog Care / Nutrition</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <div class="nutrition_new_main">
-    <div class="navi">
-        <div class="container">
-            <h4><a href="<?php echo base_url() ?>">Home</a> > <a href="<?php echo base_url() ?>nutrition">Dog Care > Nutrition</a></h4>
-        </div>
-    </div>
-    <div class="nutri_head">
-        <div class="container">
-            <h1>***Nutrition***</h1>
-        </div>
-    </div>
+   
     <div class="nutri_body">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-3">
-                    <h1> Nutrition news</h1>
+            <!--div class="row justify-content-center">
+                <div class="col-md-2">
+                    <h1>Nutrition</h1>
                     <hr class="hooooriii">
                 </div>
-            </div>
+            </div-->
             <div class="flex" id="load_data">
 
             </div>
@@ -29,14 +35,19 @@
                 <button id="loadmore">Load More</button>
             </div>
 
-
-
-            <div class="row justify-content-center">
-                <div class="col-md-3">
-                    <h1> Nutrition Videos</h1>
+        </div>
+    </div>
+</div>
+<div class="nutrition_new_main nu_main_video">
+   
+    <div class="nutri_body">
+        <div class="container">
+           <!--div class="row justify-content-center">
+                <div class="col-md-2">
+                    <h1>Videos</h1>
                     <hr class="hooooriii">
                 </div>
-            </div>
+            </div-->
             <div class="flex" id="load_video">
 
             </div>
@@ -52,6 +63,9 @@
         </div>
     </div>
 </div>
+
+
+
 
 
 
@@ -75,7 +89,7 @@
 
 <script>
     $(document).ready(function() {
-        $(document).on('click', '.vdeoscr', function() {
+        $(document).on('click', '.newviesrc', function() {
             var idd = $(this).attr('data-video');
             var head = $(this).attr('data-id');
 

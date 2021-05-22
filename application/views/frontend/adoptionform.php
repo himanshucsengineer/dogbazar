@@ -12,7 +12,7 @@ $uniqid = basename($url);
 <div class="form_top_new rescue_top">
     <div class="">
         <div class="container">
-            <h1>Rescue A Dog Now</h1>
+            <h1>Adopt A Dog Now</h1>
             <p>Giving A Second life is a Good Option</p>
         </div>
     </div>
