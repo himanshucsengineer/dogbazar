@@ -6,11 +6,16 @@ $route['default_controller'] = 'home';
 $route['logout'] = 'frontend/logout';
 
 $route['listmydog'] = 'frontend/user/listmydog';
+$route['donation-history'] = 'frontend/user/donationhistory';
 $route['adopt'] = 'frontend/adopt';
 $route['adopt/(:any)'] = 'frontend/adoptpet/index/$1';
 
 $route['franchies'] = 'frontend/franchies';
 $route['news'] = 'frontend/news/news';
+
+$route['watch-news/(:any)'] = 'frontend/news/viewnews/index/$1';
+
+
 $route['events'] = 'frontend/news/events';
 $route['mydogs'] = 'frontend/user/mydogs';
 $route['profile'] = 'frontend/user/profile';

@@ -8,7 +8,10 @@ class Donatemodel extends CI_Model
 
         return  $this->db->insert('donate', $data);
     }
-
+    public function fetch_user_donate_data(){
+        return  $this->db->get('donate')->result_array();
+           
+       }
     function insert_gift_data($data)
     {
 

@@ -124,6 +124,21 @@ $parts = basename($url);
             </div>
           </div>
         </li>
+
+        <li class="nav-item ">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#events" aria-expanded="true" aria-controls="collapsePages">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Events</span>
+          </a>
+          <div id="events" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="py-2 collapse-inner rounded">
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/even/events" style="font-size:1.3rem; ">Create Event</a>
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/even/eventsdata" style="font-size:1.3rem; ">All Events</a>
+             
+              <div class="collapse-divider"></div>
+            </div>
+          </div>
+        </li>
         <!--li class="nav-item <?php echo ($parts == 'petmemorial') ? "active" : "" ?>">
           <a class="nav-link " href="<?php echo base_url(); ?>admin/petmemorial"><i class="fas fa-fw fa-table"></i><span>Pet memorial Data</span></a>
         </li-->
@@ -257,7 +272,7 @@ $parts = basename($url);
         <li class="nav-item ">
           <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#news" aria-expanded="true" aria-controls="collapsePages">
             <i class="fas fa-fw fa-folder"></i>
-            <span>News and Events</span>
+            <span>News</span>
           </a>
           <div id="news" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="py-2 collapse-inner rounded">

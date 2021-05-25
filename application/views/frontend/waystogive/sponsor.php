@@ -18,7 +18,50 @@
 </div>
 
 
-<div class="sponsor_circle">
+<div class="sponsor_circle_mobile">
+    <div class="container">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="card">
+                    <div class="inner_card">
+                        <i class="fas fa-dog"></i>
+                        <p>1,300 Strays</p>
+                    </div>
+                    <h5>Help provide a dog with the home they deserve</h5>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <div class="card">
+                    <div class="inner_card">
+                        <i class="fas fa-dollar-sign">1</i>
+                        <p>WEEK</p>
+                    </div>
+                    <h5>Sponsoring a dog for yourself or someone else for £1 a week helps with essentials for your sponsor dog</h5>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <div class="card">
+                    <div class="inner_card">
+                        <i class="fas fa-mail-bulk"></i>
+                        <p>3X YEARS</p>
+                    </div>
+                    <h5>Receive updates through the year, so you know exactly how much your money helps</h5>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="sponsor_circle desktop_view_sponsor">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10">
@@ -154,33 +197,17 @@
 
             ?>
             <div class="sponsor_dog_card">
-                <div class="flex">
-                    <?php foreach ($blogs as $value) { ?>
-                        <div class="card">
-                            <a href="<?php echo base_url() . "sponsorpet/" . $value['link'] ?>">
-                                <h3><?php echo $value['name'] ?></h3>
-                                <div class="inner_card">
-
-                                    <img src="<?php echo $value['image'] ?>" alt="">
-                                    <h5>Gender: <span class="spins"><?php echo $value['gender'] ?></span></h5>
-                                    <h5>Age: <span class="spins"><?php echo $value['age'] ?></span></h5>
-                                    <div class="sponsor_buttt">
-                                        <button>Sponsor Me</button>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    <?php } ?>
-
-
-
-
-
-
+                <div class="flex" id="load_data">
+                    
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-3">
+                        <div class="text-center" id="load_data_message"></div>
+                    </div>
                 </div>
             </div>
             <div class="load_more_but">
-                <button>Load more dogs</button>
+                <button id="loadmore">Load more dogs</button>
             </div>
         
     </div>
@@ -325,4 +352,89 @@ $('#headingThree').click(function() {
     });
 }
 });
+</script>
+
+
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+
+<script>
+    $(document).ready(function() {
+
+        var limit = 8;
+        var start = 0;
+        var action = 'inactive';
+
+        function lazzy_loader(limit) {
+
+            for (var count = 0; count < limit; count++) {
+
+                output = '<div class="row justify-content-center"><div class="col-md-3"><div class="loader"></div></div></div>';
+            }
+            $('#load_data_message').html(output);
+        }
+
+        lazzy_loader(limit);
+
+        function load_data(limit, start) {
+            $.ajax({
+                url: "<?php echo base_url(); ?>frontend/waystogive/sponsor/fetch",
+                method: "POST",
+                data: {
+                    limit: limit,
+                    start: start
+                },
+                cache: false,
+                success: function(data) {
+                    if (data == '') {
+                        $('#load_data_message').html('<h3>No More Result Found</h3>');
+                        action = 'active';
+                    } else {
+                        $('#load_data').append(data);
+                        $('#load_data_message').html("");
+                        action = 'inactive';
+                    }
+                }
+            })
+        }
+
+        if (action == 'inactive') {
+            action = 'active';
+            load_data(limit, start);
+        }
+
+        $('#loadmore').click(function() {
+            if ($(window).scrollTop() + $(window).height() > $("#load_data").height() && action == 'inactive') {
+                lazzy_loader(limit);
+                action = 'active';
+                start = start + limit;
+                setTimeout(function() {
+                    load_data(limit, start);
+                }, 500);
+            }
+        });
+
+    });
 </script>

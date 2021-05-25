@@ -102,13 +102,6 @@
                             <?php } ?>
                         </select>
                         <p>Select Post Category</p>
-
-                        <label>Select Sub Category</label>
-                        <select name="subcategory" id='sel_depart'>
-                            <option>Select sub Category</option>
-                        </select>
-                        
-                        <p>Select Post Category</p>
                         <label>Publish Your Post</label>
                         <button name="formSubmit">Publish</button>
                     </div>
@@ -168,43 +161,3 @@
         CKEDITOR.replace('textareaContent');
     });
 </script>
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-  <script type='text/javascript'>
-  // baseURL variable
-  var baseURL= "<?php echo base_url();?>";
- 
-  $(document).ready(function(){
- 
-    // City change
-    $('#sel_city').change(function(){
-      var city = $(this).val();
-
-      // AJAX request
-      $.ajax({
-        url:'<?=base_url()?>admin/news/category/getCityDepartment',
-        method: 'post',
-        data: {cate_name: city},
-        dataType: 'json',
-        success: function(response){
-
-          // Remove options 
-          
-          $('#sel_depart').find('option').not(':first').remove();
-
-          // Add options
-          $.each(response,function(index,data){
-             $('#sel_depart').append('<option value="'+data['subcate_name']+'">'+data['subcate_name']+'</option>');
-          });
-        }
-     });
-   });
- 
-
-
- 
- });
- </script>

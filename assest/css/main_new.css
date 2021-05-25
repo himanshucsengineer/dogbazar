@@ -117,6 +117,15 @@ body {
   background-repeat: no-repeat;
   box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.44);
 }
+
+.events_bg {
+  background-image: url("../images/events_bg.png") !important;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.44);
+}
 .form_top_new {
   background-image: url("../images/list_form.jpg");
   background-size: cover;
@@ -978,8 +987,9 @@ select,
 textarea {
   width: 100%;
   height: auto;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
+  padding-right: 1.5rem;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
   padding-left: 1.5rem;
   margin-bottom: 2rem;
   border: 1px solid #cdcdcd;
@@ -1046,8 +1056,8 @@ input[type="email"],
 input[type="number"] {
   width: 100%;
   height: auto;
-  padding-top: 0.8rem !important;
-  padding-bottom: 0.8rem !important;
+  padding-top: 1.3rem !important;
+  padding-bottom: 1.3rem !important;
   padding-left: 1.5rem !important;
   border: 1px solid #cdcdcd;
   outline: none;
@@ -1070,8 +1080,8 @@ input[type="number"] {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   height: auto;
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
   border: 1px solid #f39933;
   outline: none;
   background-color: #f39933;
@@ -1093,8 +1103,8 @@ input[type="number"] {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   height: auto;
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
   border: 1px solid #f39933;
   outline: none;
   background-color: #f39933;
@@ -1120,8 +1130,8 @@ input[type="number"] {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   height: auto;
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
   border: 1px solid #f39933;
   outline: none;
   background-color: #f39933;
@@ -1142,8 +1152,8 @@ input[type="number"] {
 .donation_form_new .make_payment {
   width: 100%;
   height: auto;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
   background-color: #f39933;
   border: 1px solid #f39933;
   outline: none;
@@ -1303,8 +1313,8 @@ input[type="number"] {
 .contact_us_input {
   width: 100%;
   height: auto;
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
+  padding-top: 1.3rem !important;
+  padding-bottom: 1.3rem !important;
   padding-left: 15px !important;
   border: 1px solid rgb(190, 190, 190) !important;
   margin-bottom: 20px !important;
@@ -1850,8 +1860,8 @@ input[type="email"],
 input[type="password"] {
   width: 100%;
   height: auto;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
   padding-left: 1.5rem;
   border: 1px solid #cdcdcd;
   outline: none;
@@ -1861,8 +1871,8 @@ input[type="password"] {
 .login .modal-body input[type="submit"] {
   width: 100%;
   height: auto;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
   color: white;
   border: none;
   outline: none;
@@ -1947,8 +1957,8 @@ input[type="password"] {
 .touch .flex .right button {
   width: 100%;
   height: auto;
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
   color: white;
   background: #fc8817;
   border: 1px solid #fc8817;
@@ -2076,11 +2086,19 @@ input[type="password"] {
   width: 100%;
   height: auto;
   background-color: #f9f9f9;
-  color: #a6341b;
+  
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-left: 2rem;
   border-bottom: 1px solid #cdcdcd;
+  
+}
+.user_panel .box2 .head h3{
+  text-align: center;
+  color: #a6341b;
+  text-transform: uppercase;
+  
+  
 }
 .user_panel .box2 .box2_body {
   width: 100%;
@@ -2097,8 +2115,8 @@ input[type="number"],
 textarea {
   width: 100%;
   height: auto;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
   padding-left: 1.5rem;
   border: 1px solid #cdcdcd;
   outline: none;
@@ -3164,8 +3182,8 @@ textarea {
 .adopt_dog .flex .left input[type="text"] {
   width: 100%;
   height: auto;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
   padding-left: 1.5rem;
   outline: none;
   border: 1px solid #cdcdcd;
@@ -3179,8 +3197,8 @@ textarea {
 .adopt_dog .flex .right button {
   width: 100%;
   height: auto;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
   color: white;
   background-color: #f39933;
   border: 1px solid #f39933;
@@ -3667,3 +3685,429 @@ textarea {
   background-image: url("../images/sad-faq.svg");
   background-size: 47px auto;
 }
+
+
+.desktop_view_sponsor{
+  display:block;
+}
+.sponsor_circle_mobile{
+  width:100%;
+  height:auto;
+  background-color:transparent;
+  display:none !important;
+}
+.sponsor_circle_mobile .mySlides {display: none}
+
+
+/* Slideshow container */
+.sponsor_circle_mobile .slideshow-container {
+max-width: 1000px;
+position: relative;
+margin: auto;
+}
+
+.sponsor_circle_mobile .dot {
+cursor: pointer;
+height: 10px;
+width: 10px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+.sponsor_circle_mobile .active, .dot:hover {
+background-color: #fcc201;
+}
+
+/* Fading animation */
+.sponsor_circle_mobile .fade {
+-webkit-animation-name: fade;
+-webkit-animation-duration: 1.5s;
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+.sponsor_circle_mobile .card{
+width:100%;
+height:auto;
+border:none;
+background-color:transparent;
+padding:0rem 2rem;
+align-items:center;
+}
+.sponsor_circle_mobile .card .inner_card{
+width:50%;
+height:auto;
+background-color:white;
+padding:2rem 0rem;
+text-align:center;
+border-radius:50%;
+margin-top:-5rem;
+}
+
+.sponsor_circle_mobile .card .inner_card .fas{
+color:#fcc201;
+font-size:30px;
+}
+.sponsor_circle_mobile .card .inner_card p{
+color:#2d2d2d;
+font-size:20px;
+font-family:Bebas Neue,sans-serif !important;
+text-transform:uppercase;
+}
+.sponsor_circle_mobile .card .inner_card h5{
+color:#2d2d2d;
+font-size:15px;
+font-family:Lato, sans-serif !important;
+line-height:22px;
+font-weight:300 !important;
+text-align:center;
+}
+@-webkit-keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+
+@keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+.prev, .next,.text {font-size: 11px}
+}
+@media only screen and (max-width: 600px) {
+  .desktop_view_sponsor{
+  display:none;
+}  
+.spons_filter .flex .left {
+  width:62%;
+
+}
+.spons_filter .flex  {
+  justify-content:center;
+
+}
+.spons_filter .flex .right {
+  width:30%;
+
+}
+.spons_filter{
+  margin:0 0px 15px;
+}
+.sponsor_circle_mobile{
+  display:block !important;
+}
+}
+.create_pet_memo{
+  width: 100%;
+  height: auto;
+  background-color: #fcc201;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  text-align: center;
+}
+.create_pet_memo h1{
+  text-align: center;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600 !important;
+}
+.create_pet_memo button{
+  width: 23rem;
+  height: auto;
+  padding: 1rem 0rem;
+  border: none;
+  background-color: #fc8817;
+  margin-top: 2rem;
+  color: white;
+  outline: none;
+  font-size: 20px;
+  font-weight: 400 !important;
+  border-radius: 35px;
+}
+
+
+@media screen and (max-width: 1300px) and (min-width: 601px){
+  .login .modal-body input[type="text"], input[type="email"], input[type="password"]{
+    padding-top: .8rem ;
+    padding-bottom: .8rem ;
+  }
+  .login .modal-body input[type="submit"]{
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+  }
+  .user_panel .box2 .box2_body input[type="text"], input[type="email"], input[type="number"], textarea{
+    padding-top: .8rem !important;
+    padding-bottom: .8rem !important;
+  }
+  .donation_button_new{
+    padding-top: .4rem !important;
+    padding-bottom: .4rem !important;
+  }
+  .donation_button_new2{
+    padding-top: .4rem !important;
+    padding-bottom: .4rem !important;
+  }
+  .donation_button_new3{
+    padding-top: .4rem !important;
+    padding-bottom: .4rem !important;
+  }
+  .donation_form_new .make_payment{
+    padding-top: .8rem !important;
+    padding-bottom: .8rem !important;
+  }
+  .donation_form_new input[type="text"], input[type="email"], input[type="number"]{
+    padding-top: .8rem !important;
+    padding-bottom: .8rem !important;
+  }
+  .list_dog_form .list_dod_form_inner input[type="text"], input[type="email"], input[type="file"], input[type="number"], select, textarea{
+    padding-top: .8rem !important;
+    padding-bottom: .8rem !important;
+  }
+  .touch .flex .right button{
+    padding-top: .7rem !important;
+    padding-bottom: .7rem !important;
+  }
+  .contact_us_input{
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+  .current_location{
+    padding-top: .5rem !important;
+    padding-bottom: .5rem !important;
+  }
+  
+}
+
+.user_table_new table{
+  background-color: white;
+  color: #212529;
+}
+.user_table_new table th,td{
+  padding: 1rem;
+  text-align: center;
+}
+
+.events_main{
+  width: 100%;
+  height: auto;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.events_main .top_heading_events{
+  position: relative !important;
+  padding-left: 42px !important;
+  color: #fcc201 !important;
+  letter-spacing: 1.5px !important;
+  margin-bottom: 20px !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+}
+.events_main .flex{
+  width: 100%;
+  height: auto;
+  display: flex;
+  box-shadow: 0px 5px 40px 0 rgb(104 108 133 / 30%);
+  border-radius: 10px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+.events_main .flex .left{
+  width: 10%;
+  height: auto;
+  padding: 20px 10px 20px 20px;
+ 
+}
+.events_main .flex .mid{
+  width: 68%;
+  height: auto;
+  padding:20px 20px 20px 10px;
+  
+}
+.events_main .flex .right{
+  width: 22%;
+  height: auto;
+  padding: 4rem 1rem 4rem 3rem!important;
+}
+.events_main .flex .right .fas{
+  color: #fcc201 !important;
+  float: right;
+  margin-right: 2rem;
+  font-size: 13px !important;
+  margin-top: .5rem;
+}
+.events_main .flex .left .calendor{
+  width: 100%;
+  height: auto;
+  position: relative;
+  
+}
+.events_main .flex .left .calendor:after{
+  content: "";
+  position: absolute;
+  border: 1px solid #ccc;
+  border-top: none;
+  left: 2px;
+  bottom: -4px;
+  height: 6px;
+  border-radius: 0 0 8px 8px;
+  background-color: #f4f4f4;
+  z-index: -1;
+  
+}
+.events_main .flex .left .calendor .month{
+  width: 100%;
+  height: auto;
+  background-color: #e5003b;
+  border-radius: 8px 8px 0 0;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  font-weight: 700 !important;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding-top: 4px;
+ padding-bottom: 4px; 
+}
+
+.events_main .flex .left .calendor .date{
+  width: 100%;
+  height: auto;
+  border: 1px solid #d8d8d8;
+  font-size: 35px !important;
+  font-weight: 700 !important;
+  border-top: none ;
+  border-radius: 0 0 8px 8px;
+  background-color: #fff;
+  line-height: 1.3;
+  padding: 5px 0;
+  text-align: center;
+}
+.events_main .flex .mid h1{
+  color: #2e2d2d;
+  margin-bottom: 0;
+  line-height: 1.3;
+  font-weight: 600 !important;
+  font-size: 22px !important;
+  letter-spacing: 0.2px;
+}
+
+.events_main .flex .mid .mid_date{
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-top: 5px;
+}
+.events_main .flex .mid .mid_date .date_full{
+  width: 23%;
+  height: auto;
+  
+ 
+}
+.events_main .flex .mid .mid_date .date_full p {
+  color: #585a63;
+  font-weight: 700 !important;
+  font-size: 15px ;
+  line-height: 20px;
+  word-spacing: 2px;
+}
+.events_main .flex .mid .mid_date .date_full p .far,.fas{
+  color: #fc8817;
+  font-size: 17px !important;
+}
+.events_main .flex .mid .mid_date .date_full .date_mohnt{
+  color: #585a63;
+  font-weight: 500 !important;
+  font-size: 15px ;
+  line-height: 20px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+.events_main .flex .mid .mid_date .location_full{
+  width: 50%;
+  height: auto;
+  
+}
+
+.events_main .flex .mid .mid_date .location_full p {
+  color: #585a63;
+  font-weight: 700 !important;
+  font-size: 15px ;
+  line-height: 20px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+.events_main .flex .mid .mid_date .location_full p .far,.fas{
+  color: #fc8817;
+  font-size: 17px !important;
+}
+.events_main .flex .mid h5{
+  color: #585a63;
+  font-weight: 700 !important;
+  font-size: 13px ;
+  line-height: 20px;
+ 
+  text-transform: capitalize;
+}
+.events_main .flex .mid .orgenid{
+  font-weight: 500 !important;
+}
+
+.events_main .flex .right{
+  width: 20%;
+  height: auto;
+  padding: 15px;
+  border-left: 1px solid #d8d8d8;
+  text-align: center;
+  
+}
+.events_main .flex .right button{
+  width: 100%;
+  height: auto;
+  border: 2px solid #fcc201;
+  background-color: transparent;
+  outline: none;
+  font-size: 14px;
+  font-weight: 700 !important;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #fcc201;
+  text-transform: uppercase;
+  border-radius: 6px;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .events_main .flex{
+    padding: 0rem !important;
+  
+  }
+  .events_main .flex .left{
+    width:100%;
+    padding: 20px 10px 0px 20px !important;
+  }
+  .events_main .flex .right{
+    width: 100%;
+    padding: 0rem 2rem 2rem 2rem!important;
+  }
+  .events_main .flex .mid{
+    width: 100%;
+    padding: 20px 20px 20px 20px;
+  }
+  .events_main .flex .left .calendor{
+    width: 35%;
+  }
+  .events_main .flex .mid h1{
+    font-size: 20px !important;
+  }
+  .events_main .flex .mid .mid_date .date_full{
+    width: 50% !important;
+  }
+}  

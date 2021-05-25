@@ -18,7 +18,7 @@ class Givingup extends CI_controller
         $this->load->view('frontend/dogcare/givingup/givingup', $data);
         $this->load->view('frontend/template/footer');
     }
-
+ 
     function fetch()
     {
      $output = '';

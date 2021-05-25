@@ -63,13 +63,7 @@
 
         <form action="<?php echo base_url(); ?>admin/news/category/insert" method="post" id="referform">
             <label for="">Sub Category</label>
-            <input type="text" name="name" placeholder="Enter Category Name" required>
-            <label for="">Select Category</label>
-            <select name="cate" id="" required>
-
-                <option value="news">News</option>
-                <option value="events">Events</option>
-            </select>
+            <input type="text" name="cate" placeholder="Enter Category Name" required>
             <label for="">Category Description</label>
             <textarea name="desc" rows="5" placeholder="Enter Category Description" required></textarea>
             <button name="formSubmit">Create</button>
@@ -82,7 +76,7 @@
                 <thead>
                     <tr>
                         <th>Category Name</th>
-                        <th>Sub Category Name</th>
+                        <
                         <th>Description</th>
                         <th>Action</th>
 

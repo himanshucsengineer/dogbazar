@@ -54,7 +54,7 @@ class Newpost extends CI_controller
 
         $datas = array(
             'head' => $this->input->post('heading'),
-             'subcategory' => $this->input->post('subcategory'),
+        
             // 'm_desc' => $this->input->post('mdesc'),
             // 'm_key' => $this->input->post('mkey'),
             'content' => $this->input->post('content'),

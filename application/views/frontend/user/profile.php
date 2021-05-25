@@ -10,7 +10,7 @@ $add = $_SESSION["add"];
             <div class="col-md-3">
                 <div class="box">
                     <a href="<?php echo base_url() ?>profile"><button class="active">Profile & Setting</button></a>
-                    <button>Donation History</button>
+                    <a href="<?php echo base_url()?>donation-history"><button>Donation History</button></a>
                     <button>Listed Dogs</button>
                 </div>
             </div>

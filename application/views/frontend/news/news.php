@@ -14,84 +14,74 @@
 
 <div class="news_main_section">
     <div class="container">
-        <div class="flex">
-            <div class="left">
-                <h2>8</h2>
+        <div class="daat" id="load_data">
 
-                <p>APR 2021</p>
-            </div>
-            <div class="right">
-                <h1><a href="">Tigress Found Dead in Bandhavgarh National Park in Madhya Pradesh</a></h1>
-                <p class="category">Category</p>
-                <p class="content">﻿Anew study by the Federation of Indian Animal Protection Organisations (FIAPO) and All Creatures Great and Small (ACGS) have revealed...</p>
-                <a href="" class="buy_line">Read more</a>
-            </div>
         </div>
-        <div class="flex">
-            <div class="left">
-                <h2>8</h2>
-
-                <p>APR 2021</p>
+        <div class="row justify-content-center">
+                <div class="col-md-3">
+                    <div class="text-center" id="load_data_message"></div>
+                </div>
             </div>
-            <div class="right">
-                <h1><a href="">Tigress Found Dead in Bandhavgarh National Park in Madhya Pradesh</a></h1>
-                <p class="category">Category</p>
-                <p class="content">﻿Anew study by the Federation of Indian Animal Protection Organisations (FIAPO) and All Creatures Great and Small (ACGS) have revealed...</p>
-                <a href="" class="buy_line">Read more</a>
-            </div>
-        </div>
-        <div class="flex">
-            <div class="left">
-                <h2>8</h2>
-
-                <p>APR 2021</p>
-            </div>
-            <div class="right">
-                <h1><a href="">Tigress Found Dead in Bandhavgarh National Park in Madhya Pradesh</a></h1>
-                <p class="category">Category</p>
-                <p class="content">﻿Anew study by the Federation of Indian Animal Protection Organisations (FIAPO) and All Creatures Great and Small (ACGS) have revealed...</p>
-                <a href="" class="buy_line">Read more</a>
-            </div>
-        </div>
-        <div class="flex">
-            <div class="left">
-                <h2>8</h2>
-
-                <p>APR 2021</p>
-            </div>
-            <div class="right">
-                <h1><a href="">Tigress Found Dead in Bandhavgarh National Park in Madhya Pradesh</a></h1>
-                <p class="category">Category</p>
-                <p class="content">﻿Anew study by the Federation of Indian Animal Protection Organisations (FIAPO) and All Creatures Great and Small (ACGS) have revealed...</p>
-                <a href="" class="buy_line">Read more</a>
-            </div>
-        </div>
-        <div class="flex">
-            <div class="left">
-                <h2>8</h2>
-
-                <p>APR 2021</p>
-            </div>
-            <div class="right">
-                <h1><a href="">Tigress Found Dead in Bandhavgarh National Park in Madhya Pradesh</a></h1>
-                <p class="category">Category</p>
-                <p class="content">﻿Anew study by the Federation of Indian Animal Protection Organisations (FIAPO) and All Creatures Great and Small (ACGS) have revealed...</p>
-                <a href="" class="buy_line">Read more</a>
-            </div>
-        </div>
-        <div class="flex">
-            <div class="left">
-                <h2>8</h2>
-
-                <p>APR 2021</p>
-            </div>
-            <div class="right">
-                <h1><a href="">Tigress Found Dead in Bandhavgarh National Park in Madhya Pradesh</a></h1>
-                <p class="category">Category</p>
-                <p class="content">﻿Anew study by the Federation of Indian Animal Protection Organisations (FIAPO) and All Creatures Great and Small (ACGS) have revealed...</p>
-                <a href="" class="buy_line">Read more</a>
-            </div>
-        </div>
 
     </div>
 </div>
+
+
+<script>
+    $(document).ready(function() {
+
+        var limit = 8;
+        var start = 0;
+        var action = 'inactive';
+
+        function lazzy_loader(limit) {
+
+            for (var count = 0; count < limit; count++) {
+
+                output = '<div class="row justify-content-center"><div class="col-md-3"><div class="loader"></div></div></div>';
+            }
+            $('#load_data_message').html(output);
+        }
+
+        lazzy_loader(limit);
+
+        function load_data(limit, start) {
+            $.ajax({
+                url: "<?php echo base_url(); ?>frontend/news/news/fetch",
+                method: "POST",
+                data: {
+                    limit: limit,
+                    start: start
+                },
+                cache: false,
+                success: function(data) {
+                    if (data == '') {
+                        $('#load_data_message').html('<h3>No More Result Found</h3>');
+                        action = 'active';
+                    } else {
+                        $('#load_data').append(data);
+                        $('#load_data_message').html("");
+                        action = 'inactive';
+                    }
+                }
+            })
+        }
+
+        if (action == 'inactive') {
+            action = 'active';
+            load_data(limit, start);
+        }
+
+        $(window).scroll(function() {
+            if ($(window).scrollTop() + $(window).height() > $("#load_data").height() && action == 'inactive') {
+                lazzy_loader(limit);
+                action = 'active';
+                start = start + limit;
+                setTimeout(function() {
+                    load_data(limit, start);
+                }, 500);
+            }
+        });
+
+    });
+</script>

@@ -14,7 +14,49 @@
     </div>
 </div>
 
-<div class="sponsor_circle">
+
+<div class="sponsor_circle_mobile">
+    <div class="container">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="card">
+                    <div class="inner_card">
+                        <i class="fas fa-dog"></i>
+                        <p>1,300 Strays</p>
+                    </div>
+                    <h5>Help provide a dog with the home they deserve</h5>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <div class="card">
+                    <div class="inner_card">
+                        <i class="fas fa-dollar-sign">1</i>
+                        <p>WEEK</p>
+                    </div>
+                    <h5>Sponsoring a dog for yourself or someone else for £1 a week helps with essentials for your sponsor dog</h5>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <div class="card">
+                    <div class="inner_card">
+                        <i class="fas fa-mail-bulk"></i>
+                        <p>3X YEARS</p>
+                    </div>
+                    <h5>Receive updates through the year, so you know exactly how much your money helps</h5>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+    </div>
+</div>
+
+
+<div class="sponsor_circle desktop_view_sponsor">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10">
@@ -103,7 +145,14 @@
       
     </div>
 </div>
-<hr>
+
+
+<div class="create_pet_memo">
+    <div class="container">
+        <h1>Create an Online Memorial for your Pet, for FREE</h1>
+        <button>List A Memorial</button>
+    </div>
+</div>
 <div class="feqs">
     <div class="container">
         
@@ -271,4 +320,26 @@ $('#headingThree').click(function() {
         });
 
     });
+</script>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
 </script>

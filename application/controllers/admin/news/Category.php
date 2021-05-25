@@ -31,7 +31,7 @@ class Category extends CI_controller
 
 
     $data = array(
-      'subcate_name' => $this->input->post('name'),
+     
       'cate_name' => $this->input->post('cate'),
       'cate_desc' => $this->input->post('desc'),
     );
@@ -65,7 +65,7 @@ class Category extends CI_controller
     foreach ($getPurchaseData as $key => $value) {
       //                $short_desc_vl=$lst_desc.'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->id.'" data-toggle="tooltip" data-original-title="Edit">Read More</a>';
 
-      $arrya_json[] = array($value['cate_name'],$value['subcate_name'], $value['cate_desc'], '
+      $arrya_json[] = array($value['cate_name'], $value['cate_desc'], '
                <a class="delete_sliders" data-id="' . $value['id'] . '"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a>');
     }
     echo json_encode(array('data' => $arrya_json));

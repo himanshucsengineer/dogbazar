@@ -24,12 +24,12 @@
             </div>
             <div class="col-md-6">
                 <div class="right">
-                    <h1>Adonis</h1>
-                    <h5>Breed:<span class="declar">Testing</span></h5>
-                    <h5>Age:<span class="declar">12 Year</span></h5>
-                    <h5>Weight:<span class="declar">45kg</span></h5>
-                    <h5>Gender:<span class="declar">Male</span></h5>
-                    <h5>Good With Dogs?:<span class="declar">yes</span></h5>
+                    <h1><?php echo @$list->name ?></h1>
+                    
+                    <h5>Age:<span class="declar"><?php echo @$list->age ?></span></h5>
+                    
+                    <h5>Gender:<span class="declar"><?php echo @$list->gender ?></span></h5>
+                    <h5>Color:<span class="declar"><?php echo @$list->color ?></span></h5>
                     <!--h3><?php echo @$list->breed ?></h3>
                     <h5>Age: <span><?php echo @$list->age ?></span></h5>
                     <h5>Colour: <span><?php echo @$list->color ?></span></h5>
@@ -51,7 +51,7 @@
                 <h3>More Information About Dog:</h3>
                 <hr>
                 <p>
-                    <!--?php echo @$list->about ?--> hiii yhi udu uyd y dgfa a sata sdthbthbr sdvsahgdshgd sdcystfdystd dgjsuydguasgdsa dsavdufsaudsa dsaduasfdsaudhs dsgdcsa dashgdcyas dhascdysa dhasdyas dascdas dasgd as dhsads dvsa td svd tsd sdfsa dshdcty dhsdshd hasgdcyas dashgcdysah dgasd yhas dhsacd yas dysad hasd sd sadc ashg dshga das dyasd sahvdetywvdgh sxhd sband ycds vba dhgsdfvytw scdwhgsdvgwhs hds ycds gchfvewydvf vf dhgvf
+                    <?php echo @$list->about ?>
                 </p>
             </div>
         </div>
