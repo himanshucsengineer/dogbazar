@@ -12,6 +12,13 @@ class Donatemodel extends CI_Model
         return  $this->db->get('donate')->result_array();
            
        }
+    
+
+
+       public function fetch_user_sponsor_data(){
+        return  $this->db->get('sponsoranimal')->result_array();
+           
+       }
     function insert_gift_data($data)
     {
 
@@ -39,6 +46,17 @@ class Donatemodel extends CI_Model
      
      $this->db->order_by("id", "DESC");
      $this->db->limit($limit, $start);
+     $query = $this->db->get();
+     return $query;
+    }
+    function fetch_data_search($name)
+    {
+   
+     $this->db->select("*");
+     $this->db->from("petmemo");
+     $this->db->where($name);
+     $this->db->order_by("id", "DESC");
+     
      $query = $this->db->get();
      return $query;
     }

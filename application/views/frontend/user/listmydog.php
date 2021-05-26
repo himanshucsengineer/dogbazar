@@ -138,6 +138,12 @@ $number =  $_SESSION["number"];
                         </div>
                         <div class="row">
                             <div class="col-md-12">
+                                <label for="">Id Proof</label>
+                                <input type="file" multiple="multiple" name="filess[]" maxlength="2" placeholder="Enter Your Name" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
                                 <label for="">About Pet</label>
                                 <textarea name="about" id="" cols="30" rows="10" placeholder="Type Somthing about pet"></textarea>
                             </div>
@@ -150,48 +156,8 @@ $number =  $_SESSION["number"];
 
                     </form>
 
-                    <!--form action="<?php echo base_url() ?>frontend/user/listmydog/insert" method="post" enctype="multipart/form-data">
-                        <?php
-                        if ($this->session->flashdata('success')) {
-                            echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
-                        } else if ($this->session->flashdata('error')) {
-                            echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
-                        }
-
-
-                        ?>
-                        <label for="">Your Name*</label>
-                        <input type="text" name="name" placeholder="Enter Your Name">
-                        <label for="">Your Email*</label>
-                        <input type="email" name="email" placeholder="Enter Your Email">
-                        <label for="">Your Number*</label>
-                        <input type="number" name="number" placeholder="Enter Your Number">
-                        <label for="">Dog Name*</label>
-                        <input type="text" name="breed" placeholder="Enter Dog Name">
-                        <label for="">Dog Age*</label>
-                        <input type="text" name="age" placeholder="Enter Dog Age">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label for="">Gender* (Dog)</label>
-                                <input type="radio" name="gender" id="">Male
-                                <input type="radio" name="gender" id="">Female
-                            </div>
-                            <div class="col-md-6">
-                                <label for="">Condition*</label>
-                                <select name="condition" id="">
-                                    <option value="Good">Good</option>
-                                    <option value="Bed">Bed</option>
-                                </select>
-                            </div>
-                        </div>
-                        <label for="">Upload Dog Image</label>
-                        <input type="file" multiple="multiple" name="files[]" maxlength="5" placeholder="Upload Dog Images">
-                        <label for="">Enter Location</label>
-                        <input type="text" name="city" placeholder="Enter Location">
-                        <label for="">About Dog</label>
-                        <textarea name="msg" id="" cols="30" rows="5" placeholder="Tell Us more About Dog..."></textarea>
-                        <button name='upload'>Register Dog</button>
-                    </form-->
+                  
+                       
                 </div>
             </div>
         </div>

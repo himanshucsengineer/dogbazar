@@ -35,7 +35,7 @@ class Sponsoranimal extends CI_controller
     foreach ($getPurchaseData as $key => $value) {
       //                $short_desc_vl=$lst_desc.'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->id.'" data-toggle="tooltip" data-original-title="Edit">Read More</a>';
 
-      $arrya_json[] = array($value['id'], $value['name'], $value['email'], $value['number'], $value['amount'], $value['address'],$value['state'],$value['city'], $value['indi'], $value['motivate'], $value['uniqid'], $value['order_id'], '<a class="edit" href="' . base_url() . 'admin/brands/galleryedit/' . $value['id'] . '" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
+      $arrya_json[] = array($value['id'], $value['name'], $value['email'], $value['number'], $value['amount'], $value['address'],$value['state'],$value['city'], $value['indi'], $value['motivate'], $value['uniqid'],$value['p_name'],$value['p_age'],$value['p_color'],$value['p_gender'],'<a href="'.$value['p_image'].'" target="_blank">View Image</a>' ,$value['order_id'], '<a class="edit" href="' . base_url() . 'admin/brands/galleryedit/' . $value['id'] . '" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
                <a class="delete_sliders" data-id="' . $value['id'] . '"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a>');
     }
     echo json_encode(array('data' => $arrya_json));

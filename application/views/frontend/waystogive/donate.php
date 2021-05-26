@@ -1,3 +1,14 @@
+<?php
+if (!isset($_SESSION["email"])) {
+
+    $donate = '<button  data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();" class="make_payment">Confirm Payment</button>';
+} else {
+
+    $donate = '<button class="make_payment">Confirm Payment</button>';
+}
+?>
+
+
 <div class="donation_new_main ">
     <div class="container">
         <div class="row">
@@ -79,7 +90,7 @@
                             </div>
                         </div>
                         <input type="checkbox" name="term" id="" required> I Agree To <a href="<?php echo base_url() ?>term-condition">Term & Condition Policy</a>
-                        <button class="make_payment">Confirm Payment</button>
+                        <?php echo $donate?>
 
                     </form>
                 </div>
@@ -430,4 +441,4 @@ $('#headingThree').click(function() {
 
     });
     // baseURL variable
-</script>
+</script> 

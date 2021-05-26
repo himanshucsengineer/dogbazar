@@ -108,7 +108,7 @@ if (!isset($_SESSION["email"])) {
         </div>
         <a href="<?php echo base_url() ?>blog">Blogs</a>
         <a href="<?php echo base_url() ?>news">News</a>
-        <a href="<?php echo base_url() ?>news">Events</a>
+        <a href="<?php echo base_url() ?>events">Events</a>
     </div>
     <div id="mySidepaneladopt" class="sidepanel">
         <div class="flex">

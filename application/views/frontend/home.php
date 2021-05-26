@@ -1,7 +1,7 @@
 <main>
 
     <!-- Cousal -->
-    <div class="homecrousal boxShadow">
+    <div class="homecrousal ">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -10,13 +10,13 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="<?php echo base_url() ?>assest/images/img1.jpg" class="d-block w-100 cimgheight" alt="...">
+                    <img src="<?php echo base_url() ?>assest/images/home_slider1.jpg" class="d-block w-100 cimgheight" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="<?php echo base_url() ?>assest/images/img2.jpg" class="d-block w-100 cimgheight" alt="...">
+                    <img src="<?php echo base_url() ?>assest/images/home_slider22.jpg" class="d-block w-100 cimgheight" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="<?php echo base_url() ?>assest/images/img3.jpg" class="d-block w-100 cimgheight" alt="...">
+                    <img src="<?php echo base_url() ?>assest/images/home_slider3.jpg" class="d-block w-100 cimgheight" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

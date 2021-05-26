@@ -10,7 +10,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> 
 
 <div class="help_us_volunteer">
     <div class="container">

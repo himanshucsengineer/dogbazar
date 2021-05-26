@@ -1,13 +1,18 @@
+<style>
+    .activeimage, .adopt_pet_main_new .bottom_images .cardimage img:hover{
+        opacity: .5;
+    }
+</style>
 <div class="adopt_pet_main_new">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img src="<?php echo @$list->image ?>" alt="adopt pet">
+                <img id="getdynamicimae" src="<?php echo @$list->image ?>" alt="adopt pet">
 
-                <div class="bottom_images">
+                <div class="bottom_images" id="bottomImage">
                     <div class="cardimage">
 
-                        <img src="<?php echo @$list->image ?>" alt="adopt pet">
+                        <img  src="<?php echo @$list->image ?>" alt="adopt pet" >
                     </div>
                     <?php for ($i = 1; $i < 5; $i++) {
                         $img = "image$i";
@@ -75,6 +80,26 @@
         </div>
     </div>
 </div>
+
+
+
+<script type='text/javascript'>
+    $(document).ready(function() {
+        $('#bottomImage div img').on('click', function() {
+            var thisBtn = $(this);
+            console.log(thisBtn);
+            thisBtn.addClass('activeimage').removeClass('activeimage');
+            var btnText = thisBtn.text();
+            var btnValue = thisBtn.attr('src');
+            document.getElementById('getdynamicimae').src = btnValue;
+            console.log(btnText);
+            console.log(btnValue);
+        });
+
+    });
+    // baseURL variable
+</script>
+
 
 <script>
     $(document).ready(function() {

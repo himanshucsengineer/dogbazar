@@ -11,7 +11,7 @@ $add = $_SESSION["add"];
                 <div class="box">
                     <a href="<?php echo base_url() ?>profile"><button class="active">Profile & Setting</button></a>
                     <a href="<?php echo base_url()?>donation-history"><button>Donation History</button></a>
-                    <button>Listed Dogs</button>
+                    <a href="<?php echo base_url()?>sponsor-history"><button >Sponsor History</button></a>
                 </div>
             </div>
             <div class="col-md-9">

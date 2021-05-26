@@ -44,6 +44,10 @@ class Listmydog extends CI_controller
                 $img_data = array();
             // Count total files
             $countfiles = count($_FILES['files']['name']);
+
+            $img_datas = array();
+            // Count total files
+            $countfiless = count($_FILES['filess']['name']);
             // Looping all files
             for ($i = 0; $i < $countfiles; $i++) {
 
@@ -74,6 +78,41 @@ class Listmydog extends CI_controller
 
                         // Initialize array
                          $img_data[] = $filename;
+                       
+                    }
+                    
+                }
+            }
+
+            for ($j = 0; $j < $countfiless; $j++) {
+
+                if (!empty($_FILES['filess']['name'][$j])) {
+
+                    // Define new $_FILES array - $_FILES['file']
+                    $_FILES['file']['name'] = $_FILES['filess']['name'][$j];
+                    $_FILES['file']['type'] = $_FILES['filess']['type'][$j];
+                    $_FILES['file']['tmp_name'] = $_FILES['filess']['tmp_name'][$j];
+                    $_FILES['file']['error'] = $_FILES['filess']['error'][$j];
+                    $_FILES['file']['size'] = $_FILES['filess']['size'][$j];
+
+                    // Set preference
+                    $config['upload_path'] = APPPATH . '../upload/listdog';
+                    $config['allowed_types'] = 'jpg|jpeg|png';
+                    $config['max_size'] = '5000'; // max_size in kb
+                    $config['file_name'] = $_FILES['filess']['name'][$j];
+
+                    //Load upload library
+                    $this->load->library('upload', $config);
+
+                    // File upload
+                    if ($this->upload->do_upload('file')) {
+                        // Get data about the file
+                        $uploadDatas = $this->upload->data();
+                        $filenames = base_url() . 'upload/listdog/' .$uploadDatas['file_name'];
+                        
+
+                        // Initialize array
+                         $img_datas[] = $filenames;
                        
                     }
                     
@@ -114,6 +153,8 @@ class Listmydog extends CI_controller
                 'image2' => $img_data[2],
                 'image3' => $img_data[3],
                 'image4' => $img_data[4],
+                'front' => $img_datas[0],
+                'back' => $img_datas[1],
                 'link' => $new_url
             );
             if ($this->Listmydogmodel->insert_data($data)) {

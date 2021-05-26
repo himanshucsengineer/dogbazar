@@ -110,11 +110,11 @@
                     <div class="col-md-8">
                         <div class="flex">
                             <div class="left">
-                                <input type="text"  name="city" id="browser" placeholder="Enter Pet Name">
+                                <input type="text" id="get_name"  name="city" id="browser" placeholder="Enter Pet Name">
 
                             </div>
                             <div class="right">
-                                <button>Search</button>
+                                <button id="searchmemo">Search</button>
                             </div>
                         </div>
                     </div>
@@ -203,6 +203,44 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    $(document).ready(function() {
+
+        $('#searchmemo').click(function() {
+           var  name = document.getElementById('get_name').value;
+           console.log(name);
+
+           $.ajax({
+                url: "<?php echo base_url(); ?>frontend/waystogive/petmemorial/search",
+                method: "POST",
+                data: {
+                    name: name,
+                    
+                },
+                cache: false,
+                success: function(data) {
+                    console.log(data);
+                }
+            })
+        });
+        
+        
+
+ 
+
+       
+
+       
+        
+
+    });
+</script>
+
+
+
+
 
 <script>
 $('#headingOne').click(function() {

@@ -6,12 +6,23 @@ if ($exttt[1] == "mp4") {
 } else {
     $videotagmain = '<img src="' . @$blog->image . '" >';
 } ?>
-<div class="postview_new">
-    <div class="navi">
-        <div class="container">
-            <h4><a href="<?php echo base_url() ?>">Home</a> > <a href="<?php echo base_url() ?>getting">Dog care > Getting a Dog</a> > <?php echo @$blog->head ?></h4>
+
+
+<div class="news_main getting_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Getting A Dog</h3>
+            </div>
+            <div class="col-md-6">
+                <p><a href="<?php echo base_url() ?>"><span class="acc">Home</a></span> / <a href="<?php echo base_url() ?>getting">Dog Care / Getting a Dog</a> / <?php echo @$blog->head ?></p>
+            </div>
         </div>
     </div>
+</div>
+
+<div class="postview_new">
+    
     <div class="container">
         <div class="row">
             <div class="col-md-8">

@@ -35,6 +35,11 @@ class Sponsor extends CI_Controller
     $_SESSION['indi'] = $this->input->post('indi');
     $_SESSION['motivate'] = $this->input->post('moti');
     $_SESSION['uniqid'] = $this->input->post('uniqid');
+    $_SESSION['p_name'] = $this->input->post('p_name');
+    $_SESSION['p_age'] = $this->input->post('p_age');
+    $_SESSION['p_color'] = $this->input->post('p_color');
+    $_SESSION['p_gender'] = $this->input->post('p_gender');
+    $_SESSION['p_image'] = $this->input->post('p_image');
     $_SESSION['payable_amount'] = $this->input->post('amount');
     $razorpayOrder = $api->order->create(array(
       'receipt'         => rand(),
@@ -81,6 +86,11 @@ class Sponsor extends CI_Controller
         'indi' => $_SESSION['indi'],
         'motivate' => $_SESSION['motivate'],
         'uniqid' => $_SESSION['uniqid'],
+        'p_name' => $_SESSION['p_name'],
+        'p_age' => $_SESSION['p_age'],
+        'p_color' => $_SESSION['p_color'],
+        'p_gender' => $_SESSION['p_gender'],
+        'p_image' => $_SESSION['p_image'],
         'amount' => $_SESSION['payable_amount'],
       );
       if ($this->Donatemodel->insert_spondor_data($data)) {

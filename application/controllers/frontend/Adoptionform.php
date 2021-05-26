@@ -39,6 +39,46 @@ class Adoptionform extends CI_controller
         $this->form_validation->set_rules('uniq_id', 'Address', 'required');
         if ($this->form_validation->run()) {
 
+
+            $img_data = array();
+            // Count total files
+            $countfiles = count($_FILES['files']['name']);
+            // Looping all files
+            for ($i = 0; $i < $countfiles; $i++) {
+
+                if (!empty($_FILES['files']['name'][$i])) {
+
+                // Define new $_FILES array - $_FILES['file']
+                $_FILES['file']['name'] = $_FILES['files']['name'][$i];
+                $_FILES['file']['type'] = $_FILES['files']['type'][$i];
+                $_FILES['file']['tmp_name'] = $_FILES['files']['tmp_name'][$i];
+                $_FILES['file']['error'] = $_FILES['files']['error'][$i];
+                $_FILES['file']['size'] = $_FILES['files']['size'][$i];
+
+                // Set preference
+                $config['upload_path'] = APPPATH . '../upload/adoptionform';
+                $config['allowed_types'] = 'jpg|jpeg|png';
+                $config['max_size'] = '5000'; // max_size in kb
+                $config['file_name'] = $_FILES['files']['name'][$i];
+
+                //Load upload library
+                $this->load->library('upload', $config);
+
+                // File upload
+                if ($this->upload->do_upload('file')) {
+                    // Get data about the file
+                    $uploadData = $this->upload->data();
+                    $filename = base_url() . 'upload/adoptionform/' .$uploadData['file_name'];
+                    
+
+                    // Initialize array
+                     $img_data[] = $filename;
+                   
+                }
+                
+            }
+        }
+
             $data = array(
                 'name' => $this->input->post('name'),
                 'email' => $this->input->post('email'),
@@ -54,6 +94,11 @@ class Adoptionform extends CI_controller
                 'res_name' => $this->input->post('res_name'),
                 'res_mob' => $this->input->post('res_mob'),
                 'uniq_id' => $this->input->post('uniq_id'),
+                'change_location_ex' => $this->input->post('change_location_ex'),
+                'why_ex' => $this->input->post('why_ex'),
+                'alone_ex' => $this->input->post('alone_ex'),
+                'image' => $img_data[0],
+                'image1' => $img_data[1],
             );
 
             if ($this->Adoptionmodel->insert_data($data)) {

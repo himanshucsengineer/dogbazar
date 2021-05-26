@@ -7,6 +7,7 @@ $route['logout'] = 'frontend/logout';
 
 $route['listmydog'] = 'frontend/user/listmydog';
 $route['donation-history'] = 'frontend/user/donationhistory';
+$route['sponsor-history'] = 'frontend/user/sponsorhistory';
 $route['adopt'] = 'frontend/adopt';
 $route['adopt/(:any)'] = 'frontend/adoptpet/index/$1';
 

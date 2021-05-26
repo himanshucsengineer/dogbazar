@@ -1,7 +1,17 @@
 /* dog care pages start */
+.homecrousal .active{
+  border: none !important;
+}
+.cimgheight{
+  height: 48.7rem !important;
+  width: 100% !important;
+}
 .load_msg_data {
   width: 15rem;
 }
+/*.insectst{
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.44);
+}*/
 body {
   font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
@@ -11,32 +21,30 @@ body {
   background-position: 0% 0% !important;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4) !important;
-}
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1) !important;
+} 
 .surrender_top {
   background-image: url("../images/surrender.jpg") !important;
   background-size: cover;
   background-position: 50% 50%;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1) !important;
 }
 .rescue_top {
+ 
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1) !important;
   background-image: url("../images/rescue2.jpg") !important;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4) !important;
+ 
 }
 .form_top_vol {
   background-image: url("../images/volunteerbg2.jpg") !important;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.33) !important;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1) !important;
 }
 .gallery_bg{
   background-image: url("../images/gallery_bg.jpg") !important;
-
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.33) !important;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1) !important;
+ 
 }
 .franchies_top {
   background-image: url("../images/franc.jpg") !important;
@@ -44,7 +52,7 @@ body {
   background-position: 50% 50%;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.44);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1) !important;
 }
 .donation_new_main {
   background-image: url("../images/donation_bg.jpg");
@@ -59,7 +67,7 @@ body {
   background-position: 50% 50%;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.44);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1) !important;
 }
 .givingup_bg{
   background-image: url("../images/giving_bg.jpg") !important;
@@ -67,7 +75,7 @@ body {
   background-position: 50% 50%;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.44);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1) !important;
 }
 .getting_bg{
   background-image: url("../images/getting_bg.jpg") !important;
@@ -75,7 +83,7 @@ body {
   background-position: 50% 50%;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.44);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1) !important;
 }
 .petcare_bg{
   background-image: url("../images/petcare_bg.jpg") !important;
@@ -83,7 +91,7 @@ body {
   background-position: 50% 50%;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.44);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1) !important;
 }
 .grooming_bg{
   background-image: url("../images/gromming_bg2.jpg") !important;
@@ -91,7 +99,7 @@ body {
   background-position: 50% 50%;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.44);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1) !important;
 }
 .nutri_bg {
   background-image: url("../images/nutrition_bg2.jpg") !important;
@@ -99,7 +107,7 @@ body {
   background-position: 50% 50%;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.44);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1) !important;
 }
 .train_bg {
   background-image: url("../images/train_bg.jpg") !important;
@@ -107,7 +115,7 @@ body {
   background-position: 50% 50%;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.44);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1) !important;
 }
 .news_main {
   background-image: url("../images/newsbg.jpg");
@@ -115,7 +123,7 @@ body {
   background-position: 50% 50%;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.44);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1) !important;
 }
 
 .events_bg {
@@ -124,7 +132,7 @@ body {
   background-position: 50% 50%;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.44);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1) !important;
 }
 .form_top_new {
   background-image: url("../images/list_form.jpg");
@@ -132,7 +140,7 @@ body {
   background-position: 50% 50%;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.66);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1) !important;
 }
 .sponsor_banner {
   background-image: url("../images/sponsor_bg.jpg");
@@ -140,7 +148,7 @@ body {
   background-position: 50% 50%;
   background-attachment: inherit;
   background-repeat: no-repeat;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1) !important;
 }
 .aboutidb_top{
   background-image: url("../images/aboutidb_bg.jpg") !important;
@@ -148,7 +156,7 @@ body {
   background-position: 50% 50%;
   background-attachment: inherit;
   background-repeat: no-repeat;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1) !important;
 }
 .aboutmad_top{
   background-image: url("../images/aboutmad_bg.jpg") !important;
@@ -156,7 +164,7 @@ body {
   background-position: 50% 50%;
   background-attachment: inherit;
   background-repeat: no-repeat;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1) !important;
 }
 .aboutkcr_top{
   background-image: url("../images/aboutkcr_bg.jpg") !important;
@@ -164,7 +172,7 @@ body {
   background-position: 50% 50%;
   background-attachment: inherit;
   background-repeat: no-repeat;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1) !important;
 }
 .aboutpaws_top{
   background-image: url("../images/aboutpaws_bg.jpg") !important;
@@ -172,7 +180,7 @@ body {
   background-position: 50% 50%;
   background-attachment: inherit;
   background-repeat: no-repeat;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1) !important;
 }
 .about_viren {
   background-image: url("../images/about_viren_top.jpg");
@@ -180,7 +188,7 @@ body {
   background-position: 50% 50%;
   background-attachment: inherit;
   background-repeat: no-repeat;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1) !important;
 }
 .nutrition_new_main {
   width: 100%;
@@ -480,6 +488,7 @@ body {
   width: 100%;
   height: auto;
   padding-bottom: 5rem;
+  padding-top: 5rem;
   background-color: #ecf0f1;
 }
 .postview_new .navi {
@@ -755,6 +764,7 @@ body {
 .adopt_pet_main_new .bottom_images .cardimage img {
   width: 100%;
   height: 70px;
+  cursor: pointer;
 }
 
 .MultiCarousel {
@@ -1194,7 +1204,7 @@ input[type="number"] {
   margin-top: -2rem;
 }
 .why_donate .flex .left .fff {
-  font-size: 7rem;
+  font-size: 7rem !important;
   margin-top: -2rem;
   color: #575757;
 }
@@ -1444,7 +1454,7 @@ input[type="number"] {
     margin-bottom: 0rem;
   }
   .why_donate .flex .left .fff {
-    font-size: 5rem;
+    font-size: 5rem !important;
     margin-top: -1rem;
   }
   .writetous {
@@ -2291,8 +2301,8 @@ textarea {
 }
 .utilize .fas {
   color:  #f8b334;
-  font-size: 10rem;
-  margin-top: 5rem;
+  font-size: 10rem !important;
+  margin-top: 5rem !important;
 }
 .utilize h2 {
   text-align: center;
@@ -2378,7 +2388,7 @@ textarea {
 }
 .what_will_vonlunteer .flex .left .fas {
   color: white;
-  font-size: 10px;
+  font-size: 10px !important;
   border-radius: 50%;
   background-color: #ffc107;
   padding: 4px 4px;
@@ -2705,7 +2715,7 @@ textarea {
 }
 .sponsor_circle .flex .card .inne .fas{
  color: #fcc201;
-  font-size: 60px;
+  font-size: 60px !important;
 }
 .sponsor_circle .flex .card .inne p{
  color: #2d2d2d;
@@ -3377,7 +3387,7 @@ textarea {
 @media only screen and (max-width: 600px) {
   .carousel-inner img {
     width: 100%;
-    height: 200px;
+    height: 300px !important;
   }
 }
 
@@ -3749,7 +3759,7 @@ margin-top:-5rem;
 
 .sponsor_circle_mobile .card .inner_card .fas{
 color:#fcc201;
-font-size:30px;
+font-size:30px !important;
 }
 .sponsor_circle_mobile .card .inner_card p{
 color:#2d2d2d;
@@ -4111,3 +4121,4 @@ to {opacity: 1}
     width: 50% !important;
   }
 }  
+

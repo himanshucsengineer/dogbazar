@@ -17,6 +17,36 @@ class Petmemorial extends CI_controller
         $this->load->view('frontend/template/footer');
     }
 
+
+    function search()
+    {
+     $output = '';
+     $this->load->model('frontend/donatemodel');
+     $data = $this->donatemodel->fetch_data_search($this->input->post('name'));
+     if($data->num_rows() > 0)
+     {
+      foreach($data->result() as $row)
+      {
+        
+          
+                $str = $row->about;
+                $result = substr($str, 0, 200); 
+       $output .= '<div class="card">
+                        <h3>'.$row->name.'</h3>
+                        <div class="inner_card">
+                            <a href="'.base_url().'petmemorial/'.$row->link.'"><img src="'.$row->image.'" alt="dog image"> </a>
+                            <h5>'.$result.'</h5>
+                            <div class="sponsor_buttt">
+                                <a href="'.base_url().'petmemorial/'.$row->link.'"><button>View Memorial</button></a>
+                            </div>
+                        </div>
+                    </div>';
+      }
+     }
+     echo $output;
+    }
+
+
     function fetch()
     {
      $output = '';
