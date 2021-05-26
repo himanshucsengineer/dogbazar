@@ -26,7 +26,21 @@ class Petmemorialdata extends CI_controller
 
 
 
-  
+  public function addinventory_api()
+  {
+
+    $getPurchaseData = $this->Donationmodel->fetch_pet_memorial_data();
+
+
+    foreach ($getPurchaseData as $key => $value) {
+      //                $short_desc_vl=$lst_desc.'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->id.'" data-toggle="tooltip" data-original-title="Edit">Read More</a>';
+
+      $arrya_json[] = array($value['id'], $value['name'], $value['b_date'], $value['b_place'], $value['d_date'], $value['d_place'],'<a href="'.base_url().'admin/petmemoedit?='.$value['id'].'">Edit</a>' , '
+               <a class="delete_sliders" data-id="' . $value['id'] . '"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a>');
+    }
+    echo json_encode(array('data' => $arrya_json));
+  }
+
 
 
 

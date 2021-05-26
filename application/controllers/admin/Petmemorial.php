@@ -57,7 +57,7 @@ class Petmemorial extends CI_controller
               if ($this->upload->do_upload('file')) {
                   // Get data about the file
                   $uploadData = $this->upload->data();
-                  $filename = base_url() . 'upload/petmemorial/' .$uploadData['file_name'];
+                  $filename =$uploadData['file_name'];
                   
 
                   // Initialize array
@@ -92,7 +92,7 @@ class Petmemorial extends CI_controller
           'image4' => $img_data[4],
       );
       if ($this->Donationmodel->insert_data($datas)) {
-          $this->session->set_flashdata('success', 'Dog Listed');
+          $this->session->set_flashdata('success', 'Pet Memorial Created');
           redirect(base_url() . 'admin/petmemorial');
       } else {
           $this->session->set_flashdata('error', 'Error In Updating Please Try Again');

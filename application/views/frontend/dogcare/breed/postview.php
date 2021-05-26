@@ -8,19 +8,19 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img src="<?php echo @$blog->image ?>" id="getdynamicimae" alt="adopt pet">
+                <img src="<?php echo base_url()?>upload/dogcare/breed/<?php echo @$blog->image ?>" id="getdynamicimae" alt="adopt pet">
 
                 <div class="bottom_images" id="bottomImage">
                     <div class="cardimage">
 
-                        <img src="<?php echo @$blog->image ?>" alt="adopt pet">
+                        <img src="<?php echo base_url()?>upload/dogcare/breed/<?php echo @$blog->image ?>" alt="adopt pet">
                     </div>
                     <?php for ($i = 1; $i < 5; $i++) {
                         $img = "image$i";
                         if (@$blog->$img != NULL) {  ?>
                             <div class="cardimage">
 
-                                <img src="<?php echo @$blog->$img ?>" alt="adopt pet">
+                                <img src="<?php echo base_url()?>upload/dogcare/breed/<?php echo @$blog->$img ?>" alt="adopt pet">
                             </div>
 
                     <?php }

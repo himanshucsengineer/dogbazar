@@ -7,19 +7,19 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img id="getdynamicimae" src="<?php echo @$list->image ?>" alt="adopt pet">
+                <img id="getdynamicimae" src="<?php echo base_url()?>upload/listdog/<?php echo @$list->image ?>" alt="adopt pet">
 
                 <div class="bottom_images" id="bottomImage">
                     <div class="cardimage">
 
-                        <img  src="<?php echo @$list->image ?>" alt="adopt pet" >
+                        <img  src="<?php echo base_url()?>upload/listdog/<?php echo @$list->image ?>" alt="adopt pet" >
                     </div>
                     <?php for ($i = 1; $i < 5; $i++) {
                         $img = "image$i";
                         if (@$list->$img != NULL) {  ?>
                             <div class="cardimage">
 
-                                <img src="<?php echo @$list->$img ?>" alt="adopt pet">
+                                <img src="<?php echo base_url()?>upload/listdog/<?php echo @$list->$img ?>" alt="adopt pet">
                             </div>
 
                     <?php }
@@ -39,7 +39,7 @@
                     <h5>Location:<span class="declar"><?php echo @$list->city ?></span></h5>
                     <div class="row">
                         <div class="col-md-8">
-                            <a href="<?php echo base_url() ?>adoptpet/adoption/<?php echo @$list->link ?>"><button>Adopt Pet Now</button></a>
+                            <a href="<?php echo base_url() ?>adoptpet/adoption/<?php echo @$list->id ?>"><button>Adopt Pet Now</button></a>
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                             <a href="<?php echo base_url() . "adopt/" . @$rel->link ?>">
                                 <div class="item">
                                     <div class="pad15">
-                                        <img src="<?php echo @$rel->image ?>" alt="adopt pet">
+                                        <img src="<?php echo base_url()?>upload/listdog/<?php echo @$rel->image ?>" alt="adopt pet">
                                     </div>
                                 </div>
                             </a>

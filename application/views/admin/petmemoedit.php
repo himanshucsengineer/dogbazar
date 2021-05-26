@@ -66,6 +66,10 @@
         font-weight: 300;
         font-style: italic;
     }
+    #video{
+        width: 100%;
+        height: auto;
+    }
 </style>
 
 <div class="new-post">
@@ -95,15 +99,15 @@
             ?>
             <?php foreach ($fetch_content as $value) {
                 if ($value['id'] == $rerfe[1]) { ?>
-
+                    <?php $vall =$value['image']; $last = basename($vall); $ext = explode('.', $last); if($ext[1]=="mp4"){$videotag = '<video src="'.$value['image'].'" controls id="video"></video>'; }else{$videotag ='<img src="'.$value['image'].'" id="im">';}?>
                     <div class="row">
                         <div class="col-md-9">
                             <div class="box">
-                                <label>Breed Name</label>
-                                <input type="text" name="name" placeholder="Enter Heading" value="<?php echo $value['name']; ?>">
+                                <label>Post Heading</label>
+                                <input type="text" name="heading" placeholder="Enter Heading" value="<?php echo $value['head']; ?>">
 
-                                <label>About Breed</label>
-                                <textarea name="about" id="textareaContent" placeholder="Type Your Blog Here...." required><?php echo $value['about']; ?></textarea>
+                                <label>Post Content</label>
+                                <textarea name="content" id="textareaContent" placeholder="Type Your Blog Here...." required><?php echo $value['content']; ?></textarea>
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -116,28 +120,22 @@
                             </div>
                             <div class="box">
                                 <label>Featured Image</label>
-                                <img src="<?php echo base_url()?>upload/dogcare/breed/<?php echo $value['image']; ?>" id="im">
+                                <?php echo $videotag; ?>
                                 <p>Your Featured Image</p>
                                 <label>upload new Image</label>
                                 <input name="images" id="fileupload" type="file">
                                 <p>Update Featured Image</p>
-                            </div>
-
-
-                            <div class="box">
-                                <label>Temperament:</label>
-                                <textarea name="temp" required><?php echo $value['temp']; ?></textarea>
                                 <input class="hidden" name="id" type="text" value="<?php echo $value['id']; ?>">
-                                <p>Separate tags with commas</p>
-                                <label for="">Height</label>
-                                <input type="text" name="height" value="<?php echo $value['height']?>">
-                                <label for="">Weight</label>
-                                <input type="text" name="weight" value="<?php echo $value['weight']?>">
-                                <label for="">Life Expectancy</label>
-                                <input type="text" name="exp" value="<?php echo $value['exp']?>">
-                                <label for="">Group</label>
-                                <input type="text" name="grp" value="<?php echo $value['grp']?>">
                             </div>
+
+
+                            <!--div class="box">
+                    <label>Meta Tags</label>
+                    <textarea name="tags"  required><?php echo $value['tag']; ?></textarea>
+                   
+                    <p>Separate tags with commas</p>
+                    
+                </div-->
 
                         </div>
                     </div>
@@ -149,16 +147,16 @@
 
 
                     <!--div class="box">
-                        <label>Meta Title</label>
-                        <input name="mtitle" type="text" placeholder="Enter Meta Title" value="<?php echo $value['mt_title']; ?>">
-
-                        <label>Meta Description</label>
-
-                        <textarea name="mdesc" required><?php echo $value['m_desc']; ?></textarea>
-
-                        <label>Meta Keywords</label>
-                        <input name="mkey" type="text" placeholder="Enter Meta Keywords" value="<?php echo $value['m_key']; ?>">
-                    </div-->
+            <label>Meta Title</label>
+                <input name="mtitle" type="text" placeholder="Enter Meta Title" value="<?php echo $value['mt_title']; ?>">
+                
+                <label>Meta Description</label>
+               
+                <textarea name="mdesc" required><?php echo $value['m_desc']; ?></textarea>
+                
+                <label>Meta Keywords</label>
+                <input name="mkey" type="text" placeholder="Enter Meta Keywords" value="<?php echo $value['m_key']; ?>">
+        </div-->
             <?php }
             } ?>
         </form>
@@ -172,7 +170,7 @@
     $(function() {
         $("#fileupload").change(function() {
             $("#dvPreview").html("");
-            var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpeg|.jpg|.png)$/;
+            var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpeg|.jpg|.png|.mp4)$/;
             if (regex.test($(this).val().toLowerCase())) {
                 if ($.browser.msie && parseFloat(jQuery.browser.version) <= 9.0) {
                     $("#dvPreview").show();

@@ -5,17 +5,18 @@ class Adoptionform extends CI_controller
     {
         parent::__construct();
         $this->load->model('frontend/Adoptionmodel');
+        $this->load->model('frontend/Listmydogmodel');
         //$this->load->helper('url');
     }
 
-    public function index()
+    public function index($slug = "")
     {
 
-        //$data['list'] = $this->Listmydogmodel->blog_detail($slug);
+        $data['list'] = $this->Listmydogmodel->blog_detail($slug);
         $this->load->view('frontend/template/header');
         $this->load->view('frontend/template/navbar');
 
-        $this->load->view('frontend/adoptionform');
+        $this->load->view('frontend/adoptionform',$data);
         $this->load->view('frontend/template/footer');
     }
 
@@ -68,7 +69,7 @@ class Adoptionform extends CI_controller
                 if ($this->upload->do_upload('file')) {
                     // Get data about the file
                     $uploadData = $this->upload->data();
-                    $filename = base_url() . 'upload/adoptionform/' .$uploadData['file_name'];
+                    $filename =$uploadData['file_name'];
                     
 
                     // Initialize array
@@ -97,6 +98,14 @@ class Adoptionform extends CI_controller
                 'change_location_ex' => $this->input->post('change_location_ex'),
                 'why_ex' => $this->input->post('why_ex'),
                 'alone_ex' => $this->input->post('alone_ex'),
+
+
+                'p_name' => $this->input->post('p_name'),
+                'color' => $this->input->post('color'),
+                'age' => $this->input->post('age'),
+                'breed' => $this->input->post('breed'),
+                'gender' => $this->input->post('gender'),
+                'city' => $this->input->post('city'),
                 'image' => $img_data[0],
                 'image1' => $img_data[1],
             );

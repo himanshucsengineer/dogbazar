@@ -24,6 +24,22 @@ class Doglist extends CI_controller
     $this->load->view('admin/template/footer');
   }
 
+  public function addinventory_api()
+  {
+
+    $getPurchaseData = $this->Doglistmodel->fetchinventory_api();
+
+
+    foreach ($getPurchaseData as $key => $value) {
+      //                $short_desc_vl=$lst_desc.'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->id.'" data-toggle="tooltip" data-original-title="Edit">Read More</a>';
+
+      $arrya_json[] = array($value['id'],$value['date'], $value['name'], $value['email'], $value['number'], $value['p_name'], $value['weight'], $value['color'], $value['age'],$value['breed'], $value['gender'], $value['address'],$value['about'],$value['city'],'<a href="'.base_url().'upload/listdog/'.$value['image'].'" target="_blank">View Image</a>','<a href="'.base_url().'upload/listdog/'.$value['image1'].'" target="_blank">View Image</a>','<a href="'.base_url().'upload/listdog/'.$value['image2'].'" target="_blank">View Image</a>','<a href="'.base_url().'upload/listdog/'.$value['image3'].'" target="_blank">View Image</a>','<a href="'.base_url().'upload/listdog/'.$value['image4'].'" target="_blank">View Image</a>','<a href="'.base_url().'upload/listdog/'.$value['front'].'" target="_blank">View Image</a>','<a href="'.base_url().'upload/listdog/'.$value['back'].'" target="_blank">View Image</a>', '<a class="edit" href="' . base_url() . 'admin/brands/galleryedit/' . $value['id'] . '" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
+               <a class="delete_sliders" data-id="' . $value['id'] . '"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a>');
+    }
+    echo json_encode(array('data' => $arrya_json));
+  }
+
+
 
 
   

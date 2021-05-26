@@ -3,8 +3,11 @@
 
 <script src="<?php echo base_url(); ?>admin/assets/js/jquery.dataTables.min.js"></script>
 
-
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 <style>
+
     .new-post {
         width: 100%;
         height: auto;
@@ -30,13 +33,13 @@
     input[type="file"],
     select,
     textarea {
-        width: 100%;
+        width: 100% !important;
         height: auto;
-        padding-top: .5rem;
-        padding-bottom: .5rem;
-        padding-left: 1rem;
-        border: 1px solid #cdcdcd;
-        margin-bottom: 1rem;
+        padding-top: .5rem !important;
+        padding-bottom: .5rem !important;
+        padding-left: 1rem !important;
+        border: 1px solid #cdcdcd !important;
+        margin-bottom: 1rem !important;
     }
 
     .new-post button {
@@ -62,6 +65,9 @@
         font-size: 12px;
         font-weight: 300;
         font-style: italic;
+    }
+    .ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year{
+        width: 45% !important;
     }
 </style>
 
@@ -91,14 +97,14 @@
                     
                     <div class="box">
                         <label>Born Date</label>
-                        <input type="text" placeholder="enter Temperament" name="b_date">
+                        <input type="text" placeholder="enter Temperament" name="b_date" id="min" autocomplete="off">
                         <label>Born Place</label>
                         <input type="text" placeholder="enter Temperament" name="b_place">
                         
                     </div>
                     <div class="box">
                         <label>Died Date</label>
-                        <input type="text" placeholder="enter Temperament" name="d_date">
+                        <input type="text" placeholder="enter Temperament" name="d_date" id="max"  autocomplete="off">
                         <label>Died Place</label>
                         <input type="text" placeholder="enter Temperament" name="d_place">
                         
@@ -159,4 +165,25 @@
     $(document).ready(function() {
         CKEDITOR.replace('textareaContent');
     });
+</script>
+
+<script>
+$(document).ready(function () {
+    
+
+    $('#min').datepicker({ 
+        yearRange: '-100y:c+nn', 
+        changeYear : true,
+        changeMonth : true, 
+        dateFormat : 'dd/mm/yy', });
+    $('#max').datepicker({  
+        yearRange: '-100y:c+nn',  
+        changeYear : true, 
+        changeMonth : true,  
+        dateFormat : 'dd/mm/yy', });
+    
+
+    // Event listener to the two range filtering inputs to redraw on input
+   
+});
 </script>

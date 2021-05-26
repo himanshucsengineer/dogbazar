@@ -57,7 +57,7 @@ class Newpost extends CI_controller
                 if ($this->upload->do_upload('file')) {
                     // Get data about the file
                     $uploadData = $this->upload->data();
-                    $filename = base_url() . 'upload/dogcare/breed/' .$uploadData['file_name'];
+                    $filename = $uploadData['file_name'];
                     
 
                     // Initialize array

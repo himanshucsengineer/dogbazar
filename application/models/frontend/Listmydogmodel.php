@@ -14,7 +14,7 @@ class Listmydogmodel extends CI_Model
     }
     public function blog_detail($slug = '')
   {
-    return $this->db->where('link', $slug)->get('listdog')->row();
+    return $this->db->where('id', $slug)->get('listdog')->row();
   }
   function fetch_data($limit, $start)
  {

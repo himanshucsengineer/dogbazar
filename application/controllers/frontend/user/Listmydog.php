@@ -73,7 +73,7 @@ class Listmydog extends CI_controller
                     if ($this->upload->do_upload('file')) {
                         // Get data about the file
                         $uploadData = $this->upload->data();
-                        $filename = base_url() . 'upload/listdog/' .$uploadData['file_name'];
+                        $filename = $uploadData['file_name'];
                         
 
                         // Initialize array
@@ -108,7 +108,7 @@ class Listmydog extends CI_controller
                     if ($this->upload->do_upload('file')) {
                         // Get data about the file
                         $uploadDatas = $this->upload->data();
-                        $filenames = base_url() . 'upload/listdog/' .$uploadDatas['file_name'];
+                        $filenames = $uploadDatas['file_name'];
                         
 
                         // Initialize array

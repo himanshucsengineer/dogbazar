@@ -76,8 +76,31 @@
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Number</th>
-                                    <th>city</th>
-                                    <th>Unique Id</th>
+                                    <th>User Address</th>
+                                    <th>Id Front</th>
+                                    <th>Id Back</th>
+                                    
+
+                                    <th>House</th>
+                                    <th>Plan To relocate</th>
+                                    <th>Plan With Adopted pet</th>
+                                    <th>Why Want To Adopt</th>
+                                    <th>Why Explain</th>
+                                    <th>Pet In Past</th>
+                                    <th>Spent time</th>
+                                    <th>Left Alone pet</th>
+                                    <th>Alone Time</th>
+                                    <th>Occupation</th>
+                                    <th>Responsible Person</th>
+                                    <th>Person Contact</th>
+                                    <th>Pet Name</th>
+                                    <th>Pet Unique Id</th>
+                                    <th>Pet Color</th>
+                                    <th>Pet Age</th>
+                                    <th>Pet Breed</th>
+                                    <th>Pet Gender</th>
+                                    <th>Pet Location</th>
+
 
                                     <th>Action</th>
 
@@ -85,19 +108,7 @@
 
                             </thead>
                             <tbody>
-                                <?php foreach($list as $value){?>
-                                <tr>
-                                    <td><?php echo $value['id'];?></td>
-                                    <td><?php echo $value['name'];?></td>
-                                    <td><?php echo $value['email'];?></td>
-                                    <td><?php echo $value['number'];?></td>
-                                    
-                                    <td><?php echo $value['city'];?></td>
-                                    <td><?php echo $value['uniq_id'];?></td>
-                                    <td><a class="delete_sliders" data-id="<?php $value['id']?>"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
-                                    
-                                </tr>
-                                <?php }?>
+                                
                             </tbody>
                         </table>
                     </div>
@@ -145,7 +156,7 @@
 <script>
     $(document).ready(function() {
         $('#lowinventory').DataTable({
-           
+            "ajax": "<?php echo base_url(); ?>admin/adoption/addinventory_api"
         });
 
 

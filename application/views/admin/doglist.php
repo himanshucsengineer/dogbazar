@@ -73,42 +73,33 @@
                                 <tr>
 
                                     <th>Sr. No.</th>
+                                    <th>Date</th>
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Number</th>
-                                    <th>Age</th>
-                                    <th>Name</th>
-                                    <th>Gender</th>
-                                    <th>Condition</th>
-                                    <th>Message</th>
-                                    <th>City</th>
-                                    <th>Image</th>
-                                    <th>Unique Id</th>
-
+                                    <th>Pet Name</th>
+                                    <th>Weight</th>
+                                    <th>color</th>
+                                    <th>age</th>
+                                    <th>breed</th>
+                                    <th>gender</th>
+                                    <th>address</th>
+                                    <th>about</th>
+                                    <th>city</th>
+                                    <th>image 1</th>
+                                    <th>Image 2</th>
+                                    <th>Image 3</th>
+                                    <th>Image 4</th>
+                                    <th>Image 5</th>
+                                    <th>Id proof front</th>
+                                    <th>Id proof back</th>
                                     <th>Action</th>
 
                                 </tr>
 
                             </thead>
                             <tbody>
-                                <?php foreach($list as $value){?>
-                                <tr>
-                                    <td><?php echo $value['id'];?></td>
-                                    <td><?php echo $value['name'];?></td>
-                                    <td><?php echo $value['email'];?></td>
-                                    <td><?php echo $value['number'];?></td>
-                                    <td><?php echo $value['age'];?></td>
-                                    <td><?php echo $value['breed'];?></td>
-                                    <td><?php echo $value['gender'];?></td>
-                                    <td><?php echo $value['condition'];?></td>
-                                    <td><?php echo $value['msg'];?></td>
-                                    <td><?php echo $value['city'];?></td>
-                                    <td><img src="<?php echo $value['image'];?>"></td>
-                                    <td><?php echo $value['link'];?></td>
-                                    <td><a class="delete_sliders" data-id="<?php $value['id']?>"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
-                                    
-                                </tr>
-                                <?php }?>
+                                
                             </tbody>
                         </table>
                     </div>
@@ -156,7 +147,7 @@
 <script>
     $(document).ready(function() {
         $('#lowinventory').DataTable({
-           
+            "ajax": "<?php echo base_url(); ?>admin/doglist/addinventory_api"
         });
 
 

@@ -58,7 +58,7 @@
                 <th>Died Date</th>
                 <th>Died Place</th>
 
-
+                <th>Edit</th>
                 <th>Action</th>
 
 
@@ -66,18 +66,7 @@
 
             </thead>
             <tbody>
-              <?php foreach($list as $value){ ?>
-                <tr>
-                  <td><?php echo $value['id'] ?></td>
-                  <td><?php echo $value['name'] ?></td>
-                  <td><?php echo $value['b_date'] ?></td>
-                  <td><?php echo $value['b_place']?></td>
-                  <td><?php echo $value['d_date']?></td>
-                  <td><?php echo $value['d_place']?></td>
-                  <!--td><a href="<?php echo base_url()?>admin/dogcare/grooming/editpost?id=<?php echo $value['id'] ?>"    >Edit</a></td-->
-                  <td><a class="delete_sliders" data-id="<?php echo $value['id']?>"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
-                </tr>
-              <?php } ?>
+              
             </tbody>
           </table>
         </div>
@@ -123,11 +112,9 @@
 <script>
   $(document).ready(function() {
     $('#lowinventory').DataTable({
-      
+      "ajax": "<?php echo base_url(); ?>admin/petmemorialdata/addinventory_api"
     });
-    $('#lowinventory2').DataTable({
-      
-    });
+   
 
     $(document).on('click', '.delete_sliders', function() {
 

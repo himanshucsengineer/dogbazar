@@ -160,7 +160,14 @@ if (!isset($_SESSION["email"])) {
                 
                 <div class="list_dod_form_inner">
                     <form action="<?php echo base_url() ?>frontend/adoptionform/insert_data" method="post" enctype="multipart/form-data">
-                        <input type="hidden" name="uniq_id" value="<?php echo $uniqid ?>">
+                        <input type="hidden" name="uniq_id" value="<?php echo @$list->id ?>">
+                        <input type="hidden" name="p_name" value="<?php echo @$list->p_name ?>">
+                        <input type="hidden" name="color" value="<?php echo @$list->color ?>">
+                        <input type="hidden" name="age" value="<?php echo @$list->age ?>">
+                        <input type="hidden" name="breed" value="<?php echo @$list->breed ?>">
+                        <input type="hidden" name="gender" value="<?php echo @$list->gender ?>">
+                        <input type="hidden" name="city" value="<?php echo @$list->city ?>">
+                        
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="">Name</label>

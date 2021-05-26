@@ -30,7 +30,7 @@ class Breed extends CI_controller
       {
        $output .= '<div class="card">
                         <div class="inner_card">
-                            <a href="'.base_url().'breed/'.$row->link.'"><img src="'.$row->image.'" alt="dog image"> </a>
+                            <a href="'.base_url().'breed/'.$row->link.'"><img src="'.base_url().'upload/dogcare/breed/'.$row->image.'" alt="dog image"> </a>
                             <h3>Name: '.$row->name.'</h3>
                             <h6>Temporent: '.$row->temp.'</h6>
                             <h6>Group: '.$row->grp.'</h6>
