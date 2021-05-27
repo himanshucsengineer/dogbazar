@@ -3,6 +3,9 @@
 
 <script src="<?php echo base_url(); ?>admin/assets/js/jquery.dataTables.min.js"></script>
 
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
 <style>
     .new-post {
@@ -80,7 +83,7 @@
                 <label for="">Event Name</label>
                 <input type="text" name="name" placeholder="Enter Event Name">
                 <label for="">Event Date</label>
-                <input type="text" name="date" placeholder="Enter Event Date">
+                <input type="text" name="date" placeholder="Enter Event Date" id="min">
                 <label for="">Event Location</label>
                 <input type="text" name="location" placeholder="Enter Event Location">
                 <label for="">Event Organizer</label>
@@ -96,3 +99,19 @@
 
 
 
+<script>
+$(document).ready(function () {
+    
+
+    $('#min').datepicker({ 
+        yearRange: '-100y:c+nn', 
+        changeYear : true,
+        changeMonth : true, 
+        dateFormat : 'dd/mm/yy', });
+    
+    
+
+    // Event listener to the two range filtering inputs to redraw on input
+   
+});
+</script>

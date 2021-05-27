@@ -63,7 +63,7 @@ class Petmemorial extends CI_controller
        $output .= '<div class="card">
                         <h3>'.$row->name.'</h3>
                         <div class="inner_card">
-                            <a href="'.base_url().'petmemorial/'.$row->link.'"><img src="'.$row->image.'" alt="dog image"> </a>
+                            <a href="'.base_url().'petmemorial/'.$row->link.'"><img src="'.base_url().'upload/petmemorial/'.$row->image.'" alt="dog image"> </a>
                             <h5>'.$result.'</h5>
                             <div class="sponsor_buttt">
                                 <a href="'.base_url().'petmemorial/'.$row->link.'"><button>View Memorial</button></a>

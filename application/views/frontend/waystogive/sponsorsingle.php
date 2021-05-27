@@ -8,19 +8,19 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img src="<?php echo @$list->image ?>" id="getdynamicimae" alt="adopt pet">
+                <img src="<?php echo base_url()?>upload/dogcare/behave/<?php echo @$list->image ?>" id="getdynamicimae" alt="adopt pet">
 
                 <div class="bottom_images" id="bottomImage">
                     <div class="cardimage">
 
-                        <img src="<?php echo @$list->image ?>" alt="adopt pet">
+                        <img src="<?php echo base_url()?>upload/dogcare/behave/<?php echo @$list->image ?>" alt="adopt pet">
                     </div>
                     <?php for ($i = 1; $i < 5; $i++) {
                         $img = "image$i";
                         if (@$list->$img != NULL) {  ?>
                             <div class="cardimage">
 
-                                <img src="<?php echo @$list->$img ?>" alt="adopt pet">
+                                <img src="<?php echo base_url()?>upload/dogcare/behave/<?php echo @$list->$img ?>" alt="adopt pet">
                             </div>
 
                     <?php }
@@ -36,8 +36,8 @@
                     
                     <h5>Gender:<span class="declar"><?php echo @$list->gender ?></span></h5>
                     <h5>Color:<span class="declar"><?php echo @$list->color ?></span></h5>
-                    <!--h3><?php echo @$list->breed ?></h3>
-                    <h5>Age: <span><?php echo @$list->age ?></span></h5>
+                    <h5>Breed:<span class="declar"><?php echo @$list->breed ?></h5>
+                    <!--h5>Age: <span><?php echo @$list->age ?></span></h5>
                     <h5>Colour: <span><?php echo @$list->color ?></span></h5>
                    
                     <h5>Gender:<span><?php echo @$list->gender ?></span></h5-->
@@ -74,7 +74,7 @@
                                 <a href="<?php echo base_url() . "adopt/" . @$rel->link ?>">
                                     <div class="item">
                                         <div class="pad15">
-                                            <img src="<?php echo @$rel->image ?>" alt="adopt pet">
+                                            <img src="<?php echo base_url()?>upload/dogcare/behave/<?php echo @$rel->image ?>" alt="adopt pet">
                                         </div>
                                     </div>
                                 </a>

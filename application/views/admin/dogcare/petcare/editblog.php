@@ -101,29 +101,22 @@
                             <div class="box">
                                 <label>Post Heading</label>
                                 <input type="text" name="heading" placeholder="Enter Heading" value="<?php echo $value['head']; ?>">
-
-                                <label>Post Content</label>
-                                <textarea name="content" id="textareaContent" placeholder="Type Your Blog Here...." required><?php echo $value['content']; ?></textarea>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="box">
-                                <label>Post Link</label>
-                                <input name="link" type="text" placeholder="Enter Post name" value="<?php echo $value['link']; ?>">
-                                <p>Update Your Own Post Link</p>
-                                <label>Publish Your Post</label>
-                                <button name="formSubmit">Update</button>
-                            </div>
-                            <div class="box">
-                                <label>Featured Video</label>
-                                <video width="100%" height="auto" controls>
-                                    <source src="<?php echo $value['image']; ?>" type="video/mp4">
-                                </video>
-                                <p>Your Featured Video</p>
                                 <label>upload new video</label>
                                 <input name="images" id="fileupload" type="file">
                                 <p>Update Featured Video</p>
                                 <input class="hidden" name="id" type="text" value="<?php echo $value['id']; ?>">
+                                <button name="formSubmit">Update</button>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                           
+                            <div class="box">
+                                <label>Featured Video</label>
+                                <video width="100%" height="auto" controls>
+                                    <source src="<?php echo base_url()?>upload/dogcare/petcare/<?php echo $value['image']; ?>" type="video/mp4">
+                                </video>
+                                <p>Your Featured Video</p>
+                                
                             </div>
 
 

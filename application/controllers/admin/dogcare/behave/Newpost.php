@@ -57,7 +57,7 @@ class Newpost extends CI_controller
                 if ($this->upload->do_upload('file')) {
                     // Get data about the file
                     $uploadData = $this->upload->data();
-                    $filename = base_url() . 'upload/dogcare/behave/' .$uploadData['file_name'];
+                    $filename = $uploadData['file_name'];
                     
 
                     // Initialize array
@@ -81,7 +81,8 @@ class Newpost extends CI_controller
         }
         $new_url = $str . "" . $code;
        
-
+    
+        $link = str_replace(' ', '-', $new_url);
 
 
         $datas = array(
@@ -90,8 +91,8 @@ class Newpost extends CI_controller
              'color' => $this->input->post('color'),
               'gender' => $this->input->post('gender'),
             'about' => $this->input->post('about'),
-         
-            'link' => $new_url,
+            'breed' => $this->input->post('breed'),
+            'link' => $link,
             
 
             'image' => $img_data[0],

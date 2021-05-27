@@ -45,9 +45,11 @@ class Newpost extends CI_controller
                 redirect('admin/dogcare/problems/newpost');
             } else {
                 $dataimage_return = $this->upload->data();
-                $imageurl = base_url() . 'upload/dogcare/problems/' . $dataimage_return['file_name'];
+                $imageurl =  $dataimage_return['file_name'];
             }
         }
+        $link = $this->input->post('heading');
+        $link = str_replace(' ', '-', $link);
 
 
 
@@ -59,7 +61,7 @@ class Newpost extends CI_controller
             // 'm_key' => $this->input->post('mkey'),
             'content' => $this->input->post('content'),
             'cate' => $this->input->post('category'),
-            'link' => $this->input->post('link'),
+            'link' => $link,
             //'tag' => $this->input->post('tags'),
 
             'image' => $imageurl,

@@ -34,7 +34,7 @@
                     <h5>Age: <span class="declar"><?php echo @$list->age ?></span></h5>
                     <h5>Colour: <span class="declar"><?php echo @$list->color ?></span></h5>
                     <h5>Weight: <span class="declar"><?php echo @$list->weight ?></span></h5>
-                    <h5>Age:<span class="declar"><?php echo @$list->age ?></span></h5>
+                  
                     <h5>Gender:<span class="declar"><?php echo @$list->gender ?></span></h5>
                     <h5>Location:<span class="declar"><?php echo @$list->city ?></span></h5>
                     <div class="row">

@@ -2,9 +2,9 @@
 $lasttt = basename($vallll);
 $exttt = explode('.', $lasttt);
 if ($exttt[1] == "mp4") {
-    $videotagmain = '<video src="' . @$blog->image . '" controls ></video>';
+    $videotagmain = '<video src="'.base_url().'upload/news/' . @$blog->image . '" controls ></video>';
 } else {
-    $videotagmain = '<img src="' . @$blog->image . '" >';
+    $videotagmain = '<img src="'.base_url().'upload/news/' . @$blog->image . '" >';
 } ?>
 <div class="news_main">
     <div class="container">
@@ -47,11 +47,11 @@ if ($exttt[1] == "mp4") {
                         $last = basename($vall);
                         $ext = explode('.', $last);
                         if ($ext[1] == "mp4") {
-                            $videotagrecent = '<video src="' . @$recent->image . '"  ></video>';
+                            $videotagrecent = '<video src="'.base_url().'upload/news/' . @$recent->image . '"  ></video>';
                         } else {
-                            $videotagrecent = '<img src="' . @$recent->image . '" >';
+                            $videotagrecent = '<img src="'.base_url().'upload/news/' . @$recent->image . '" >';
                         } ?>
-                        <a href="<?php echo base_url() . "givingup/" . @$recent->link ?>">
+                        <a href="<?php echo base_url() . "watch-news/" . @$recent->link ?>">
                             <div class="post_side_head">
                                 <div class="left">
                                     <?php echo $videotagrecent ?>
@@ -82,11 +82,11 @@ if ($exttt[1] == "mp4") {
                         $lastt = basename($valll);
                         $extt = explode('.', $lastt);
                         if ($extt[1] == "mp4") {
-                            $videotagrelated = '<video src="' . @$rel->image . '"  ></video>';
+                            $videotagrelated = '<video src="'.base_url().'upload/news/' . @$rel->image . '"  ></video>';
                         } else {
-                            $videotagrelated = '<img src="' . @$rel->image . '" >';
+                            $videotagrelated = '<img src="'.base_url().'upload/news/' . @$rel->image . '" >';
                         } ?>
-                        <a href="<?php echo base_url() . "givingup/" . @$rel->link ?>">
+                        <a href="<?php echo base_url() . "watch-news/" . @$rel->link ?>">
                             <div class="post_side_head">
                                 <div class="left">
                                     <?php echo $videotagrelated; ?>

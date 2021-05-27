@@ -45,7 +45,7 @@ class Gallary extends CI_controller
                 $_FILES['file']['size'] = $_FILES['files']['size'][$i];
 
                 // Set preference
-                $config['upload_path'] = APPPATH . '../upload/dogcare/behave';
+                $config['upload_path'] = APPPATH . '../upload/gallary';
                 $config['allowed_types'] = 'jpg|jpeg|png';
                 $config['max_size'] = '5000'; // max_size in kb
                 $config['file_name'] = $_FILES['files']['name'][$i];
@@ -57,7 +57,7 @@ class Gallary extends CI_controller
                 if ($this->upload->do_upload('file')) {
                     // Get data about the file
                     $uploadData = $this->upload->data();
-                    $filename = base_url() . 'upload/dogcare/behave/' . $uploadData['file_name'];
+                    $filename = $uploadData['file_name'];
 
 
                     // Initialize array

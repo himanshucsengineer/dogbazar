@@ -174,7 +174,7 @@ $(document).ready(function () {
     $('#min').datepicker({ 
         yearRange: '-100y:c+nn', 
         changeYear : true,
-        changeMonth : true, 
+        changeMonth : true,  
         dateFormat : 'dd/mm/yy', });
     $('#max').datepicker({  
         yearRange: '-100y:c+nn',  

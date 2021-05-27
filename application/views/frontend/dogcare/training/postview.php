@@ -2,9 +2,9 @@
 $lasttt = basename($vallll);
 $exttt = explode('.', $lasttt);
 if ($exttt[1] == "mp4") {
-    $videotagmain = '<video src="' . @$blog->image . '" controls ></video>';
+    $videotagmain = '<video src="'.base_url().'upload/dogcare/training/' . @$blog->image . '" controls ></video>';
 } else {
-    $videotagmain = '<img src="' . @$blog->image . '" >';
+    $videotagmain = '<img src="'.base_url().'upload/dogcare/training/' . @$blog->image . '" >';
 } ?>
 
 <div class="news_main train_bg">
@@ -46,9 +46,9 @@ if ($exttt[1] == "mp4") {
                         $last = basename($vall);
                         $ext = explode('.', $last);
                         if ($ext[1] == "mp4") {
-                            $videotagrecent = '<video src="' . @$recent->image . '"  ></video>';
+                            $videotagrecent = '<video src="'.base_url().'upload/dogcare/training/' . @$recent->image . '"  ></video>';
                         } else {
-                            $videotagrecent = '<img src="' . @$recent->image . '" >';
+                            $videotagrecent = '<img src="'.base_url().'upload/dogcare/training/' . @$recent->image . '" >';
                         } ?>
                         <a href="<?php echo base_url() . "training/" . @$recent->link ?>">
                             <div class="post_side_head">
@@ -81,9 +81,9 @@ if ($exttt[1] == "mp4") {
                         $lastt = basename($valll);
                         $extt = explode('.', $lastt);
                         if ($extt[1] == "mp4") {
-                            $videotagrelated = '<video src="' . @$rel->image . '"  ></video>';
+                            $videotagrelated = '<video src="'.base_url().'upload/dogcare/training/' . @$rel->image . '"  ></video>';
                         } else {
-                            $videotagrelated = '<img src="' . @$rel->image . '" >';
+                            $videotagrelated = '<img src="'.base_url().'upload/dogcare/training/' . @$rel->image . '" >';
                         } ?>
                         <a href="<?php echo base_url() . "training/" . @$rel->link ?>">
                             <div class="post_side_head">

@@ -85,6 +85,7 @@
                   <th>Pet Age</th>
                   <th>Pet Color</th>
                   <th>Pet Gender</th>
+                  <th>Pet Breed</th>
                   <th>Pet Image</th>
                   <th>Order Id</th>
                   <th>Action</th>

@@ -8,19 +8,19 @@ class Newpost extends CI_controller
         if (!$this->session->userdata('vendorAuth')) {
             redirect('login');
         }
-        $this->load->model('admin/dogcare/petcare/Catemodel');
+        //$this->load->model('admin/dogcare/petcare/Catemodel');
         $this->load->model('admin/dogcare/petcare/Newpostmodel');
     }
 
     public function index()
     {
 
-        $data['fetch_category'] = $this->Catemodel->fetch_data();
+        //$data['fetch_category'] = $this->Catemodel->fetch_data();
 
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
         $this->load->view('admin/template/topbar');
-        $this->load->view('admin/dogcare/petcare/newpost', $data);
+        $this->load->view('admin/dogcare/petcare/newpost');
         $this->load->view('admin/template/footer');
     }
 
@@ -45,7 +45,7 @@ class Newpost extends CI_controller
                 redirect('admin/dogcare/petcare/newpost');
             } else {
                 $dataimage_return = $this->upload->data();
-                $imageurl = base_url() . 'upload/dogcare/petcare/' . $dataimage_return['file_name'];
+                $imageurl =$dataimage_return['file_name'];
             }
         }
 
@@ -57,9 +57,9 @@ class Newpost extends CI_controller
             //'mt_title' => $this->input->post('mtitle'),
             // 'm_desc' => $this->input->post('mdesc'),
             //  'm_key' => $this->input->post('mkey'),
-            'content' => $this->input->post('content'),
-            'cate' => $this->input->post('category'),
-            'link' => $this->input->post('link'),
+            //'content' => $this->input->post('content'),
+            //'cate' => $this->input->post('category'),
+            //'link' => $link,
             //'tag' => $this->input->post('tag'),
 
             'image' => $imageurl,

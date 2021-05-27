@@ -8,7 +8,8 @@
     a.edit {
         display: none;
     }
-    img{
+
+    img {
         width: 80px;
     }
 
@@ -61,7 +62,7 @@
 
 
         ?>
-        <form method="post" action="<?php echo base_url(); ?>admin/user/user">
+      
 
             <div class="row">
                 <div class="col-md-12">
@@ -79,7 +80,7 @@
                                     <th>User Address</th>
                                     <th>Id Front</th>
                                     <th>Id Back</th>
-                                    
+
 
                                     <th>House</th>
                                     <th>Plan To relocate</th>
@@ -100,21 +101,86 @@
                                     <th>Pet Breed</th>
                                     <th>Pet Gender</th>
                                     <th>Pet Location</th>
+                                    <th>Pet Image</th>
+                                    <th>Status</th>
 
-
-                                    <th>Action</th>
-
+                                    <th>Choose Action</th>
+                                    <th>Change Status</th>
                                 </tr>
 
                             </thead>
                             <tbody>
-                                
+                                <?php foreach ($list as $value) { ?>
+                                    <?php $sts = $value['account_status'];?>
+                                   
+                                    
+                                        <tr>
+                                        <form action="<?php echo base_url(); ?>admin/adoption/update_bank/<?php echo $value['id']; ?>" method="post">
+                                        <input type="hidden" value="<?php echo $value['name']; ?>" name="u_name">
+                                    <input type="hidden" value="<?php echo $value['email']; ?>" name="u_email">  
+                                    <input type="hidden" value="<?php echo $value['number']; ?>" name="u_mob">
+                                    <input type="hidden" value="<?php echo $value['address']; ?>" name="u_add">
+                                    <input type="hidden" value="<?php echo $value['image']; ?>" name="front">
+                                    <input type="hidden" value="<?php echo $value['image1']; ?>" name="back">
+                                    <input type="hidden" value="<?php echo $value['occu']; ?>" name="u_occu">
+                                    <input type="hidden" value="<?php echo $value['res_name']; ?>" name="re_name">
+                                    <input type="hidden" value="<?php echo $value['res_mob']; ?>" name="re_mob">
+                                    <input type="hidden" value="<?php echo $value['p_name']; ?>" name="pet_name">
+                                    <input type="hidden" value="<?php echo $value['color']; ?>" name="pet_color">
+                                    <input type="hidden" value="<?php echo $value['age']; ?>" name="pet_age">
+                                    <input type="hidden" value="<?php echo $value['breed']; ?>" name="pet_breed">
+                                    <input type="hidden" value="<?php echo $value['gender']; ?>" name="pet_gender">
+                                    <input type="hidden" value="<?php echo $value['city']; ?>" name="pet_city">
+                                    <input type="hidden" value="<?php echo $value['p_image']; ?>" name="pet_image">    
+                                    <input type="hidden" value="<?php echo $value['uniq_id']; ?>" name="pet_uniq_id">
+                                        
+                                        <td><?php echo $value['id']; ?></td>
+                                            <td><?php echo $value['name']; ?></td>
+                                            <td><?php echo $value['email']; ?></td>
+                                            <td><?php echo $value['number']; ?></td>
+                                            <td><?php echo $value['address']; ?></td>
+                                            <td><a href="<?php echo base_url()?>upload/adoptionform/<?php echo $value['image']?>" target="_blank">View Image</a></td>
+                                            <td><a href="<?php echo base_url()?>upload/adoptionform/<?php echo $value['image1']?>" target="_blank">View Image</a></td>
+                                            <td><?php echo $value['house']; ?></td>
+                                            <td><?php echo $value['change_location']; ?></td>
+                                            <td><?php echo $value['change_location_ex']; ?></td>
+                                            <td><?php echo $value['why']; ?></td>
+                                            <td><?php echo $value['why_ex']; ?></td>
+                                            <td><?php echo $value['past']; ?></td>
+                                            <td><?php echo $value['time']; ?></td>
+                                            <td><?php echo $value['alone']; ?></td>
+                                            <td><?php echo $value['alone_ex']; ?></td>
+                                            <td><?php echo $value['occu']; ?></td>
+                                            <td><?php echo $value['res_name']; ?></td>
+                                            <td><?php echo $value['res_mob']; ?></td>
+                                            <td><?php echo $value['p_name']; ?></td>
+                                            <td><?php echo $value['uniq_id']; ?></td>
+                                            <td><?php echo $value['color']; ?></td>
+                                            <td><?php echo $value['age']; ?></td>
+                                            <td><?php echo $value['breed']; ?></td>
+
+                                            <td><?php echo $value['gender']; ?></td>
+                                            <td><?php echo $value['city']; ?></td>
+                                            <td><a href="<?php echo base_url()?>upload/listdog/<?php echo $value['p_image']?>" target="_blank">View Image</a></td>
+                                            <td><?php echo ($value['account_status'] == false) ? "<span class='text-white badge badge-warning'>New Adopt Request</span>" : "<span class='text-white badge badge-success'>$sts</span>"; ?></td>
+                                          
+                                            <td><select name="action">
+                                                    <option value="">Select Action</option>
+                                                    <option value="Pending">Pending</option>
+                                                    <option value="Approved">Approved</option>
+                                                    <option value="Decline">Decline</option>
+                                                </select></td>
+                                            <td><button class="btn btn-success ">Change Status</button></td>
+                                            </form>
+                                        </tr>
+                                    
+                                <?php } ?>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
-        </form>
+      
     </div>
 </div>
 
@@ -156,7 +222,7 @@
 <script>
     $(document).ready(function() {
         $('#lowinventory').DataTable({
-            "ajax": "<?php echo base_url(); ?>admin/adoption/addinventory_api"
+
         });
 
 

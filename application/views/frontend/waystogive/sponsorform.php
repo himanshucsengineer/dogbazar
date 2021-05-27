@@ -53,7 +53,7 @@ if (!isset($_SESSION["email"])) {
                         <input type="hidden" name="p_color" value="<?php echo @$list->color ?>">
                         <input type="hidden" name="p_gender" value="<?php echo @$list->gender ?>">
                         <input type="hidden" name="p_image" value="<?php echo @$list->image ?>">
-                       
+                        <input type="hidden" name="p_breed" value="<?php echo @$list->breed ?>">
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="">Name</label>

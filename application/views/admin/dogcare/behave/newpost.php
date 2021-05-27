@@ -142,6 +142,8 @@
             <input type="text" name="age" placeholder="Enter Dog AGE">
             <label for="">Color</label>
             <input type="text" name="color" placeholder="Enter Dog Color">
+            <label for="">Breed</label>
+            <input type="text" name="breed" placeholder="Enter Dog Breed">
             <label for="">Gender</label>
             <select name="gender" id="">
                 <option value="Male">Male</option>

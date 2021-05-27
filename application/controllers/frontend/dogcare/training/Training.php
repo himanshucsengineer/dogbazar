@@ -36,7 +36,7 @@ class Training extends CI_controller
             <div class="card">
               
                    <div class="inner_card">
-                   <a href="'.base_url().'training/'.$row->link.'"><img src="'.$row->image.'" alt="dog image"> </a>
+                   <a href="'.base_url().'training/'.$row->link.'"><img src="'.base_url().'upload/dogcare/training/'.$row->image.'" alt="dog image"> </a>
                        <h3>'.$row->head.'</h3>
                        <p>'.$result.'....<a href="'.base_url().'training/'.$row->link.'">Read More</a></p>
                    </div>
@@ -62,8 +62,8 @@ class Training extends CI_controller
       {
         $output .= '<div class="card">
                         <div class="inner_card">
-                            <video src="'.$row->image.'" alt="" controls></video>
-                            <h3 class="VIDEOHEEE"><a class="newviesrc" href="" data-bs-toggle="modal" data-video="'.$row->image.'" data-id="'.$row->head.'" data-bs-target="#video">'.$row->head.'</h3>
+                            <video src="'.base_url().'upload/dogcare/training/'.$row->image.'" alt="" controls></video>
+                            <h3 class="VIDEOHEEE"><a class="newviesrc" href="" data-bs-toggle="modal" data-video="'.base_url().'upload/dogcare/training/'.$row->image.'" data-id="'.$row->head.'" data-bs-target="#video">'.$row->head.'</h3>
                             
                         </div>
                     </div>';

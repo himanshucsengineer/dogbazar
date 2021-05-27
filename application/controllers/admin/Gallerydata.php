@@ -25,8 +25,21 @@ class Gallerydata extends CI_controller
   }
 
 
+  public function addinventory_api()
+  {
 
-  
+    $getPurchaseData = $this->Gallarymodel->fetch_data();
+
+
+    foreach ($getPurchaseData as $key => $value) {
+     
+
+      $arrya_json[] = array($value['id'], '<img src="'.$value['image'].'">', '
+               <a class="delete_sliders" data-id="' . $value['id'] . '"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a>');
+    }
+    echo json_encode(array('data' => $arrya_json));
+  }
+   
 
 
 

@@ -186,7 +186,7 @@
                         </p>
                     </div>
 
-                    <a href="<?php echo base_url() ?>franchies"><button class="fbtn">Become Franchies</button></a>
+                    <a href="<?php echo base_url() ?>franchies"><button class="fbtn">Become Franchise</button></a>
                 </div>
 
 

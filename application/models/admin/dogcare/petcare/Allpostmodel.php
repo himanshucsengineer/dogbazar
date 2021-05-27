@@ -18,13 +18,13 @@ class Allpostmodel extends CI_Model
     return $query->result();
   }
 
-  function update_pro($head, $content, $id, $link, $imageurl)
+  function update_pro($head, $id, $imageurl)
   {
 
     $data = array(
       'head' => $head,
-      'link' => $link,
-      'content' => $content,
+   
+  
       // 'tag' => $tag,
       'id' => $id,
       'image' => $imageurl,

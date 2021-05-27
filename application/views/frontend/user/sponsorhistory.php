@@ -6,7 +6,7 @@
                     <a href="<?php echo base_url() ?>profile"><button >Profile & Setting</button></a>
                     <a href="<?php echo base_url()?>donation-history"><button >Donation History</button></a>
                     <a href="<?php echo base_url()?>sponsor-history"><button class="active">Sponsor History</button></a>
-        
+                    <a href="<?php echo base_url()?>adopted-pet"><button >Adopted Pet</button></a>
                 </div>
             </div>
             <div class="col-md-9">
@@ -23,6 +23,7 @@
                                     <th>Pet Age</th>
                                     <th>Pet Color</th>
                                     <th>Pet Gender</th>
+                                    <th>Pet Breed</th>
                                     <th>Pet Image</th>
                                     <th>Amount</th>
                                     <th>Transection Id</th>
@@ -34,7 +35,8 @@
                                     <td><?php echo $value['p_age']?></td>
                                     <td><?php echo $value['p_color']?></td>
                                     <td><?php echo $value['p_gender']?></td>
-                                    <td><img src="<?php echo $value['p_image']?> " style="width: 100px; "></td>
+                                    <td><?php echo $value['p_breed']?></td>
+                                    <td><img src="<?php echo base_url()?>upload/dogcare/behave/<?php echo $value['p_image']?> " style="width: 100px; "></td>
                                     <td><?php echo $value['amount']?></td>
                                     <td><?php echo $value['order_id']?></td>
                                 </tr>

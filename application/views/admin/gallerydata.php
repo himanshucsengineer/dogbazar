@@ -63,14 +63,7 @@
 
             </thead>
             <tbody>
-              <?php foreach($list as $value){ ?>
-                <tr>
-                  <td><?php echo $value['id'] ?></td>
-                  <td><img src="<?php echo $value['image'] ?>"></td>
-                 
-                  <td><a class="delete_sliders" data-id="<?php echo $value['id']?>"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
-                </tr>
-              <?php } ?>
+             
             </tbody>
           </table>
         </div>
@@ -89,7 +82,7 @@
 
 <div id="deletePurchaseModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <?php echo form_open(base_url('admin/gallerydata'), array('method' => 'post')); ?>
+    <?php echo form_open(base_url('admin/gallerydata/deleteuserdetail'), array('method' => 'post')); ?>
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">�</button>
@@ -116,11 +109,9 @@
 <script>
   $(document).ready(function() {
     $('#lowinventory').DataTable({
-      
+      "ajax": "<?php echo base_url(); ?>admin/gallerydata/addinventory_api"
     });
-    $('#lowinventory2').DataTable({
-      
-    });
+   
 
     $(document).on('click', '.delete_sliders', function() {
 

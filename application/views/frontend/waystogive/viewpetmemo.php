@@ -9,19 +9,19 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img src="<?php echo @$blog->image ?>" id="getdynamicimae" alt="adopt pet">
+                <img src="<?php echo base_url()?>upload/petmemorial/<?php echo @$blog->image ?>" id="getdynamicimae" alt="adopt pet">
 
                 <div class="bottom_images" id="bottomImage">
                     <div class="cardimage">
 
-                        <img src="<?php echo @$blog->image ?>" alt="adopt pet">
+                        <img src="<?php echo base_url()?>upload/petmemorial/<?php echo @$blog->image ?>" alt="adopt pet">
                     </div>
                     <?php for ($i = 1; $i < 5; $i++) {
                         $img = "image$i";
                         if (@$blog->$img != NULL) {  ?>
                             <div class="cardimage">
 
-                                <img src="<?php echo @$blog->$img ?>" alt="adopt pet">
+                                <img src="<?php echo base_url()?>upload/petmemorial/<?php echo @$blog->$img ?>" alt="adopt pet">
                             </div>
 
                     <?php }
@@ -35,7 +35,7 @@
                     <h5>Born Date: <span class="declar"><?php echo @$blog->b_date ?></span></h5>
                     <h5>Born Place: <span class="declar"><?php echo @$blog->b_place ?></span></h5>
                     <h5>Died Date: <span class="declar"><?php echo @$blog->d_date ?></span></h5>
-                    <h5>Died Date:<span class="declar"><?php echo @$blog->d_place ?></span></h5>
+                    <h5>Died Place:<span class="declar"><?php echo @$blog->d_place ?></span></h5>
 
 
                 </div>

@@ -8,7 +8,7 @@ class Editpost extends CI_controller
         if (!$this->session->userdata('vendorAuth')) {
             redirect('login');
         }
-        $this->load->model('admin/dogcare/petcare/Catemodel');
+        //$this->load->model('admin/dogcare/petcare/Catemodel');
         $this->load->model('admin/dogcare/petcare/Allpostmodel');
     }
 
@@ -16,7 +16,7 @@ class Editpost extends CI_controller
     {
 
 
-        $data['fetch_category'] = $this->Catemodel->fetch_data();
+       // $data['fetch_category'] = $this->Catemodel->fetch_data();
         $data['fetch_content'] = $this->Allpostmodel->fetch_data();
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
@@ -33,8 +33,8 @@ class Editpost extends CI_controller
 
 
         $this->form_validation->set_rules('heading', 'Name', 'required');
-        $this->form_validation->set_rules('link', 'Email', 'required');
-        $this->form_validation->set_rules('content', 'Number', 'required');
+        //$this->form_validation->set_rules('link', 'Email', 'required');
+       // $this->form_validation->set_rules('content', 'Number', 'required');
         // $this->form_validation->set_rules('tags', 'Address', 'required');
         //// $this->form_validation->set_rules('mtitle', 'Meta Title', 'required');
         // $this->form_validation->set_rules('mdesc', 'Meta Description', 'required');
@@ -56,7 +56,7 @@ class Editpost extends CI_controller
                     redirect('admin/dogcare/petcare/newpost');
                 } else {
                     $dataimage_return = $this->upload->data();
-                    $imageurl = base_url() . 'upload/dogcare/petcare/' . $dataimage_return['file_name'];
+                    $imageurl = $dataimage_return['file_name'];
                 }
             } else {
                 $data = $this->Allpostmodel->fetch_data();
@@ -69,15 +69,15 @@ class Editpost extends CI_controller
             }
 
             $head = $this->input->post('heading');
-            $link = $this->input->post('link');
-            $content = $this->input->post('content');
+           // $link = $this->input->post('link');
+           // $content = $this->input->post('content');
             //  $tag = $this->input->post('tags');
             $id = $this->input->post('id');
             // $mtitle = $this->input->post('mtitle');
             // $mdesc = $this->input->post('mdesc');
             // $mkey = $this->input->post('mkey');
 
-            if ($this->Allpostmodel->update_pro($head, $content, $id, $link, $imageurl)) {
+            if ($this->Allpostmodel->update_pro($head, $id, $imageurl)) {
 
 
 

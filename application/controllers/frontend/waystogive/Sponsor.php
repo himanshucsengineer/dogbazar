@@ -32,7 +32,7 @@ class Sponsor extends CI_controller
                             <a href="'.base_url().'sponsorpet/'.$row->link.'">
                                 <h3>'.$row->name.'</h3>
                                 <div class="inner_card">
-                                    <img src="'.$row->image.'">
+                                    <img src="'.base_url().'upload/dogcare/behave/'.$row->image.'">
                                     <h5>Gender: '.$row->gender.'</h5>
                                     <h5>Age: '.$row->age.'</h5>
                                     <div class="sponsor_buttt">

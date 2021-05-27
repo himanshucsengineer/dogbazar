@@ -18,9 +18,9 @@
     <div class="container">
         <div class="flex" id="lightgallery">
             <?php foreach ($dogss as $value) { ?>
-                <div class="card" data-responsive="<?php echo $value['image'] ?>" data-src="<?php echo $value['image'] ?>" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
+                <div class="card" data-responsive="<?php echo base_url()?>upload/gallary/<?php echo $value['image'] ?>" data-src="<?php echo base_url()?>upload/gallary/<?php echo $value['image'] ?>" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
                     <a href="">
-                        <img src="<?php echo $value['image'] ?>" alt="">
+                        <img src="<?php echo base_url()?>upload/gallary/<?php echo $value['image'] ?>" alt="">
                     </a>
                 </div>
             <?php } ?>

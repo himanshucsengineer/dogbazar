@@ -53,104 +53,149 @@ if (!isset($_SESSION["email"])) {
     </div>
 
 </div>
-<div class="utilize">
-    <div class="container">
-        <h1>We Could Utilize Your Services!</h1>
-        <p>We couldn’t save the lives of these animals without you. We appreciate any time or donations you can offer us.</p>
-        <div class="row">
-            <div class="col-md-4 ">
 
-                <center><i class="fas fa-calendar-alt"></i></center>
-                <h2>When?</h2>
-                <p>We need volunteers seven days a week from 11:00-7:00. If you even have an hour, stop by. There’s always a pet in need.</p>
+
+<div class="what_will_vonlunteer what_adopt">
+    <div class="container">
+        <div class="row">
+            
+
+            <div class="col-md-6">
+                <h1>Top 10 Reasons for Relinquishment</h1>
+                <div class="flex">
+                    <div class="left">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="right">
+                        <p>Moving (7%)</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="left">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="right">
+                        <p>Landlord not allowing pet (6%)</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="left">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="right">
+                        <p>Too many animals in household (4%)</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="left">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="right">
+                        <p>Cost of pet maintenance (5%)</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="left">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="right">
+                        <p>Owner having personal problems (4%)</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="left">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="right">
+                        <p>Inadequate facilities (4%)</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="left">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="right">
+                        <p>No homes available for litter mates (3%)</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="left">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="right">
+                        <p>Having no time for pet (4%)</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="left">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="right">
+                        <p>Pet illness(es) (4%)</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="left">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="right">
+                        <p>	Biting (3%)</p>
+                    </div>
+                </div>
+
             </div>
-            <div class="col-md-4">
-                <center><i class="fas fa-users"></i></center>
-                <h2>Who?</h2>
-                <p>Anyone can volunteer! You just have to love animals and be ready to work.</p>
+            <div class="col-md-6">
+                <img src="<?php echo base_url() ?>/assest/images/dog_adopt_2.jpg" alt="what will vounteer do">
             </div>
-            <div class="col-md-4">
-                <center><i class="fas fa-question-circle"></i></center>
-                <h2>Why?</h2>
-                <p>We rescue thousands of abused and neglected dogs and cats every year. They all need care, help, and your love.</p>
-            </div>
-        </div>
-        <div class="sing_volun">
-            <a href="#volunteer"><button>Adopt A pet Now</button></a>
         </div>
     </div>
 </div>
 
-<div class="what_will_vonlunteer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <h1>As a volunteer what you can do</h1>
-                <div class="flex">
-                    <div class="left">
-                        <i class="fas fa-check"></i>
-                    </div>
-                    <div class="right">
-                        <p>Research and develop educational material for humane education programs</p>
-                    </div>
-                </div>
-                <div class="flex">
-                    <div class="left">
-                        <i class="fas fa-check"></i>
-                    </div>
-                    <div class="right">
-                        <p>Research and write material for the media, social media, blogs and newsletters</p>
-                    </div>
-                </div>
-                <div class="flex">
-                    <div class="left">
-                        <i class="fas fa-check"></i>
-                    </div>
-                    <div class="right">
-                        <p>Graphic and web design our online and textbooks material</p>
-                    </div>
-                </div>
-                <div class="flex">
-                    <div class="left">
-                        <i class="fas fa-check"></i>
-                    </div>
-                    <div class="right">
-                        <p>Build databases of animal welfare organizations and hospitals, Vets, Ambulance Operators, volunteers, etc.</p>
-                    </div>
-                </div>
-                <div class="flex">
-                    <div class="left">
-                        <i class="fas fa-check"></i>
-                    </div>
-                    <div class="right">
-                        <p>Conduct workshops for college students on animal welfare and environment sustenance</p>
-                    </div>
-                </div>
-                <div class="flex">
-                    <div class="left">
-                        <i class="fas fa-check"></i>
-                    </div>
-                    <div class="right">
-                        <p>Attend to our Animal Helpline and help in coordinating rescue work</p>
-                    </div>
-                </div>
-                <div class="flex">
-                    <div class="left">
-                        <i class="fas fa-check"></i>
-                    </div>
-                    <div class="right">
-                        <p>Fund raise by writing grant proposals and crowd funding</p>
-                    </div>
-                </div>
 
+
+<div class="help_us_volunteer sdopt_daa">
+    <div class="container">
+        <h1>Tips You Might Want to Know About Dog Adoption?</h1>
+        <div class="row abostsbsy">
+            <div class="col-md-4">
+                <h4>First Week with Your Newly Adopted Dog</h4>
+                <hr class="adopt_horrf">
             </div>
-            <div class="col-md-6">
-                <img src="<?php echo base_url() ?>/assest/images/Volunteer_What.jpg" alt="what will vounteer do">
+            <div class="col-md-8">
+                <p>Just like us, dogs need order and leadership. They seek order, which you must provide. Your dog needs to know that you are the in charge and that you have a set of rules to live by. This makes the transition from the shelter to your home easier, faster and more rewarding.</p>
+                <p>Purchase your essential dog care items such as ID tags, a collar, food and water bowls, food, dog toys, a crate and bedding, and basic grooming tools. Just before you bring your dog adoption home, take him for a walk to tire him out a little.</p>
+            </div>
+        </div>
+
+        <div class="row abostsbsy">
+            <div class="col-md-4">
+                <h4>Myths of Dog Adoption</h4>
+                <hr class="adopt_horrf">
+            </div>
+            <div class="col-md-8">
+                <ol>
+                    <li>Animals in Shelters are Damaged Goods. ...</li>
+                    <li>Animals for Adoption are Old and/or Sick. ...</li>
+                    <li>You Don't Know What You're Getting If You Adopt from a Shelter or Rescue. ...</li>
+                    <li>The Only Animals Up for Adoption are Cats and Dogs. ...</li>
+                    <li>Pets for Adoption Are Dirty and Sickly.</li>
+                </ol>
+                <p>These myths are baseless. The number of dog adoptions in need are compounded by a surplus of dogs breed for profit: approximately 4 million adoptable pets are killed each year due to overpopulation. By taking home a dog adoption from a rescue or a shelter, not only are you saving that pet, you're either making room in the rescue so they can save another pet from a shelter, or making room at the shelter itself.</p>
+            </div>
+        </div>
+
+        <div class="row abostsbsy">
+            <div class="col-md-4">
+                <h4>Prepare Your Budget for Dog Adoption</h4>
+                <hr class="adopt_horrf">
+            </div>
+            <div class="col-md-8">
+                <p>Adding a pet as a new family member is exciting, sometimes frustrating, and extremely rewarding. But you have to make sure you understand up front what kind of commitment you’re making. Pets thrive on love, but they also require tangibles like food, shelter and bedding. And you have to be prepared to give your new pet the veterinary care necessary for a long, healthy, happy life. Typical dog adoption fees range from $100 to $300. Next consider you basic supplies such as a collar, IDs, microchip, leash, pet bed, bowls, and toys. The biggest cost will be food, that depends on the size and type of dog you will be adopting. Other costs are mostly medical and will include regular vet check-ups, and the potential for a trip to the vest because of an accident, or illness. So be prepared for that. </p>
             </div>
         </div>
     </div>
-</div>
 
+</div>
 
 <div class="list_dog_form volunteer_form_new" id="volunteer">
     <div class="container">
@@ -167,7 +212,7 @@ if (!isset($_SESSION["email"])) {
                         <input type="hidden" name="breed" value="<?php echo @$list->breed ?>">
                         <input type="hidden" name="gender" value="<?php echo @$list->gender ?>">
                         <input type="hidden" name="city" value="<?php echo @$list->city ?>">
-                        
+                        <input type="hidden" name="p_image" value="<?php echo @$list->image ?>">
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="">Name</label>

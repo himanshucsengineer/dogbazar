@@ -19,6 +19,13 @@ class Donatemodel extends CI_Model
         return  $this->db->get('sponsoranimal')->result_array();
            
        }
+
+
+       public function fetch_user_adoption_data(){
+        return  $this->db->get('adoption')->result_array();
+           
+       }
+
     function insert_gift_data($data)
     {
 

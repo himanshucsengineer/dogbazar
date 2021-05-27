@@ -56,7 +56,7 @@ class Editpost extends CI_controller
                     redirect('admin/dogcare/nutrition/newpost');
                 } else {
                     $dataimage_return = $this->upload->data();
-                    $imageurl = base_url() . 'upload/dogcare/nutrition/' . $dataimage_return['file_name'];
+                    $imageurl = $dataimage_return['file_name'];
                 }
             } else {
                 $data = $this->Allpostmodel->fetch_data();

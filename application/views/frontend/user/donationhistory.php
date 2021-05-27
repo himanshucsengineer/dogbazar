@@ -6,7 +6,7 @@
                     <a href="<?php echo base_url() ?>profile"><button >Profile & Setting</button></a>
                     <a href="<?php echo base_url()?>donation-history"><button class="active">Donation History</button></a>
                     <a href="<?php echo base_url()?>sponsor-history"><button >Sponsor History</button></a>
-        
+                    <a href="<?php echo base_url()?>adopted-pet" ><button >Adopted Pet</button></a>
                 </div>
             </div>
             <div class="col-md-9">

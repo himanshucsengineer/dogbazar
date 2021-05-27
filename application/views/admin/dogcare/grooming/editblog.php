@@ -99,7 +99,7 @@
             ?>
             <?php foreach ($fetch_content as $value) {
                 if ($value['id'] == $rerfe[1]) { ?>
-                    <?php $vall =$value['image']; $last = basename($vall); $ext = explode('.', $last); if($ext[1]=="mp4"){$videotag = '<video src="'.$value['image'].'" controls id="video"></video>'; }else{$videotag ='<img src="'.$value['image'].'" id="im">';}?>
+                    <?php $vall =$value['image']; $last = basename($vall); $ext = explode('.', $last); if($ext[1]=="mp4"){$videotag = '<video src="'.base_url().'upload/dogcare/grooming/'.$value['image'].'" controls id="video"></video>'; }else{$videotag ='<img src="'.base_url().'upload/dogcare/grooming/'.$value['image'].'" id="im">';}?>
                     <div class="row">
                         <div class="col-md-9">
                             <div class="box">

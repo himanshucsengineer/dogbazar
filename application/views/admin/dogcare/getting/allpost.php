@@ -70,7 +70,7 @@
                 <tr>
                   <td><?php echo $value['id'] ?></td>
                   <td><?php echo $value['head'] ?></td>
-                  <td><img  src="<?php echo $value['image'] ?>"></td>
+                  <td><img  src="<?php echo base_url()?>upload/dogcare/getting/<?php echo $value['image'] ?>"></td>
                   <td><?php echo $value['cate']?></td>
                   <td><?php echo $value['subcategory']?></td>
                   <td><?php echo $value['date']?></td>
@@ -128,7 +128,7 @@
                 <tr>
                   <td><?php echo $value['id'] ?></td>
                   <td><?php echo $value['head'] ?></td>
-                  <td><video src="<?php echo $value['image'] ?>" controls></video></td>
+                  <td><video src="<?php echo base_url()?>upload/dogcare/getting/<?php echo $value['image'] ?>" controls></video></td>
                   <td><?php echo $value['cate']?></td>
                   <td><?php echo $value['subcategory']?></td>
                   <td><?php echo $value['date']?></td>

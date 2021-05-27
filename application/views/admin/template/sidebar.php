@@ -91,7 +91,20 @@ $parts = basename($url);
         </div>
 
       
-
+        <li class="nav-item ">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#adopt" aria-expanded="true" aria-controls="collapsePages">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Pet Adopt</span>
+          </a>
+          <div id="adopt" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="py-2 collapse-inner rounded">
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/doglist" style="font-size:1.3rem; ">Listed Dog</a>
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/adoption" style="font-size:1.3rem; ">Adoption Request</a>
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/adopted" style="font-size:1.3rem; ">Adopted Pet</a>
+              <div class="collapse-divider"></div>
+            </div>
+          </div>
+        </li>
 
 
         <li class="nav-item ">
@@ -325,12 +338,7 @@ $parts = basename($url);
         <li class="nav-item <?php echo ($parts == 'franchies') ? "active" : "" ?>">
           <a class="nav-link " href="<?php echo base_url(); ?>admin/franchies"><i class="fas fa-fw fa-table"></i><span>Franchies Request</span></a>
         </li>
-        <li class="nav-item <?php echo ($parts == 'adoption') ? "active" : "" ?>">
-          <a class="nav-link " href="<?php echo base_url(); ?>admin/adoption"><i class="fas fa-fw fa-table"></i><span>Adoption Request</span></a>
-        </li>
-        <li class="nav-item <?php echo ($parts == 'doglist') ? "active" : "" ?>">
-          <a class="nav-link " href="<?php echo base_url(); ?>admin/doglist"><i class="fas fa-fw fa-table"></i><span>Dog Lists</span></a>
-        </li>
+        
         <li class="nav-item <?php echo ($parts == 'volunteer') ? "active" : "" ?>">
           <a class="nav-link " href="<?php echo base_url(); ?>admin/volunteer"><i class="fas fa-fw fa-table"></i><span>volunteer Request</span></a>
         </li>

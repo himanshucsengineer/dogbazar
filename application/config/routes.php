@@ -20,6 +20,7 @@ $route['watch-news/(:any)'] = 'frontend/news/viewnews/index/$1';
 $route['events'] = 'frontend/news/events';
 $route['mydogs'] = 'frontend/user/mydogs';
 $route['profile'] = 'frontend/user/profile';
+$route['adopted-pet'] = 'frontend/user/adoptedpet';
 $route['about-idb'] = 'frontend/aboutidb';
 $route['about-mad'] = 'frontend/aboutmad';
 $route['about-viren'] = 'frontend/aboutvs';

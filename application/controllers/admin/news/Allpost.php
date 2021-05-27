@@ -27,22 +27,9 @@ class Allpost extends CI_controller
   
 
 
-  public function addinventory_api()
-  {
+ 
 
-    $getPurchaseData = $this->Allpostmodel->fetch_data();
-
-    foreach ($getPurchaseData as $key => $value) {
-
-      $arrya_json[] = array(
-        $value['id'], $value['head'], '<iframe  src="' . $value['image'] . '">', $value['cate'],$value['subcategory'] ,$value['date'], '<a href="' . base_url() . 'admin/dogcare/givingup/editpost?id=' . $value['id'] . '"    >Edit</a>',
-        '<a class="delete_sliders" data-id="' . $value['id'] . '"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a>'
-      );
-    }
-    echo json_encode(array('data' => $arrya_json));
-  }
-
-  public function deletepost()
+  public function deletepost() 
   {
 
     if ($this->input->post('deletesliderId')) {

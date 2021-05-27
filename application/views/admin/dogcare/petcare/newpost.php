@@ -78,46 +78,16 @@
         <form method="post" action="newpost/post" enctype="multipart/form-data">
 
             <div class="row">
-                <div class="col-md-9">
+                <div class="col-md-12">
                     <div class="box">
                         <label>Post Heading</label>
                         <input type="text" name="heading" placeholder="Enter Heading">
-
-                        <label>Post Content</label>
-                        <textarea name="content" id="textareaContent" placeholder="Type Your Blog Here...." required></textarea>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="box">
-                        <label>Post Link</label>
-                        <input name="link" type="text" placeholder="Enter Post name">
-                        <p>Genrate Your Own Post Link</p>
-                    </div>
-                    <div class="box">
-                        <label>Select Category</label>
-                        <select name="category">
-                            <option>Select Category</option>
-                            <?php foreach ($fetch_category as $value) { ?>
-                                <option><?php echo $value['cate_name']; ?></option>
-                            <?php } ?>
-                        </select>
-                        <p>Select Post Category</p>
-                        <label>Publish Your Post</label>
-                        <button name="formSubmit">Publish</button>
-                    </div>
-                    <div class="box">
                         <label>Featured Image</label>
                         <input name="images" id="fileupload" type="file">
-                        <p>set Featured Image</p>
+                        <button name="formSubmit">Publish</button>
                     </div>
-
-
-                    <!--div class="box">
-                    <label>Video Link</label>
-                    <input type="text" required placeholder="Enter youtube video link" name="tag">
-                  
-                </div-->
                 </div>
+                
             </div>
 
 

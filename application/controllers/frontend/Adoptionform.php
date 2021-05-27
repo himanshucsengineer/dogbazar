@@ -106,6 +106,7 @@ class Adoptionform extends CI_controller
                 'breed' => $this->input->post('breed'),
                 'gender' => $this->input->post('gender'),
                 'city' => $this->input->post('city'),
+                'p_image' => $this->input->post('p_image'),
                 'image' => $img_data[0],
                 'image1' => $img_data[1],
             );
