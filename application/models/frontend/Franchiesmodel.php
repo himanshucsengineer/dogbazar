@@ -3,14 +3,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Franchiesmodel extends CI_Model
 {
-    function insert_data($name, $email, $sub, $msg)
+    function insert_data($data)
     {
-        $data = array(
-            'name' => $name,
-            'email' => $email,
-            'subject' => $sub,
-            'msg' => $msg
-        );
+        
         return  $this->db->insert('franchies', $data);
     }
 }
