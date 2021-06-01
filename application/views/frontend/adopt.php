@@ -1,4 +1,3 @@
-
 <div class="adopt_dog">
     <div class="first_sec">
         <div class="container">
@@ -27,7 +26,7 @@
                             <input type="text" id="serch" placeholder="Search By City" value="">
                         </div>
                         <div class="right">
-                            <button id="searchnow">Search</button>
+                            <button id="searchnow" onclick="delet()">Search</button>
                         </div>
 
                     </div>
@@ -37,49 +36,49 @@
         </div>
 
         <?php
-                if ($this->session->flashdata('success')) {
-                    echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
-                } else if ($this->session->flashdata('error')) {
-                    echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
-                }
+        if ($this->session->flashdata('success')) {
+            echo '<div class="alert alert-success">' . $this->session->flashdata('success') . '</div>';
+        } else if ($this->session->flashdata('error')) {
+            echo '<div class="alert alert-danger">' . $this->session->flashdata('error') . '</div>';
+        }
 
 
-                ?>
-        <div class="adopt_card_main  " id="load_data">
+        ?>
+        <div id="allpett">
+            <div class="adopt_card_main  " id="load_data">
 
-
-
-
-
-
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-md-3">
-                <div class="text-center" id="load_data_message"></div>
             </div>
-        </div>
-        <div class="adopt_card_main  " id="load_data2">
+            <div class="row justify-content-center">
+                <div class="col-md-3">
+                    <div class="text-center" id="load_data_message"></div>
+                </div>
+            </div>
 
 
 
-
-
-
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-md-3">
-                <div class="text-center" id="load_data_message2"></div>
+            <div class="load_more_adopt">
+                <button id="loadmore">load more</button>
             </div>
         </div>
 
-        <div class="load_more_adopt">
-            <button id="loadmore">load more</button>
+        <div id="serchpet" style="display: none;">
+            <div class="adopt_card_main  " id="load_data2">
+
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-3">
+                    <div class="text-center" id="load_data_message2"></div>
+                </div>
+            </div>
+            <div class="load_more_adopt">
+                <button id="loadmo">load more</button>
+            </div>
+
         </div>
-
-
     </div>
 </div>
 <script>
+    
     $(document).ready(function() {
 
         var limit = 6;
@@ -139,58 +138,70 @@
 </script>
 <script>
     
-
-
-
-
     $(document).ready(function() {
 
         
         $('#searchnow').click(function(e) {
             e.preventDefault();
-            var srr = document.getElementById('serch').value;
-           
-           
-            console.log(srr);
-            $("#load_data").hide();
-            $("#load_data_message").hide();
-
+            var search = document.getElementById('serch').value;
+            
+            
+            $("#allpett").hide();
+            $("#serchpet").show();
+            localStorage.mytime = search;
+            var seess = localStorage.getItem("mytime");
+            console.log(seess)
             var limit = 6;
             var start = 0;
-
-
+            
             function lazzy_loader(limit) {
+                if (search == seess) {
+                    for (var count = 0; count < limit; count++) {
 
-                for (var count = 0; count < limit; count++) {
+                        output = '<div class="row justify-content-center"><div class="col-md-3"><div class="loader"></div></div></div>';
 
-                    output = '<div class="row justify-content-center"><div class="col-md-3"><div class="loader"></div></div></div>';
+                    }
+                    $('#load_data_message2').html(output);
+                } else {
+                    $('#load_data2').html("");
+                    for (var count = 0; count < limit; count++) {
+
+                        output = '<div class="row justify-content-center"><div class="col-md-3"><div class="loader"></div></div></div>';
+
+                    }
+                    $('#load_data_message2').html(output);
                 }
-                $('#load_data_message').html(output);
+
+
+
+               
+
             }
 
             lazzy_loader(limit);
 
             function load_data(limit, start) {
                 $("#searchform").trigger("reset");
+
                 $.ajax({
                     url: "<?php echo base_url(); ?>frontend/adopt/search",
                     method: "POST",
                     data: {
                         limit: limit,
                         start: start,
-                        search: srr
+                        search: search
                     },
                     cache: false,
                     success: function(data) {
-                        $('#load_data2').html("");
+
                         if (data == '') {
-                        $('#load_data_message2').html('<h3>No More Result Found</h3>');
-                        action = 'active';
-                    } else {
-                        $('#load_data2').append(data);
-                        $('#load_data_message2').html("");
-                        action = 'inactive';
-                    }
+                            $('#load_data_message2').html('<h3>No More Result Found</h3>');
+                            action = 'active';
+                        } else {
+                            $('#load_data2').append(data);
+                            $('#load_data_message2').html("");
+                            action = 'inactive';
+                        }
 
                     }
                 });
@@ -205,16 +216,19 @@
 
             load_data(limit, start);
 
-            $("#loadmore").click(function() {
 
-                lazzy_loader(limit);
-
-                start = start + limit;
-                setTimeout(function() {
-                    load_data(limit, start);
-                }, 1000);
-
+            $('#loadmo').click(function() {
+                if ($(window).scrollTop() + $(window).height() > $("#load_data2").height() && action == 'inactive') {
+                    lazzy_loader(limit, search);
+                    action = 'active';
+                    start = start + limit;
+                    setTimeout(function() {
+                        load_data(limit, start);
+                    }, 500);
+                }
             });
+
+
         });
 
     });

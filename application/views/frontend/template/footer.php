@@ -40,7 +40,7 @@
                     <li><a href="<?php echo base_url() ?>about-mad">About MAD</a></li>
                     <li><a href="<?php echo base_url() ?>about-paws">About PAWS</a></li>
                     <li><a href="<?php echo base_url() ?>privacy-policy">Privacy-Policy</a></li>
-                    <li><a href="<?php echo base_url() ?>terms">Terms & Conditions</a></li>
+                    <li><a href="<?php echo base_url() ?>term">Terms & Conditions</a></li>
                 </ul>
             </div>
             <div class="col-md-3 touch">
@@ -121,14 +121,14 @@
             <div class="modal-body">
                 <?php
                 if ($this->session->flashdata('error')) {
-                    echo "<script>$('#loginModal').modal('show');</script>";
-                    echo '<p class="text-danger">' . $this->session->flashdata('error') . '</p>';
+                    echo "<script>$('#loginModal').modal('hide');</script>";
+                    echo '<p class="text-danger ">' . $this->session->flashdata('error') . '</p>';
                 }
                 ?>
                 <?php
                 if ($this->session->flashdata('success')) {
                     echo "<script>$('#loginModal').modal('hide');</script>";
-                    echo '<p class="text-success">' . $this->session->flashdata('success') . '</p>';
+                    echo '<p class="text-success ">' . $this->session->flashdata('success') . '</p>';
                 }
                 ?>
                 <?php
@@ -147,7 +147,7 @@
                         <form method="post" action="<?php echo base_url(); ?>frontend/login/login">
                             <input id="email" type="text" placeholder="Email" name="email" required>
                             <!-- id-"password"--><input id="input_login" type="password" placeholder="Password" name="password" required><span class="hide" type="button" onclick="hideeLogin()"><i class="fa fa-eye" aria-hidden="true"></i></span>
-                            <input type="submit" value="Login">
+                            <input type="submit" onclick="veriiii()" value="Login">
                         </form>
                     </div>
                 </div>
@@ -186,15 +186,21 @@
 </div>
 
 
+<?php $errorid= $this->session->flashdata('error'); $erorrex = explode(" ", $errorid); $finalerrr =$erorrex[0];?>
+
 <script>
-    /*
-     *
-     * login-register modal
-     * Autor: Creative Tim
-     * Web-autor: creative.tim
-     * Web script: https://creative-tim.com
-     * 
-     */
+    var errr = "<?php echo $finalerrr?>";
+    if(errr =="Wrong" || errr == "This" ){
+        $(document).ready(function(){
+        $("#loginModal").modal('show');
+        });
+    }
+
+</script>
+<script>
+
+    
+
     function showRegisterForm() {
         $('.loginBox').fadeOut('fast', function() {
             $('.registerBox').fadeIn('fast');
@@ -203,6 +209,7 @@
             });
             $('.modal-title').html('Register with International Dog Bazar');
         });
+    
         $('.error').removeClass('alert alert-danger').html('');
 
     }
@@ -216,6 +223,7 @@
 
             $('.modal-title').html('Login with International Dog Bazar');
         });
+      
         $('.error').removeClass('alert alert-danger').html('');
     }
 
@@ -277,6 +285,8 @@
 </script>
 
 
+
+  
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>

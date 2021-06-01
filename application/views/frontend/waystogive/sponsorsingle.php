@@ -61,7 +61,11 @@
                 </p>
             </div>
         </div>
-        <div class="container slideee">
+        
+    </div>
+</div>
+<div class="slideee">
+<div class="container ">
             <div class="slide_head">
                 <h1>Sponsor a dog</h1>
             </div>
@@ -87,7 +91,7 @@
                 </div>
             </div>
         </div>
-    </div>
+
 </div>
 <script type='text/javascript'>
     $(document).ready(function() {

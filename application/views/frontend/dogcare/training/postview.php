@@ -32,7 +32,7 @@ if ($exttt[1] == "mp4") {
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="box">
+                <!--div class="box">
                     <div class="top_side_head">
                         <div class="left">
                             <h3>Recent post</h3>
@@ -62,7 +62,7 @@ if ($exttt[1] == "mp4") {
                         </a>
                     <?php } ?>
 
-                </div>
+                </div-->
 
 
 

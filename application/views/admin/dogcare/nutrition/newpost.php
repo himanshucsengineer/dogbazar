@@ -82,9 +82,10 @@
                     <div class="box">
                         <label>Post Heading</label>
                         <input type="text" name="heading" placeholder="Enter Heading">
-
+                        <div id="videohide">
                         <label>Post Content</label>
                         <textarea name="content" id="textareaContent" placeholder="Type Your Blog Here...." required></textarea>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -96,26 +97,33 @@
                     <div class="box">
                         <label>Select Category</label>
                         <select name="category" id="sel_city">
-                            <option>Select Category</option>
+                            <option value="">Select Category</option>
                             <?php foreach ($fetch_category as $value) { ?>
                                 <option><?php echo $value['cate_name']; ?></option>
                             <?php } ?>
                         </select>
                         <p>Select Post Category</p>
-
+                        <div id="vidosubhide">
                         <label>Select Sub Category</label>
                         <select name="subcategory" id='sel_depart'>
                             <option>Select sub Category</option>
                         </select>
-                        
-                        <p>Select Post Category</p>
+                        </div>
+                    
                         <label>Publish Your Post</label>
                         <button name="formSubmit">Publish</button>
                     </div>
                     <div class="box">
+                    <div id="videoimage">
                         <label>Featured Image</label>
                         <input name="images" id="fileupload" type="file">
                         <p>set Featured Image</p>
+                        
+                    </div>
+                    <div id="videoshow" style="display: none;">
+                        <label for="">Insert Video Link</label>
+                        <input type="text" name="images" placeholder="Enter Link">
+                    </div>
                     </div>
 
 
@@ -130,7 +138,23 @@
 </div>
 
 
-
+<script>
+    $("#sel_city").change(function () {
+    var numInputs = $(this).val();
+    console.log(numInputs);
+    if(numInputs=="video"){
+        document.getElementById('videohide').style.display = "none";
+        document.getElementById('vidosubhide').style.display = "none";
+        document.getElementById('videoimage').style.display = "none";
+        document.getElementById('videoshow').style.display = "block";
+    }else{
+        document.getElementById('videohide').style.display = "block";
+        document.getElementById('vidosubhide').style.display = "block";
+        document.getElementById('videoimage').style.display = "block";
+        document.getElementById('videoshow').style.display = "none";
+    }
+});
+</script>
 
 <script language="javascript" type="text/javascript">
     $(function() {

@@ -113,9 +113,9 @@
                 <th>Title</th>
                 <th>Fetured Video</th>
                 <th>Category</th>
-                <th>Sub Category</th>
+                
                 <th>Date</th>
-                <th>Edit</th>
+              
 
                 <th>Action</th>
 
@@ -128,11 +128,11 @@
                 <tr>
                   <td><?php echo $value['id'] ?></td>
                   <td><?php echo $value['head'] ?></td>
-                  <td><video src="<?php echo base_url()?>upload/dogcare/problems/<?php echo $value['image'] ?>" controls></video></td>
+                  <td><iframe width="420" height="315" src="<?php echo $value['image']?>"></iframe></td>
                   <td><?php echo $value['cate']?></td>
-                  <td><?php echo $value['subcategory']?></td>
+
                   <td><?php echo $value['date']?></td>
-                  <td><a href="<?php echo base_url()?>admin/dogcare/problems/editpost?id=<?php echo $value['id'] ?>"    >Edit</a></td>
+                  <!--td><a href="<?php echo base_url()?>admin/dogcare/problems/editpost?id=<?php echo $value['id'] ?>"    >Edit</a></td-->
                   <td><a class="delete_sliders" data-id="<?php echo $value['id']?>"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
                 </tr>
               <?php } }?>

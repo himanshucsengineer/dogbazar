@@ -35,7 +35,7 @@ class Allpost extends CI_controller
     foreach ($getPurchaseData as $key => $value) {
 
       $arrya_json[] = array(
-        $value['id'], $value['head'], '<a href="'.base_url().'upload/dogcare/petcare/' . $value['image'] . '" target="_blank">View Video</a>', $value['date'], '<a href="' . base_url() . 'admin/dogcare/petcare/editpost?id=' . $value['id'] . '"    >Edit</a>',
+        $value['id'], $value['head'], '<iframe width="200" height="200" src="'. $value['image'].'"></iframe>', $value['date'],
         '<a class="delete_sliders" data-id="' . $value['id'] . '"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a>'
       );
     }

@@ -100,14 +100,20 @@
             <?php foreach ($fetch_content as $value) {
                 if ($value['id'] == $rerfe[1]) { ?>
                     <?php $vall =$value['image']; $last = basename($vall); $ext = explode('.', $last); if($ext[1]=="mp4"){$videotag = '<video src="'.base_url().'upload/dogcare/nutrition/'.$value['image'].'" controls id="video"></video>'; }else{$videotag ='<img src="'.base_url().'upload/dogcare/nutrition/'.$value['image'].'" id="im">';}?>
+                    <input id="inpout" type="hidden" value="<?php echo $value['cate']?>">
                     <div class="row">
                         <div class="col-md-9">
                             <div class="box">
                                 <label>Post Heading</label>
                                 <input type="text" name="heading" placeholder="Enter Heading" value="<?php echo $value['head']; ?>">
-
+                                <div id="postcontent">
                                 <label>Post Content</label>
                                 <textarea name="content" id="textareaContent" placeholder="Type Your Blog Here...." required><?php echo $value['content']; ?></textarea>
+                                </div>
+                                <div id="videoinput" style="display:none;">
+                                    <label for="">Select New Video Link</label>
+                                    <input type="text" name="images" placeholder="enter Link">
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -129,13 +135,7 @@
                             </div>
 
 
-                            <!--div class="box">
-                    <label>Meta Tags</label>
-                    <textarea name="tags"  required><?php echo $value['tag']; ?></textarea>
-                   
-                    <p>Separate tags with commas</p>
-                    
-                </div-->
+                      
 
                         </div>
                     </div>
@@ -146,24 +146,12 @@
 
 
 
-                    <!--div class="box">
-            <label>Meta Title</label>
-                <input name="mtitle" type="text" placeholder="Enter Meta Title" value="<?php echo $value['mt_title']; ?>">
-                
-                <label>Meta Description</label>
-               
-                <textarea name="mdesc" required><?php echo $value['m_desc']; ?></textarea>
-                
-                <label>Meta Keywords</label>
-                <input name="mkey" type="text" placeholder="Enter Meta Keywords" value="<?php echo $value['m_key']; ?>">
-        </div-->
+             
             <?php }
             } ?>
         </form>
     </div>
 </div>
-
-
 
 
 <script language="javascript" type="text/javascript">
@@ -200,5 +188,12 @@
 <script>
     $(document).ready(function() {
         CKEDITOR.replace('textareaContent');
+        var inouryb= document.getElementById('inpout').value;
+        console.log(inouryb);
+        if(inouryb=="video"){
+            document.getElementById('postcontent').style.display = "none";
+        }else{
+            document.getElementById('postcontent').style.display = "block";
+        }
     });
 </script>

@@ -31,24 +31,11 @@ class Newpost extends CI_controller
         $this->input->post('formSubmit');
 
 
-        if (!empty($_FILES['images']['name'])) {
-            $File_name = '';
-            $config['upload_path'] = APPPATH . '../upload/dogcare/petcare';
-            $config['file_name'] = $File_name;
-            $config['overwrite'] = TRUE;
-            $config["allowed_types"] = 'mp4';
-            $config["max_size"] = '';
-            $this->load->library('upload', $config);
-            if (!$this->upload->do_upload('images')) {
-                $this->data['error'] = $this->upload->display_errors();
-                $this->session->set_flashdata('error', $this->upload->display_errors());
-                redirect('admin/dogcare/petcare/newpost');
-            } else {
-                $dataimage_return = $this->upload->data();
-                $imageurl =$dataimage_return['file_name'];
-            }
-        }
-
+  
+        $imagefullurl = $this->input->post('images');
+        $base = explode("=",$imagefullurl);
+        $finalurl = "https://www.youtube.com/embed/".$base[1];
+        $imageu= $finalurl;
 
 
 
@@ -62,7 +49,7 @@ class Newpost extends CI_controller
             //'link' => $link,
             //'tag' => $this->input->post('tag'),
 
-            'image' => $imageurl,
+            'image' => $imageu,
         );
         if ($this->newpostmodel->newpost($datas)) {
             $this->session->set_flashdata('success', 'Post Published');

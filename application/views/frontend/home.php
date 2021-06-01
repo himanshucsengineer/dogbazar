@@ -303,7 +303,7 @@
                     <div class="inner_card">
                         <h2>Volunteering</h2>
                         <p>Mercy Ships brings hope and healing to developing nations by operating hospital ships staffed by amazing volunteers.</p>
-                        <a href="<?php echo base_url()?>volunteer"><button>Get Involvde</button></a>
+                        <a href="<?php echo base_url()?>volunteer"><button>Get Involved</button></a>
                     </div>
                 </div>
 

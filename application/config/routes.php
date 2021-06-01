@@ -19,6 +19,8 @@ $route['watch-news/(:any)'] = 'frontend/news/viewnews/index/$1';
 
 $route['events'] = 'frontend/news/events';
 $route['mydogs'] = 'frontend/user/mydogs';
+
+$route['term'] = 'frontend/term';
 $route['profile'] = 'frontend/user/profile';
 $route['adopted-pet'] = 'frontend/user/adoptedpet';
 $route['about-idb'] = 'frontend/aboutidb';

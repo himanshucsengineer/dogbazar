@@ -32,16 +32,16 @@
                 <h1><?php echo $value['name']?></h1>
                 <div class="mid_date">
                     <div class="date_full">
-                        <p><i class="far fa-clock"></i> <?php echo $finaldate[0]?> <span class="date_mohnt"><?php echo $finaldate[1]?> <?php echo $finaldate[2]?></span></p>
+                        <p><i class="event_fa far fa-clock"></i> <?php echo $finaldate[0]?> <span class="date_mohnt"><?php echo $finaldate[1]?> <?php echo $finaldate[2]?></span></p>
                     </div>
                     <div class="location_full">
-                        <p><i class="fas fa-map-marker-alt"></i> <?php echo $value['location']?></p>
+                        <p><i class="event_fa fas fa-map-marker-alt"></i> <?php echo $value['location']?></p>
                     </div>
                 </div>
                 <h5><span class="orgenid">Organizer:</span><?php echo $value['orge']?></h5>
             </div>
             <div class="right">
-                <a href="<?php echo $value['link']?>" target="_blank"><button>View Event <i class="fas fa-external-link-alt"></i></button></a>
+                <a href="<?php echo $value['link']?>" target="_blank"><button>View Event <i class="evenet_viw fas fa-external-link-alt"></i></button></a>
             </div>
         </div>
         <?php }?>

@@ -63,7 +63,7 @@ class Adopt extends CI_controller
                <a href="'.base_url().'adopt/'.$row->link.'">
                    <div class="card_inner">
                        <h3>'.$row->breed.'</h3>
-                       <img src="'.$row->image.'" alt="dog image">
+                       <img src="'.base_url().'upload/listdog/'.$row->image.'" alt="dog image">
                        <h6>Gender: '.$row->gender.'</h6>
                        <h6>Age: '.$row->age.'</h6>
                        <h6>City: '.$row->city.'</h6>

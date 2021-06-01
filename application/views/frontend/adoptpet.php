@@ -52,9 +52,13 @@
             <p><?php echo @$list->about ?></p>
         </div>
     </div>
-    <div class="container slideee">
+    
+</div>
+<div class="slideee">
+<div class="container ">
         <div class="slide_head">
             <h1>Adopt a dog</h1>
+            <hr>
         </div>
         <div class="slide_body">
             <div class="row">
@@ -80,9 +84,6 @@
         </div>
     </div>
 </div>
-
-
-
 <script type='text/javascript'>
     $(document).ready(function() {
         $('#bottomImage div img').on('click', function() {

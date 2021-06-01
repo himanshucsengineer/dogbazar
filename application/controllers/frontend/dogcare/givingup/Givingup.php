@@ -63,8 +63,8 @@ class Givingup extends CI_controller
       {
         $output .= '<div class="card">
                         <div class="inner_card">
-                            <video src="'.base_url().'upload/dogcare/givingup/'.$row->image.'" alt="" controls></video>
-                            <h3 class="VIDEOHEEE"><a href="" class="newviesrc" data-bs-toggle="modal" data-video="'.base_url().'upload/dogcare/givingup/'.$row->image.'" data-id="'.$row->head.'" data-bs-target="#video">'.$row->head.'</h3>
+                        <iframe src="'.$row->image.'" ></iframe>
+                            <h3 class="VIDEOHEEE"><a href="" class="newviesrc" data-bs-toggle="modal" data-video="'.$row->image.'" data-id="'.$row->head.'" data-bs-target="#video">'.$row->head.'</h3>
                         </div>
                     </div>';
       }

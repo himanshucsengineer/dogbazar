@@ -48,7 +48,15 @@ class Newpost extends CI_controller
                 $imageurl =  $dataimage_return['file_name'];
             }
         }
-
+        if($this->input->post('images')==''){
+            $imageu = $imageurl;
+        }else{
+            $imagefullurl = $this->input->post('images');
+            $base = explode("=",$imagefullurl);
+            $finalurl = "https://www.youtube.com/embed/".$base[1];
+            $imageu= $finalurl;
+            
+        }
 
         $link = $this->input->post('heading');
         $link = str_replace(' ', '-', $link);
@@ -63,7 +71,7 @@ class Newpost extends CI_controller
             'link' => $link,
             //'tag' => $this->input->post('tags'),
 
-            'image' => $imageurl,
+            'image' => $imageu,
         );
         if ($this->newpostmodel->newpost($datas)) {
             $this->session->set_flashdata('success', 'Post Published');

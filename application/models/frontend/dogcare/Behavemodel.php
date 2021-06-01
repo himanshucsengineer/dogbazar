@@ -18,4 +18,16 @@ class Behavemodel extends CI_Model
      $query = $this->db->get();
      return $query;
     }
+
+    function fetch_search($limit, $start,$city)
+    {
+   
+     $this->db->select("*");
+     $this->db->from("behave_newpost");
+     $this->db->where('city',$city);
+     $this->db->order_by("id", "DESC");
+     $this->db->limit($limit, $start);
+     $query = $this->db->get();
+     return $query;
+    }
 }

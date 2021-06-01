@@ -1,7 +1,7 @@
 <?php
 if (!isset($_SESSION["email"])) {
 
-    $donate = '<button  data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();" class="make_payment">Confirm Payment</button>';
+    $donate2 = '<button  data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();" class="make_payment">Confirm Payment</button>';
 } else {
 
     $donate = '<button class="make_payment">Confirm Payment</button>';
@@ -78,13 +78,13 @@ if (!isset($_SESSION["email"])) {
                             </div>
                         </div>
                         <div class="row amount">
-                            <div class="col-md-6" id="amount">
+                            <!--div class="col-md-6" id="amount">
                                 <label for="">Prefixed Amounts</label>
                                 <input type="button" class="donation_button_new3" value="2000">
                                 <input type="button" class="donation_button_new3" value="5000">
                                 <input type="button" class="donation_button_new3" value="8000">
-                            </div>
-                            <div class="col-md-6">
+                            </div-->
+                            <div class="col-md-12">
                                 <label for="">Custom Amount</label>
                                 <input id="amm" type="number" name="amount" placeholder="Enter Amount" value="" required>
                             </div>
@@ -93,6 +93,7 @@ if (!isset($_SESSION["email"])) {
                         <?php echo $donate?>
 
                     </form>
+                    <?php echo $donate2?>
                 </div>
             </div>
         </div>

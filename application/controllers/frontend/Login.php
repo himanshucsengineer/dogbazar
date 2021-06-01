@@ -40,7 +40,7 @@ class Login extends CI_controller
         if ($login_success == 1) {
             redirect(base_url() . 'profile');
         } else {
-            $this->session->set_flashdata('error', 'Wrong Email Or Password or Your Profile Is not Approved');
+            $this->session->set_flashdata('error', 'Wrong Email Or Password');
             redirect($url);
         }
     }

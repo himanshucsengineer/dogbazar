@@ -65,13 +65,10 @@
     <div class="modal-dialog">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         <div class="modal-content videomodal">
-            <div class="modal-body">
-                <div class="gead">
-                    <h1 id="videotitle">Title</h1>
-                </div>
-
-                <video id="getvideosrc" alt="" src="" controls></video>
-            </div>
+           
+                
+                <iframe height="600px" id="getvideosrc" src="" ></iframe>
+           
 
         </div>
     </div>

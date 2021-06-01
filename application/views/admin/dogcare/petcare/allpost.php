@@ -50,7 +50,7 @@
                 
 
                 <th>Date</th>
-                <th>Edit</th>
+                
 
                 <th>Action</th>
 

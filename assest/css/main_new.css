@@ -266,11 +266,15 @@ body {
 .nutrition_new_main .nutri_body .flex .card .inner_card video {
   width: 100%;
 }
+.nutrition_new_main .nutri_body .flex .card .inner_card iframe {
+  width: 100%;
+  height: 250px;
+}
 .nutrition_new_main .nutri_body .flex .card .inner_card h3 {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   margin-top: 1rem;
-  color: #a6341b;
+  color:#252525;
   text-transform: capitalize;
 }
 .nutrition_new_main .nutri_body .flex .card .inner_card .VIDEOHEEE {
@@ -278,7 +282,7 @@ body {
 }
 .nutrition_new_main .nutri_body .flex .card .inner_card p {
   color: gray;
-  font-size: 13px;
+  font-size: 15px;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   margin-bottom: 1.5rem;
@@ -287,7 +291,7 @@ body {
 }
 
 .nutrition_new_main .nutri_body .flex .card .inner_card a {
-  color: #a6341b;
+  color: #252525;
   text-decoration: none;
 }
 .nutrition_new_main .nutri_body .flex .card .inner_card .watch {
@@ -364,6 +368,9 @@ body {
   }
   .videomodal .gead h1 {
     font-size: 17px !important;
+  }
+  .frbs_img_first{
+    margin-top: 3rem !important;
   }
 }
 
@@ -616,24 +623,32 @@ body {
   background-color: white;
 }
 
-.adopt_pet_main_new .slideee img {
+.slideee{
+  width: 100%;
+  height: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: whitesmoke;
+  margin-top: 5rem;
+}
+ .slideee img {
   width: 100%;
   height: 200px;
   border-radius: 0px !important;
 }
 
-.adopt_pet_main_new .slideee .slide_head {
+ .slideee .slide_head {
   width: 100%;
   height: auto;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   background-color:#f5f5f5 ;
   padding-left: 2rem;
-  margin-top: 8rem;
+  
   
 }
 
-.adopt_pet_main_new .slideee .slide_body {
+ .slideee .slide_body {
   width: 100%;
   height: auto;
   padding-top: 2rem;
@@ -642,20 +657,20 @@ body {
  
 }
 
-.adopt_pet_main_new .slideee .slide_head h1 {
+ .slideee .slide_head h1 {
   font-size: 25px;
   font-weight: 500;
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: #2d2d2d;
-  text-align: center;
+  
 }
 
-.adopt_pet_main_new .slideee .MultiCarousel .leftLst.over,
+ .slideee .MultiCarousel .leftLst.over,
 .MultiCarousel .rightLst.over {
   background-color: #a6341b;
 }
 
-.adopt_pet_main_new .slideee .btn-primary {
+ .slideee .btn-primary {
   font-size: 20px;
   color: white;
   background-color: #fc8817;
@@ -743,7 +758,7 @@ body {
 }
 .adopt_pet_main_new .about p {
   color: #202020;
-  font-size: 15px !important;
+  font-size: 17px !important;
   line-height: 23px;
   letter-spacing: 1px;
   text-transform: capitalize;
@@ -765,6 +780,7 @@ body {
   width: 100%;
   height: 70px;
   cursor: pointer;
+  border: 1px solid #cdcdcd;
 }
 
 .MultiCarousel {
@@ -858,23 +874,23 @@ body {
     font-size: 21px !important;
   }
   .adopt_pet_main_new .about p {
-    font-size: 13px !important;
+    font-size: 15px !important;
   }
-  .adopt_pet_main_new .slideee .slide_head {
+   .slideee .slide_head {
     margin-top: 5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 0rem;
   }
-  .adopt_pet_main_new .slideee .slide_head h1 {
+   .slideee .slide_head h1 {
     font-weight: 600;
     font-size: 25px;
     text-align: center;
   }
-  .adopt_pet_main_new .slideee .slide_body {
+   .slideee .slide_body {
     padding: 0rem 0rem;
   }
-  .adopt_pet_main_new .slideee .btn-primary {
+   .slideee .btn-primary {
     font-size: 15px;
     padding: 3px 10px;
   }
@@ -1213,7 +1229,7 @@ input[type="number"] {
   height: auto;
 }
 .why_donate .flex .right p {
-  font-size: 1.5rem;
+  font-size: 17px;
 }
 .why_donate .hori_line {
   border-bottom: 1px solid gray;
@@ -1425,6 +1441,10 @@ input[type="number"] {
 }
 
 @media screen and (max-width: 600px) {
+    
+    .why_donate .flex .right p {
+  font-size: 15px;
+}
   .load_more_adopt button {
     margin-top: 0rem !important;
     margin-bottom: 3rem !important;
@@ -2861,8 +2881,9 @@ textarea {
 }
 .sponsor_how .flex .right p {
   line-height: 26px;
-  font-size: 14px;
+  font-size: 17px;
   padding-right: 60px;
+  color:white;
 }
 
 @media only screen and (max-width: 600px) {
@@ -2927,6 +2948,7 @@ textarea {
   .sponsor_how .flex .right p {
     text-align: justify;
     margin-right: 1rem;
+    font-size:15px;
   }
   .sponser_new .spons-ths .how_word {
     line-height: 1.1 !important;
@@ -3338,7 +3360,7 @@ textarea {
 
 .adopt_dog .first_sec .first_sec_inner p {
   color:#252525;
-  font-size: 15px;
+  font-size: 17px;
   text-transform: capitalize;
 }
 
@@ -3391,7 +3413,7 @@ textarea {
   }
 
   .adopt_dog .first_sec .first_sec_inner p {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .adopt_dog .flex .right {
@@ -3845,10 +3867,10 @@ to {opacity: 1}
   width: 23rem;
   height: auto;
   padding: 1rem 0rem;
-  border: none;
-  background-color: #fc8817;
+  border: 2px solid #a6341b !important;
+  background-color: transparent;
   margin-top: 2rem;
-  color: white;
+  color: #a6341b !important;
   outline: none;
   font-size: 20px;
   font-weight: 400 !important;
@@ -4068,8 +4090,8 @@ to {opacity: 1}
   word-spacing: 2px;
   text-transform: capitalize;
 }
-.events_main .flex .mid .mid_date .location_full p .far,.fas{
-  color: #fc8817;
+.events_main .flex .mid .mid_date .location_full  .far,.fas{
+  color: #fc8817 !important;
   font-size: 17px !important;
 }
 .events_main .flex .mid h5{
@@ -4628,4 +4650,17 @@ padding-bottom: 5rem;
   .home_about .top_flex .right{
     width: 20%;
   }
+}
+.nutry_postview{
+  width: 100%;
+  background-color: white !important;
+  margin-top: 0rem !important;
+}
+.event_fa{
+  font-size: 17px !important;
+  color: #fc8817 !important;
+}
+.evenet_viw{
+  margin-right: 2rem !important;
+  margin-bottom: 0rem !important;
 }

@@ -82,8 +82,8 @@
                     <div class="box">
                         <label>Post Heading</label>
                         <input type="text" name="heading" placeholder="Enter Heading">
-                        <label>Featured Image</label>
-                        <input name="images" id="fileupload" type="file">
+                        <label>Video Link</label>
+                        <input name="images"  type="text" placeholder="Enter Link">
                         <button name="formSubmit">Publish</button>
                     </div>
                 </div>

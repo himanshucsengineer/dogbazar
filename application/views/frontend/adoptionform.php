@@ -15,7 +15,7 @@ $uniqid = basename($url);
 <?php
 if (!isset($_SESSION["email"])) {
 
-    $badoptbgn = '<button  data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();">Adopt Now</button>';
+    $badoptbgn2 = '<button  data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();">Adopt Now</button>';
 } else {
 
     $badoptbgn = '<button>Adopt Now</button>';
@@ -333,6 +333,11 @@ if (!isset($_SESSION["email"])) {
                             </div>
                         </div>
                     </form>
+                    <div class="row justify-content-center">
+                            <div class="col-md-5">
+                                <?php echo $badoptbgn2?>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>

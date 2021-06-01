@@ -213,7 +213,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <img src="<?php echo base_url() ?>/assest/images/fran2.jpg" alt="what will vounteer do">
+                <img class="frbs_img_first" src="<?php echo base_url() ?>/assest/images/fran2.jpg" alt="what will vounteer do">
             </div>
         </div>
     </div>
