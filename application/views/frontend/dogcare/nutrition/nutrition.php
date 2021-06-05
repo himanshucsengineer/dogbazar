@@ -76,7 +76,7 @@
         <div class="modal-content videomodal">
             
                
-                <iframe height="600px" id="getvideosrc" src="" ></iframe>
+                <iframe class="ifraene" id="getvideosrc" src="" ></iframe>
                 
        
 

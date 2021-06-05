@@ -10,14 +10,14 @@ if (!isset($_SESSION["email"])) {
                             <img src="'.base_url().'assest/images/avtarr.png" alt="avtar">
                         </div>
                         <div class="right">
-                        <a href="" class="nodecoration ">' . $_SESSION['name'] . ' <i class="fas fa-chevron-down"></i></a>
+                        <a href="" class="nodecoration ">' . $_SESSION['name'] . ' <i class="desh_fa fas fa-chevron-down"></i></a>
                         <!-- Dropdowns with diplay class d7 -->
                             <ul class="m-0  d7 nav_item_drop_user">
-                            <li class="lstn  nav_items_dropdown_link"><a href="' . base_url() . 'profile" class=" "><i class="fa fa-user" aria-hidden="true"></i> My Profile</a></li>
-                            <li class="lstn nav_items_dropdown_link"><a href="' . base_url() . 'sponsor-history" class=""><i class="fas fa-paw"></i>Sponsor Pet History</a></li>
-                            <li class="lstn nav_items_dropdown_link"><a href="' . base_url() . 'donation-history" class=""><i class="fa fa-book" aria-hidden="true"></i>Donation History</a></li>
-                            <li class="lstn nav_items_dropdown_link"><a href="' . base_url() . 'adopted-pet" class=""><i class="fas fa-door-open"></i>Adopted Pet</a></li>
-                            <li class="lstn nav_items_dropdown_link"><a href="' . base_url() . 'logout" class=""><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                            <li class="lstn  nav_items_dropdown_link"><a href="' . base_url() . 'profile" class=" "><i class="desh_fa fa fa-user" aria-hidden="true"></i> My Profile</a></li>
+                            <li class="lstn nav_items_dropdown_link"><a href="' . base_url() . 'sponsor-history" class=""><i class="desh_fa fas fa-paw"></i>Sponsor Pet History</a></li>
+                            <li class="lstn nav_items_dropdown_link"><a href="' . base_url() . 'donation-history" class=""><i class="desh_fa fa fa-book" aria-hidden="true"></i>Donation History</a></li>
+                            <li class="lstn nav_items_dropdown_link"><a href="' . base_url() . 'adopted-pet" class=""><i class="desh_fa fas fa-door-open"></i>Adopted Pet</a></li>
+                            <li class="lstn nav_items_dropdown_link"><a href="' . base_url() . 'logout" class=""><i class="desh_fa fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
                         </ul>
                         </div>
                     </div>
@@ -37,7 +37,13 @@ if (!isset($_SESSION["email"])) {
     $logout = '<a href="' . base_url() . 'logout">Logout</a>';
 }
 ?>
-
+<style>
+    .desh_fa{
+    font-size:15px !important;
+    margin-right:1rem !important;
+    color:rgb(95,96,96) !important;
+}
+</style>
 <body>
     <div id="mySidepanel" class="sidepanel">
         <div class="flex">

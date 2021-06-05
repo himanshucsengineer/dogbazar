@@ -81,13 +81,13 @@ class Login extends CI_controller
 
         $this->form_validation->set_rules('name', 'Name', 'required');
         $this->form_validation->set_rules('email', 'Email', 'required');
-        $this->form_validation->set_rules('number', 'Number', 'required');
+        $this->form_validation->set_rules('mob', 'Number', 'required');
         $this->form_validation->set_rules('add', 'Address', 'required');
         if ($this->form_validation->run()) {
 
             $name = $this->input->post('name');
             $email = $this->input->post('email');
-            $number = $this->input->post('number');
+            $number = $this->input->post('mob');
             $addrs = $this->input->post('add');
 
 
@@ -98,12 +98,19 @@ class Login extends CI_controller
                 $_SESSION["email"] = $this->input->post('email');
                 $_SESSION["number"] = $this->input->post('number');
                 $_SESSION["add"] = $this->input->post('add');
-                echo "<h6 class='text-danger text-center'>Error In Submission</h6>";
+               
+                
+                $this->session->set_flashdata('error', 'Error In Submission');
+            redirect(base_url().'profile');
             } else {
-                echo "<h6 class='text-success text-center'>Your data have been submitted</h6>";
+              
+                $this->session->set_flashdata('success', 'Your data have been submitted');
+            redirect(base_url().'profile');
             }
         } else {
-            echo "<h6 class='text-danger text-center'>Please Fill All The Fields</h6>";
+            
+            $this->session->set_flashdata('error', 'Please Fill All The Fields');
+            redirect(base_url().'profile');
         }
     }
 }

@@ -6,11 +6,11 @@ if (!isset($_SESSION["email"])) {
     $myaccount = '<li class="lstn nav_items" id="d7"><a href="" class="nodecoration ">' . $_SESSION['name'] . '</a>
     <!-- Dropdowns with diplay class d7 -->
         <ul class="m-0  d7 nav_item_drop_user">
-            <li class="lstn  nav_items_dropdown_link"><a href="' . base_url() . 'profile" class=" "><i class="fa fa-user" aria-hidden="true"></i> My Profile</a></li>
-            <li class="lstn nav_items_dropdown_link"><a href="' . base_url() . 'sponsor-history" class=""><i class="fas fa-paw"></i>Sponsor Pet History</a></li>
-            <li class="lstn nav_items_dropdown_link"><a href="' . base_url() . 'donation-history" class=""><i class="fa fa-book" aria-hidden="true"></i>Donation History</a></li>
-            <li class="lstn nav_items_dropdown_link"><a href="' . base_url() . 'adopted-pet" class=""><i class="fas fa-door-open"></i>Adopted Pet</a></li>
-            <li class="lstn nav_items_dropdown_link"><a href="' . base_url() . 'logout" class=""><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+            <li class="lstn  nav_items_dropdown_link"><a href="' . base_url() . 'profile" class=" "><i class="desh_fa fa fa-user" aria-hidden="true"></i> My Profile</a></li>
+            <li class="lstn nav_items_dropdown_link"><a href="' . base_url() . 'sponsor-history" class=""><i class="desh_fa fas fa-paw"></i>Sponsor Pet History</a></li>
+            <li class="lstn nav_items_dropdown_link"><a href="' . base_url() . 'donation-history" class=""><i class="desh_fa fa fa-book" aria-hidden="true"></i>Donation History</a></li>
+            <li class="lstn nav_items_dropdown_link"><a href="' . base_url() . 'adopted-pet" class=""><i class="desh_fa fas fa-door-open"></i>Adopted Pet</a></li>
+            <li class="lstn nav_items_dropdown_link"><a href="' . base_url() . 'logout" class=""><i class="desh_fa fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
         </ul>
     <!-- End Dropdown -->
     </li>';
@@ -31,6 +31,11 @@ if (!isset($_SESSION["email"])) {
 }
 ?>
 <style>
+.desh_fa{
+    font-size:15px !important;
+    margin-right:1rem !important;
+    color:rgb(95,96,96) !important;
+}
     .sidebar_new {
         width: 0;
         position: fixed;
@@ -74,10 +79,10 @@ if (!isset($_SESSION["email"])) {
     .sidebar_new .flex .left .top_login {
         width: 100%;
         height: auto;
-        background-color: #323c4f;
+        background-color: #66120e !important;
         padding: 25px 15px;
         align-items: center;
-        overflow-wrap: inherit;
+        
     }
 
     .sidebar_new .flex .left .top_login .login_flex {
@@ -106,7 +111,7 @@ if (!isset($_SESSION["email"])) {
     .sidebar_new .flex .left .top_login .login_flex .login_left .inner_login_left .far {
         color: #fff !important;
         font-size: 23px !important;
-        padding: 13px 14px !important;
+        padding: 15px 18px !important;
     }
 
     .sidebar_new .flex .left .top_login .login_flex .login_right h3 {
@@ -128,6 +133,10 @@ if (!isset($_SESSION["email"])) {
         height: auto;
         background-color: #f4f4f4;
         padding: 10px;
+    }
+    .sidebar_fa_icon{
+        font-size:15px !important;
+        margin-bottom:0rem !important;
     }
 
     .sidebar_new .flex .left .brwos .brw_flex {
@@ -229,18 +238,18 @@ if (!isset($_SESSION["email"])) {
                     </div>
                     <a href="<?php echo base_url() ?>"><button>Home</button></a>
                     <?php echo $deah; ?>
-                    <button onclick="opencare();">Dog Care <span class="next_icon"><i class="fas fa-chevron-right"></i></span></button>
-                    <button onclick="openways();">Ways To Give <span class="next_icon"><i class="fas fa-chevron-right"></i></span></button>
-                    <button onclick="openhelp();">Help & Advice <span class="next_icon"><i class="fas fa-chevron-right"></i></span></button>
-                    <button onclick="openblog();">Blogs <span class="next_icon"><i class="fas fa-chevron-right"></i></span></button>
-                    <button onclick="openadopt();">Adopt <span class="next_icon"><i class="fas fa-chevron-right"></i></span></button>
-                    <button onclick="openabout();">About Us <span class="next_icon"><i class="fas fa-chevron-right"></i></span></button>
+                    <button onclick="opencare();">Dog Care <span class="next_icon"><i class="sidebar_fa_icon fas fa-chevron-right"></i></span></button>
+                    <button onclick="openways();">Ways To Give <span class="next_icon"><i class="sidebar_fa_icon fas fa-chevron-right"></i></span></button>
+                    <button onclick="openhelp();">Help & Advice <span class="next_icon"><i class="sidebar_fa_icon fas fa-chevron-right"></i></span></button>
+                    <button onclick="openblog();">Blogs <span class="next_icon"><i class="sidebar_fa_icon fas fa-chevron-right"></i></span></button>
+                    <button onclick="openadopt();">Adopt <span class="next_icon"><i class="sidebar_fa_icon fas fa-chevron-right"></i></span></button>
+                    <button onclick="openabout();">About Us <span class="next_icon"><i class="sidebar_fa_icon fas fa-chevron-right"></i></span></button>
                     <a href="<?php echo base_url() ?>"><button>Pet Accessories</button></a>
                     <a href="<?php echo base_url() ?>franchies"><button>Franchise</button></a>
                     <a href="<?php echo base_url() ?>volunteer"><button>Volunteer</button></a>
                     <a href="<?php echo base_url() ?>gallary"><button>Gallery</button></a>
                    
-                    <button>contact Us</button>
+                      <a href="<?php echo base_url() ?>contact-us"><button>contact Us</button></a>
                     <?php echo $logout; ?>
                 </div>
             </div>

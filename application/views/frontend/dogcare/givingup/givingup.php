@@ -69,7 +69,7 @@
     <div class="modal-dialog">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         <div class="modal-content videomodal">
-        <iframe height="600px" id="getvideosrc" src="" ></iframe>
+        <iframe class="ifraene" id="getvideosrc" src="" ></iframe>
 
         </div>
     </div>

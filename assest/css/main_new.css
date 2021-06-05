@@ -3,7 +3,7 @@
   border: none !important;
 }
 .cimgheight{
-  height: 48.7rem !important;
+  height: 58.7rem !important;
   width: 100% !important;
 }
 .load_msg_data {
@@ -372,6 +372,7 @@ body {
   .frbs_img_first{
     margin-top: 3rem !important;
   }
+  
 }
 
 /* dog care pages end */
@@ -401,7 +402,7 @@ body {
   margin-bottom: 1rem;
 }
 .breed_new .breed_new_top p {
-  font-size: 15px;
+  font-size: 17px;
   text-transform: capitalize;
   color: #252525;
 }
@@ -481,11 +482,14 @@ body {
     margin-left: 0.5rem;
   }
   .breed_new .breed_new_top p {
-    font-size: 13px;
+    font-size: 15px;
     margin-left: 0.5rem;
   }
   .breed_new .flex .card {
     width: 100%;
+  }
+  .ifraene{
+      height:300px !important;
   }
 }
 /* dog care breed page end */
@@ -876,9 +880,12 @@ body {
   .adopt_pet_main_new .about p {
     font-size: 15px !important;
   }
+  .slideee{
+      padding-top:0rem !important;
+  }
    .slideee .slide_head {
     margin-top: 5rem;
-    padding-top: 1rem;
+    padding-top: 3rem;
     padding-bottom: 1rem;
     padding-left: 0rem;
   }
@@ -963,6 +970,15 @@ body {
   .what_will_vonlunteer .flex .right p {
     line-height: 2.5rem !important;
     margin-right: 1rem !important;
+    font-size:15px !important;
+  }
+  .franci_send{
+      margin-top:1rem !important;
+      margin-bottom:2rem !Important;
+  }
+  .frnss_last_sec{
+      margin-bottom:2rem !Important;
+      margin-top:1rem !Important;
   }
 }
 
@@ -999,11 +1015,11 @@ body {
   height: auto;
   padding: 1.5rem;
   background-color: white;
-  border-bottom: 6px solid #a6341b;
+ 
   padding-bottom: 3rem;
   padding-top: 3rem;
   box-shadow: 0 1rem 1.7rem rgba(0, 0, 0, 0.2) !important;
-  border-top: 6px solid #a6341b;
+  
 }
 .list_dog_form .list_dod_form_inner input[type="text"],
 input[type="email"],
@@ -1022,6 +1038,7 @@ textarea {
   outline: none;
   color: gray;
   font-size: 15px;
+  background-color:white !important;
 }
 .list_dog_form .list_dod_form_inner input[type="radio"] {
   margin-right: 0.5rem;
@@ -2932,7 +2949,7 @@ textarea {
     font-size: 27px;
   }
   .sponser_new .spons-ths p {
-    font-size: 13px;
+    font-size: 15px;
   }
   .sponser_new .spons-ths .sons_butt button {
     margin-bottom: 1rem;
@@ -3400,6 +3417,7 @@ textarea {
     width: 100%;
     height: auto;
     padding: 0rem !important;
+    margin-bottom:2rem !important;
   }
 
   .adopt_dog .first_sec .first_sec_inner h1 {
@@ -4575,10 +4593,11 @@ padding-bottom: 5rem;
  background-color: #fc8817 !important;
 }
 .first_frn img{
-  margin-top: 10rem !important;
+  margin-top: 10rem ;
 }
 .frnch_last img{
   height:700px !important;
+  margin-top:5rem;
 }
 @media only screen and (max-width: 600px) {
   .dog_care_home .top_flex .mid{
@@ -4663,4 +4682,14 @@ padding-bottom: 5rem;
 .evenet_viw{
   margin-right: 2rem !important;
   margin-bottom: 0rem !important;
+}
+
+.franci_send{
+    margin-top:5rem;
+}
+.frnss_last_sec{
+    margin-top:2rem;
+}
+.ifraene{
+    height:650px ;
 }

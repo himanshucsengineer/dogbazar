@@ -227,7 +227,7 @@
     <div class="container">
         <div class="row">
         <div class="col-md-6">
-                <img src="<?php echo base_url() ?>/assest/images/franch4.jpg" alt="what will vounteer do">
+                <img class="franci_send" src="<?php echo base_url() ?>/assest/images/franch4.jpg" alt="what will vounteer do">
             </div>
             <div class="col-md-6">
                 <h1>Proposed Services At IDB Franchies (WORK AREA)</h1>
@@ -583,7 +583,7 @@
     <div class="container">
         <div class="row">
         <div class="col-md-6">
-                <img src="<?php echo base_url() ?>/assest/images/Volunteer_What.jpg" alt="what will vounteer do">
+                <img class="frnss_last_sec" src="<?php echo base_url() ?>/assest/images/Volunteer_What.jpg" alt="what will vounteer do">
             </div>
             <div class="col-md-6">
                 <h1>Cost Of IDB Franchisee</h1>
