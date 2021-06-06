@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
-                    <h1>Get Information About Breed</h1>
+                    <h1>Get Information About Different Breeds</h1>
                     <p>Dog types are broad categories of dogs based on form, function or style of work, lineage, or appearance. In contrast, modern dog breeds are particular breed standards, sharing a common set of heritable characteristics, determined by the kennel club that recognizes the breed.</p>
                 </div>
                 <div class="col-md-5">
