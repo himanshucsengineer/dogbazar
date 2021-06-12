@@ -88,11 +88,11 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <!--div class="box">
+                    <div class="box">
                         <label>Post Link</label>
                         <input name="link" type="text" placeholder="Enter Post name">
                         <p>Genrate Your Own Post Link</p>
-                    </div-->
+                    </div>
                     <div class="box">
                         <label>Select Category</label>
                         <select name="category" id="sel_city">

@@ -39,7 +39,7 @@ class Nutrition extends CI_controller
                    <div class="inner_card">
                    <a href="'.base_url().'nutrition/'.$row->link.'"><img src="'.base_url().'upload/dogcare/nutrition/'.$row->image.'" alt="dog image"> </a>
                        <h3>'.$row->head.'</h3>
-                       <p>'.$result.'....<a href="'.base_url().'nutrition/'.$row->link.'">Read More</a></p>
+                       '.$result.'....<a href="'.base_url().'nutrition/'.$row->link.'">Read More</a>
                    </div>
               
            </div>

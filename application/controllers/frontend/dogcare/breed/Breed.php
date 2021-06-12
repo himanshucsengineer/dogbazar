@@ -11,7 +11,7 @@ class Breed extends CI_controller
     public function index()
     {
 
-        $data['blogs'] = $this->Breedmodel->fetch();
+        $data['blogs'] = $this->Breedmodel->fetch(); 
         $this->load->view('frontend/template/header');
         $this->load->view('frontend/template/navbar');
 

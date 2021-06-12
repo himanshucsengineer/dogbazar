@@ -10,7 +10,7 @@
                     </div>
                 </div>
                 <div class="col-md-5">
-                    <img src="<?php echo base_url() ?>/assest/images/list-dog-banner.png" alt="banner">
+                    <img src="<?php echo base_url() ?>/assest/images/street.png" class="adop_img" alt="banner">
                 </div>
             </div>
         </div>
@@ -23,7 +23,7 @@
                     <div class="flex " id="aBtnGroup">
 
                         <div class="left">
-                            <input type="text" id="serch" placeholder="Search By City" value="">
+                            <input type="text" prevvalue="" id="serch" placeholder="Search By City" value="">
                         </div>
                         <div class="right">
                             <button id="searchnow" onclick="delet()">Search</button>
@@ -139,23 +139,27 @@
 <script>
     
     $(document).ready(function() {
+       
+        //var cc = document.getElementById('serch').value;
+          //  document.getElementById('serch').setAttribute("prevvalue",cc);
+           // var oldvalue = document.getElementById('serch').getAttribute("prevvalue");
+  
 
         
         $('#searchnow').click(function(e) {
             e.preventDefault();
             var search = document.getElementById('serch').value;
-            
-            
+          
+            //console.log(oldvalue);
+           
             $("#allpett").hide();
             $("#serchpet").show();
-            localStorage.mytime = search;
-            var seess = localStorage.getItem("mytime");
-            console.log(seess)
+           
             var limit = 6;
             var start = 0;
             
             function lazzy_loader(limit) {
-                if (search == seess) {
+                if (search == "alwar") {
                     for (var count = 0; count < limit; count++) {
 
                         output = '<div class="row justify-content-center"><div class="col-md-3"><div class="loader"></div></div></div>';
@@ -181,7 +185,7 @@
             lazzy_loader(limit);
 
             function load_data(limit, start) {
-                $("#searchform").trigger("reset");
+               
 
                 $.ajax({
                     url: "<?php echo base_url(); ?>frontend/adopt/search",

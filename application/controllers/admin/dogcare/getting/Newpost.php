@@ -57,7 +57,7 @@ class Newpost extends CI_controller
             $imageu= $finalurl;
             
         }
-        $link = $this->input->post('heading');
+        $link = $this->input->post('link');
         $link = str_replace(' ', '-', $link);
 
 
