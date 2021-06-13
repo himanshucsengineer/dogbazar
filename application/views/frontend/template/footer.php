@@ -4,10 +4,11 @@
         <div class="row">
             <div class="col-md-3 ">
                 <div class="mb-4">
-                    <h3 class="footer_headings">About Dog Bazar</h3>
+                    <h3 class="footer_headings">About Viren Sharma</h3>
                     <hr class="footer_hori">
                 </div>
-                <p>Here will come about dog bazar</p>
+                <p>
+Cambridge dictionary defines Entrepreneur as someone who starts their own business, especially when this involves seeing a new opportunity like our very own 'DOG-MAN’ Mr.Viren Sharma from Jaipur.</p>
             </div>
             <div class="col-md-3">
                 <div class="mb-4">
@@ -63,7 +64,7 @@
                         <i class="fa fa-map-marker" aria-hidden="true"></i>
                     </div>
                     <div class="add_right">
-                        <p>114, azad nagr, alwar (301001)</p>
+                        <p>C3, MI Rd, Panch Batti, Jayanti Market, New Colony, Jaipur, Rajasthan 302001</p>
                     </div>
                 </div>
                 <div class="flex">
@@ -71,7 +72,7 @@
                         <i class="fa fa-envelope"></i>
                     </div>
                     <div class="add_right">
-                        <p>Info@dogbazar.com</p>
+                        <p>viren.dogman@gmail.com</p>
                     </div>
                 </div>
                 <div class="flex">
@@ -79,7 +80,7 @@
                         <i class="fa fa-phone"></i>
                     </div>
                     <div class="add_right">
-                        <p>+91 0000000000
+                        <p>+91 9982911111
                         <p>
                     </div>
                 </div>

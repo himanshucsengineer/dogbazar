@@ -15,7 +15,7 @@
 </div>
 
 
-<div class="sponsor_circle_mobile">
+<!--div class="sponsor_circle_mobile">
     <div class="container">
         <div class="slideshow-container">
             <div class="mySlides fade">
@@ -87,7 +87,7 @@
         </div>
        
     </div>
-</div>
+</div-->
 
 <div class="sponser_new">
     <div class="container">
@@ -98,10 +98,10 @@
 
 
                 <h2>Memorial Giving</h2>
-                <p>When you make a memorial gift, your support not only pays tribute to a beloved pet or person, it supports the work of Best Friends and helps homeless pets get the love and care they need to thrive as they wait for loving families of their own.</p>
+                <p>“Everyone is taught that angels have wings – the lucky ones of us find that they have 4 paws.” Losing a pet can be an extremely difficult process. Over the course of their lives, our pets give us so much love and happiness, so when they pass away, it is understandably very painful .</p>
                 <hr class="soons_horii">
-                <p>If you have lost a beloved pet, we are honored to assist you in making arrangements for the placement of your pet at Angels Rest or Angels Overlook. For information about placing your pet at Angels Rest, please contact <a class="mal" href = "mailto: info@dogbazar.com">Info@dogbazar.com</a></p>
-                <p>You can also submit a memorial for consideration on the “Saying Goodbye” page in Best Friends magazine. Please send your submission, with a photo, to <a class="mal" href="mailto: info@dogbazar.com">info@dogbazar.com</a> Note: Because of the high number of submissions, we are unable to print them all.</p>
+                <p>If you have lost a beloved pet, we are honored to assist you in making arrangements for the placement of your pet at our pet memorial page.  </p>
+                <p>Please send your submission, with a photo and a caption to  <a class="mal" href="mailto: viren.dogman@gmail.com">viren.dogman@gmail.com</a></p>
             </div>
         </div>
         

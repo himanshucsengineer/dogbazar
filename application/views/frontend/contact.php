@@ -60,7 +60,7 @@
                                 <div class="right">
                                     <p class="subbb">Drop On</p>
                                     <h2 class="h2_head base_heading_h2">Email</h2>
-                                    <p class="subbb">info@dogbazar.org </p>
+                                    <p class="subbb">viren.dogman@gmail.com</p>
                                 </div>
                             </div>
                         </div>

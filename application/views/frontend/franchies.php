@@ -663,7 +663,7 @@
                                 <input type="number" name="mob" placeholder="Enter your No.">
                             </div>
                             <div class="col-md-6">
-                                <label for="">Alternatice Number</label>
+                                <label for="">Alternative Number</label>
                                 <input type="number" name="a_mob" placeholder="Enter your Alternative Number">
                             </div>
                         </div>
@@ -673,8 +673,8 @@
                                 <input type="text" name="edu" placeholder="Enter your Qualification">
                             </div>
                             <div class="col-md-6">
-                                <label for="">Current Bussiness Activity</label>
-                                <input type="text" name="buss" placeholder="Enter your Current Bussiness Activity">
+                                <label for="">Current Business Activity</label>
+                                <input type="text" name="buss" placeholder="Enter your Current Business Activity">
                             </div>
                         </div>
                         <div class="row">

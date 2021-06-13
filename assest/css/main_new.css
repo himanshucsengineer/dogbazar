@@ -210,7 +210,7 @@ body {
 .nutrition_new_main .navi h4 {
   font-size: 17px;
   color: white;
-  text-transform: capitalize;
+
 }
 .nutrition_new_main .navi a {
   text-decoration: none;
@@ -222,7 +222,7 @@ body {
   padding-bottom: 3rem;
 }
 .nutrition_new_main .nutri_head h1 {
-  text-transform: capitalize;
+ 
   color: white;
 
   text-align: center;
@@ -275,7 +275,7 @@ body {
   margin-right: 1.5rem;
   margin-top: 1rem;
   color:#252525;
-  text-transform: capitalize;
+ 
 }
 .nutrition_new_main .nutri_body .flex .card .inner_card .VIDEOHEEE {
   text-align: center !important;
@@ -311,7 +311,7 @@ body {
   border-radius: 2px;
 }
 .nutrition_new_main .nutri_body h1 {
-  text-transform: capitalize;
+
   text-align: center;
   letter-spacing: 2px;
   font-weight: 500 !important;
@@ -412,12 +412,12 @@ body {
   font-size: 28px;
   font-weight: 700;
   color: #fc8817;
-  text-transform: capitalize;
+
   margin-bottom: 1rem;
 }
 .breed_new .breed_new_top p {
   font-size: 17px;
-  text-transform: capitalize;
+
   color: #252525;
 }
 .breed_new .inner_search {
@@ -528,7 +528,7 @@ body {
 .postview_new .navi h4 {
   font-size: 17px;
   color: white;
-  text-transform: capitalize;
+ 
 }
 .postview_new .navi a {
   text-decoration: none;
@@ -686,7 +686,7 @@ body {
  .slideee .slide_head h1 {
   font-size: 25px;
   font-weight: 500;
-  text-transform: capitalize;
+ 
   color: #2d2d2d;
   
 }
@@ -730,7 +730,7 @@ body {
   border-radius: 30px;
   font-size: 20px;
   font-weight: 600;
-  text-transform: capitalize;
+ 
   margin-top: 2rem;
   box-shadow: 0 3px 4px -1px rgb(0 0 0 / 40%);
 }
@@ -757,14 +757,14 @@ body {
   color: #202020;
   font-size: 17px;
   font-weight: 700 !important;
-  text-transform: capitalize;
+
   margin-bottom: 2rem;
 }
 .adopt_pet_main_new .right .declar {
   color: #202020;
   font-size: 17px !important;
   font-weight: 400 !important;
-  text-transform: capitalize;
+
 }
 
 .adopt_pet_main_new .right span {
@@ -780,7 +780,7 @@ body {
   color: #202020;
   font-size: 23px !important;
   font-weight: 600 !important;
-  text-transform: capitalize;
+
 }
 .adopt_pet_main_new .about p {
   color: #202020;
@@ -1015,7 +1015,7 @@ body {
 
 .form_top_new h1 {
   text-align: center;
-  text-transform: capitalize;
+
   font-size: 40px;
   font-weight: 700;
   color: #fc8817;
@@ -1283,7 +1283,7 @@ input[type="number"] {
 }
 .feqs h1 {
   text-align: center;
-  text-transform: capitalize;
+
   font-weight: 300 !important;
   font-size: 36px !important;
   margin: 0 0 36px !important;
@@ -1307,7 +1307,7 @@ input[type="number"] {
 .feqs .accordion-button {
   outline: none !important;
   color: inherit;
-  text-transform: capitalize;
+  
   font-size: 22px;
   font-weight: 300 !important;
   background-color: white;
@@ -1356,7 +1356,7 @@ input[type="number"] {
   color: #444;
   font-weight: 600;
   font-size: 25px;
-  text-transform: capitalize;
+
 }
 @media screen and (min-width: 576px) {
   .videooomodd .modal-dialog {
@@ -2244,7 +2244,7 @@ textarea {
   line-height: 48px;
   position: relative;
   margin-bottom: 5rem !important;
-  text-transform: capitalize;
+ 
   font-weight: 400 !important;
   text-align: center;
 }
@@ -2275,7 +2275,7 @@ textarea {
   line-height: 48px;
   position: relative;
   margin-bottom: 30px;
-  text-transform: capitalize;
+
   font-weight: 500 !important;
 }
 .help_us_volunteer h1:after {
@@ -2337,7 +2337,7 @@ textarea {
   line-height: 48px;
   position: relative;
   margin-bottom: 30px;
-  text-transform: capitalize;
+
   font-weight: 600 !important;
   text-align: center;
 }
@@ -2424,7 +2424,7 @@ textarea {
   line-height: 48px;
   position: relative;
   margin-bottom: 30px;
-  text-transform: capitalize;
+
   font-weight: 500 !important;
 }
 .what_will_vonlunteer h1:after {
@@ -2580,6 +2580,7 @@ textarea {
   width: 100%;
   height: auto;
   font-family: Lato, sans-serif !important;
+  padding-top: 2rem;
   padding-bottom: 3rem;
   background-color: white;
 }
@@ -2656,7 +2657,7 @@ textarea {
   color: #333;
   font-size: 26px;
   font-weight: 500;
-  text-transform: capitalize;
+
   /*font-family: "Mansalva", cursive;*/
 }
 
@@ -2806,7 +2807,7 @@ textarea {
   font-size: 30px;
   font-weight: 500 !important;
   text-align: center;
-  text-transform: capitalize;
+
   margin-bottom: 10px !important;
   margin-top: 20px !important;
   color: inherit;
@@ -2817,7 +2818,7 @@ textarea {
   font-size: 30px;
   font-weight: 500 !important;
   text-align: center;
-  text-transform: capitalize;
+
   margin-bottom: 25px !important;
   margin-top: 60px !important;
   color: inherit;
@@ -2860,7 +2861,7 @@ textarea {
 .sponser_new .spons_choose_dog {
   text-align: center;
   font-weight: 300 !important;
-  text-transform: capitalize;
+
   margin-top: 3rem;
   font-size: 30px;
 }
@@ -2884,7 +2885,7 @@ textarea {
   font-weight: 700 !important;
   background-color: transparent;
   outline: none;
-  text-transform: capitalize;
+
 }
 .sponsor_how {
   width: 100%;
@@ -3018,7 +3019,7 @@ textarea {
   line-height: 48px;
   position: relative;
   margin-bottom: 30px;
-  text-transform: capitalize;
+
 }
 
 .about_idb_new h3:after {
@@ -3088,7 +3089,7 @@ textarea {
   color: whitesmoke;
   font-size: 20px;
   font-weight: 400;
-  text-transform: capitalize;
+
 }
 .main_about_viren {
   width: 100%;
@@ -3103,7 +3104,7 @@ textarea {
   line-height: 48px;
   position: relative;
   margin-bottom: 30px;
-  text-transform: capitalize;
+
 }
 .main_about_viren h4:after {
   position: absolute;
@@ -3130,7 +3131,7 @@ textarea {
 }
 .main_about_viren .fund h1 {
   text-align: center;
-  text-transform: capitalize;
+
   color: #444;
   line-height: 48px;
   font-size: 30px;
@@ -3355,7 +3356,7 @@ textarea {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   color: white;
-  text-transform: capitalize;
+
   background-color: #fc8817;
   border: 1px solid #fc8817;
   outline: none;
@@ -3379,7 +3380,7 @@ textarea {
   color: #fc8817;
   font-size: 25px;
   font-weight: 700;
-  text-transform: capitalize;
+ 
   margin-bottom: 1rem;
 }
 
@@ -3400,7 +3401,7 @@ textarea {
 .adopt_dog .first_sec .first_sec_inner p {
   color:#252525;
   font-size: 17px;
-  text-transform: capitalize;
+
 }
 
 .load_more_adopt {
@@ -3419,7 +3420,7 @@ textarea {
   font-weight: 700 !important;
   box-shadow: 0 3px 4px -1px rgb(0 0 0 / 40%);
   border-radius: 2px;
-  text-transform: capitalize;
+ 
   
   margin-bottom: 6rem;
 }
@@ -3514,7 +3515,7 @@ textarea {
   line-height: 48px;
   position: relative;
   margin-bottom: 30px;
-  text-transform: capitalize;
+
 }
 .main_gallary h1:after {
   position: absolute;
@@ -3670,7 +3671,7 @@ textarea {
   border-radius: 2px;
   clear: both;
   text-decoration: none !important;
-  text-transform: capitalize;
+
   line-height: 1.6em;
   font-weight: 400 !important;
 }
@@ -4114,7 +4115,7 @@ to {opacity: 1}
   font-size: 15px ;
   line-height: 20px;
   word-spacing: 2px;
-  text-transform: capitalize;
+  
 }
 .events_main .flex .mid .mid_date .location_full{
   width: 50%;
@@ -4128,7 +4129,7 @@ to {opacity: 1}
   font-size: 15px ;
   line-height: 20px;
   word-spacing: 2px;
-  text-transform: capitalize;
+
 }
 .events_main .flex .mid .mid_date .location_full  .far,.fas{
   color: #fc8817 !important;
@@ -4139,8 +4140,7 @@ to {opacity: 1}
   font-weight: 700 !important;
   font-size: 13px ;
   line-height: 20px;
- 
-  text-transform: capitalize;
+
 }
 .events_main .flex .mid .orgenid{
   font-weight: 500 !important;
@@ -4384,18 +4384,18 @@ to {opacity: 1}
 .home_frn .flex .right{
   width: 50%;
   background-color: #fc8817;
-  padding: 10rem;
+  padding: 6rem;
 }
 .home_frn .flex .right h2{
   color: white;
-  text-transform: capitalize;
+
   font-size: 25px;
  margin-bottom: 2rem;
 }
 
 .home_frn .flex .right p{
   color: white;
-  text-transform: capitalize;
+
   font-size: 17px;
   
 }
@@ -4485,12 +4485,12 @@ padding-bottom: 5rem;
   font-size: 25px;
   font-weight: 600  !important;
   text-align: left;
-  text-transform: capitalize;
+
 }
 .home_donate p{
   color: rgb(95, 96, 96);
   font-size: 17px;
-  text-transform: capitalize;
+
 }
 .home_donate .donate_butttt{
   text-align: center;

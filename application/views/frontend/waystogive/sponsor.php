@@ -33,10 +33,10 @@
             <div class="mySlides fade">
                 <div class="card">
                     <div class="inner_card">
-                        <i class="fas fa-dollar-sign">1</i>
-                        <p>WEEK</p>
+                    <i class="fas fa-rupee-sign"></i>
+                        <p>MONTH</p>
                     </div>
-                    <h5>Sponsoring a dog for yourself or someone else for £1 a week helps with essentials for your sponsor dog</h5>
+                    <h5>Sponsoring a dog for yourself or someone else for <i class="fas fa-rupee-sign"></i> 5000 a week helps with essentials for your sponsor dog</h5>
                 </div>
             </div>
             <div class="mySlides fade">
@@ -98,22 +98,14 @@
         <div class="row justify-content-center">
             <div class="col-md-8 spons-ths">
                 <h2>Sponsor a dog today</h2>
-                <p>With around 1300 stray and abandoned dogs in our care at any one time, we really need your help. Most dogs find loving new homes within about six weeks but some pooches need a little extra care from us.</p>
-                <p>We receive no government funding and are totally dependent on the generosity of people like you. By sponsoring a dog for 1000 Rs. per week you won’t just be helping your sponsor dog but all their friends too!</p>
-                <hr class="soons_horii">
-                <p>If you’re looking for the perfect gift, our friends at Dogsy have a whole range of items you can personalise with pictures of your favourite pooch! They’ve also created a range featuring each of our Sponsor Dogs! Dogsy will donate 15% of the net sale price from all items sold from their exclusive ‘Dogsy for Dogs Trust’ online shop, check out the link below:</p>
-                <!--h2 class="how_word">How Sponsorship Works</h2>
-                <p class="below_how">It couldn't be easier to sponsor a dog in our care, or to gift a sponsorship to a friend or loved one.</p>
-                <h3>Step 1 - Pick a dog to sponsor</h3>
-                <p>We’ve got sponsor dogs of all shapes, sizes, breeds and ages! You might choose a dog who reminds you of a beloved pet, a dog with a story that tugs at your heartstrings, or a dog you’ll be able to visit.</p>
-                <h3>Step 2 - Set up your sponsorship</h3>
-                <p>Tell us where to send your doggy updates, whether you’re sponsoring for yourself or as a gift You can also choose how much you’d like to pay, and whether you'd rather pay monthly via direct debit or make a one-off annual payment.</p>
-                <h3>Step 3 - Enjoy regular updates from your Sponsor Dog</h3>
-                <p>Whichever dog you decide to sponsor, you'll receive updates from them three times a year. We’ll also send you a sponsorship pack, including a special photo certificate of your new pooch pal, a wallet-sized sponsor's card, a window sticker and fridge magnet.</p>
-                <div class="sons_butt">
-                    <button>Sponsor a dog today</button>
-                    <hr>
-                </div-->
+                <p>Sponsor a dog that has been placed in a new home after being abused, neglected, or abandoned by its previous owner. The term can also apply to dogs that are found as strays, surrendered by owners for a variety of reasons, including relationship breakdowns, moving home where the owner is unable or unwilling to take their pets, or elderly people who are not permitted to take their dogs into a nursing home.</p>
+               <p>Once a pet is chosen, the owner should ensure the pet has been spayed or neutered and properly identified. The responsibility to the animal should be a commitment for the lifetime of the pet.</p>
+               <p>Your monthly gift will help fund the shelter, food, and veterinary care for dogs that have nowhere else to go.</p>
+               <p>You can sponsor on a monthly basis and you can get a best friend for life, receiving updates 3 times a year so you know exactly how much your money helps.</p>
+               
+                <!--hr class="soons_horii">
+                <p>If you’re looking for the perfect gift, our friends at Dogsy have a whole range of items you can personalise with pictures of your favourite pooch! They’ve also created a range featuring each of our Sponsor Dogs! Dogsy will donate 15% of the net sale price from all items sold from their exclusive ‘Dogsy for Dogs Trust’ online shop, check out the link below:</p-->
+                
             </div>
         </div>
         

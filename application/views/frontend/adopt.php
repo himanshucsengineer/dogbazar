@@ -5,7 +5,7 @@
                 <div class="col-md-7">
                     <div class="first_sec_inner">
                         <h1>List Your Dog for Adoption</h1>
-                        <p>At the International Dog Bazar, hundreds of dogs wait in anticipation of loving homes. Many have been rescued from suffering on the streets or as survivors of the Asian dog meat trade. All are deserving of a forever home and the process is a lot easier than you think. Search below to find the perfect companion for your home and family. Thank you for wanting to adopt a rescue; International Dog Bazar will help you every step of the way.</p>
+                        <p>At the International Dog Bazar, Hundreds Of Dogs Wait In Anticipation Of Loving Homes. Many Have Been Rescued From Suffering On The Streets. All Are Deserving Of A Forever Home And The Process Is A Lot Easier Than You Think. Search Below To Find The Perfect Companion For Your Home And Family. Thank You For Wanting To Adopt A Rescue; International Dog Bazar Will Help You Every Step Of The Way.</p>
                         <a href="<?php echo base_url() ?>listmydog"><button>List A Dog</button></a>
                     </div>
                 </div>

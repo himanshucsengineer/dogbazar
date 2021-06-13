@@ -43,7 +43,7 @@
             </div>
         </div>
         <div class="achive">
-            <h4>His Achivments</h4>
+            <h4>His Achievements</h4>
 
             <div class="row">
                 <div class="col-md-4">

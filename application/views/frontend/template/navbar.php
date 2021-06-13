@@ -503,13 +503,13 @@ if (!isset($_SESSION["email"])) {
                 <div class="col-md-6">
                     <div class="top_flex">
                         <div class="left">
-                            <p>+91 0000000000</p>
+                            <p>+91 9982911111</p>
                         </div>
                         <div class="mid">
                             <p>|</p>
                         </div>
                         <div class="right">
-                            <p>example@gmail.com</p>
+                            <p>viren.dogman@gmail.com</p>
                         </div>
                     </div>
                 </div>

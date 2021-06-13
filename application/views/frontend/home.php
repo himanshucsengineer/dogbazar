@@ -13,21 +13,21 @@
                     
                     <img src="<?php echo base_url() ?>assest/images/home_slider1.jpg" class="d-block w-100 cimgheight" alt="...">
                     <div class="carousel-caption slider_text d-none d-md-block">
-                        <h3>This is Demo Content first content will come here</h3>
+                        <h3>Find Your Best Friend Forever</h3>
                     </div>
                 </div>
                 <div class="carousel-item">
                
                     <img src="<?php echo base_url() ?>assest/images/home_slider22.jpg" class="d-block w-100 cimgheight" alt="...">
                     <div class="carousel-caption slider_text d-none d-md-block">
-                    <h3>This is Demo Content Secont content will come here</h3>
+                    <h3>Get Your Favourite Companion</h3>
                     </div>
                 </div>
                 <div class="carousel-item">
                
                     <img src="<?php echo base_url() ?>assest/images/home_slider3.jpg" class="d-block w-100 cimgheight" alt="...">
                     <div class="carousel-caption slider_text d-none d-md-block">
-                    <h3>This is Demo Content Third content will come here</h3>
+                    <h3>Your Four legged FRIEND is waiting</h3>
                        
                     </div>
                 </div>
@@ -180,7 +180,7 @@
                 <div class="card">
                     <div class="inner_card">
                         <h2>Sponsor Animal</h2>
-                        <p>If you’re looking for the perfect gift, our friends at Dogsy have a whole range of items you can personalise with pictures.</p>
+                        <p>By sponsoring a dog, you will not only change their life, but you'll also change the lives of many others in desperate need.</p>
                         <a href="<?php echo base_url()?>sponsor-an-animal"><button>Get Involved</button></a>
                     </div>
                 </div>
@@ -195,7 +195,8 @@
             </div>
             <div class="right">
                 <h2>Franchise Partner and Become A Franchise</h2>
-                <p>Donate here for more pets to save Are you MAD and crazy enough to be known as an owner of Mad about Dogs? Because 50% of the world’s population lives near a coast, we can provide more surgeries for more people with our floating hospitals.</p>
+                <p>IDB’s Vision “U Dream – We Deliver” IDB’s vision is to make this world a better & happy place as we see the Golden Words said by Mahatma Gandhi “The Greatness and the moral progress of a Nation is judged by the way its animals are treated” so better we treat the animals, greater our progress will be.</p>
+                <p>Let’s join hands together and be a part of this journey. </p>
                 <a href="<?php echo base_url()?>franchies"><button>Become Franchise</button></a>
 
             </div>

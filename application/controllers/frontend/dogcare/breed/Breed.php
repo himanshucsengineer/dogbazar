@@ -32,7 +32,7 @@ class Breed extends CI_controller
                         <div class="inner_card">
                             <a href="'.base_url().'breed/'.$row->link.'"><img src="'.base_url().'upload/dogcare/breed/'.$row->image.'" alt="dog image"> </a>
                             <h3>Name: '.$row->name.'</h3>
-                            <h6>Temporent: '.$row->temp.'</h6>
+                            <h6>Temperament: '.$row->temp.'</h6>
                             <h6>Group: '.$row->grp.'</h6>
                             <div class="breed_but">
                                 <a href="'.base_url().'breed/'.$row->link.'"><button>View Breed</button></a>

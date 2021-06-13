@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-md-7">
                     <h1>Get Information About Different Breeds</h1>
-                    <p>Dog types are broad categories of dogs based on form, function or style of work, lineage, or appearance. In contrast, modern dog breeds are particular breed standards, sharing a common set of heritable characteristics, determined by the kennel club that recognizes the breed.</p>
+                    <p>Dog types are broad categories of dogs based on form, function or style of work, lineage, or appearance and are categorised in enormous variety. So here are the details of all the breeds in India mentioning their height, weight and appearance. </p>
                 </div>
                 <div class="col-md-5">
                     <img src="<?php echo base_url() ?>/assest/images/list-dog-banner.png" alt="">
