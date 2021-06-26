@@ -243,11 +243,13 @@ if (!isset($_SESSION["email"])) {
                     <button onclick="openhelp();">Help & Advice <span class="next_icon"><i class="sidebar_fa_icon fas fa-chevron-right"></i></span></button>
                     <button onclick="openblog();">Blogs <span class="next_icon"><i class="sidebar_fa_icon fas fa-chevron-right"></i></span></button>
                     <button onclick="openadopt();">Adopt <span class="next_icon"><i class="sidebar_fa_icon fas fa-chevron-right"></i></span></button>
+                    <button onclick="opengallary();">Gallery <span class="next_icon"><i class="sidebar_fa_icon fas fa-chevron-right"></i></span></button>
                     <button onclick="openabout();">About Us <span class="next_icon"><i class="sidebar_fa_icon fas fa-chevron-right"></i></span></button>
+
                     <a href="<?php echo base_url() ?>"><button>Pet Accessories</button></a>
                     <a href="<?php echo base_url() ?>franchies"><button>Franchise</button></a>
                     <a href="<?php echo base_url() ?>volunteer"><button>Volunteer</button></a>
-                    <a href="<?php echo base_url() ?>gallary"><button>Gallery</button></a>
+                   
                    
                       <a href="<?php echo base_url() ?>contact-us"><button>contact Us</button></a>
                     <?php echo $logout; ?>
@@ -497,6 +499,69 @@ if (!isset($_SESSION["email"])) {
             </div>
         </div>
     </div>
+
+
+
+    <div id="mySidepanelgallary" class="sidebar_new sidebar_submenu">
+        <div class="flex">
+            <div class="left">
+                <div class="top_login">
+                    <div class="login_flex">
+                        <div class="login_left">
+                            <div class="inner_login_left">
+                                <i class="far fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="login_right">
+                            <h3>Login / Signup</h3>
+                            <p>For Better Search & Experience</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="brwos">
+                    <div class="brw_flex">
+                        <div class="brw_flex_left" onclick="closegallary();">
+                            <i class="fas fa-long-arrow-alt-left"></i>
+                        </div>
+                        <div class="brw_flex_right">
+                            <p>All CATEGORIES</p>
+                        </div>
+                    </div>
+                </div>
+                <?php
+							$socials_datas=Utility::gallarylink();
+                            $socials_ds=Utility::gallarycate();
+							//print_r($socials_datas);
+            ?>  
+                <?php foreach($socials_ds as $val){ $new_url = $val['cate_name']; $link = str_replace(' ', '-', $new_url);?>
+                    <a href="<?php echo base_url() ?>gallary/<?php echo $link?>"><button><?php echo $val['cate_name']?></button></a>
+                              
+                               <?php }?> 
+
+               
+                
+            </div>
+            <div class="right">
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="top_head_new">
         <div class="container">
             <div class="row">
@@ -583,7 +648,24 @@ if (!isset($_SESSION["email"])) {
                             <!-- End Dropdown -->
                         </li>
                         <li class="lstn nav_items"><a href="" class="nodecoration">Pet Accessories</a></li>
-                        <li class="lstn nav_items"><a href="<?php echo base_url() ?>gallary" class="nodecoration">Our Gallery</a></li>
+                       <?php
+							$socials_datas=Utility::gallarylink();
+                            $socials_ds=Utility::gallarycate();
+							//print_r($socials_datas);
+            ?>  
+                        <li class="lstn nav_items" id="d8"><a href="" class="nodecoration ">Our Gallery</a>
+                            <!-- Dropdowns with diplay class d2 -->
+                            <ul class="m-0 nav_items_dropdown d8">
+                            <?php foreach($socials_ds as $val){ $new_url = $val['cate_name']; $link = str_replace(' ', '-', $new_url);?>
+                               
+                                <li class="lstn nav_items_dropdown_link"><a href="<?php echo base_url() ?>gallary/<?php echo $link?>" class=""><?php echo $val['cate_name']?></a></li>
+                               
+                                <?php }?>
+                            </ul>
+                            <!-- End Dropdown -->
+                        </li>
+                        
+                        
                         <li class="lstn nav_items"><a href="<?php echo base_url() ?>franchies" class="nodecoration ">Franchise</a></li>
                         <!--li class="lstn nav_items"><a href="<?php echo base_url() ?>volunteer" class="nodecoration nav_items_link">Volunteer</a></li-->
                         <li class="lstn nav_items" id="d6"><a href="" class="nodecoration ">About Us</a>
@@ -662,6 +744,7 @@ if (!isset($_SESSION["email"])) {
             document.getElementById("mySidepanelabout").style.width = "0";
             document.getElementById("mySidepaneladopt").style.width = "0";
             document.getElementById("mySidepanelblog").style.width = "0";
+            document.getElementById("mySidepanelgallary").style.width = "0";
         }
     </script>
 
@@ -692,7 +775,15 @@ if (!isset($_SESSION["email"])) {
             document.getElementById("mySidepanelblog").style.width = "0";
         }
     </script>
+<script>
+        function opengallary() {
+            document.getElementById("mySidepanelgallary").style.width = "100%";
+        }
 
+        function closegallary() {
+            document.getElementById("mySidepanelgallary").style.width = "0";
+        }
+    </script>
     <script>
         $(window).scroll(function() {
 

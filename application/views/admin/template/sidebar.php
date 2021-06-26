@@ -132,7 +132,7 @@ $parts = basename($url);
             <div class="py-2 collapse-inner rounded">
               <a class="collapse-item " href="<?php echo base_url(); ?>admin/gallary" style="font-size:1.3rem; ">Upload Gallery</a>
               <a class="collapse-item " href="<?php echo base_url(); ?>admin/gallerydata" style="font-size:1.3rem; ">All Gallery</a>
-             
+              <a class="collapse-item " href="<?php echo base_url(); ?>admin/gallarypage" style="font-size:1.3rem; ">Add New Page</a>
               <div class="collapse-divider"></div>
             </div>
           </div>

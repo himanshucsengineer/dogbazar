@@ -290,36 +290,36 @@ if (!isset($_SESSION["email"])) {
                     <div class="accordion-item" id="foo">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Accordion Item #1
+                            Can I make a donation in honor of someone? Or in memory of someone?
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <p>here content will be come</p>
+                                <p> Yes, we gratefully accept donations of any amount made in honor or in memory of a special human being or a beloved animal.</p>
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item" id="fooo">
                         <h2 class="accordion-header" id="headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Accordion Item #2
+                            What payment methods do you accept?
                             </button>
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                            <p>here content will be come</p>
+                            <p>We accept all major credit and debit cards, net banking transfers, selected cash cards and mobile payments.</p>
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item" id="foooo">
                         <h2 class="accordion-header" id="headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Accordion Item #3
+                            Where do my donations go?
                             </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                            <p>here content will be come</p>
+                            <p>We are very careful in spending donations from our generous donors. 90 percent of our funds go towards animal protection programs. </p>
                             </div>
                         </div>
                     </div>

@@ -52,6 +52,7 @@
             <thead>
               <tr>
                 <th>ID</th>
+                <th>Category</th>
                 <th>Image</th>
                 
 

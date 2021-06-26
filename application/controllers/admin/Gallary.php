@@ -17,17 +17,19 @@ class Gallary extends CI_controller
     {
 
 
-
+       $data['fetch_cate'] = $this->Gallarymodel->fetch_cate();
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
         $this->load->view('admin/template/topbar');
-        $this->load->view('admin/gallary');
+        $this->load->view('admin/gallary', $data);
         $this->load->view('admin/template/footer');
     }
     public function upload()
     {
         $this->load->model('aadmin/Gallarymodel');
         $this->input->post('formSubmit');
+        $new_url = $this->input->post('cate');
+        $link = str_replace(' ', '-', $new_url);
         $img_data = array();
         // Count total files
         $countfiles = count($_FILES['files']['name']);
@@ -70,7 +72,8 @@ class Gallary extends CI_controller
 
             $datas = array(
                 'image' => $img_data[$j],
-                
+                'cate' => $this->input->post('cate'),
+                'link' => $link
             );
             
             $fina = $this->Gallarymodel->newpost($datas);

@@ -6,26 +6,25 @@ $number =  $_SESSION["number"];
 ?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.css" />
 
-<script src="https://maps.googleapis.com/maps/api/js?key=*********&libraries=places"></script>
 
 <style>
-    .current_location{
+    .current_location {
         position: absolute;
-        border:1px solid #cdcdcd;
-        background-color:ghostwhite;
-        color:black;
-        padding:1rem;
-        margin-left:-14rem;
+        border: 1px solid #cdcdcd;
+        background-color: ghostwhite;
+        color: black;
+        padding: 1rem;
+        margin-left: -14rem;
     }
 </style>
 <script>
-//navigator.geolocation.getCurrentPosition(function(position) {
-   //             console.log(position.coords.latitude)
-     //           console.log(position.coords.longitude)
-       //     },
-         //   function(error) {
-           //     console.log("The Locator was denied. :(")
-            //})
+    navigator.geolocation.getCurrentPosition(function(position) {
+                console.log(position.coords.latitude)
+              console.log(position.coords.longitude)
+        },
+      function(error) {
+        console.log("The Locator was denied. :(")
+    })
 
     function getLoc() {
         if(navigator.geolocation){
@@ -37,11 +36,28 @@ $number =  $_SESSION["number"];
     function showPosition(position){
         console.log(position.coords.latitude);
         console.log(position.coords.longitude);
+        var urlll ="https://wft-geo-db.p.rapidapi.com/v1/geo/locations/"+position.coords.latitude+"%2B"+position.coords.longitude+"/nearbyCities?limit=1&radius=100" ;
+        const settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": urlll,
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "6a95c985admsh2933d255d478d6bp116ad7jsn1bfc00dc6887",
+		"x-rapidapi-host": "wft-geo-db.p.rapidapi.com"
+	}
+};
 
-        var locApi = "http://maps.googleapis.com/maps/api/geocode/json?latlng="+position.coords.latitude+","+position.coords.longitude+"&sensor=true";
-        console.log(locApi);
-         document.getElementById("location").value = position.coords.latitude;
+$.ajax(settings).done(function (response) {
+	document.getElementById("location").value = response.data[0].city;
+});
+
     }
+
+
+    
+
+
 </script>
 
 
@@ -129,7 +145,7 @@ $number =  $_SESSION["number"];
                             <div class="col-md-6">
                                 <label for="">Pet Location</label>
                                 <input type="text" id="location" name="location" placeholder="Enter Pet Location">
-                                <a  onclick="getLoc()"  class="current_location">Current Location</a>
+                                <a style="cursor: pointer;" onclick="getLoc()" class="current_location">Current Location</a>
                             </div>
                             <div class="col-md-6">
                                 <label for="">Pet Photos</label>
@@ -156,8 +172,8 @@ $number =  $_SESSION["number"];
 
                     </form>
 
-                  
-                       
+
+
                 </div>
             </div>
         </div>

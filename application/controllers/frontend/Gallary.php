@@ -5,10 +5,12 @@ class Gallary extends CI_controller
     {
         parent::__construct();
         $this->load->model('admin/Gallarymodel');
+    
+        $this->load->helper('url');
     }
-    public function index()
-    {
-        $data['dogss'] = $this->Gallarymodel->fetch_data();
+    public function index($slug = "")
+    { $data['dogss'] = $this->Gallarymodel->fetch_data($slug);
+       
         $this->load->view('frontend/template/header');
         $this->load->view('frontend/template/navbar');
         $this->load->view('frontend/gallary',$data);

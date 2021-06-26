@@ -76,9 +76,16 @@
         ?>
         <h3>Upload Gallary</h3>
         <form method="post" action="<?php echo base_url()?>admin/gallary/upload" enctype="multipart/form-data">
-        <div class="box">    
-        <label for="">Upload Gallary</label>    
-            <input type="file" id="fileupload"   multiple="multiple" name="files[]"  maxlength="20">
+        <div class="box">  
+            <label for="">Select Category</label>
+            <select name="cate" id="">
+                <option value="">Select Category</option>
+                <?php foreach($fetch_cate as $value){?>
+                <option value="<?php echo $value['cate_name']?>"><?php echo $value['cate_name']?></option>
+                <?php }?>
+            </select>  
+            <label for="">Upload Gallary</label>    
+            <input type="file" id="fileupload"   multiple="multiple" name="files[]"  >
             <button name="formSubmit">Upload</button>
         </div>
         </form>

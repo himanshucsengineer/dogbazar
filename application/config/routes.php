@@ -16,7 +16,7 @@ $route['news'] = 'frontend/news/news';
 
 $route['watch-news/(:any)'] = 'frontend/news/viewnews/index/$1';
 
-
+$route['gallary/(:any)'] = 'frontend/gallary/index/$1';
 $route['events'] = 'frontend/news/events';
 $route['mydogs'] = 'frontend/user/mydogs';
 

@@ -3,7 +3,12 @@
 
 
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+.rupee{
+    font-size: 17px !important;
+}
 
+</style>
 <div class="sponsor_banner">
     <div class="container">
         <div class="row">
@@ -36,7 +41,7 @@
                     <i class="fas fa-rupee-sign"></i>
                         <p>MONTH</p>
                     </div>
-                    <h5>Sponsoring a dog for yourself or someone else for <i class="fas fa-rupee-sign"></i> 5000 a week helps with essentials for your sponsor dog</h5>
+                    <h5>Sponsoring a dog for yourself or someone else for <i class="rupee fas fa-rupee-sign"></i> 5000 a week helps with essentials for your sponsor dog</h5>
                 </div>
             </div>
             <div class="mySlides fade">
@@ -75,10 +80,10 @@
                     </div>
                     <div class="card">
                         <div class="inne">
-                            <i class="fas fa-dollar-sign"></i>
-                            <p>WEEK</p>
+                        <i class="fas fa-rupee-sign"></i>
+                            <p>MONTHS</p>
                         </div>
-                        <h5>Sponsoring a dog for yourself or someone else for £1 a week helps with essentials for your sponsor dog</h5>
+                        <h5>Sponsoring a dog for yourself or someone else for <i class="rupee fas fa-rupee-sign"></i> 5000  a week helps with essentials for your sponsor dog</h5>
                     </div>
                     <div class="card">
                         <div class="inne">
@@ -227,7 +232,7 @@
                     </div>
                     <div class="right">
                         <h1>Who are our sponsor dogs?</h1>
-                        <p>Most dogs in our care find loving new homes within about six weeks but some need a little extra help along the way. Whether this be specialised training and behavioural support, medical care or just a bit more TLC. Dogs Trust will be there for as long as it takes because we never put a healthy dog down. We also receive no government funding so are totally dependent on the generosity of people like you to carry out our work.</p>
+                        <p>Most dogs in our care find loving new homes within about six weeks but some need a little extra help. We will be there for as long as it takes because we never put a healthy dog down. We also receive no government funding so are totally dependent on the generosity of people like you to carry out our work.</p>
                     </div>
                 </div>
 
@@ -249,36 +254,36 @@
                     <div class="accordion-item" id="foo">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Accordion Item #1
+                            What is my sponsorship money used for?
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <p>here content will be come</p>
+                                <p>Your sponsorship contributions are used to help your sponsor dog and all the dogs in our care.</p>
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item" id="fooo">
                         <h2 class="accordion-header" id="headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Accordion Item #2
+                            How often will I hear from my sponsor dog?
                             </button>
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                            <p>here content will be come</p>
+                            <p>Receive updates through the year, so you know exactly how much your money helps.</p>
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item" id="foooo">
                         <h2 class="accordion-header" id="headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Accordion Item #3
+                            How do I pay for my sponsorship?
                             </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                            <p>here content will be come</p>
+                            <p>Sponsorships are made by a monthly donation, either through a credit card (Visa, Mastercard, Discover, American Express) or through bank draft directly from a checking account. </p>
                             </div>
                         </div>
                     </div>

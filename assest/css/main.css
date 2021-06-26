@@ -342,7 +342,9 @@ p {
 #d3:hover .d3 {
   display: block;
 }
-
+#d8:hover .d8 {
+  display: block;
+}
 #d4:hover .d4 {
   display: block;
 }

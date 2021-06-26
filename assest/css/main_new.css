@@ -3262,10 +3262,31 @@ textarea {
 }
 
 .adopt_dog .flex .left {
-  width: 75%;
+  width: 55%;
   height: auto;
 }
+.adopt_dog .flex .ser {
+  width: 20%;
+  height: auto;
+}
+.adopt_dog .flex .ser .locate{
 
+  height: auto;
+  position:absolute;
+  padding:1.03rem 3rem;
+  outline:none;
+  border:1px solid #cdcdcd;
+  background:aliceblue;
+  color:#212121;
+  font-size:16px;
+  text-decoration:none;
+  cursor:pointer;
+  border-right:none !important;
+}
+.adopt_dog .flex .ser .locccc{
+  font-size:16px !important;
+  margin-right:.5rem;
+}
 .adopt_dog .flex .left input[type="text"] {
   width: 100%;
   height: auto;
@@ -3274,6 +3295,7 @@ textarea {
   padding-left: 1.5rem;
   outline: none;
   border: 1px solid #cdcdcd;
+  
 }
 
 .adopt_dog .flex .right {
@@ -3426,13 +3448,23 @@ textarea {
 }
 
 @media screen and (max-width: 600px) {
+.get_text{
+  display:none;
+}
+.adopt_dog .flex .ser .locate{
+  padding:1.03rem 2rem;
+}
+  .adopt_dog .flex{
+    flex-wrap:wrap;
+  }
   .adopt_dog .flex .left {
-    width: 65%;
+    width: 80%;
     height: auto;
+    margin-bottom:1rem;
   }
 
   .adopt_dog .flex .right {
-    width: 25%;
+    width: 100% !important;
     height: auto;
   }
 

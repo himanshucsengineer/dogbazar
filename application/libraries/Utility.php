@@ -9,12 +9,20 @@
             return $getSearchsocial;
 
         }
-        public static function sitedata(){
+        public static function gallarylink(){
             $CI =& get_instance();
-            $CI->db->select('*')->from('site_setting');
-            $getSite = $CI->db->get()->row();
+            $CI->db->select('*')->from('gallary');
+            $getSite = $CI->db->get()->result_array();
             return $getSite;
+            
+        }
 
+        public static function gallarycate(){
+            $CI =& get_instance();
+            $CI->db->select('*')->from('gallary_cate');
+            $getSite = $CI->db->get()->result_array();
+            return $getSite;
+            
         }
     }
 

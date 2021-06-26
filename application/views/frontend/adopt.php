@@ -1,3 +1,46 @@
+<script>
+    navigator.geolocation.getCurrentPosition(function(position) {
+                console.log(position.coords.latitude)
+              console.log(position.coords.longitude)
+        },
+      function(error) {
+        console.log("The Locator was denied. :(")
+    })
+
+    function getLoc() {
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(showPosition);
+        }else{
+            console.log("not suport");
+        }
+    };
+    function showPosition(position){
+        console.log(position.coords.latitude);
+        console.log(position.coords.longitude);
+        var urlll ="https://wft-geo-db.p.rapidapi.com/v1/geo/locations/"+position.coords.latitude+"%2B"+position.coords.longitude+"/nearbyCities?limit=1&radius=100" ;
+        const settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": urlll,
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "6a95c985admsh2933d255d478d6bp116ad7jsn1bfc00dc6887",
+		"x-rapidapi-host": "wft-geo-db.p.rapidapi.com"
+	}
+};
+
+$.ajax(settings).done(function (response) {
+	document.getElementById("serch").value = response.data[0].city;
+});
+
+    }
+
+
+    
+
+
+</script>
+
 <div class="adopt_dog">
     <div class="first_sec">
         <div class="container">
@@ -21,9 +64,11 @@
             <div class="col-md-9">
                 <form action="" id="searchform">
                     <div class="flex " id="aBtnGroup">
-
+                        <div class="ser">
+                            <a class="locate" onclick="getLoc()"><i class="fas locccc fa-map-marker-alt"></i> <span class="get_text">Get Location</span></a>
+                        </div>
                         <div class="left">
-                            <input type="text" prevvalue="" id="serch" placeholder="Search By City" value="">
+                            <input type="text" prevvalue=""  id="serch" placeholder="Search By City" value="">
                         </div>
                         <div class="right">
                             <button id="searchnow" onclick="delet()">Search</button>

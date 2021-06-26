@@ -9,10 +9,13 @@ class Gallarymodel extends CI_Model {
   }
 
 
-  public function fetch_data()
+  function insert($data)
   {
-    return $this->db->get('gallary')->result_array();
+    $this->db->insert('gallary_cate', $data);
+    return true;
   }
+
+
   public function delete_data($data)
   {
     $explodData = explode(',', $data);
@@ -26,5 +29,26 @@ class Gallarymodel extends CI_Model {
   }
 
 
+
+  public function fetch_data($slug = '')
+  {
+    return $this->db->where('link', $slug)->get('gallary')->result_array();
+  }
+
+  public function fetch_cate()
+  {
+    return $this->db->get('gallary_cate')->result_array();
+  }
+  public function delete_cate($data)
+  {
+    $explodData = explode(',', $data);
+    $this->db->where_in('id', $explodData);
+    $getDeleteStatus = $this->db->delete('gallary_cate');
+    if ($getDeleteStatus == 1) {
+      return array('message' => 'yes');
+    } else {
+      return array('message' => 'no');
+    }
+  }
 
 }?>
